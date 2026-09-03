@@ -27,9 +27,7 @@
         "FOREGROUND_SERVICE_LOCATION"
       ],
       "config": {
-        "googleMaps": {
-          "apiKey": "YOUR_GOOGLE_MAPS_ANDROID_API_KEY"
-        }
+        "googleMaps": {}
       },
       "predictiveBackGestureEnabled": false
     },

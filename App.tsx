@@ -2,10 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { NavigationControls } from './src/components/NavigationControls';
+import { DiagnosticsPanel } from './src/components/DiagnosticsPanel';
 import { NavigationHUD } from './src/components/NavigationHUD';
 import { NavigationMap } from './src/components/NavigationMap';
-import { AvailableProviderId, providerRegistry } from './src/providers';
+import { AvailableProviderId } from './src/providers';
 import { navigationManager } from './src/services/NavigationManager';
 import { NavigationTelemetry } from './src/types/location';
 
@@ -13,8 +13,7 @@ export default function App() {
   const [telemetry, setTelemetry] = useState<NavigationTelemetry>(() =>
     navigationManager.getTelemetry()
   );
-  const [activeProviderId, setActiveProviderId] = useState<AvailableProviderId>('gnss');
-  const [isOutageSimulated, setIsOutageSimulated] = useState<boolean>(false);
+  const [diagnosticsOpen, setDiagnosticsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     // 1. Subscribe to navigation telemetry stream
@@ -33,24 +32,26 @@ export default function App() {
     };
   }, []);
 
-  const handleSwitchProvider = async (id: AvailableProviderId) => {
-    setActiveProviderId(id);
-    setIsOutageSimulated(false);
-    await navigationManager.switchProvider(id);
-  };
-
-  const handleToggleOutage = () => {
-    const mockProvider = providerRegistry.getMockProvider();
-    const isOutage = mockProvider.toggleOutageSimulation();
-    setIsOutageSimulated(isOutage);
-  };
-
-  const handleToggleMode = () => {
-    navigationManager.toggleNavigationMode();
+  const handleSwitchProvider = async () => {
+    const nextId: AvailableProviderId =
+      telemetry.providerType === 'gnss' ? 'mock' : 'gnss';
+    await navigationManager.switchProvider(nextId);
   };
 
   const handleRecenter = () => {
     navigationManager.recenter();
+  };
+
+  const handleToggleCompass = () => {
+    navigationManager.toggleNavigationMode();
+  };
+
+  const handleToggleDiagnostics = () => {
+    setDiagnosticsOpen((prev) => !prev);
+  };
+
+  const handleRequestPermission = async () => {
+    await navigationManager.requestPermissions();
   };
 
   const handleUserPan = () => {
@@ -64,23 +65,25 @@ export default function App() {
       <View style={styles.container}>
         <StatusBar style="dark" />
 
-        {/* 1. Map Layer (Google Maps + Custom Vehicle Puck) */}
+        {/* 1. Map Layer: Google Maps + Dynamic Vehicle Puck + Breadcrumbs */}
         <NavigationMap telemetry={telemetry} onUserPan={handleUserPan} />
 
-        {/* 2. Interactive Navigation Controls (Mode toggle, Provider switch, Recenter) */}
-        <NavigationControls
-          mode={telemetry.mode}
-          onToggleMode={handleToggleMode}
+        {/* 2. Navigation HUD: Top status bar, floating compass, recenter FAB, bottom telemetry dock */}
+        <NavigationHUD
+          telemetry={telemetry}
+          diagnosticsOpen={diagnosticsOpen}
+          onToggleDiagnostics={handleToggleDiagnostics}
           onRecenter={handleRecenter}
-          activeProviderId={activeProviderId}
+          onToggleCompass={handleToggleCompass}
+          onRequestPermission={handleRequestPermission}
           onSwitchProvider={handleSwitchProvider}
         />
 
-        {/* 3. Navigation HUD (Speedometer, Compass/Bearing, Accuracy, GPS Lock status) */}
-        <NavigationHUD
+        {/* 3. GNSS Diagnostics Panel: Real-time update frequency (Hz), coordinates, provider health */}
+        <DiagnosticsPanel
           telemetry={telemetry}
-          onToggleOutage={handleToggleOutage}
-          isOutageSimulated={isOutageSimulated}
+          visible={diagnosticsOpen}
+          onClose={() => setDiagnosticsOpen(false)}
         />
       </View>
     </SafeAreaProvider>

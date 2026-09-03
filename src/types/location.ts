@@ -6,16 +6,16 @@
  * They have NO direct knowledge of GNSS hardware, IMUs, or ML models.
  */
 
-export type ProviderType = 'gnss' | 'idr' | 'hybrid' | 'mock';
+export type ProviderType = "gnss" | "idr" | "hybrid" | "mock";
 
 export type ProviderStatus =
-  | 'idle'
-  | 'initializing'
-  | 'active'
-  | 'permission_denied'
-  | 'gnss_unavailable'
-  | 'error'
-  | 'stopped';
+  | "idle"
+  | "initializing"
+  | "active"
+  | "permission_denied"
+  | "gnss_unavailable"
+  | "error"
+  | "stopped";
 
 /**
  * Standardized navigation location emitted by all LocationProviders.
@@ -87,12 +87,14 @@ export interface ILocationProvider {
  * - follow_north: Map stays oriented North-Up, camera follows vehicle center
  * - free: User is panning/zooming manually; camera does not auto-follow
  */
-export type NavigationMode = 'follow_course' | 'follow_north' | 'free';
+export type NavigationMode = "follow_course" | "follow_north" | "free";
 
 export interface NavigationTelemetry {
   currentLocation: NavLocation | null;
   speedKmh: number;
   smoothedHeading: number;
+  isHeadingReliable: boolean;
+  updateFrequencyHz: number;
   mode: NavigationMode;
   providerStatus: ProviderStatus;
   providerName: string;

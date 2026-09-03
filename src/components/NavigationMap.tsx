@@ -1,8 +1,13 @@
-import React, { useEffect, useRef } from 'react';
-import { Platform, StyleSheet, View } from 'react-native';
-import MapView, { Marker, Polyline, PROVIDER_DEFAULT, PROVIDER_GOOGLE } from 'react-native-maps';
-import { NavigationMode, NavigationTelemetry } from '../types/location';
-import { VehiclePuck } from './VehiclePuck';
+import React, { useEffect, useRef } from "react";
+import { Platform, StyleSheet, View } from "react-native";
+import MapView, {
+  Marker,
+  Polyline,
+  PROVIDER_DEFAULT,
+  PROVIDER_GOOGLE,
+} from "react-native-maps";
+import { NavigationMode, NavigationTelemetry } from "../types/location";
+import { VehiclePuck } from "./VehiclePuck";
 
 interface NavigationMapProps {
   telemetry: NavigationTelemetry;
@@ -14,8 +19,13 @@ export const NavigationMap: React.FC<NavigationMapProps> = ({
   onUserPan,
 }) => {
   const mapRef = useRef<MapView | null>(null);
-  const { currentLocation, smoothedHeading, mode, isDeadReckoning, historyTrail } =
-    telemetry;
+  const {
+    currentLocation,
+    smoothedHeading,
+    mode,
+    isDeadReckoning,
+    historyTrail,
+  } = telemetry;
 
   // Initial fallback region (Connaught Place, New Delhi)
   const defaultRegion = {
@@ -28,7 +38,7 @@ export const NavigationMap: React.FC<NavigationMapProps> = ({
   // Smooth camera tracking
   useEffect(() => {
     if (!currentLocation || !mapRef.current) return;
-    if (mode === 'free') return; // Do not interrupt user free navigation
+    if (mode === "free") return; // Do not interrupt user free navigation
 
     const cameraConfig = {
       center: {
@@ -36,16 +46,23 @@ export const NavigationMap: React.FC<NavigationMapProps> = ({
         longitude: currentLocation.longitude,
       },
       zoom: 18,
-      heading: mode === 'follow_course' ? smoothedHeading : 0,
+      heading: mode === 'follow_course' && telemetry.isHeadingReliable ? smoothedHeading : 0,
       pitch: mode === 'follow_course' ? 45 : 0, // 3D driving perspective in course-up
       altitude: 200,
     };
 
     mapRef.current.animateCamera(cameraConfig, { duration: 400 });
-  }, [currentLocation?.latitude, currentLocation?.longitude, smoothedHeading, mode]);
+  }, [
+    currentLocation?.latitude,
+    currentLocation?.longitude,
+    smoothedHeading,
+    telemetry.isHeadingReliable,
+    mode,
+  ]);
 
   // Use Google Maps provider on Android/iOS where available
-  const provider = Platform.OS === 'android' ? PROVIDER_GOOGLE : PROVIDER_DEFAULT;
+  const provider =
+    Platform.OS === "android" ? PROVIDER_GOOGLE : PROVIDER_DEFAULT;
 
   return (
     <View style={styles.container}>
@@ -67,7 +84,11 @@ export const NavigationMap: React.FC<NavigationMapProps> = ({
         {historyTrail.length > 1 && (
           <Polyline
             coordinates={historyTrail}
-            strokeColor={isDeadReckoning ? 'rgba(255, 152, 0, 0.6)' : 'rgba(26, 115, 232, 0.5)'}
+            strokeColor={
+              isDeadReckoning
+                ? "rgba(255, 152, 0, 0.6)"
+                : "rgba(26, 115, 232, 0.5)"
+            }
             strokeWidth={4}
             lineCap="round"
             lineJoin="round"
@@ -86,8 +107,9 @@ export const NavigationMap: React.FC<NavigationMapProps> = ({
             tracksViewChanges={true}
           >
             <VehiclePuck
-              heading={mode === 'follow_course' ? 0 : smoothedHeading}
+              heading={mode === 'follow_course' && telemetry.isHeadingReliable ? 0 : smoothedHeading}
               isDeadReckoning={isDeadReckoning}
+              isHeadingReliable={telemetry.isHeadingReliable}
             />
           </Marker>
         )}
@@ -98,14 +120,14 @@ export const NavigationMap: React.FC<NavigationMapProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
   },
   map: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
 });

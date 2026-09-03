@@ -1,11 +1,11 @@
-import { ILocationProvider } from '../types/location';
-import { GnssLocationProvider } from './GnssLocationProvider';
-import { MockLocationProvider } from './MockLocationProvider';
+import { ILocationProvider } from "../types/location";
+import { GnssLocationProvider } from "./GnssLocationProvider";
+import { MockLocationProvider } from "./MockLocationProvider";
 
-export * from './GnssLocationProvider';
-export * from './MockLocationProvider';
+export * from "./GnssLocationProvider";
+export * from "./MockLocationProvider";
 
-export type AvailableProviderId = 'gnss' | 'mock';
+export type AvailableProviderId = "gnss" | "mock";
 
 /**
  * Provider registry to switch between location engines at runtime.
@@ -17,9 +17,9 @@ class LocationProviderRegistry {
 
   public getProvider(id: AvailableProviderId): ILocationProvider {
     switch (id) {
-      case 'gnss':
+      case "gnss":
         return this.gnssProvider;
-      case 'mock':
+      case "mock":
         return this.mockProvider;
       default:
         return this.gnssProvider;

@@ -1,7 +1,7 @@
-import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { AvailableProviderId } from '../providers';
-import { NavigationMode } from '../types/location';
+import React from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { AvailableProviderId } from "../providers";
+import { NavigationMode } from "../types/location";
 
 interface NavigationControlsProps {
   mode: NavigationMode;
@@ -20,12 +20,12 @@ export const NavigationControls: React.FC<NavigationControlsProps> = ({
 }) => {
   const getModeIconText = () => {
     switch (mode) {
-      case 'follow_course':
-        return '▲ Course';
-      case 'follow_north':
-        return '🧭 North';
-      case 'free':
-        return '🔍 Free';
+      case "follow_course":
+        return "▲ Course";
+      case "follow_north":
+        return "🧭 North";
+      case "free":
+        return "🔍 Free";
     }
   };
 
@@ -36,15 +36,15 @@ export const NavigationControls: React.FC<NavigationControlsProps> = ({
         <TouchableOpacity
           style={[
             styles.providerButton,
-            activeProviderId === 'gnss' && styles.providerButtonActive,
+            activeProviderId === "gnss" && styles.providerButtonActive,
           ]}
-          onPress={() => onSwitchProvider('gnss')}
+          onPress={() => onSwitchProvider("gnss")}
           activeOpacity={0.8}
         >
           <Text
             style={[
               styles.providerButtonText,
-              activeProviderId === 'gnss' && styles.providerButtonTextActive,
+              activeProviderId === "gnss" && styles.providerButtonTextActive,
             ]}
           >
             🛰️ Live GNSS
@@ -54,15 +54,15 @@ export const NavigationControls: React.FC<NavigationControlsProps> = ({
         <TouchableOpacity
           style={[
             styles.providerButton,
-            activeProviderId === 'mock' && styles.providerButtonActive,
+            activeProviderId === "mock" && styles.providerButtonActive,
           ]}
-          onPress={() => onSwitchProvider('mock')}
+          onPress={() => onSwitchProvider("mock")}
           activeOpacity={0.8}
         >
           <Text
             style={[
               styles.providerButtonText,
-              activeProviderId === 'mock' && styles.providerButtonTextActive,
+              activeProviderId === "mock" && styles.providerButtonTextActive,
             ]}
           >
             🚗 Simulator
@@ -82,7 +82,7 @@ export const NavigationControls: React.FC<NavigationControlsProps> = ({
         </TouchableOpacity>
 
         {/* Recenter Button */}
-        {mode === 'free' && (
+        {mode === "free" && (
           <TouchableOpacity
             style={[styles.fab, styles.recenterFab]}
             onPress={onRecenter}
@@ -98,24 +98,24 @@ export const NavigationControls: React.FC<NavigationControlsProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     paddingHorizontal: 16,
   },
   providerToggleGroup: {
-    position: 'absolute',
+    position: "absolute",
     top: 90,
-    alignSelf: 'center',
-    flexDirection: 'row',
-    backgroundColor: '#FFFFFF',
+    alignSelf: "center",
+    flexDirection: "row",
+    backgroundColor: "#FFFFFF",
     borderRadius: 20,
     padding: 3,
     elevation: 4,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOpacity: 0.15,
     shadowRadius: 5,
     shadowOffset: { width: 0, height: 2 },
@@ -126,51 +126,51 @@ const styles = StyleSheet.create({
     borderRadius: 17,
   },
   providerButtonActive: {
-    backgroundColor: '#1A73E8',
+    backgroundColor: "#1A73E8",
   },
   providerButtonText: {
     fontSize: 12,
-    fontWeight: '600',
-    color: '#5F6368',
+    fontWeight: "600",
+    color: "#5F6368",
   },
   providerButtonTextActive: {
-    color: '#FFFFFF',
-    fontWeight: '700',
+    color: "#FFFFFF",
+    fontWeight: "700",
   },
   fabColumn: {
-    position: 'absolute',
+    position: "absolute",
     right: 16,
     bottom: 150,
-    alignItems: 'flex-end',
+    alignItems: "flex-end",
     gap: 12,
   },
   fab: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: "#FFFFFF",
     paddingHorizontal: 14,
     paddingVertical: 10,
     borderRadius: 24,
     elevation: 5,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOpacity: 0.2,
     shadowRadius: 6,
     shadowOffset: { width: 0, height: 3 },
     borderWidth: 1,
-    borderColor: '#DADCE0',
-    alignItems: 'center',
-    justifyContent: 'center',
+    borderColor: "#DADCE0",
+    alignItems: "center",
+    justifyContent: "center",
   },
   fabText: {
     fontSize: 12,
-    fontWeight: '700',
-    color: '#1A73E8',
+    fontWeight: "700",
+    color: "#1A73E8",
   },
   recenterFab: {
-    backgroundColor: '#1A73E8',
-    borderColor: '#185ABC',
+    backgroundColor: "#1A73E8",
+    borderColor: "#185ABC",
   },
   recenterFabText: {
     fontSize: 12,
-    fontWeight: '700',
-    color: '#FFFFFF',
+    fontWeight: "700",
+    color: "#FFFFFF",
   },
 });

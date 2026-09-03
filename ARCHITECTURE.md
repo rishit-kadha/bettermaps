@@ -1,4 +1,5 @@
 # BetterMaps System Architecture
+
 ## SIH Problem Statement: "AI-ML based Intelligent Dead Reckoning System for Seamless Navigation"
 
 ---
@@ -61,23 +62,25 @@ The UI and camera management layers **never interact directly with device GPS ha
 ## 2. Core Abstractions (`src/types/location.ts`)
 
 ### `NavLocation`
+
 All position fixes are normalized into `NavLocation`:
 
 ```typescript
 export interface NavLocation {
-  latitude: number;           // WGS84 latitude
-  longitude: number;          // WGS84 longitude
-  altitude?: number | null;   // Altitude in meters
-  accuracy?: number | null;   // Horizontal accuracy radius (meters)
-  heading?: number | null;    // Heading / course (0-359.9 deg, 0 = True North)
-  speed?: number | null;      // Speed over ground (m/s)
-  timestamp: number;          // Epoch milliseconds
+  latitude: number; // WGS84 latitude
+  longitude: number; // WGS84 longitude
+  altitude?: number | null; // Altitude in meters
+  accuracy?: number | null; // Horizontal accuracy radius (meters)
+  heading?: number | null; // Heading / course (0-359.9 deg, 0 = True North)
+  speed?: number | null; // Speed over ground (m/s)
+  timestamp: number; // Epoch milliseconds
   providerType: ProviderType; // 'gnss' | 'idr' | 'hybrid' | 'mock'
-  isDeadReckoning: boolean;   // true when GNSS is lost & dead reckoning is active
+  isDeadReckoning: boolean; // true when GNSS is lost & dead reckoning is active
 }
 ```
 
 ### `ILocationProvider`
+
 The universal interface implemented by all positioning providers:
 
 ```typescript
@@ -99,6 +102,7 @@ export interface ILocationProvider {
 ## 3. Phase 1 Implementation
 
 ### `GnssLocationProvider`
+
 - Integrates with Android's `FusedLocationProviderClient` via `expo-location`.
 - Configured with `Accuracy.BestForNavigation` (uses GPS, GLONASS, Galileo, BeiDou, Wi-Fi, and cell assistance).
 - Handles permission acquisition (`ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`).
@@ -106,10 +110,12 @@ export interface ILocationProvider {
 - Normalizes raw Android location updates into `NavLocation`.
 
 ### `MockLocationProvider`
+
 - Provides realistic urban vehicle driving simulation with smooth waypoint interpolation, heading calculation, and variable speed profiles.
 - Features **Tunnel / GPS Outage Simulation**: toggling the outage causes GNSS loss, demonstrating how the UI and provider status react when satellites disappear.
 
 ### `NavigationManager`
+
 - Manages the active provider lifecycle.
 - Manages map tracking modes:
   - `follow_course`: Course-Up mode with 3D tilted camera (45° pitch) matching driving direction.
@@ -119,6 +125,7 @@ export interface ILocationProvider {
 - Maintains a trajectory breadcrumb history trail.
 
 ### UI Components
+
 - **`NavigationMap`**: Native Google Maps view (`react-native-maps`, `PROVIDER_GOOGLE`), animated camera synchronization, and route breadcrumb polyline.
 - **`VehiclePuck`**: Navigation puck displaying orientation chevron and pulse ring; changes color from Google Blue to Amber when in dead-reckoning state.
 - **`NavigationHUD`**: Real-time HUD showing speed (km/h), heading with cardinal notation (e.g., `042° NE`), accuracy radius, coordinate readout, and engine status badge.
@@ -129,6 +136,7 @@ export interface ILocationProvider {
 ## 4. Roadmap to Phase 2 & 3: Intelligent Dead Reckoning
 
 ### Phase 2: Sensor Ingestion & Kinematic Dead Reckoning
+
 1. **High-Rate IMU Ingestion**:
    - Access `SensorManager` on Android for Accelerometer, Gyroscope, and Magnetometer at 50 Hz – 100 Hz.
 2. **Attitude and Heading Reference System (AHRS)**:
@@ -139,6 +147,7 @@ export interface ILocationProvider {
    - Integrate longitudinal acceleration with Non-Holonomic Constraints (NHC) assuming zero lateral slip for ground vehicles.
 
 ### Phase 3: AI/ML Forward Velocity & Fusion (IO-VNBD Dataset)
+
 1. **IO-VNBD Model**:
    - Train a lightweight 1D-CNN or GRU model on the [IO-VNBD](https://github.com/onyekpeu/IO-VNBD) (Inertial and Odometry Benchmark Dataset for Ground Vehicle Positioning) to estimate instantaneous forward vehicle speed from raw IMU windows.
 2. **Edge Deployment**:

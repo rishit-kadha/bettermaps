@@ -1,20 +1,41 @@
 # BetterMaps 🧭
+
 ### AI-ML based Intelligent Dead Reckoning System for Seamless Navigation
-*Smart India Hackathon (SIH) Solution*
+
+_Smart India Hackathon (SIH) Solution_
 
 BetterMaps is a smartphone navigation application engineered to provide seamless, accurate positioning when GNSS/GPS is unavailable (in tunnels, underground parking structures, urban canyons, or under dense tree canopies).
 
 ---
 
-## Phase 1 Deliverables (Current Phase)
+### Phase 1 Deliverables
 
-Phase 1 establishes the mobile navigation shell and decoupled architecture:
-- **Google Maps Integration**: Native Google Maps rendering via `react-native-maps` (`PROVIDER_GOOGLE`).
-- **Decoupled Architecture**: Strict `ILocationProvider` interface decoupling the UI from hardware positioning sources.
-- **Real-Time GNSS Provider**: `GnssLocationProvider` streaming live phone GPS coordinates, bearing, and speed via Android's `FusedLocationProviderClient`.
-- **Route Simulator**: `MockLocationProvider` with simulated vehicle driving and a "Simulate Tunnel (GPS Loss)" toggle for instant offline testing and demonstration.
-- **Smooth Navigation Camera**: Automatic camera following with Course-Up (3D perspective), North-Up (2D), and Free-Look modes with auto-recentering.
-- **Navigation Telemetry HUD**: Speedometer (km/h), compass bearing with cardinal notation, GPS accuracy, and provider health badge.
+Phase 1 delivers a clean, modern Android navigation shell with a completely decoupled architecture:
+- **Google Maps Integration**: Native Google Maps rendering on Android via `react-native-maps` (`PROVIDER_GOOGLE`).
+- **Decoupled Architecture**: Strict `ILocationProvider` interface contract. Map and camera components have zero direct coupling with Android location APIs.
+- **Phone GNSS Provider**: `GnssLocationProvider` streaming real-time coordinates, course heading, and speed from Android's `FusedLocationProviderClient`.
+- **Live GNSS Diagnostics Panel**: Real-time telemetry overlay displaying:
+  - Exact coordinates (`latitude`, `longitude`, `altitude`)
+  - Speed (`km/h` and `m/s`)
+  - Course heading and heading reliability status
+  - Horizontal accuracy (`± meters`)
+  - **Live update frequency in approximate Hz** (calculated via rolling window)
+  - Current provider tag: `GNSS`
+- **Heading-Aware Vehicle Puck**:
+  - Displays a high-visibility directional chevron when moving with reliable GPS heading.
+  - Switches to a stable circular location puck when stationary to prevent noisy visual spinning.
+- **Navigation Camera**:
+  - **Course-Up**: 3D driving perspective (45° tilt) aligned with vehicle course.
+  - **North-Up**: 2D top-down perspective facing True North.
+  - **Free-Look**: User can pan and inspect surroundings freely.
+  - **Recenter FAB**: Instantly flies camera back to the vehicle and re-locks navigation tracking.
+- **Permission & Safety Handling**:
+  - Explicit status pill (`GNSS 3D FIX`, `ACQUIRING GNSS...`, `NO PERMISSION`, `GPS DISABLED`).
+  - Interactive permission recovery banner if permission was previously denied.
+  - Helpful alert if GPS / location services are disabled in device settings.
+- **Secure Environment Configuration**:
+  - Google Maps API key loaded dynamically via `.env` (`EXPO_PUBLIC_GOOGLE_MAPS_API_KEY`) and `app.config.ts`.
+  - Secrets are never hardcoded into source control.
 
 ---
 
@@ -24,80 +45,78 @@ Phase 1 establishes the mobile navigation shell and decoupled architecture:
 bettermaps/
 ├── src/
 │   ├── types/
-│   │   └── location.ts            # ILocationProvider, NavLocation, ProviderStatus
+│   │   └── location.ts            # ILocationProvider, NavLocation, NavigationTelemetry
 │   ├── providers/
-│   │   ├── GnssLocationProvider.ts # Device GNSS (FusedLocationProviderClient)
-│   │   ├── MockLocationProvider.ts # Route replay & GPS outage simulation
-│   │   └── index.ts               # Provider registry and factory
+│   │   ├── GnssLocationProvider.ts # Native Android GNSS via FusedLocationProviderClient
+│   │   ├── MockLocationProvider.ts # Route simulator & GNSS outage toggle
+│   │   └── index.ts               # Provider registry & runtime factory
 │   ├── services/
-│   │   └── NavigationManager.ts   # Navigation state, bearing filtering, camera tracking
+│   │   └── NavigationManager.ts   # Navigation state, update Hz calculator, circular heading filter
 │   └── components/
-│       ├── NavigationMap.tsx      # Google Maps + camera follow + breadcrumb trail
-│       ├── VehiclePuck.tsx        # Navigation vehicle puck with heading chevron
-│       ├── NavigationHUD.tsx      # Speedometer, bearing, accuracy & status badge
-│       └── NavigationControls.tsx # Mode switcher, recenter, provider selector
-├── App.tsx                        # Main application entry
-├── app.json                       # Android permissions, package name, Google Maps config
+│       ├── NavigationMap.tsx      # Google Maps view, vehicle marker, animated camera
+│       ├── VehiclePuck.tsx        # Orientation chevron + stationary circular puck
+│       ├── NavigationHUD.tsx      # Modern floating controls: compass, recenter, status pill, bottom dock
+│       └── DiagnosticsPanel.tsx   # Live GNSS diagnostics overlay (Hz, accuracy, speed, lat/lon)
+├── App.tsx                        # Main entry point wiring UI and state
+├── app.config.ts                  # Dynamic Expo config reading .env safely
+├── app.json                       # Android permissions, package name, base config
+├── .env.example                   # Template for Google Maps API Key
 ├── ARCHITECTURE.md                # In-depth system architecture & IDR roadmap
 └── README.md
 ```
 
 ---
 
-## Quick Start (Testing on Android Phone)
+## Physical Android Phone Setup Guide
 
 ### 1. Prerequisites
-- Node.js (v18+)
-- Install the **Expo Go** app on your Android smartphone from the [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent).
+- Install **Node.js** (v18+) on your computer.
+- Install the **Expo Go** app on your Android phone from the [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent).
 
-### 2. Start the Development Server
-From the project directory:
+### 2. Configure Google Maps API Key (No Hardcoded Secrets)
+1. Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+2. Open `.env` and paste your Google Maps Android API key:
+   ```env
+   EXPO_PUBLIC_GOOGLE_MAPS_API_KEY=AIzaSy...
+   ```
+   *(Note: For testing in Expo Go on Android, maps will render using Expo's bundled development credentials even before you add a custom key. For standalone APK builds, your own key is used.)*
 
+### 3. Start the Development Server
+Run:
 ```bash
 npm start
 ```
+A QR code will appear in your terminal.
 
-### 3. Open on Your Android Phone
-1. Ensure your phone and computer are connected to the same Wi-Fi network (or use `npx expo start --tunnel` if on separate networks).
-2. Open the **Expo Go** app on your Android phone.
-3. Tap **Scan QR code** and scan the QR code displayed in your terminal.
-4. The app will bundle and run live on your phone!
-
----
-
-## Google Maps Android API Key Configuration
-
-By default in Expo Go, maps render with development credentials. For production builds or standalone APKs:
-
-1. Obtain an Android Maps API key from the [Google Cloud Console](https://console.cloud.google.com/google/maps-apis).
-2. Enable the **Maps SDK for Android**.
-3. In `app.json`, replace `"YOUR_GOOGLE_MAPS_ANDROID_API_KEY"` under `expo.android.config.googleMaps.apiKey` with your actual key:
-
-```json
-"android": {
-  "config": {
-    "googleMaps": {
-      "apiKey": "AIzaSy..."
-    }
-  }
-}
-```
+### 4. Connect Your Android Phone
+1. Connect your Android phone to the same Wi-Fi network as your computer (or run `npm start -- --tunnel` if on different networks/cellular).
+2. Open **Expo Go** on your phone.
+3. Tap **Scan QR code** and point your phone at the terminal QR code.
+4. The JavaScript bundle will download and the app will open directly on your phone!
 
 ---
 
-## Testing Features in the App
+## Definition of Done Verification Checklist
 
-1. **Live GPS Tracking**: By default, the app starts with `🛰️ Live GNSS`. On your phone, accept the location permission when prompted. Walk or drive to observe the real-time speed, heading chevron, and smooth camera tracking.
-2. **Driving Simulator**: Tap `🚗 Simulator` in the top bar to switch to the simulated vehicle route in New Delhi. The camera will immediately lock onto the simulated vehicle traveling through turns, accelerating, and decelerating.
-3. **Simulate GPS Loss (Tunnel)**: While in simulator mode, tap **Simulate Tunnel (GPS Loss)** in the top bar. The provider status changes to `GNSS OUTAGE / TUNNEL`, demonstrating how the application handles GNSS denial before dead reckoning recovery.
-4. **Camera Controls**:
-   - Tap **▲ Course** to cycle between **Course-Up** (3D driving perspective), **North-Up** (2D top-down), and **Free** mode.
-   - Drag anywhere on the map to switch into Free mode.
-   - Tap **🎯 Recenter** to re-engage navigation lock.
+| Step | Action | Expected Behavior |
+| :--- | :--- | :--- |
+| **1. Launch** | Open the app on Android | Google Map renders taking 100% of the screen. |
+| **2. Permission** | Dialog prompts for Location | Tapping **Allow** grants fine location permission; top pill changes to `GNSS 3D FIX`. |
+| **3. Live Position** | Look at the map | Vehicle puck appears at your exact physical coordinates. |
+| **4. Movement** | Walk or drive | Vehicle puck updates smoothly; speedometer displays live speed; breadcrumbs trail follows behind. |
+| **5. Heading** | Moving in a direction | Directional chevron points along your course heading. When stationary, chevron gracefully hides. |
+| **6. Camera Follow** | Let the vehicle move | Camera follows your vehicle smoothly in 3D perspective (Course-Up). |
+| **7. Manual Pan** | Drag the map | Camera tracking disengages; floating **Recenter** button lights up in blue. |
+| **8. Recenter** | Tap **Recenter** | Camera smoothly animates back to your position and re-locks navigation tracking. |
+| **9. Compass** | Tap the compass needle | Toggles between Course-Up (3D tilted) and North-Up (2D top-down) mode. |
+| **10. Diagnostics** | Tap **Diagnostics** | Debug overlay opens showing live `Hz`, speed, accuracy, heading, and coordinates. |
 
 ---
 
-## Next Steps: Phase 2 & 3 Roadmap
+## Next Steps: Future Phases
 
-- **Phase 2**: Access smartphone `SensorManager` (Accelerometer, Gyroscope, Magnetometer @ 50-100Hz), implement attitude estimation (Madgwick/Mahony AHRS), and suppress vibration/bumps.
-- **Phase 3**: Train an ML forward velocity model on the [IO-VNBD dataset](https://github.com/onyekpeu/IO-VNBD), integrate with an Error-State Kalman Filter (ESKF) for seamless GNSS + INS dead reckoning, and package as `HybridIdrLocationProvider`.
+- **Phase 2 (Inertial Sensing)**: Integrate smartphone `SensorManager` (Accelerometer, Gyroscope, Magnetometer @ 50-100Hz) and implement vibration/pothole filtering.
+- **Phase 3 (AI/ML Dead Reckoning Engine)**: Train a 1D-CNN / GRU on the [IO-VNBD dataset](https://github.com/onyekpeu/IO-VNBD) to estimate forward vehicle velocity during GNSS outages, implement an Error-State Kalman Filter (ESKF), and package as `HybridIdrLocationProvider` behind the existing `ILocationProvider` interface.

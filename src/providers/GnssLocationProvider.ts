@@ -1,4 +1,4 @@
-import * as Location from 'expo-location';
+import * as Location from "expo-location";
 import {
   ILocationProvider,
   LocationListener,
@@ -6,7 +6,7 @@ import {
   ProviderStatus,
   ProviderType,
   StatusListener,
-} from '../types/location';
+} from "../types/location";
 
 /**
  * GnssLocationProvider
@@ -18,10 +18,10 @@ import {
  * Output: Standardized NavLocation stream with providerType = 'gnss'
  */
 export class GnssLocationProvider implements ILocationProvider {
-  public readonly name = 'Device GNSS (Native GPS)';
-  public readonly providerType: ProviderType = 'gnss';
+  public readonly name = "Device GNSS (Native GPS)";
+  public readonly providerType: ProviderType = "gnss";
 
-  private status: ProviderStatus = 'idle';
+  private status: ProviderStatus = "idle";
   private locationSubscription: Location.LocationSubscription | null = null;
   private lastLocation: NavLocation | null = null;
 
@@ -55,37 +55,64 @@ export class GnssLocationProvider implements ILocationProvider {
       return this.lastLocation;
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : String(err);
-      this.setStatus('error', `Failed to obtain initial fix: ${message}`);
+      this.setStatus("error", `Failed to obtain initial fix: ${message}`);
       return null;
     }
   }
 
+  public async requestPermissions(): Promise<boolean> {
+    try {
+      const { status } = await Location.requestForegroundPermissionsAsync();
+      if (status === Location.PermissionStatus.GRANTED) {
+        // If granted, immediately start GNSS stream
+        await this.start();
+        return true;
+      } else {
+        this.setStatus('permission_denied', 'Location permission denied by user.');
+        return false;
+      }
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : String(err);
+      this.setStatus('error', `Permission request failed: ${message}`);
+      return false;
+    }
+  }
+
   public async start(): Promise<void> {
-    if (this.status === 'active' || this.status === 'initializing') {
+    if (this.status === "active" || this.status === "initializing") {
       return;
     }
 
-    this.setStatus('initializing');
+    this.setStatus("initializing");
 
     try {
       // 1. Check & Request Android Foreground Location Permissions
-      const { status: existingStatus } = await Location.getForegroundPermissionsAsync();
+      const { status: existingStatus } =
+        await Location.getForegroundPermissionsAsync();
       let finalStatus = existingStatus;
 
       if (existingStatus !== Location.PermissionStatus.GRANTED) {
-        const { status: requestedStatus } = await Location.requestForegroundPermissionsAsync();
+        const { status: requestedStatus } =
+          await Location.requestForegroundPermissionsAsync();
         finalStatus = requestedStatus;
       }
 
       if (finalStatus !== Location.PermissionStatus.GRANTED) {
-        this.setStatus('permission_denied', 'Location permission denied by user.');
+        this.setStatus(
+          "permission_denied",
+          "Location permission denied by user.",
+        );
         return;
       }
 
       // 2. Check if Location Services are enabled on device
-      const isLocationServicesEnabled = await Location.hasServicesEnabledAsync();
+      const isLocationServicesEnabled =
+        await Location.hasServicesEnabledAsync();
       if (!isLocationServicesEnabled) {
-        this.setStatus('gnss_unavailable', 'GPS/Location services disabled in system settings.');
+        this.setStatus(
+          "gnss_unavailable",
+          "GPS/Location services disabled in system settings.",
+        );
         return;
       }
 
@@ -101,18 +128,18 @@ export class GnssLocationProvider implements ILocationProvider {
           const navLoc = this.normalizePosition(location);
           this.lastLocation = navLoc;
 
-          if (this.status !== 'active') {
-            this.setStatus('active');
+          if (this.status !== "active") {
+            this.setStatus("active");
           }
 
           this.notifyLocation(navLoc);
-        }
+        },
       );
 
-      this.setStatus('active');
+      this.setStatus("active");
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : String(err);
-      this.setStatus('error', `GNSS provider start failed: ${message}`);
+      this.setStatus("error", `GNSS provider start failed: ${message}`);
     }
   }
 
@@ -121,7 +148,7 @@ export class GnssLocationProvider implements ILocationProvider {
       this.locationSubscription.remove();
       this.locationSubscription = null;
     }
-    this.setStatus('stopped');
+    this.setStatus("stopped");
   }
 
   public addListener(listener: LocationListener): () => void {
@@ -145,13 +172,13 @@ export class GnssLocationProvider implements ILocationProvider {
   private normalizePosition(loc: Location.LocationObject): NavLocation {
     // Android heading can sometimes be -1 when stationary; normalize to null if invalid
     const heading =
-      typeof loc.coords.heading === 'number' && loc.coords.heading >= 0
+      typeof loc.coords.heading === "number" && loc.coords.heading >= 0
         ? loc.coords.heading
         : null;
 
     // Speed in m/s, or null if negative/unavailable
     const speed =
-      typeof loc.coords.speed === 'number' && loc.coords.speed >= 0
+      typeof loc.coords.speed === "number" && loc.coords.speed >= 0
         ? loc.coords.speed
         : 0;
 
@@ -164,7 +191,7 @@ export class GnssLocationProvider implements ILocationProvider {
       heading,
       speed,
       timestamp: loc.timestamp,
-      providerType: 'gnss',
+      providerType: "gnss",
       isDeadReckoning: false,
     };
   }
