@@ -46,8 +46,11 @@ export const NavigationMap: React.FC<NavigationMapProps> = ({
         longitude: currentLocation.longitude,
       },
       zoom: 18,
-      heading: mode === 'follow_course' && telemetry.isHeadingReliable ? smoothedHeading : 0,
-      pitch: mode === 'follow_course' ? 45 : 0, // 3D driving perspective in course-up
+      heading:
+        mode === "follow_course" && telemetry.isHeadingReliable
+          ? smoothedHeading
+          : 0,
+      pitch: mode === "follow_course" ? 45 : 0, // 3D driving perspective in course-up
       altitude: 200,
     };
 
@@ -107,7 +110,11 @@ export const NavigationMap: React.FC<NavigationMapProps> = ({
             tracksViewChanges={true}
           >
             <VehiclePuck
-              heading={mode === 'follow_course' && telemetry.isHeadingReliable ? 0 : smoothedHeading}
+              heading={
+                mode === "follow_course" && telemetry.isHeadingReliable
+                  ? 0
+                  : smoothedHeading
+              }
               isDeadReckoning={isDeadReckoning}
               isHeadingReliable={telemetry.isHeadingReliable}
             />

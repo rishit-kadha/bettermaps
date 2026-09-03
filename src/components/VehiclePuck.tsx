@@ -20,10 +20,10 @@ export const VehiclePuck: React.FC<VehiclePuckProps> = ({
   isDeadReckoning = false,
   isHeadingReliable = true,
 }) => {
-  const primaryColor = isDeadReckoning ? '#FF9800' : '#1A73E8'; // Amber for DR, Blue for GNSS
+  const primaryColor = isDeadReckoning ? "#FF9800" : "#1A73E8"; // Amber for DR, Blue for GNSS
   const pulseColor = isDeadReckoning
-    ? 'rgba(255, 152, 0, 0.20)'
-    : 'rgba(26, 115, 232, 0.20)';
+    ? "rgba(255, 152, 0, 0.20)"
+    : "rgba(26, 115, 232, 0.20)";
 
   return (
     <View style={styles.container}>
@@ -46,7 +46,9 @@ export const VehiclePuck: React.FC<VehiclePuckProps> = ({
       >
         {/* Directional Chevron (only visible when reliable) */}
         {isHeadingReliable && (
-          <View style={[styles.arrowHead, { borderBottomColor: primaryColor }]} />
+          <View
+            style={[styles.arrowHead, { borderBottomColor: primaryColor }]}
+          />
         )}
 
         {/* Center core */}

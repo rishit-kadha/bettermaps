@@ -68,12 +68,15 @@ export class GnssLocationProvider implements ILocationProvider {
         await this.start();
         return true;
       } else {
-        this.setStatus('permission_denied', 'Location permission denied by user.');
+        this.setStatus(
+          "permission_denied",
+          "Location permission denied by user.",
+        );
         return false;
       }
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : String(err);
-      this.setStatus('error', `Permission request failed: ${message}`);
+      this.setStatus("error", `Permission request failed: ${message}`);
       return false;
     }
   }

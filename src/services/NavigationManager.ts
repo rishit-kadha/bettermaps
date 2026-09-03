@@ -76,18 +76,18 @@ export class NavigationManager {
   }
 
   public toggleNavigationMode(): NavigationMode {
-    if (this.currentMode === 'follow_course') {
-      this.setNavigationMode('follow_north');
-    } else if (this.currentMode === 'follow_north') {
-      this.setNavigationMode('free');
+    if (this.currentMode === "follow_course") {
+      this.setNavigationMode("follow_north");
+    } else if (this.currentMode === "follow_north") {
+      this.setNavigationMode("free");
     } else {
-      this.setNavigationMode('follow_course');
+      this.setNavigationMode("follow_course");
     }
     return this.currentMode;
   }
 
   public recenter(): void {
-    this.setNavigationMode('follow_course');
+    this.setNavigationMode("follow_course");
   }
 
   public getTelemetry(): NavigationTelemetry {
@@ -149,11 +149,20 @@ export class NavigationManager {
     // In ground vehicle navigation, GPS course is reliable when vehicle has positive velocity (>0.5 m/s)
     // or when simulated
     const speedMs = location.speed ?? 0;
-    const hasValidHeading = location.heading !== null && location.heading !== undefined && location.heading >= 0;
+    const hasValidHeading =
+      location.heading !== null &&
+      location.heading !== undefined &&
+      location.heading >= 0;
 
-    if (hasValidHeading && (speedMs >= 0.5 || location.providerType === 'mock')) {
+    if (
+      hasValidHeading &&
+      (speedMs >= 0.5 || location.providerType === "mock")
+    ) {
       this.isHeadingReliable = true;
-      this.smoothedHeading = this.filterHeading(this.smoothedHeading, location.heading!);
+      this.smoothedHeading = this.filterHeading(
+        this.smoothedHeading,
+        location.heading!,
+      );
     } else if (hasValidHeading) {
       // Stationary: retain orientation without erratic jumps
       this.isHeadingReliable = false;
@@ -162,7 +171,10 @@ export class NavigationManager {
     }
 
     // Append to breadcrumb history trail
-    const newPoint = { latitude: location.latitude, longitude: location.longitude };
+    const newPoint = {
+      latitude: location.latitude,
+      longitude: location.longitude,
+    };
     this.historyTrail.push(newPoint);
     if (this.historyTrail.length > this.maxTrailPoints) {
       this.historyTrail.shift();
@@ -217,4 +229,3 @@ export class NavigationManager {
 }
 
 export const navigationManager = new NavigationManager();
-
