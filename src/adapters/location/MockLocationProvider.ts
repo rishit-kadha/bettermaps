@@ -5,21 +5,14 @@ import {
   ProviderStatus,
   ProviderType,
   StatusListener,
-} from "../types/location";
+} from '../../core/types/location';
 
-/**
- * Waypoint definition for mock driving route.
- */
 interface Waypoint {
   latitude: number;
   longitude: number;
   speedMs: number;
 }
 
-/**
- * Sample urban driving trajectory (simulation route in New Delhi / Connaught Place).
- * Provides realistic turns, acceleration, and deceleration.
- */
 const SAMPLE_ROUTE: Waypoint[] = [
   { latitude: 28.6315, longitude: 77.2167, speedMs: 8.5 },
   { latitude: 28.6322, longitude: 77.2174, speedMs: 11.2 },
@@ -29,33 +22,31 @@ const SAMPLE_ROUTE: Waypoint[] = [
   { latitude: 28.6368, longitude: 77.2212, speedMs: 10.0 },
   { latitude: 28.6375, longitude: 77.2225, speedMs: 7.0 },
   { latitude: 28.6372, longitude: 77.2241, speedMs: 9.5 },
-  { latitude: 28.636, longitude: 77.2255, speedMs: 12.0 },
-  { latitude: 28.6345, longitude: 77.226, speedMs: 13.5 },
-  { latitude: 28.633, longitude: 77.2252, speedMs: 11.0 },
+  { latitude: 28.6360, longitude: 77.2255, speedMs: 12.0 },
+  { latitude: 28.6345, longitude: 77.2260, speedMs: 13.5 },
+  { latitude: 28.6330, longitude: 77.2252, speedMs: 11.0 },
   { latitude: 28.6318, longitude: 77.2238, speedMs: 8.0 },
-  { latitude: 28.6312, longitude: 77.222, speedMs: 6.5 },
-  { latitude: 28.631, longitude: 77.2195, speedMs: 7.5 },
+  { latitude: 28.6312, longitude: 77.2220, speedMs: 6.5 },
+  { latitude: 28.6310, longitude: 77.2195, speedMs: 7.5 },
   { latitude: 28.6315, longitude: 77.2167, speedMs: 8.5 },
 ];
 
 /**
  * MockLocationProvider
  *
- * Implements ILocationProvider for testing and demonstrations.
- * Simulates a vehicle navigating along realistic waypoints with dynamic heading
- * and speed calculations at 2 Hz (or 10 Hz).
- *
- * Also provides an outage simulation toggle (simulating entering a tunnel / GNSS loss).
+ * Development and testing adapter.
+ * Simulates real-time vehicle navigation along urban coordinates with dynamic bearing.
+ * Features an outage simulation toggle for simulating tunnel entry / GNSS loss.
  */
 export class MockLocationProvider implements ILocationProvider {
-  public readonly name = "Route Simulator (Mock Vehicle)";
-  public readonly providerType: ProviderType = "mock";
+  public readonly name = 'Route Simulator (Development)';
+  public readonly providerType: ProviderType = 'mock';
 
-  private status: ProviderStatus = "idle";
+  private status: ProviderStatus = 'idle';
   private timer: ReturnType<typeof setInterval> | null = null;
   private routeIndex = 0;
   private subStep = 0;
-  private readonly subStepsPerLeg = 10; // Interpolate 10 points between waypoints
+  private readonly subStepsPerLeg = 10;
   private lastLocation: NavLocation | null = null;
   private isGnssOutageSimulated = false;
 
@@ -77,7 +68,7 @@ export class MockLocationProvider implements ILocationProvider {
         heading: 45,
         speed: p.speedMs,
         timestamp: Date.now(),
-        providerType: "mock",
+        providerType: 'mock',
         isDeadReckoning: false,
       };
     }
@@ -85,13 +76,12 @@ export class MockLocationProvider implements ILocationProvider {
   }
 
   public async start(): Promise<void> {
-    if (this.status === "active") return;
+    if (this.status === 'active') return;
 
-    this.setStatus("active");
+    this.setStatus('active');
     this.routeIndex = 0;
     this.subStep = 0;
 
-    // Emit updates at 500ms intervals (2 Hz)
     this.timer = setInterval(() => {
       this.tick();
     }, 500);
@@ -102,18 +92,15 @@ export class MockLocationProvider implements ILocationProvider {
       clearInterval(this.timer);
       this.timer = null;
     }
-    this.setStatus("stopped");
+    this.setStatus('stopped');
   }
 
-  /**
-   * Toggle simulated GNSS outage (e.g. driving into a tunnel).
-   */
   public toggleOutageSimulation(): boolean {
     this.isGnssOutageSimulated = !this.isGnssOutageSimulated;
     if (this.isGnssOutageSimulated) {
-      this.setStatus("gnss_unavailable", "Simulated GNSS outage (Tunnel Mode)");
+      this.setStatus('gnss_unavailable', 'Simulated GNSS outage (Tunnel Mode)');
     } else {
-      this.setStatus("active");
+      this.setStatus('active');
     }
     return this.isGnssOutageSimulated;
   }
@@ -124,9 +111,7 @@ export class MockLocationProvider implements ILocationProvider {
 
   public addListener(listener: LocationListener): () => void {
     this.locationListeners.add(listener);
-    if (this.lastLocation) {
-      listener(this.lastLocation);
-    }
+    if (this.lastLocation) listener(this.lastLocation);
     return () => {
       this.locationListeners.delete(listener);
     };
@@ -141,28 +126,22 @@ export class MockLocationProvider implements ILocationProvider {
   }
 
   private tick(): void {
-    if (this.isGnssOutageSimulated) {
-      // In Phase 1 without IDR, if GNSS is lost, raw GNSS provider stops emitting valid fixes
-      return;
-    }
+    if (this.isGnssOutageSimulated) return;
 
     const currentWp = SAMPLE_ROUTE[this.routeIndex];
     const nextIndex = (this.routeIndex + 1) % SAMPLE_ROUTE.length;
     const nextWp = SAMPLE_ROUTE[nextIndex];
 
     const fraction = this.subStep / this.subStepsPerLeg;
-    const lat =
-      currentWp.latitude + (nextWp.latitude - currentWp.latitude) * fraction;
-    const lng =
-      currentWp.longitude + (nextWp.longitude - currentWp.longitude) * fraction;
-    const speed =
-      currentWp.speedMs + (nextWp.speedMs - currentWp.speedMs) * fraction;
+    const lat = currentWp.latitude + (nextWp.latitude - currentWp.latitude) * fraction;
+    const lng = currentWp.longitude + (nextWp.longitude - currentWp.longitude) * fraction;
+    const speed = currentWp.speedMs + (nextWp.speedMs - currentWp.speedMs) * fraction;
 
     const bearing = this.calculateBearing(
       currentWp.latitude,
       currentWp.longitude,
       nextWp.latitude,
-      nextWp.longitude,
+      nextWp.longitude
     );
 
     const location: NavLocation = {
@@ -173,7 +152,7 @@ export class MockLocationProvider implements ILocationProvider {
       heading: bearing,
       speed,
       timestamp: Date.now(),
-      providerType: "mock",
+      providerType: 'mock',
       isDeadReckoning: false,
     };
 
@@ -187,14 +166,9 @@ export class MockLocationProvider implements ILocationProvider {
     }
   }
 
-  private calculateBearing(
-    lat1: number,
-    lon1: number,
-    lat2: number,
-    lon2: number,
-  ): number {
-    const toRad = (deg: number) => (deg * Math.PI) / 180;
-    const toDeg = (rad: number) => (rad * 180) / Math.PI;
+  private calculateBearing(lat1: number, lon1: number, lat2: number, lon2: number): number {
+    const toRad = (d: number) => (d * Math.PI) / 180;
+    const toDeg = (r: number) => (r * 180) / Math.PI;
 
     const phi1 = toRad(lat1);
     const phi2 = toRad(lat2);

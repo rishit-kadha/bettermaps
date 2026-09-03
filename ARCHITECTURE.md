@@ -1,161 +1,179 @@
 # BetterMaps System Architecture
-
 ## SIH Problem Statement: "AI-ML based Intelligent Dead Reckoning System for Seamless Navigation"
 
 ---
 
-## 1. Architectural Philosophy
+## 1. Architectural Philosophy: React Native UI + Native Platform Adapters
 
-BetterMaps is engineered to deliver continuous, reliable vehicle positioning in GNSS-denied environments (tunnels, underground parking, dense urban canyons, dense tree cover) using smartphone inertial sensors (accelerometer, gyroscope, magnetometer) fused with GNSS.
+BetterMaps is architected around a strict separation between a **single cross-platform React Native application layer** and **pluggable platform-specific native adapters**.
 
-Rather than reinventing mapping or navigation graphics from scratch, BetterMaps pairs standard **Google Maps ecosystem** visualization with a **modular positioning engine abstraction**.
-
-The UI and camera management layers **never interact directly with device GPS hardware**. Instead, they receive positioning information exclusively through the `ILocationProvider` interface:
+The React Native presentation layer is treated as the **cross-platform navigation frontend** that will run on both **Android** and **iOS**, while native adapters provide sensor/location access, and the **IDR Core** serves as the portable navigation engine.
 
 ```
-+-----------------------------------------------------------------------------------+
-|                                 UI & Map Layer                                    |
-|   NavigationMap (Google Maps) | NavigationHUD (Telemetry) | NavigationControls     |
-+-----------------------------------------------------------------------------------+
-                                         ▲
-                                         │ Consumes NavLocation & State
-+-----------------------------------------------------------------------------------+
-|                              Navigation State Layer                               |
-|   NavigationManager (Heading smoothing, Camera follow modes, Trajectory history)  |
-+-----------------------------------------------------------------------------------+
-                                         ▲
-                                         │ Emits standard NavLocation stream
-+-----------------------------------------------------------------------------------+
-|                        Positioning Engine Abstraction                             |
-|                               ILocationProvider                                   |
-+-----------------------------------------------------------------------------------+
-                   ▲                                               ▲
-                   │                                               │
-+--------------------------------------+       +------------------------------------+
-|         GnssLocationProvider         |       |        MockLocationProvider        |
-|               (Phase 1)              |       |      (Phase 1 Dev & Testing)       |
-|  - Android Fused Location Provider   |       |  - Realistic city driving route    |
-|  - Fine GPS + Satellite tracking     |       |  - Tunnel / GNSS outage simulation |
-|  - Standard 1-2 Hz location fixes    |       |  - Decoupling validation           |
-+--------------------------------------+       +------------------------------------+
-                   ▲
-                   │ (Future Evolution)
-+-----------------------------------------------------------------------------------+
-|                             HybridIdrLocationProvider                             |
-|                                   (Phases 2 & 3)                                  |
-|  ┌─────────────────────────────────────────────────────────────────────────────┐  |
-|  │  1. High-Rate IMU Ingestion (Acc, Gyro, Mag @ 50-200 Hz via SensorManager)  │  |
-|  │  2. IMU Preprocessing: Noise filtering, vibration & pothole suppression     │  |
-|  │  3. Phone-to-Vehicle Attitude Estimation & Dynamic Alignment                │  |
-|  │  4. ML Forward Velocity Estimator (Trained on IO-VNBD dataset)              │  |
-|  │  5. INS Strapdown Mechanization (Attitude, Velocity, Position integration)  │  |
-|  │  6. Non-Holonomic Constraints (NHC) & Zero Velocity Updates (ZUPT)          │  |
-|  │  7. GNSS + INS Extended Kalman Filter (EKF) / Error-State Kalman Filter     │  |
-|  │  8. Map-Matching Drift Correction                                           │  |
-|  │  9. 10 Hz Unified Navigation State Output                                   │  |
-|  └─────────────────────────────────────────────────────────────────────────────┘  |
-+-----------------------------------------------------------------------------------+
+                    React Native App
+                         │
+          ┌──────────────┼──────────────┐
+          │              │              │
+          ▼              ▼              ▼
+        UI          Navigation      App State
+          │
+          ▼
+   Platform-neutral
+   interfaces / bridge
+          │
+    ┌─────┴─────┐
+    │           │
+    ▼           ▼
+ Android      iOS
+ Adapter      Adapter
+    │           │
+    ├── GNSS    ├── GNSS
+    ├── IMU     ├── IMU
+    ├── Gyro    ├── Gyro
+    ├── Mag     ├── Mag
+    └── IDR     └── IDR
 ```
+
+The React Native layer knows **only about interfaces and normalized data**, never Android `SensorEvent`, iOS `CMMotionManager`, or proprietary hardware primitives.
 
 ---
 
-## 2. Core Abstractions (`src/types/location.ts`)
+## 2. Location Architecture
 
-### `NavLocation`
+All positioning engines adhere to the platform-independent contract [`ILocationProvider`](file:///c:/Users/rkadh/OneDrive/Documents/GitHub/bettermaps/src/core/types/location.ts):
 
-All position fixes are normalized into `NavLocation`:
+```
+                    LocationProvider
+                           │
+              ┌────────────┴────────────┐
+              │                         │
+       Android adapter             iOS adapter
+              │                         │
+      Android Location APIs       Core Location
+```
 
+### Normalized Location State (`NavLocation`)
 ```typescript
 export interface NavLocation {
-  latitude: number; // WGS84 latitude
-  longitude: number; // WGS84 longitude
-  altitude?: number | null; // Altitude in meters
-  accuracy?: number | null; // Horizontal accuracy radius (meters)
-  heading?: number | null; // Heading / course (0-359.9 deg, 0 = True North)
-  speed?: number | null; // Speed over ground (m/s)
-  timestamp: number; // Epoch milliseconds
+  latitude: number;           // WGS84 latitude
+  longitude: number;          // WGS84 longitude
+  altitude?: number | null;   // Ellipsoid altitude (meters)
+  accuracy?: number | null;   // Horizontal accuracy radius (meters)
+  altitudeAccuracy?: number | null;
+  heading?: number | null;    // Course bearing (0-359.9 deg, 0 = True North)
+  speed?: number | null;      // Speed over ground (m/s)
+  timestamp: number;          // Fix timestamp (epoch ms)
   providerType: ProviderType; // 'gnss' | 'idr' | 'hybrid' | 'mock'
-  isDeadReckoning: boolean; // true when GNSS is lost & dead reckoning is active
+  isDeadReckoning: boolean;   // true during GNSS outages
 }
 ```
 
-### `ILocationProvider`
+### Implementations:
+- **Phase 1**: [`AndroidGnssLocationProvider`](file:///c:/Users/rkadh/OneDrive/Documents/GitHub/bettermaps/src/adapters/location/AndroidGnssLocationProvider.ts) (connects to Android `FusedLocationProviderClient`).
+- **Future iOS**: [`IosGnssLocationProvider`](file:///c:/Users/rkadh/OneDrive/Documents/GitHub/bettermaps/src/adapters/location/IosGnssLocationProvider.ts) (connects to iOS `CoreLocation`).
+- **Development/Testing**: [`MockLocationProvider`](file:///c:/Users/rkadh/OneDrive/Documents/GitHub/bettermaps/src/adapters/location/MockLocationProvider.ts) (simulates routes & GNSS dropouts).
+- **Future Fusion**: `AndroidHybridLocationProvider` / `IosHybridLocationProvider` (GNSS + IMU + IDR).
 
-The universal interface implemented by all positioning providers:
+---
 
+## 3. Sensor Architecture
+
+High-frequency IMU data is normalized across platforms:
+
+```
+React Native / IDR Core
+          │
+          ▼
+   ImuProvider interface
+          │
+    ┌─────┴─────┐
+    ▼           ▼
+ Android       iOS
+ Adapter     Adapter
+    │           │
+ Sensor       Core
+ Manager     Motion
+```
+
+### Normalized Representation ([`ImuSample`](file:///c:/Users/rkadh/OneDrive/Documents/GitHub/bettermaps/src/core/types/imu.ts))
 ```typescript
-export interface ILocationProvider {
-  readonly name: string;
-  readonly providerType: ProviderType;
+export interface Vector3D {
+  x: number;
+  y: number;
+  z: number;
+}
 
-  start(): Promise<void>;
-  stop(): Promise<void>;
-  getCurrentLocation(): Promise<NavLocation | null>;
-  getStatus(): ProviderStatus;
-  addListener(listener: LocationListener): () => void;
-  addStatusListener(listener: StatusListener): () => void;
+export interface ImuSample {
+  timestamp: number;          // Timestamp (monotonic ms)
+  accel: Vector3D;            // Linear acceleration (m/s^2)
+  gyro: Vector3D;             // Angular velocity (rad/s)
+  magnetometer?: Vector3D;    // Geomagnetic field (uT)
 }
 ```
 
----
-
-## 3. Phase 1 Implementation
-
-### `GnssLocationProvider`
-
-- Integrates with Android's `FusedLocationProviderClient` via `expo-location`.
-- Configured with `Accuracy.BestForNavigation` (uses GPS, GLONASS, Galileo, BeiDou, Wi-Fi, and cell assistance).
-- Handles permission acquisition (`ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`).
-- Detects whether device location services are toggled on.
-- Normalizes raw Android location updates into `NavLocation`.
-
-### `MockLocationProvider`
-
-- Provides realistic urban vehicle driving simulation with smooth waypoint interpolation, heading calculation, and variable speed profiles.
-- Features **Tunnel / GPS Outage Simulation**: toggling the outage causes GNSS loss, demonstrating how the UI and provider status react when satellites disappear.
-
-### `NavigationManager`
-
-- Manages the active provider lifecycle.
-- Manages map tracking modes:
-  - `follow_course`: Course-Up mode with 3D tilted camera (45° pitch) matching driving direction.
-  - `follow_north`: North-Up mode with top-down 2D camera.
-  - `free`: Unconstrained pan/zoom inspection. Automatically activates when the user touches the map.
-- Implements a circular exponential filter (`filterHeading`) for smooth heading rotation without snapping across the 0°/360° boundary.
-- Maintains a trajectory breadcrumb history trail.
-
-### UI Components
-
-- **`NavigationMap`**: Native Google Maps view (`react-native-maps`, `PROVIDER_GOOGLE`), animated camera synchronization, and route breadcrumb polyline.
-- **`VehiclePuck`**: Navigation puck displaying orientation chevron and pulse ring; changes color from Google Blue to Amber when in dead-reckoning state.
-- **`NavigationHUD`**: Real-time HUD showing speed (km/h), heading with cardinal notation (e.g., `042° NE`), accuracy radius, coordinate readout, and engine status badge.
-- **`NavigationControls`**: One-touch controls for tracking mode switching, camera recentering, and live GNSS vs simulation route selection.
+### Platform Adapters:
+- [`AndroidImuProvider`](file:///c:/Users/rkadh/OneDrive/Documents/GitHub/bettermaps/src/adapters/imu/AndroidImuProvider.ts): Ingests Android `SensorManager` events (`SENSOR_DELAY_FASTEST`) and normalizes to SI units.
+- [`IosImuProvider`](file:///c:/Users/rkadh/OneDrive/Documents/GitHub/bettermaps/src/adapters/imu/IosImuProvider.ts): Ingests Apple `CMMotionManager` events.
 
 ---
 
-## 4. Roadmap to Phase 2 & 3: Intelligent Dead Reckoning
+## 4. IDR Core Architecture
 
-### Phase 2: Sensor Ingestion & Kinematic Dead Reckoning
+The IDR positioning algorithm remains independent from both React Native and the mobile operating system:
 
-1. **High-Rate IMU Ingestion**:
-   - Access `SensorManager` on Android for Accelerometer, Gyroscope, and Magnetometer at 50 Hz – 100 Hz.
-2. **Attitude and Heading Reference System (AHRS)**:
-   - Quaternion-based complementary filter or Madgwick/Mahony filter to estimate device orientation relative to the vehicle coordinate frame.
-3. **Gravity Removal & Vibration Suppression**:
-   - Bandpass / Butterworth filtering to suppress engine vibrations, road noise, potholes, and speed bumps.
-4. **Basic Kinematic Dead Reckoning**:
-   - Integrate longitudinal acceleration with Non-Holonomic Constraints (NHC) assuming zero lateral slip for ground vehicles.
+```
+Android native adapter ─┐
+                        │
+iOS native adapter ─────┼──► IDR Core
+                        │
+External IMU adapter ───┤
+                        │
+IO-VNBD adapter ────────┘
+```
 
-### Phase 3: AI/ML Forward Velocity & Fusion (IO-VNBD Dataset)
+The IDR Core contains:
+1. **Sensor Preprocessing**: High-pass & low-pass filtering to suppress engine vibrations, road noise, potholes, and bumps.
+2. **Calibration**: Online bias tracking for accelerometer and gyroscope.
+3. **Phone-to-Vehicle Alignment**: Dynamic attitude estimation (Madgwick/Mahony AHRS / rotation quaternion) to map phone axes to vehicle frame.
+4. **ML Forward Velocity Estimator**: Lightweight 1D-CNN / GRU trained on the [IO-VNBD dataset](https://github.com/onyekpeu/IO-VNBD).
+5. **INS Strapdown Propagation**: Numerical integration of attitude, velocity, and position.
+6. **Vehicle Kinematic Constraints**: Non-Holonomic Constraints (NHC) enforcing zero lateral/vertical slip, and Zero Velocity Updates (ZUPT).
+7. **GNSS + INS Fusion**: Error-State Kalman Filter (ESKF) running continuous calibration during GNSS lock and dead reckoning during outages.
+8. **Map Matching**: Projects estimated trajectory onto road network geometries to eliminate drift.
 
-1. **IO-VNBD Model**:
-   - Train a lightweight 1D-CNN or GRU model on the [IO-VNBD](https://github.com/onyekpeu/IO-VNBD) (Inertial and Odometry Benchmark Dataset for Ground Vehicle Positioning) to estimate instantaneous forward vehicle speed from raw IMU windows.
-2. **Edge Deployment**:
-   - Quantize model to TFLite / ONNX Runtime Mobile for sub-5ms inference on budget Android smartphones.
-3. **Error-State Kalman Filter (ESKF)**:
-   - When GNSS is available: Fuse GNSS + IMU to continuously calibrate accelerometer/gyroscope biases and phone-to-vehicle alignment.
-   - When GNSS is lost: Transition seamlessly to Dead Reckoning using ML forward velocity + gyro heading + NHC.
-   - When GNSS returns: Seamlessly re-converge position and update filter covariance without trajectory jumping.
-4. **Integration**:
-   - Wrap the entire pipeline in `HybridIdrLocationProvider` implementing `ILocationProvider`.
-   - The UI continues to run completely unmodified!
+---
+
+## 5. Map & Presentation Layer Architecture
+
+The complete presentation layer is implemented in React Native with clean isolation:
+
+```
+React Native App (App.tsx)
+│
+├── Map Screen (MapContainer.tsx: isolates Google Maps specifics)
+│     └── Vehicle Marker (VehicleMarker.tsx: heading-aware chevron)
+├── Navigation HUD (NavigationHUD.tsx: floating compass, recenter FAB, speedometer)
+├── Diagnostics Panel (DiagnosticsPanel.tsx: live Hz, accuracy, lat/lon)
+└── Navigation State (NavigationManager.ts: circular heading filter, update rate)
+        │
+        ▼
+   LocationProvider (ILocationProvider)
+        │
+        ▼
+Platform Adapter (AndroidGnssLocationProvider)
+```
+
+Google Maps-specific logic is entirely contained inside [`MapContainer.tsx`](file:///c:/Users/rkadh/OneDrive/Documents/GitHub/bettermaps/src/components/map/MapContainer.tsx). The rest of the application interacts with map states via generic props.
+
+---
+
+## 6. Phase 1 Implementation Status
+
+- [x] **React Native Navigation UI**: Clean driving navigation interface with 100% map viewport.
+- [x] **Android Native Location Adapter**: [`AndroidGnssLocationProvider`](file:///c:/Users/rkadh/OneDrive/Documents/GitHub/bettermaps/src/adapters/location/AndroidGnssLocationProvider.ts) streaming fine GPS fixes.
+- [x] **Normalized Location State**: Emits unified `NavLocation` fixes.
+- [x] **Real-Time Update Frequency**: Dynamic calculation of approximate Hz.
+- [x] **Heading-Aware Puck**: Directional chevron when vehicle is in motion; stationary circle when stopped.
+- [x] **Navigation Camera**: Course-Up (3D perspective @ 45° tilt) and North-Up (2D top-down) with manual pan release and Recenter FAB.
+- [x] **Cross-Platform Sensor Interfaces**: [`ImuSample`](file:///c:/Users/rkadh/OneDrive/Documents/GitHub/bettermaps/src/core/types/imu.ts) and [`IImuProvider`](file:///c:/Users/rkadh/OneDrive/Documents/GitHub/bettermaps/src/core/types/imu.ts) defined for Phase 2.
+- [x] **IDR Core Specification**: Documented in [`src/idr/README.md`](file:///c:/Users/rkadh/OneDrive/Documents/GitHub/bettermaps/src/idr/README.md).

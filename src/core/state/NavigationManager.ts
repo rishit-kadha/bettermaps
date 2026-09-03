@@ -1,29 +1,27 @@
-import { AvailableProviderId, providerRegistry } from "../providers";
+import { AvailableProviderId, providerRegistry } from '../../adapters/location';
 import {
   ILocationProvider,
-  LocationListener,
-  NavigationMode,
-  NavigationTelemetry,
   NavLocation,
   ProviderStatus,
-  ProviderType,
-  StatusListener,
-} from "../types/location";
+} from '../types/location';
+import { NavigationMode, NavigationTelemetry } from '../types/navigation';
 
 export type TelemetryListener = (telemetry: NavigationTelemetry) => void;
 
 /**
  * NavigationManager
  *
- * Coordinates between the active LocationProvider and the UI layer.
- * Maintains navigation state, filters heading/bearing for smooth UI rotation,
- * and maintains vehicle trajectory breadcrumbs.
+ * Core shared navigation state coordinator.
+ * Maintains positioning history, calculates real-time update rate (Hz),
+ * performs circular heading filtering, and orchestrates camera tracking modes.
  */
 export class NavigationManager {
   private activeProvider: ILocationProvider;
-  private currentMode: NavigationMode = "follow_course";
+  private currentMode: NavigationMode = 'follow_course';
   private currentLocation: NavLocation | null = null;
   private smoothedHeading = 0;
+  private isHeadingReliable = false;
+  private updateTimestamps: number[] = [];
   private historyTrail: { latitude: number; longitude: number }[] = [];
   private readonly maxTrailPoints = 100;
 
@@ -32,17 +30,16 @@ export class NavigationManager {
 
   private telemetryListeners = new Set<TelemetryListener>();
 
-  private updateTimestamps: number[] = [];
-  private isHeadingReliable = false;
-
   constructor() {
-    // Default to GNSS provider for Phase 1
-    this.activeProvider = providerRegistry.getGnssProvider();
+    // Default to platform-native GNSS adapter (AndroidGnssLocationProvider on Android)
+    this.activeProvider = providerRegistry.getNativeGnssProvider();
   }
 
   public async requestPermissions(): Promise<boolean> {
-    const gnss = providerRegistry.getGnssProvider();
-    return await gnss.requestPermissions();
+    if (this.activeProvider.requestPermissions) {
+      return await this.activeProvider.requestPermissions();
+    }
+    return true;
   }
 
   public async start(): Promise<void> {
@@ -76,18 +73,18 @@ export class NavigationManager {
   }
 
   public toggleNavigationMode(): NavigationMode {
-    if (this.currentMode === "follow_course") {
-      this.setNavigationMode("follow_north");
-    } else if (this.currentMode === "follow_north") {
-      this.setNavigationMode("free");
+    if (this.currentMode === 'follow_course') {
+      this.setNavigationMode('follow_north');
+    } else if (this.currentMode === 'follow_north') {
+      this.setNavigationMode('free');
     } else {
-      this.setNavigationMode("follow_course");
+      this.setNavigationMode('follow_course');
     }
     return this.currentMode;
   }
 
   public recenter(): void {
-    this.setNavigationMode("follow_course");
+    this.setNavigationMode('follow_course');
   }
 
   public getTelemetry(): NavigationTelemetry {
@@ -130,7 +127,7 @@ export class NavigationManager {
       this.onLocationUpdate(location);
     });
 
-    this.unsubStatus = provider.addStatusListener((status: ProviderStatus) => {
+    this.unsubStatus = provider.addStatusListener((_status: ProviderStatus) => {
       this.broadcastTelemetry();
     });
   }
@@ -146,35 +143,24 @@ export class NavigationManager {
     }
 
     // Determine heading reliability
-    // In ground vehicle navigation, GPS course is reliable when vehicle has positive velocity (>0.5 m/s)
-    // or when simulated
     const speedMs = location.speed ?? 0;
     const hasValidHeading =
       location.heading !== null &&
       location.heading !== undefined &&
       location.heading >= 0;
 
-    if (
-      hasValidHeading &&
-      (speedMs >= 0.5 || location.providerType === "mock")
-    ) {
+    if (hasValidHeading && (speedMs >= 0.5 || location.providerType === 'mock')) {
       this.isHeadingReliable = true;
-      this.smoothedHeading = this.filterHeading(
-        this.smoothedHeading,
-        location.heading!,
-      );
+      this.smoothedHeading = this.filterHeading(this.smoothedHeading, location.heading!);
     } else if (hasValidHeading) {
-      // Stationary: retain orientation without erratic jumps
+      // Vehicle is stationary: retain orientation without noisy spinning
       this.isHeadingReliable = false;
     } else {
       this.isHeadingReliable = false;
     }
 
     // Append to breadcrumb history trail
-    const newPoint = {
-      latitude: location.latitude,
-      longitude: location.longitude,
-    };
+    const newPoint = { latitude: location.latitude, longitude: location.longitude };
     this.historyTrail.push(newPoint);
     if (this.historyTrail.length > this.maxTrailPoints) {
       this.historyTrail.shift();
@@ -184,42 +170,32 @@ export class NavigationManager {
   }
 
   /**
-   * Calculate rolling update frequency in Hz.
+   * Rolling frequency calculation in approximate Hz.
    */
   private calculateUpdateFrequencyHz(): number {
-    if (this.updateTimestamps.length < 2) {
-      return 0;
-    }
+    if (this.updateTimestamps.length < 2) return 0;
 
     const newest = this.updateTimestamps[this.updateTimestamps.length - 1];
     const oldest = this.updateTimestamps[0];
     const timeSpanSec = (newest - oldest) / 1000;
 
-    // If no fix has arrived in over 4 seconds, rate is 0 Hz
-    if (Date.now() - newest > 4000) {
-      return 0;
-    }
-
-    if (timeSpanSec <= 0) {
-      return 0;
-    }
+    if (Date.now() - newest > 4000) return 0;
+    if (timeSpanSec <= 0) return 0;
 
     const hz = (this.updateTimestamps.length - 1) / timeSpanSec;
-    return Math.round(hz * 10) / 10; // 1 decimal place (e.g., 1.0 or 2.1)
+    return Math.round(hz * 10) / 10;
   }
 
   /**
-   * Exponential moving average with circular angle difference.
+   * Circular exponential moving average avoiding 0/360 boundary discontinuities.
    */
   private filterHeading(current: number, target: number): number {
     let diff = (target - current) % 360;
     if (diff < -180) diff += 360;
     if (diff > 180) diff -= 360;
 
-    // Alpha = 0.35 gives responsive yet stable orientation
     const alpha = 0.35;
-    const next = (current + diff * alpha + 360) % 360;
-    return next;
+    return (current + diff * alpha + 360) % 360;
   }
 
   private broadcastTelemetry(): void {

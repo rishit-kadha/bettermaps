@@ -38,19 +38,20 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     predictiveBackGestureEnabled: false,
   },
   plugins: [
-    'expo-dev-client',
-    'expo-font',
+    "expo-dev-client",
+    "expo-font",
     [
-      'expo-location',
+      "expo-location",
       {
         locationAlwaysAndWhenInUsePermission:
-          'Allow BetterMaps to access your location to navigate and track positioning.',
+          "Allow BetterMaps to access your location to navigate and track positioning.",
       },
     ],
     [
-      'react-native-maps',
+      "react-native-maps",
       {
-        androidGoogleMapsApiKey: process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY || '',
+        androidGoogleMapsApiKey:
+          process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY || "",
       },
     ],
   ],

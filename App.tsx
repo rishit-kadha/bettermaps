@@ -2,12 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { DiagnosticsPanel } from './src/components/DiagnosticsPanel';
-import { NavigationHUD } from './src/components/NavigationHUD';
-import { NavigationMap } from './src/components/NavigationMap';
-import { AvailableProviderId } from './src/providers';
-import { navigationManager } from './src/services/NavigationManager';
-import { NavigationTelemetry } from './src/types/location';
+import { AvailableProviderId } from './src/adapters/location';
+import { MapContainer } from './src/components/map/MapContainer';
+import { DiagnosticsPanel } from './src/components/ui/DiagnosticsPanel';
+import { NavigationHUD } from './src/components/ui/NavigationHUD';
+import { navigationManager } from './src/core/state/NavigationManager';
+import { NavigationTelemetry } from './src/core/types/navigation';
 
 export default function App() {
   const [telemetry, setTelemetry] = useState<NavigationTelemetry>(() =>
@@ -16,12 +16,12 @@ export default function App() {
   const [diagnosticsOpen, setDiagnosticsOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    // 1. Subscribe to navigation telemetry stream
+    // 1. Subscribe to shared navigation state stream
     const unsubscribe = navigationManager.subscribeTelemetry((updatedTelemetry) => {
       setTelemetry(updatedTelemetry);
     });
 
-    // 2. Start positioning engine
+    // 2. Start platform location engine
     navigationManager.start().catch((err) => {
       console.error('Failed to start navigation engine:', err);
     });
@@ -34,7 +34,7 @@ export default function App() {
 
   const handleSwitchProvider = async () => {
     const nextId: AvailableProviderId =
-      telemetry.providerType === 'gnss' ? 'mock' : 'gnss';
+      telemetry.providerType === 'gnss' ? 'mock' : 'native_gnss';
     await navigationManager.switchProvider(nextId);
   };
 
@@ -65,10 +65,18 @@ export default function App() {
       <View style={styles.container}>
         <StatusBar style="dark" />
 
-        {/* 1. Map Layer: Google Maps + Dynamic Vehicle Puck + Breadcrumbs */}
-        <NavigationMap telemetry={telemetry} onUserPan={handleUserPan} />
+        {/* 1. Map Layer: Isolated MapContainer abstraction (Google Maps, custom puck, breadcrumbs) */}
+        <MapContainer
+          location={telemetry.currentLocation}
+          heading={telemetry.smoothedHeading}
+          isHeadingReliable={telemetry.isHeadingReliable}
+          mode={telemetry.mode}
+          isDeadReckoning={telemetry.isDeadReckoning}
+          historyTrail={telemetry.historyTrail}
+          onUserPan={handleUserPan}
+        />
 
-        {/* 2. Navigation HUD: Top status bar, floating compass, recenter FAB, bottom telemetry dock */}
+        {/* 2. Navigation HUD: Top status pill, floating compass, recenter FAB, bottom telemetry dock */}
         <NavigationHUD
           telemetry={telemetry}
           diagnosticsOpen={diagnosticsOpen}
@@ -79,7 +87,7 @@ export default function App() {
           onSwitchProvider={handleSwitchProvider}
         />
 
-        {/* 3. GNSS Diagnostics Panel: Real-time update frequency (Hz), coordinates, provider health */}
+        {/* 3. GNSS Diagnostics Panel: Live update frequency (approx Hz), coordinates, provider health */}
         <DiagnosticsPanel
           telemetry={telemetry}
           visible={diagnosticsOpen}

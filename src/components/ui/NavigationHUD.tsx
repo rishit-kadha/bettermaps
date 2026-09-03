@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { NavigationMode, NavigationTelemetry } from '../types/location';
+import { NavigationTelemetry } from '../../core/types/navigation';
 
 interface NavigationHUDProps {
   telemetry: NavigationTelemetry;
@@ -13,9 +13,8 @@ interface NavigationHUDProps {
 }
 
 /**
- * Clean, modern navigation overlay.
- * Follows contemporary navigation UI conventions without copying proprietary assets.
- * Maximizes map viewport while providing immediate access to status, recenter,
+ * Modern Google Maps-style Navigation HUD.
+ * Maximizes map area while providing immediate access to status, recenter,
  * compass, and live telemetry.
  */
 export const NavigationHUD: React.FC<NavigationHUDProps> = ({
@@ -36,7 +35,6 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
     mode,
     providerStatus,
     providerType,
-    isDeadReckoning,
   } = telemetry;
 
   const isFreeMode = mode === 'free';
@@ -44,18 +42,18 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
   const getStatusBadge = () => {
     switch (providerStatus) {
       case 'permission_denied':
-        return { text: 'NO PERMISSION', dotColor: '#EA4335', bg: '#FFFFFF' };
+        return { text: 'NO PERMISSION', dotColor: '#EA4335' };
       case 'gnss_unavailable':
-        return { text: 'GPS DISABLED', dotColor: '#E37400', bg: '#FFFFFF' };
+        return { text: 'GPS DISABLED', dotColor: '#E37400' };
       case 'initializing':
-        return { text: 'ACQUIRING GNSS...', dotColor: '#FBBC04', bg: '#FFFFFF' };
+        return { text: 'ACQUIRING GNSS...', dotColor: '#FBBC04' };
       case 'error':
-        return { text: 'GNSS ERROR', dotColor: '#EA4335', bg: '#FFFFFF' };
+        return { text: 'GNSS ERROR', dotColor: '#EA4335' };
       default:
         if (providerType === 'mock') {
-          return { text: 'SIMULATOR', dotColor: '#9334E6', bg: '#FFFFFF' };
+          return { text: 'SIMULATOR', dotColor: '#9334E6' };
         }
-        return { text: 'GNSS 3D FIX', dotColor: '#137333', bg: '#FFFFFF' };
+        return { text: 'GNSS 3D FIX', dotColor: '#137333' };
     }
   };
 
@@ -73,7 +71,7 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
 
   return (
     <View pointerEvents="box-none" style={styles.container}>
-      {/* Top Floating Controls */}
+      {/* Top Floating Bar */}
       <View pointerEvents="box-none" style={styles.topRow}>
         {/* Status Indicator Pill */}
         <View style={styles.statusPill}>
@@ -84,7 +82,7 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
           )}
         </View>
 
-        {/* Action Pills (Diagnostics & Mode Switcher) */}
+        {/* Action Pills (Diagnostics & Mode Toggle) */}
         <View style={styles.topActions}>
           <TouchableOpacity
             style={[styles.actionPill, diagnosticsOpen && styles.actionPillActive]}
@@ -102,7 +100,7 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
             activeOpacity={0.8}
           >
             <Text style={styles.actionPillText}>
-              {providerType === 'gnss' ? 'Mode: GNSS' : 'Mode: Sim'}
+              {providerType === 'gnss' ? 'Live GNSS' : 'Simulator'}
             </Text>
           </TouchableOpacity>
         </View>
@@ -114,7 +112,7 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
           <View style={styles.warningContent}>
             <Text style={styles.warningTitle}>Location Permission Required</Text>
             <Text style={styles.warningSubtitle}>
-              BetterMaps needs location access to navigate and track vehicle position.
+              BetterMaps requires fine location access to track your vehicle position.
             </Text>
           </View>
           <TouchableOpacity
@@ -133,15 +131,15 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
           <View style={styles.warningContent}>
             <Text style={styles.warningTitle}>Location Services Disabled</Text>
             <Text style={styles.warningSubtitle}>
-              Please enable GPS / Location in your Android device settings.
+              Please turn on GPS / Location in your Android device settings.
             </Text>
           </View>
         </View>
       )}
 
-      {/* Right Floating Quick Controls (Compass & Recenter) */}
+      {/* Floating Action Buttons (Compass & Recenter) */}
       <View pointerEvents="box-none" style={styles.floatingRightGroup}>
-        {/* Compass Button */}
+        {/* Compass Needle Button */}
         <TouchableOpacity
           style={styles.circleFab}
           onPress={onToggleCompass}
@@ -162,7 +160,7 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
           </View>
         </TouchableOpacity>
 
-        {/* Recenter Button */}
+        {/* Recenter FAB */}
         <TouchableOpacity
           style={[
             styles.circleFab,
@@ -191,7 +189,7 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
       {/* Bottom Telemetry Dock */}
       <View style={styles.bottomDock}>
         <View style={styles.telemetryCard}>
-          {/* Speed Indicator */}
+          {/* Speed */}
           <View style={styles.statCol}>
             <View style={styles.speedRow}>
               <Text style={styles.speedNum}>{speedKmh}</Text>
@@ -202,7 +200,7 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
 
           <View style={styles.vertDivider} />
 
-          {/* Bearing & Cardinal Direction */}
+          {/* Heading */}
           <View style={styles.statCol}>
             <View style={styles.headingRow}>
               <Text style={styles.headingNum}>{smoothedHeading}°</Text>
@@ -215,7 +213,7 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
 
           <View style={styles.vertDivider} />
 
-          {/* GPS Accuracy */}
+          {/* Accuracy */}
           <View style={styles.statCol}>
             <Text style={styles.accuracyNum}>{accuracyText}</Text>
             <Text style={styles.statLabel}>ACCURACY</Text>
@@ -449,7 +447,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 10,
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
-    borderBottomColor: '#EA4335', // Red north
+    borderBottomColor: '#EA4335',
   },
   compassSouth: {
     width: 0,
@@ -459,7 +457,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 10,
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
-    borderTopColor: '#80868B', // Grey south
+    borderTopColor: '#80868B',
   },
   bottomDock: {
     marginBottom: 10,
