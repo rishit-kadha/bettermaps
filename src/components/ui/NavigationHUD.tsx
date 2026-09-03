@@ -1,6 +1,6 @@
-import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { NavigationTelemetry } from '../../core/types/navigation';
+import React from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { NavigationTelemetry } from "../../core/types/navigation";
 
 interface NavigationHUDProps {
   telemetry: NavigationTelemetry;
@@ -37,37 +37,38 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
     providerType,
   } = telemetry;
 
-  const isFreeMode = mode === 'free';
+  const isFreeMode = mode === "free";
 
   const getStatusBadge = () => {
     switch (providerStatus) {
-      case 'permission_denied':
-        return { text: 'NO PERMISSION', dotColor: '#EA4335' };
-      case 'gnss_unavailable':
-        return { text: 'GPS DISABLED', dotColor: '#E37400' };
-      case 'initializing':
-        return { text: 'ACQUIRING GNSS...', dotColor: '#FBBC04' };
-      case 'error':
-        return { text: 'GNSS ERROR', dotColor: '#EA4335' };
+      case "permission_denied":
+        return { text: "NO PERMISSION", dotColor: "#EA4335" };
+      case "gnss_unavailable":
+        return { text: "GPS DISABLED", dotColor: "#E37400" };
+      case "initializing":
+        return { text: "ACQUIRING GNSS...", dotColor: "#FBBC04" };
+      case "error":
+        return { text: "GNSS ERROR", dotColor: "#EA4335" };
       default:
-        if (providerType === 'mock') {
-          return { text: 'SIMULATOR', dotColor: '#9334E6' };
+        if (providerType === "mock") {
+          return { text: "SIMULATOR", dotColor: "#9334E6" };
         }
-        return { text: 'GNSS 3D FIX', dotColor: '#137333' };
+        return { text: "GNSS 3D FIX", dotColor: "#137333" };
     }
   };
 
   const getCardinal = (deg: number): string => {
-    const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+    const directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
     const index = Math.round(deg / 45) % 8;
     return directions[index];
   };
 
   const badge = getStatusBadge();
   const accuracyText =
-    currentLocation?.accuracy !== null && currentLocation?.accuracy !== undefined
+    currentLocation?.accuracy !== null &&
+    currentLocation?.accuracy !== undefined
       ? `±${currentLocation.accuracy.toFixed(1)}m`
-      : '--';
+      : "--";
 
   return (
     <View pointerEvents="box-none" style={styles.container}>
@@ -75,7 +76,9 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
       <View pointerEvents="box-none" style={styles.topRow}>
         {/* Status Indicator Pill */}
         <View style={styles.statusPill}>
-          <View style={[styles.statusDot, { backgroundColor: badge.dotColor }]} />
+          <View
+            style={[styles.statusDot, { backgroundColor: badge.dotColor }]}
+          />
           <Text style={styles.statusLabel}>{badge.text}</Text>
           {updateFrequencyHz > 0 && (
             <Text style={styles.hzTag}>{updateFrequencyHz.toFixed(1)}Hz</Text>
@@ -85,12 +88,20 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
         {/* Action Pills (Diagnostics & Mode Toggle) */}
         <View style={styles.topActions}>
           <TouchableOpacity
-            style={[styles.actionPill, diagnosticsOpen && styles.actionPillActive]}
+            style={[
+              styles.actionPill,
+              diagnosticsOpen && styles.actionPillActive,
+            ]}
             onPress={onToggleDiagnostics}
             activeOpacity={0.8}
           >
-            <Text style={[styles.actionPillText, diagnosticsOpen && styles.actionPillTextActive]}>
-              {diagnosticsOpen ? 'Close Stats' : 'Diagnostics'}
+            <Text
+              style={[
+                styles.actionPillText,
+                diagnosticsOpen && styles.actionPillTextActive,
+              ]}
+            >
+              {diagnosticsOpen ? "Close Stats" : "Diagnostics"}
             </Text>
           </TouchableOpacity>
 
@@ -100,19 +111,22 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
             activeOpacity={0.8}
           >
             <Text style={styles.actionPillText}>
-              {providerType === 'gnss' ? 'Live GNSS' : 'Simulator'}
+              {providerType === "gnss" ? "Live GNSS" : "Simulator"}
             </Text>
           </TouchableOpacity>
         </View>
       </View>
 
       {/* Permission Warning Banner (if permission denied) */}
-      {providerStatus === 'permission_denied' && (
+      {providerStatus === "permission_denied" && (
         <View style={styles.warningBanner}>
           <View style={styles.warningContent}>
-            <Text style={styles.warningTitle}>Location Permission Required</Text>
+            <Text style={styles.warningTitle}>
+              Location Permission Required
+            </Text>
             <Text style={styles.warningSubtitle}>
-              BetterMaps requires fine location access to track your vehicle position.
+              BetterMaps requires fine location access to track your vehicle
+              position.
             </Text>
           </View>
           <TouchableOpacity
@@ -126,7 +140,7 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
       )}
 
       {/* GPS Disabled Warning Banner */}
-      {providerStatus === 'gnss_unavailable' && (
+      {providerStatus === "gnss_unavailable" && (
         <View style={styles.warningBanner}>
           <View style={styles.warningContent}>
             <Text style={styles.warningTitle}>Location Services Disabled</Text>
@@ -150,7 +164,9 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
               styles.compassNeedleContainer,
               {
                 transform: [
-                  { rotate: `${mode === 'follow_course' ? 0 : 360 - smoothedHeading}deg` },
+                  {
+                    rotate: `${mode === "follow_course" ? 0 : 360 - smoothedHeading}deg`,
+                  },
                 ],
               },
             ]}
@@ -204,10 +220,12 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
           <View style={styles.statCol}>
             <View style={styles.headingRow}>
               <Text style={styles.headingNum}>{smoothedHeading}°</Text>
-              <Text style={styles.cardinalTag}>{getCardinal(smoothedHeading)}</Text>
+              <Text style={styles.cardinalTag}>
+                {getCardinal(smoothedHeading)}
+              </Text>
             </View>
             <Text style={styles.statLabel}>
-              {isHeadingReliable ? 'COURSE HEADING' : 'BEARING'}
+              {isHeadingReliable ? "COURSE HEADING" : "BEARING"}
             </Text>
           </View>
 
@@ -226,34 +244,34 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     padding: 16,
   },
   topRow: {
     marginTop: 36,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   statusPill: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF',
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
     paddingHorizontal: 12,
     paddingVertical: 7,
     borderRadius: 20,
     elevation: 4,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOpacity: 0.15,
     shadowRadius: 5,
     shadowOffset: { width: 0, height: 2 },
     borderWidth: 1,
-    borderColor: '#ECEFF1',
+    borderColor: "#ECEFF1",
   },
   statusDot: {
     width: 8,
@@ -263,64 +281,64 @@ const styles = StyleSheet.create({
   },
   statusLabel: {
     fontSize: 11,
-    fontWeight: '700',
-    color: '#3C4043',
+    fontWeight: "700",
+    color: "#3C4043",
     letterSpacing: 0.4,
   },
   hzTag: {
     fontSize: 10,
-    fontWeight: '700',
-    color: '#137333',
-    backgroundColor: '#E6F4EA',
+    fontWeight: "700",
+    color: "#137333",
+    backgroundColor: "#E6F4EA",
     paddingHorizontal: 5,
     paddingVertical: 1.5,
     borderRadius: 6,
     marginLeft: 6,
   },
   topActions: {
-    flexDirection: 'row',
+    flexDirection: "row",
     gap: 8,
   },
   actionPill: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: "#FFFFFF",
     paddingHorizontal: 12,
     paddingVertical: 7,
     borderRadius: 20,
     elevation: 4,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOpacity: 0.15,
     shadowRadius: 5,
     shadowOffset: { width: 0, height: 2 },
     borderWidth: 1,
-    borderColor: '#ECEFF1',
+    borderColor: "#ECEFF1",
   },
   actionPillActive: {
-    backgroundColor: '#1A73E8',
-    borderColor: '#185ABC',
+    backgroundColor: "#1A73E8",
+    borderColor: "#185ABC",
   },
   actionPillText: {
     fontSize: 11,
-    fontWeight: '700',
-    color: '#3C4043',
+    fontWeight: "700",
+    color: "#3C4043",
   },
   actionPillTextActive: {
-    color: '#FFFFFF',
+    color: "#FFFFFF",
   },
   warningBanner: {
-    position: 'absolute',
+    position: "absolute",
     top: 90,
     left: 16,
     right: 16,
-    backgroundColor: '#FEF7E0',
+    backgroundColor: "#FEF7E0",
     borderWidth: 1,
-    borderColor: '#FEEFC3',
+    borderColor: "#FEEFC3",
     borderRadius: 12,
     padding: 12,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     elevation: 6,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOpacity: 0.15,
     shadowRadius: 6,
     shadowOffset: { width: 0, height: 3 },
@@ -331,113 +349,113 @@ const styles = StyleSheet.create({
   },
   warningTitle: {
     fontSize: 13,
-    fontWeight: '700',
-    color: '#B06000',
+    fontWeight: "700",
+    color: "#B06000",
   },
   warningSubtitle: {
     fontSize: 11,
-    color: '#5F6368',
+    color: "#5F6368",
     marginTop: 2,
   },
   grantButton: {
-    backgroundColor: '#1A73E8',
+    backgroundColor: "#1A73E8",
     paddingHorizontal: 14,
     paddingVertical: 7,
     borderRadius: 8,
   },
   grantButtonText: {
-    color: '#FFFFFF',
+    color: "#FFFFFF",
     fontSize: 12,
-    fontWeight: '700',
+    fontWeight: "700",
   },
   floatingRightGroup: {
-    position: 'absolute',
+    position: "absolute",
     right: 16,
     bottom: 120,
-    alignItems: 'flex-end',
+    alignItems: "flex-end",
     gap: 12,
   },
   circleFab: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: "#FFFFFF",
     borderRadius: 24,
     minWidth: 48,
     height: 48,
     paddingHorizontal: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     elevation: 5,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOpacity: 0.2,
     shadowRadius: 6,
     shadowOffset: { width: 0, height: 3 },
     borderWidth: 1,
-    borderColor: '#ECEFF1',
+    borderColor: "#ECEFF1",
   },
   recenterActiveFab: {
-    backgroundColor: '#1A73E8',
-    borderColor: '#185ABC',
-    flexDirection: 'row',
+    backgroundColor: "#1A73E8",
+    borderColor: "#185ABC",
+    flexDirection: "row",
     paddingHorizontal: 14,
   },
   recenterLockedFab: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: "#FFFFFF",
   },
   recenterInner: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: 6,
   },
   recenterText: {
-    color: '#FFFFFF',
+    color: "#FFFFFF",
     fontSize: 12,
-    fontWeight: '700',
+    fontWeight: "700",
   },
   recenterIconFreeOuter: {
     width: 14,
     height: 14,
     borderRadius: 7,
     borderWidth: 2,
-    borderColor: '#FFFFFF',
-    alignItems: 'center',
-    justifyContent: 'center',
+    borderColor: "#FFFFFF",
+    alignItems: "center",
+    justifyContent: "center",
   },
   recenterIconFreeInner: {
     width: 6,
     height: 6,
     borderRadius: 3,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: "#FFFFFF",
   },
   recenterIconLocked: {
     width: 22,
     height: 22,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   crosshairH: {
-    position: 'absolute',
+    position: "absolute",
     width: 16,
     height: 2,
-    backgroundColor: '#1A73E8',
+    backgroundColor: "#1A73E8",
   },
   crosshairV: {
-    position: 'absolute',
+    position: "absolute",
     width: 2,
     height: 16,
-    backgroundColor: '#1A73E8',
+    backgroundColor: "#1A73E8",
   },
   crosshairCenterDot: {
     width: 8,
     height: 8,
     borderRadius: 4,
     borderWidth: 2,
-    borderColor: '#1A73E8',
-    backgroundColor: '#FFFFFF',
+    borderColor: "#1A73E8",
+    backgroundColor: "#FFFFFF",
   },
   compassNeedleContainer: {
     width: 24,
     height: 24,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   compassNorth: {
     width: 0,
@@ -445,9 +463,9 @@ const styles = StyleSheet.create({
     borderLeftWidth: 4,
     borderRightWidth: 4,
     borderBottomWidth: 10,
-    borderLeftColor: 'transparent',
-    borderRightColor: 'transparent',
-    borderBottomColor: '#EA4335',
+    borderLeftColor: "transparent",
+    borderRightColor: "transparent",
+    borderBottomColor: "#EA4335",
   },
   compassSouth: {
     width: 0,
@@ -455,77 +473,77 @@ const styles = StyleSheet.create({
     borderLeftWidth: 4,
     borderRightWidth: 4,
     borderTopWidth: 10,
-    borderLeftColor: 'transparent',
-    borderRightColor: 'transparent',
-    borderTopColor: '#80868B',
+    borderLeftColor: "transparent",
+    borderRightColor: "transparent",
+    borderTopColor: "#80868B",
   },
   bottomDock: {
     marginBottom: 10,
   },
   telemetryCard: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: "#FFFFFF",
     borderRadius: 16,
     paddingVertical: 14,
     paddingHorizontal: 16,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
     elevation: 6,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOpacity: 0.18,
     shadowRadius: 8,
     shadowOffset: { width: 0, height: 4 },
     borderWidth: 1,
-    borderColor: '#ECEFF1',
+    borderColor: "#ECEFF1",
   },
   statCol: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: "center",
   },
   vertDivider: {
     width: 1,
     height: 36,
-    backgroundColor: '#ECEFF1',
+    backgroundColor: "#ECEFF1",
   },
   speedRow: {
-    flexDirection: 'row',
-    alignItems: 'baseline',
+    flexDirection: "row",
+    alignItems: "baseline",
   },
   speedNum: {
     fontSize: 28,
-    fontWeight: '800',
-    color: '#202124',
+    fontWeight: "800",
+    color: "#202124",
   },
   speedUnit: {
     fontSize: 11,
-    fontWeight: '700',
-    color: '#5F6368',
+    fontWeight: "700",
+    color: "#5F6368",
     marginLeft: 3,
   },
   headingRow: {
-    flexDirection: 'row',
-    alignItems: 'baseline',
+    flexDirection: "row",
+    alignItems: "baseline",
   },
   headingNum: {
     fontSize: 22,
-    fontWeight: '700',
-    color: '#202124',
+    fontWeight: "700",
+    color: "#202124",
   },
   cardinalTag: {
     fontSize: 12,
-    fontWeight: '800',
-    color: '#1A73E8',
+    fontWeight: "800",
+    color: "#1A73E8",
     marginLeft: 4,
   },
   accuracyNum: {
     fontSize: 18,
-    fontWeight: '700',
-    color: '#137333',
+    fontWeight: "700",
+    color: "#137333",
   },
   statLabel: {
     fontSize: 9,
-    fontWeight: '700',
-    color: '#80868B',
+    fontWeight: "700",
+    color: "#80868B",
     marginTop: 2,
     letterSpacing: 0.6,
   },

@@ -1,4 +1,4 @@
-import * as Location from 'expo-location';
+import * as Location from "expo-location";
 import {
   ILocationProvider,
   LocationListener,
@@ -6,7 +6,7 @@ import {
   ProviderStatus,
   ProviderType,
   StatusListener,
-} from '../../core/types/location';
+} from "../../core/types/location";
 
 /**
  * IosGnssLocationProvider
@@ -16,10 +16,10 @@ import {
  * Emits the exact same normalized NavLocation stream as AndroidGnssLocationProvider.
  */
 export class IosGnssLocationProvider implements ILocationProvider {
-  public readonly name = 'iOS CoreLocation (GNSS)';
-  public readonly providerType: ProviderType = 'gnss';
+  public readonly name = "iOS CoreLocation (GNSS)";
+  public readonly providerType: ProviderType = "gnss";
 
-  private status: ProviderStatus = 'idle';
+  private status: ProviderStatus = "idle";
   private locationSubscription: Location.LocationSubscription | null = null;
   private lastLocation: NavLocation | null = null;
 
@@ -51,7 +51,7 @@ export class IosGnssLocationProvider implements ILocationProvider {
         await this.start();
         return true;
       }
-      this.setStatus('permission_denied', 'iOS Location permission denied.');
+      this.setStatus("permission_denied", "iOS Location permission denied.");
       return false;
     } catch {
       return false;
@@ -59,21 +59,23 @@ export class IosGnssLocationProvider implements ILocationProvider {
   }
 
   public async start(): Promise<void> {
-    if (this.status === 'active' || this.status === 'initializing') return;
+    if (this.status === "active" || this.status === "initializing") return;
 
-    this.setStatus('initializing');
+    this.setStatus("initializing");
 
     try {
-      const { status: existingStatus } = await Location.getForegroundPermissionsAsync();
+      const { status: existingStatus } =
+        await Location.getForegroundPermissionsAsync();
       let finalStatus = existingStatus;
 
       if (existingStatus !== Location.PermissionStatus.GRANTED) {
-        const { status: req } = await Location.requestForegroundPermissionsAsync();
+        const { status: req } =
+          await Location.requestForegroundPermissionsAsync();
         finalStatus = req;
       }
 
       if (finalStatus !== Location.PermissionStatus.GRANTED) {
-        this.setStatus('permission_denied', 'iOS Location permission denied.');
+        this.setStatus("permission_denied", "iOS Location permission denied.");
         return;
       }
 
@@ -86,15 +88,15 @@ export class IosGnssLocationProvider implements ILocationProvider {
         (location) => {
           const navLoc = this.normalizePosition(location);
           this.lastLocation = navLoc;
-          if (this.status !== 'active') this.setStatus('active');
+          if (this.status !== "active") this.setStatus("active");
           this.notifyLocation(navLoc);
-        }
+        },
       );
 
-      this.setStatus('active');
+      this.setStatus("active");
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : String(err);
-      this.setStatus('error', `iOS CoreLocation start failed: ${message}`);
+      this.setStatus("error", `iOS CoreLocation start failed: ${message}`);
     }
   }
 
@@ -103,7 +105,7 @@ export class IosGnssLocationProvider implements ILocationProvider {
       this.locationSubscription.remove();
       this.locationSubscription = null;
     }
-    this.setStatus('stopped');
+    this.setStatus("stopped");
   }
 
   public addListener(listener: LocationListener): () => void {
@@ -124,12 +126,12 @@ export class IosGnssLocationProvider implements ILocationProvider {
 
   private normalizePosition(loc: Location.LocationObject): NavLocation {
     const heading =
-      typeof loc.coords.heading === 'number' && loc.coords.heading >= 0
+      typeof loc.coords.heading === "number" && loc.coords.heading >= 0
         ? loc.coords.heading
         : null;
 
     const speed =
-      typeof loc.coords.speed === 'number' && loc.coords.speed >= 0
+      typeof loc.coords.speed === "number" && loc.coords.speed >= 0
         ? loc.coords.speed
         : 0;
 
@@ -142,7 +144,7 @@ export class IosGnssLocationProvider implements ILocationProvider {
       heading,
       speed,
       timestamp: loc.timestamp,
-      providerType: 'gnss',
+      providerType: "gnss",
       isDeadReckoning: false,
     };
   }

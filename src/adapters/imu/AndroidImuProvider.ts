@@ -1,6 +1,11 @@
-import { Accelerometer, Gyroscope, Magnetometer } from 'expo-sensors';
-import { IImuProvider, ImuListener, ImuSample, Vector3D } from '../../core/types/imu';
-import { ProviderStatus } from '../../core/types/location';
+import { Accelerometer, Gyroscope, Magnetometer } from "expo-sensors";
+import {
+  IImuProvider,
+  ImuListener,
+  ImuSample,
+  Vector3D,
+} from "../../core/types/imu";
+import { ProviderStatus } from "../../core/types/location";
 
 /**
  * AndroidImuProvider
@@ -13,9 +18,9 @@ import { ProviderStatus } from '../../core/types/location';
  * for consumption by the IDR engine.
  */
 export class AndroidImuProvider implements IImuProvider {
-  public readonly name = 'Android IMU (SensorManager)';
+  public readonly name = "Android IMU (SensorManager)";
 
-  private status: ProviderStatus = 'idle';
+  private status: ProviderStatus = "idle";
   private accelSub: ReturnType<typeof Accelerometer.addListener> | null = null;
   private gyroSub: ReturnType<typeof Gyroscope.addListener> | null = null;
   private magSub: ReturnType<typeof Magnetometer.addListener> | null = null;
@@ -31,9 +36,9 @@ export class AndroidImuProvider implements IImuProvider {
   }
 
   public async start(sampleRateHz = 50): Promise<void> {
-    if (this.status === 'active') return;
+    if (this.status === "active") return;
 
-    this.status = 'initializing';
+    this.status = "initializing";
 
     try {
       // Calculate update interval in milliseconds (e.g. 50 Hz -> 20ms)
@@ -72,9 +77,9 @@ export class AndroidImuProvider implements IImuProvider {
         };
       });
 
-      this.status = 'active';
+      this.status = "active";
     } catch (err) {
-      this.status = 'error';
+      this.status = "error";
     }
   }
 
@@ -91,7 +96,7 @@ export class AndroidImuProvider implements IImuProvider {
       this.magSub.remove();
       this.magSub = null;
     }
-    this.status = 'stopped';
+    this.status = "stopped";
   }
 
   public addListener(listener: ImuListener): () => void {

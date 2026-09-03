@@ -2,7 +2,7 @@
  * Shared Navigation State Types for the Presentation Layer.
  */
 
-import { NavLocation, ProviderStatus, ProviderType } from './location';
+import { NavLocation, ProviderStatus, ProviderType } from "./location";
 
 /**
  * Navigation Camera Tracking Modes:
@@ -10,7 +10,7 @@ import { NavLocation, ProviderStatus, ProviderType } from './location';
  * - follow_north: North-Up mode (camera tracks vehicle position with 2D top-down view)
  * - free: Free-look mode (camera uncoupled from vehicle; user can pan/zoom freely)
  */
-export type NavigationMode = 'follow_course' | 'follow_north' | 'free';
+export type NavigationMode = "follow_course" | "follow_north" | "free";
 
 /**
  * Normalized telemetry payload exposed by NavigationManager to UI components.

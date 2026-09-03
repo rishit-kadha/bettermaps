@@ -1,10 +1,10 @@
-import { AvailableProviderId, providerRegistry } from '../../adapters/location';
+import { AvailableProviderId, providerRegistry } from "../../adapters/location";
 import {
   ILocationProvider,
   NavLocation,
   ProviderStatus,
-} from '../types/location';
-import { NavigationMode, NavigationTelemetry } from '../types/navigation';
+} from "../types/location";
+import { NavigationMode, NavigationTelemetry } from "../types/navigation";
 
 export type TelemetryListener = (telemetry: NavigationTelemetry) => void;
 
@@ -17,7 +17,7 @@ export type TelemetryListener = (telemetry: NavigationTelemetry) => void;
  */
 export class NavigationManager {
   private activeProvider: ILocationProvider;
-  private currentMode: NavigationMode = 'follow_course';
+  private currentMode: NavigationMode = "follow_course";
   private currentLocation: NavLocation | null = null;
   private smoothedHeading = 0;
   private isHeadingReliable = false;
@@ -73,18 +73,18 @@ export class NavigationManager {
   }
 
   public toggleNavigationMode(): NavigationMode {
-    if (this.currentMode === 'follow_course') {
-      this.setNavigationMode('follow_north');
-    } else if (this.currentMode === 'follow_north') {
-      this.setNavigationMode('free');
+    if (this.currentMode === "follow_course") {
+      this.setNavigationMode("follow_north");
+    } else if (this.currentMode === "follow_north") {
+      this.setNavigationMode("free");
     } else {
-      this.setNavigationMode('follow_course');
+      this.setNavigationMode("follow_course");
     }
     return this.currentMode;
   }
 
   public recenter(): void {
-    this.setNavigationMode('follow_course');
+    this.setNavigationMode("follow_course");
   }
 
   public getTelemetry(): NavigationTelemetry {
@@ -149,9 +149,15 @@ export class NavigationManager {
       location.heading !== undefined &&
       location.heading >= 0;
 
-    if (hasValidHeading && (speedMs >= 0.5 || location.providerType === 'mock')) {
+    if (
+      hasValidHeading &&
+      (speedMs >= 0.5 || location.providerType === "mock")
+    ) {
       this.isHeadingReliable = true;
-      this.smoothedHeading = this.filterHeading(this.smoothedHeading, location.heading!);
+      this.smoothedHeading = this.filterHeading(
+        this.smoothedHeading,
+        location.heading!,
+      );
     } else if (hasValidHeading) {
       // Vehicle is stationary: retain orientation without noisy spinning
       this.isHeadingReliable = false;
@@ -160,7 +166,10 @@ export class NavigationManager {
     }
 
     // Append to breadcrumb history trail
-    const newPoint = { latitude: location.latitude, longitude: location.longitude };
+    const newPoint = {
+      latitude: location.latitude,
+      longitude: location.longitude,
+    };
     this.historyTrail.push(newPoint);
     if (this.historyTrail.length > this.maxTrailPoints) {
       this.historyTrail.shift();

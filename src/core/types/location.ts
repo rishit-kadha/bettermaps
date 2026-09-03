@@ -7,16 +7,16 @@
  * iOS CoreLocation, or underlying GNSS hardware.
  */
 
-export type ProviderType = 'gnss' | 'idr' | 'hybrid' | 'mock';
+export type ProviderType = "gnss" | "idr" | "hybrid" | "mock";
 
 export type ProviderStatus =
-  | 'idle'
-  | 'initializing'
-  | 'active'
-  | 'permission_denied'
-  | 'gnss_unavailable'
-  | 'error'
-  | 'stopped';
+  | "idle"
+  | "initializing"
+  | "active"
+  | "permission_denied"
+  | "gnss_unavailable"
+  | "error"
+  | "stopped";
 
 /**
  * Normalized location state emitted by all platform location adapters.

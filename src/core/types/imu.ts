@@ -7,7 +7,7 @@
  * an external CAN bus IMU, or the IO-VNBD benchmark dataset.
  */
 
-import { ProviderStatus } from './location';
+import { ProviderStatus } from "./location";
 
 /**
  * 3-axis vector representation for inertial measurements.

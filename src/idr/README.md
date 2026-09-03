@@ -1,4 +1,5 @@
 # IDR Core Architecture Specification
+
 ### Intelligent Dead Reckoning Engine (Platform-Independent Core)
 
 The Intelligent Dead Reckoning (IDR) Core is designed as a **portable, standalone navigation engine**. It is completely decoupled from React Native, Android OS, and iOS APIs.
@@ -53,14 +54,18 @@ The Intelligent Dead Reckoning (IDR) Core is designed as a **portable, standalon
 ## 2. Normalized Data Interfaces
 
 ### `ImuSample`
+
 Normalized cross-platform frame:
+
 - `timestamp`: monotonic millisecond/nanosecond timestamp.
 - `accel`: `{ x, y, z }` in $m/s^2$ (gravity included).
 - `gyro`: `{ x, y, z }` in $rad/s$.
 - `magnetometer`: optional `{ x, y, z }` in $\mu T$.
 
 ### `NavLocation` (Output)
+
 Normalized 10 Hz navigation state delivered to React Native:
+
 - `latitude`, `longitude`, `altitude` (WGS84)
 - `speed` ($m/s$ and $km/h$)
 - `heading` ($0 - 359.9^\circ$, True North)
@@ -70,7 +75,9 @@ Normalized 10 Hz navigation state delivered to React Native:
 ---
 
 ## 3. Dataset Integration: IO-VNBD
+
 The primary benchmark and training dataset is:
+
 - **IO-VNBD**: [Inertial and Odometry Benchmark Dataset for Ground Vehicle Positioning](https://github.com/onyekpeu/IO-VNBD)
 - Ground-truth reference: Differential GNSS/RTK + OBD-II wheel odometry.
 - Use case: Training lightweight neural network models (1D-CNN / TCN / GRU) to predict instantaneous vehicle forward velocity directly from phone IMU windows.

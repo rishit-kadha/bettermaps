@@ -1,5 +1,5 @@
-import { IImuProvider, ImuListener, ImuSample } from '../../core/types/imu';
-import { ProviderStatus } from '../../core/types/location';
+import { IImuProvider, ImuListener, ImuSample } from "../../core/types/imu";
+import { ProviderStatus } from "../../core/types/location";
 
 /**
  * IosImuProvider
@@ -9,8 +9,8 @@ import { ProviderStatus } from '../../core/types/location';
  * Normalizes readings into the exact same ImuSample format as Android.
  */
 export class IosImuProvider implements IImuProvider {
-  public readonly name = 'iOS IMU (CoreMotion)';
-  private status: ProviderStatus = 'idle';
+  public readonly name = "iOS IMU (CoreMotion)";
+  private status: ProviderStatus = "idle";
   private listeners = new Set<ImuListener>();
 
   public getStatus(): ProviderStatus {
@@ -18,11 +18,11 @@ export class IosImuProvider implements IImuProvider {
   }
 
   public async start(sampleRateHz = 50): Promise<void> {
-    this.status = 'active';
+    this.status = "active";
   }
 
   public async stop(): Promise<void> {
-    this.status = 'stopped';
+    this.status = "stopped";
   }
 
   public addListener(listener: ImuListener): () => void {

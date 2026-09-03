@@ -1,9 +1,14 @@
-import React, { useEffect, useRef } from 'react';
-import { Platform, StyleSheet, View } from 'react-native';
-import MapView, { Marker, Polyline, PROVIDER_DEFAULT, PROVIDER_GOOGLE } from 'react-native-maps';
-import { NavLocation } from '../../core/types/location';
-import { NavigationMode } from '../../core/types/navigation';
-import { VehicleMarker } from './VehicleMarker';
+import React, { useEffect, useRef } from "react";
+import { Platform, StyleSheet, View } from "react-native";
+import MapView, {
+  Marker,
+  Polyline,
+  PROVIDER_DEFAULT,
+  PROVIDER_GOOGLE,
+} from "react-native-maps";
+import { NavLocation } from "../../core/types/location";
+import { NavigationMode } from "../../core/types/navigation";
+import { VehicleMarker } from "./VehicleMarker";
 
 export interface MapContainerProps {
   location: NavLocation | null;
@@ -47,7 +52,7 @@ export const MapContainer: React.FC<MapContainerProps> = ({
   // Smooth camera tracking
   useEffect(() => {
     if (!location || !mapRef.current) return;
-    if (mode === 'free') return; // Do not interrupt user manual panning
+    if (mode === "free") return; // Do not interrupt user manual panning
 
     const cameraConfig = {
       center: {
@@ -55,15 +60,22 @@ export const MapContainer: React.FC<MapContainerProps> = ({
         longitude: location.longitude,
       },
       zoom: 18,
-      heading: mode === 'follow_course' && isHeadingReliable ? heading : 0,
-      pitch: mode === 'follow_course' ? 45 : 0, // 3D driving tilt in course-up mode
+      heading: mode === "follow_course" && isHeadingReliable ? heading : 0,
+      pitch: mode === "follow_course" ? 45 : 0, // 3D driving tilt in course-up mode
       altitude: 200,
     };
 
     mapRef.current.animateCamera(cameraConfig, { duration: 400 });
-  }, [location?.latitude, location?.longitude, heading, isHeadingReliable, mode]);
+  }, [
+    location?.latitude,
+    location?.longitude,
+    heading,
+    isHeadingReliable,
+    mode,
+  ]);
 
-  const mapProvider = Platform.OS === 'android' ? PROVIDER_GOOGLE : PROVIDER_DEFAULT;
+  const mapProvider =
+    Platform.OS === "android" ? PROVIDER_GOOGLE : PROVIDER_DEFAULT;
 
   return (
     <View style={styles.container}>
@@ -85,7 +97,11 @@ export const MapContainer: React.FC<MapContainerProps> = ({
         {historyTrail.length > 1 && (
           <Polyline
             coordinates={historyTrail}
-            strokeColor={isDeadReckoning ? 'rgba(255, 152, 0, 0.6)' : 'rgba(26, 115, 232, 0.5)'}
+            strokeColor={
+              isDeadReckoning
+                ? "rgba(255, 152, 0, 0.6)"
+                : "rgba(26, 115, 232, 0.5)"
+            }
             strokeWidth={4}
             lineCap="round"
             lineJoin="round"
@@ -104,7 +120,9 @@ export const MapContainer: React.FC<MapContainerProps> = ({
             tracksViewChanges={true}
           >
             <VehicleMarker
-              heading={mode === 'follow_course' && isHeadingReliable ? 0 : heading}
+              heading={
+                mode === "follow_course" && isHeadingReliable ? 0 : heading
+              }
               isDeadReckoning={isDeadReckoning}
               isHeadingReliable={isHeadingReliable}
             />
@@ -117,14 +135,14 @@ export const MapContainer: React.FC<MapContainerProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
   },
   map: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
 });
