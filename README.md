@@ -9,6 +9,7 @@ BetterMaps is a smartphone navigation application engineered to provide seamless
 ---
 
 ### 📚 Essential Project Documentation
+
 - 🚀 **[Team & AI Agent Startup Guide](docs/STARTUP_GUIDE.md)**: Prerequisites, environment setup, and 3 ways to get the app running on physical Android phones.
 - 📦 **[Training Dataset & Data Architecture Guide](docs/DATASET_GUIDE.md)**: IO-VNBD dataset audit, session inventory, coordinate transformations, normalization, and splits.
 - 🔬 **[Phase 5 IDR Training & Research Report](artifacts/reports/IDR_TRAINING_REPORT.md)**: Quantitative evaluation of classical vs neural baselines, loss sweeps, locked test evaluation, and multi-outage dead reckoning.

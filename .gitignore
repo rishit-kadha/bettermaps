@@ -60,17 +60,10 @@ __pycache__/
 .tempmediaStorage/
 scratch/
 
-# Images & plots (per user rule: do not push images; preserve app icons in assets/)
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.webp
-*.ico
-!assets/*.png
+# Phone screenshots & UI captures (do not push screenshots per user rule)
+screenshot_*.*
+screenshots/
+*_screenshot.*
 
-# External dataset zip archives (> 100MB limit) and duplicate uncategorized copies
+# Large zip archives (exclude .zip files per user instruction; push CSVs and folders)
 *.zip
-research/IO-VNBD/*.zip
-research/IO-VNBD/Unsynchronised*
-research/IO-VNBD/Synchronised V abd S datasets/Uncategorised*
