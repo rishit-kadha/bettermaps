@@ -1,0 +1,3 @@
+timestamp_ns,timestamp_ms,event_type,value
+105819647142731,1788513338798,GNSS_STREAM,disabled
+105855327364384,1788513374479,GNSS_STREAM,enabled

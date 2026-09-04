@@ -1,0 +1,138 @@
+{
+  "sessionId": "idr_drive_20260904_144450",
+  "appVersion": "1.0.0",
+  "startTimeEpochMs": 1788513290310,
+  "endTimeEpochMs": 1788513396304,
+  "durationSeconds": 105.994,
+  "droppedQueueSamples": 0,
+  "totalGnssSamples": 418,
+  "totalPositionEstimateSamples": 209,
+  "totalImuSamples": 94771,
+  "simulatedOutageUsed": true,
+  "simulationEvents": [
+    {
+      "timestamp_ns": 105819647142731,
+      "timestamp_ms": 1788513338798,
+      "event_type": "GNSS_STREAM",
+      "value": "disabled"
+    },
+    {
+      "timestamp_ns": 105855327364384,
+      "timestamp_ms": 1788513374479,
+      "event_type": "GNSS_STREAM",
+      "value": "enabled"
+    }
+  ],
+  "device": {
+    "manufacturer": "OnePlus",
+    "brand": "OnePlus",
+    "model": "CPH2661",
+    "product": "CPH2661IN",
+    "androidVersion": "16",
+    "sdkInt": 36
+  },
+  "sensors": {
+    "accelerometer": {
+      "available": true,
+      "name": "bmi26x Accelerometer Non-wakeup",
+      "vendor": "BOSCH",
+      "version": 65801,
+      "type": 1,
+      "resolution": 0.0047856453,
+      "maxRange": 156.9064,
+      "minDelayUs": 2500,
+      "stats": {
+        "sampleCount": 42086,
+        "measuredRateHz": 397.0602109553371,
+        "minTimestampNs": 105771160464424,
+        "maxTimestampNs": 105877148447607,
+        "monotonicityViolations": 0,
+        "duplicateTimestamps": 0
+      }
+    },
+    "gyroscope": {
+      "available": true,
+      "name": "bmi26x Gyroscope Non-wakeup",
+      "vendor": "BOSCH",
+      "version": 65801,
+      "type": 4,
+      "resolution": 0.0010652636,
+      "maxRange": 34.90656,
+      "minDelayUs": 2500,
+      "stats": {
+        "sampleCount": 42086,
+        "measuredRateHz": 397.0602109553371,
+        "minTimestampNs": 105771160464424,
+        "maxTimestampNs": 105877148447607,
+        "monotonicityViolations": 0,
+        "duplicateTimestamps": 0
+      }
+    },
+    "magnetometer": {
+      "available": true,
+      "name": "ak0991x Magnetometer Non-wakeup",
+      "vendor": "akm",
+      "version": 146979,
+      "type": 2,
+      "resolution": 0.15,
+      "maxRange": 4912.0503,
+      "minDelayUs": 10000,
+      "stats": {
+        "sampleCount": 10599,
+        "measuredRateHz": 99.9962262014831,
+        "minTimestampNs": 105771157718799,
+        "maxTimestampNs": 105877137718961,
+        "monotonicityViolations": 0,
+        "duplicateTimestamps": 0
+      }
+    },
+    "orientation": {
+      "classification": "derived_orientation",
+      "underlyingSensor": "Rotation Vector  Non-wakeup",
+      "angleUnits": "radians_and_degrees",
+      "referenceFrame": "Android SensorManager getOrientation: azimuth\/yaw [-pi, pi], pitch [-pi\/2, pi\/2], roll [-pi, pi]",
+      "stats": {
+        "sampleCount": 21043,
+        "measuredRateHz": 198.53010547766854,
+        "minTimestampNs": 105771149140934,
+        "maxTimestampNs": 105877134605055,
+        "monotonicityViolations": 0,
+        "duplicateTimestamps": 0
+      }
+    },
+    "reference_gnss": {
+      "classification": "reference_gnss",
+      "source": "android_fused_location_provider",
+      "note": "Reference comparison trajectory from Android Location Services. NOT ground truth; used for offline error benchmarking.",
+      "stats": {
+        "sampleCount": 418,
+        "measuredRateHz": 3.943619450157556,
+        "minTimestampNs": 105771161325301,
+        "maxTimestampNs": 105877008255105,
+        "monotonicityViolations": 0,
+        "duplicateTimestamps": 0
+      }
+    },
+    "location": {
+      "classification": "reference_gnss",
+      "source": "android_fused_location_provider",
+      "note": "Reference comparison trajectory from Android Location Services. NOT ground truth; used for offline error benchmarking.",
+      "stats": {
+        "sampleCount": 418,
+        "measuredRateHz": 3.943619450157556,
+        "minTimestampNs": 105771161325301,
+        "maxTimestampNs": 105877008255105,
+        "monotonicityViolations": 0,
+        "duplicateTimestamps": 0
+      }
+    },
+    "position_estimates": {
+      "sampleCount": 209,
+      "measuredRateHz": 1.971809725078778,
+      "minTimestampNs": 1788513290691000064,
+      "maxTimestampNs": 1788513396156000000,
+      "monotonicityViolations": 0,
+      "duplicateTimestamps": 0
+    }
+  }
+}

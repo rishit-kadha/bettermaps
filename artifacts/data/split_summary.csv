@@ -1,0 +1,4 @@
+split,session_count,total_samples,duration_hours,usable_windows,drivers,sessions
+Train,45,707572,19.65,703976,"Driver A, Driver B, Driver D, Driver E","M, S1, S3b, S3c, Vfa01, Vta11, Vta12, Vta17, Vta1a, Vta1b, Vta2, Vta22, Vta23, Vta24, Vta26, Vta28, Vta29, Vta3, Vta30, Vta4, Vta5, Vta6, Vta9, Vtb1, Vtb2, Vtb3, Vtb5, Vtb6, Vtb7, Vtb8, Vtb9, Vw10, Vw11, Vw12, Vw14a, Vw14c, Vw16b, Vw17, Vw2, Vw3, Vw4, Vw5, Vw6, Vw9, Y1"
+Val,12,212532,5.9,211655,"Driver A, Driver E","S3a, S4, Vfa02, Vta13, Vta14, Vta16, Vta19, Vta20, Vta25, Vta7, Vw13, Vw16a"
+Test,10,124282,3.45,123713,"Driver A, Driver E","S2, Vta10, Vta15, Vta21, Vta8, Vtb10, Vtb12, Vtb4, Vw14b, Vw8"

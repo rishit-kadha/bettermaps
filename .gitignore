@@ -45,4 +45,32 @@ yarn-error.*
 # IDE files
 .idea/
 *.iml
+.vscode/
 
+# Python cache & build
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+
+# Logs & temp media
+*.log
+.tempmediaStorage/
+scratch/
+
+# Images & plots (per user rule: do not push images; preserve app icons in assets/)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.ico
+!assets/*.png
+
+# External dataset zip archives (> 100MB limit) and duplicate uncategorized copies
+*.zip
+research/IO-VNBD/*.zip
+research/IO-VNBD/Unsynchronised*
+research/IO-VNBD/Synchronised V abd S datasets/Uncategorised*

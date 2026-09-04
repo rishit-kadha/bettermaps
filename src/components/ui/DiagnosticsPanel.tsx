@@ -1,6 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { NavigationTelemetry } from "../../core/types/navigation";
+import { useTheme } from "../../theme/ThemeContext";
 
 interface DiagnosticsPanelProps {
   telemetry: NavigationTelemetry;
@@ -24,6 +26,8 @@ export const DiagnosticsPanel: React.FC<DiagnosticsPanelProps> = ({
   visible,
   onClose,
 }) => {
+  const insets = useSafeAreaInsets();
+  const { theme } = useTheme();
   if (!visible) return null;
 
   const {
@@ -69,62 +73,130 @@ export const DiagnosticsPanel: React.FC<DiagnosticsPanelProps> = ({
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
+    <View
+      style={[
+        styles.container,
+        {
+          top: Math.max(insets.top, 16) + 124,
+          right: 76,
+          backgroundColor: theme.surface,
+          borderColor: theme.surfaceBorder,
+        },
+      ]}
+    >
+      <View style={[styles.header, { borderBottomColor: theme.surfaceBorder }]}>
         <View style={styles.titleRow}>
-          <View style={styles.indicator} />
-          <Text style={styles.title}>GNSS DIAGNOSTICS</Text>
+          <View style={[styles.indicator, { backgroundColor: theme.accent }]} />
+          <Text style={[styles.title, { color: theme.textPrimary }]}>
+            GNSS DIAGNOSTICS
+          </Text>
         </View>
         <TouchableOpacity
           onPress={onClose}
-          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+          hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+          style={[styles.closeTouch, { backgroundColor: theme.surfaceSubtle }]}
+          accessibilityRole="button"
+          accessibilityLabel="Close diagnostics"
         >
-          <Text style={styles.closeText}>✕</Text>
+          <Text style={[styles.closeText, { color: theme.textPrimary }]}>
+            ✕
+          </Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.grid}>
         {/* Row 1: Provider & Hz */}
         <View style={styles.row}>
-          <View style={styles.cell}>
-            <Text style={styles.label}>PLATFORM PROVIDER</Text>
-            <Text style={styles.valueHighlight}>
+          <View
+            style={[
+              styles.cell,
+              {
+                backgroundColor: theme.surfaceSubtle,
+                borderColor: theme.surfaceBorder,
+              },
+            ]}
+          >
+            <Text style={[styles.label, { color: theme.textMuted }]}>
+              PLATFORM PROVIDER
+            </Text>
+            <Text style={[styles.valueHighlight, { color: theme.textPrimary }]}>
               {providerType === "gnss" ? "GNSS" : providerType.toUpperCase()}
             </Text>
-            <Text style={styles.subText}>{providerName}</Text>
+            <Text style={[styles.subText, { color: theme.textSecondary }]}>
+              {providerName}
+            </Text>
           </View>
 
-          <View style={styles.cell}>
-            <Text style={styles.label}>UPDATE FREQ</Text>
+          <View
+            style={[
+              styles.cell,
+              {
+                backgroundColor: theme.surfaceSubtle,
+                borderColor: theme.surfaceBorder,
+              },
+            ]}
+          >
+            <Text style={[styles.label, { color: theme.textMuted }]}>
+              UPDATE FREQ
+            </Text>
             <Text
               style={[
                 styles.valueHighlight,
-                { color: updateFrequencyHz > 0 ? "#137333" : "#EA4335" },
+                { color: updateFrequencyHz > 0 ? theme.success : theme.danger },
               ]}
             >
               ~{updateFrequencyHz.toFixed(1)} Hz
             </Text>
-            <Text style={styles.subText}>Target: ~10 Hz (IDR)</Text>
+            <Text style={[styles.subText, { color: theme.textSecondary }]}>
+              Target: ~10 Hz (IDR)
+            </Text>
           </View>
         </View>
 
         {/* Row 2: Speed & Heading */}
         <View style={styles.row}>
-          <View style={styles.cell}>
-            <Text style={styles.label}>GROUND SPEED</Text>
-            <Text style={styles.value}>
-              {speedKmh} <Text style={styles.unit}>km/h</Text>
+          <View
+            style={[
+              styles.cell,
+              {
+                backgroundColor: theme.surfaceSubtle,
+                borderColor: theme.surfaceBorder,
+              },
+            ]}
+          >
+            <Text style={[styles.label, { color: theme.textMuted }]}>
+              GROUND SPEED
             </Text>
-            <Text style={styles.subText}>({speedMsText})</Text>
+            <Text style={[styles.value, { color: theme.textPrimary }]}>
+              {speedKmh}{" "}
+              <Text style={[styles.unit, { color: theme.textSecondary }]}>
+                km/h
+              </Text>
+            </Text>
+            <Text style={[styles.subText, { color: theme.textSecondary }]}>
+              ({speedMsText})
+            </Text>
           </View>
 
-          <View style={styles.cell}>
-            <Text style={styles.label}>COURSE HEADING</Text>
-            <Text style={styles.value}>{smoothedHeading}°</Text>
+          <View
+            style={[
+              styles.cell,
+              {
+                backgroundColor: theme.surfaceSubtle,
+                borderColor: theme.surfaceBorder,
+              },
+            ]}
+          >
+            <Text style={[styles.label, { color: theme.textMuted }]}>
+              COURSE HEADING
+            </Text>
+            <Text style={[styles.value, { color: theme.textPrimary }]}>
+              {smoothedHeading}°
+            </Text>
             <Text
               style={[
                 styles.subText,
-                { color: isHeadingReliable ? "#137333" : "#E37400" },
+                { color: isHeadingReliable ? theme.success : theme.warning },
               ]}
             >
               {isHeadingReliable ? "Reliable (Moving)" : "Stationary / Inert"}
@@ -134,36 +206,94 @@ export const DiagnosticsPanel: React.FC<DiagnosticsPanelProps> = ({
 
         {/* Row 3: Accuracy & Altitude */}
         <View style={styles.row}>
-          <View style={styles.cell}>
-            <Text style={styles.label}>HORIZONTAL ACCURACY</Text>
-            <Text style={[styles.value, { color: "#1A73E8" }]}>{accText}</Text>
+          <View
+            style={[
+              styles.cell,
+              {
+                backgroundColor: theme.surfaceSubtle,
+                borderColor: theme.surfaceBorder,
+              },
+            ]}
+          >
+            <Text style={[styles.label, { color: theme.textMuted }]}>
+              HORIZONTAL ACCURACY
+            </Text>
+            <Text style={[styles.value, { color: theme.accent }]}>
+              {accText}
+            </Text>
           </View>
 
-          <View style={styles.cell}>
-            <Text style={styles.label}>ALTITUDE (WGS84)</Text>
-            <Text style={styles.value}>{altText}</Text>
+          <View
+            style={[
+              styles.cell,
+              {
+                backgroundColor: theme.surfaceSubtle,
+                borderColor: theme.surfaceBorder,
+              },
+            ]}
+          >
+            <Text style={[styles.label, { color: theme.textMuted }]}>
+              ALTITUDE (WGS84)
+            </Text>
+            <Text style={[styles.value, { color: theme.textPrimary }]}>
+              {altText}
+            </Text>
           </View>
         </View>
 
         {/* Row 4: Coordinates */}
-        <View style={styles.coordsBox}>
+        <View
+          style={[
+            styles.coordsBox,
+            {
+              backgroundColor: theme.surfaceSubtle,
+              borderColor: theme.surfaceBorder,
+            },
+          ]}
+        >
           <View style={styles.coordCol}>
-            <Text style={styles.label}>LATITUDE</Text>
-            <Text style={styles.coordValue}>{latText}</Text>
+            <Text style={[styles.label, { color: theme.textMuted }]}>
+              LATITUDE
+            </Text>
+            <Text style={[styles.coordValue, { color: theme.textPrimary }]}>
+              {latText}
+            </Text>
           </View>
           <View style={styles.coordCol}>
-            <Text style={styles.label}>LONGITUDE</Text>
-            <Text style={styles.coordValue}>{lngText}</Text>
+            <Text style={[styles.label, { color: theme.textMuted }]}>
+              LONGITUDE
+            </Text>
+            <Text style={[styles.coordValue, { color: theme.textPrimary }]}>
+              {lngText}
+            </Text>
           </View>
         </View>
 
         {/* Footer */}
         <View style={styles.footerRow}>
-          <Text style={styles.footerText}>
-            Status:{" "}
-            <Text style={styles.boldText}>{providerStatus.toUpperCase()}</Text>
+          <Text style={[styles.footerText, { color: theme.textSecondary }]}>
+            Gate:{" "}
+            <Text
+              style={[
+                styles.boldText,
+                {
+                  color:
+                    telemetry.gnssStreamGateState === "GNSS_STREAM_DISABLED"
+                      ? theme.danger
+                      : theme.success,
+                },
+              ]}
+            >
+              {telemetry.gnssStreamGateState === "GNSS_STREAM_DISABLED"
+                ? "BLOCKED"
+                : "ACTIVE"}
+            </Text>{" "}
+            • Engine:{" "}
+            <Text style={[styles.boldText, { color: theme.textPrimary }]}>
+              {telemetry.positioningStatus}
+            </Text>
           </Text>
-          <Text style={styles.footerText}>
+          <Text style={[styles.footerText, { color: theme.textSecondary }]}>
             Fix: {formatTime(currentLocation?.timestamp)}
           </Text>
         </View>
@@ -175,14 +305,10 @@ export const DiagnosticsPanel: React.FC<DiagnosticsPanelProps> = ({
 const styles = StyleSheet.create({
   container: {
     position: "absolute",
-    top: 90,
     left: 16,
-    right: 16,
-    backgroundColor: "rgba(255, 255, 255, 0.96)",
     borderRadius: 14,
     padding: 14,
     borderWidth: 1,
-    borderColor: "#DADCE0",
     elevation: 8,
     shadowColor: "#000",
     shadowOpacity: 0.2,
@@ -215,11 +341,16 @@ const styles = StyleSheet.create({
     letterSpacing: 0.8,
     color: "#3C4043",
   },
+  closeTouch: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   closeText: {
-    fontSize: 14,
-    color: "#80868B",
+    fontSize: 15,
     fontWeight: "700",
-    paddingHorizontal: 4,
   },
   grid: {
     gap: 8,

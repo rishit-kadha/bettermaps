@@ -32,6 +32,8 @@ export interface NavLocation {
   accuracy?: number | null;
   /** Estimated vertical accuracy in meters */
   altitudeAccuracy?: number | null;
+  /** Alias for vertical accuracy in meters */
+  verticalAccuracy?: number | null;
   /** Course/bearing in degrees (0 - 359.9, 0 = True North, clockwise) */
   heading?: number | null;
   /** Instantaneous speed over ground in meters per second */
@@ -42,6 +44,10 @@ export interface NavLocation {
   providerType: ProviderType;
   /** Flag indicating if this fix was dead-reckoned without direct GNSS */
   isDeadReckoning: boolean;
+  /** Specific hardware or OS source string (e.g. 'gps', 'fused', 'mock') */
+  source?: string;
+  /** Indicates whether the location reading is mocked */
+  isMock?: boolean;
 }
 
 export type LocationListener = (location: NavLocation) => void;

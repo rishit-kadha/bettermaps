@@ -1,0 +1,98 @@
+{
+  "sessionId": "idr_drive_20260904_035249",
+  "appVersion": "1.0.0",
+  "startTimeEpochMs": 1788474169048,
+  "endTimeEpochMs": 1788474263646,
+  "durationSeconds": 94.598,
+  "droppedQueueSamples": 0,
+  "device": {
+    "manufacturer": "OnePlus",
+    "brand": "OnePlus",
+    "model": "CPH2661",
+    "product": "CPH2661IN",
+    "androidVersion": "16",
+    "sdkInt": 36
+  },
+  "sensors": {
+    "accelerometer": {
+      "available": true,
+      "name": "bmi26x Accelerometer Non-wakeup",
+      "vendor": "BOSCH",
+      "version": 65801,
+      "type": 1,
+      "resolution": 0.0047856453,
+      "maxRange": 156.9064,
+      "minDelayUs": 2500,
+      "stats": {
+        "sampleCount": 37567,
+        "measuredRateHz": 397.12256073067084,
+        "minTimestampNs": 66649898167918,
+        "maxTimestampNs": 66744490934562,
+        "monotonicityViolations": 0,
+        "duplicateTimestamps": 0
+      }
+    },
+    "gyroscope": {
+      "available": true,
+      "name": "bmi26x Gyroscope Non-wakeup",
+      "vendor": "BOSCH",
+      "version": 65801,
+      "type": 4,
+      "resolution": 0.0010652636,
+      "maxRange": 34.90656,
+      "minDelayUs": 2500,
+      "stats": {
+        "sampleCount": 37567,
+        "measuredRateHz": 397.12256073067084,
+        "minTimestampNs": 66649898167918,
+        "maxTimestampNs": 66744490934562,
+        "monotonicityViolations": 0,
+        "duplicateTimestamps": 0
+      }
+    },
+    "magnetometer": {
+      "available": true,
+      "name": "ak0991x Magnetometer Non-wakeup",
+      "vendor": "akm",
+      "version": 146979,
+      "type": 2,
+      "resolution": 0.15,
+      "maxRange": 4912.0503,
+      "minDelayUs": 10000,
+      "stats": {
+        "sampleCount": 9459,
+        "measuredRateHz": 99.99154316158904,
+        "minTimestampNs": 66649901516408,
+        "maxTimestampNs": 66744481516437,
+        "monotonicityViolations": 0,
+        "duplicateTimestamps": 0
+      }
+    },
+    "orientation": {
+      "classification": "derived_orientation",
+      "underlyingSensor": "Rotation Vector  Non-wakeup",
+      "angleUnits": "radians_and_degrees",
+      "referenceFrame": "Android SensorManager getOrientation: azimuth\/yaw [-pi, pi], pitch [-pi\/2, pi\/2], roll [-pi, pi]",
+      "stats": {
+        "sampleCount": 18783,
+        "measuredRateHz": 198.55599484132858,
+        "minTimestampNs": 66649891881825,
+        "maxTimestampNs": 66744479612739,
+        "monotonicityViolations": 0,
+        "duplicateTimestamps": 0
+      }
+    },
+    "location": {
+      "classification": "android_fused_location_provider",
+      "note": "Fused multi-source location (GNSS\/Wi-Fi\/Cell) from Android Location Services; reference trajectory, not raw GNSS pseudoranges.",
+      "stats": {
+        "sampleCount": 98,
+        "measuredRateHz": 1.0359627053426077,
+        "minTimestampNs": 66650205766246,
+        "maxTimestampNs": 66744261223450,
+        "monotonicityViolations": 0,
+        "duplicateTimestamps": 0
+      }
+    }
+  }
+}
