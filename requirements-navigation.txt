@@ -1,0 +1,9 @@
+numpy
+pandas
+scipy
+torch==2.7.1+cu118
+scikit-learn
+matplotlib
+
+# PyTorch CUDA 11.8:
+# pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu118

@@ -1,17 +1,17 @@
 experiment_id,model_family,model_name,split_evaluated,window_size,lambda_omega,param_count,v_rmse_ms,v_rmse_kmh,v_mae_ms,v_max_ms,v_r2,w_rmse_radps,w_rmse_degps,w_mae_radps,w_max_degps,w_r2,drift_rate_deg_per_min,composite_score
-B0.1_Mean,Classical,Global Mean,Validation,20,1.0,2,9.7203,34.99,8.1895,20.02,-0.0387,0.0942,5.4,0.0392,47.94,-0.0002,4.89,9.8145
+B0.1_Mean,Classical,Global Mean,Validation,20,1.0,2,9.6375,34.7,8.1789,19.53,-0.0211,0.0942,5.4,0.0383,47.77,-0.0002,5.12,9.7317
 B0.2_Persistence,Classical,Persistence,Validation,20,1.0,0,17.2118,61.96,14.3366,32.71,-2.2567,0.731,41.88,0.4426,2018.34,-59.2456,28.66,17.9428
-B0.3_Ridge,Classical,Ridge Regression,Validation,20,1.0,62,8.8998,32.04,7.324,53.95,0.1293,0.0842,4.83,0.0418,63.26,0.2003,11.71,8.984
-B1_MLP,Neural_MLP,Shallow MLP,Validation,20,1.0,9890,7.28,26.21,5.686,49.19,0.4174,0.092,5.27,0.0454,45.49,0.0458,62.17,7.372
-B2_TCN,Neural_TCN,Tiny Causal TCN,Validation,20,1.0,5938,6.2342,22.44,4.6878,27.18,0.5727,0.0916,5.25,0.0422,70.13,0.0537,0.6,6.3258
-B3_GRU,Neural_GRU,Lightweight GRU,Validation,20,1.0,3906,5.9932,21.58,4.4121,27.16,0.6051,0.0858,4.92,0.0441,45.77,0.169,8.02,6.079
-Sweep_TCN_lam_0_1,Neural_TCN_Sweep,TCN (lambda=0.1),Validation,20,0.1,5938,6.278,22.6,4.6921,27.18,0.5667,0.0912,5.22,0.0436,53.4,0.063,12.85,6.2872
-Sweep_TCN_lam_0_25,Neural_TCN_Sweep,TCN (lambda=0.25),Validation,20,0.25,5938,6.2991,22.68,4.7769,27.06,0.5638,0.0929,5.32,0.0468,57.12,0.027,42.84,6.3223
-Sweep_TCN_lam_0_5,Neural_TCN_Sweep,TCN (lambda=0.5),Validation,20,0.5,5938,6.0443,21.76,4.5072,27.21,0.5984,0.0866,4.96,0.0445,43.63,0.1551,25.61,6.0875
-Sweep_TCN_lam_1_0,Neural_TCN_Sweep,TCN (lambda=1.0),Validation,20,1.0,5938,6.202,22.33,4.7026,27.18,0.5771,0.092,5.27,0.0457,45.52,0.046,16.43,6.294
-Sweep_TCN_lam_2_0,Neural_TCN_Sweep,TCN (lambda=2.0),Validation,20,2.0,5938,6.0229,21.68,4.5132,27.18,0.6012,0.0933,5.35,0.0529,44.56,0.0179,70.37,6.2095
-Sweep_TCN_lam_4_0,Neural_TCN_Sweep,TCN (lambda=4.0),Validation,20,4.0,5938,6.1621,22.18,4.5905,27.32,0.5826,0.0896,5.13,0.0431,64.41,0.0945,2.89,6.5205
-TEST_B0.1_Mean,Classical,Global Mean,Test,20,0.5,2,8.0422,28.95,6.8108,20.68,-0.0822,0.122,6.99,0.057,52.36,-0.0014,15.72,8.1032
-TEST_B0.2_Persistence,Classical,Persistence,Test,20,0.5,0,12.8162,46.14,10.2109,33.23,-1.7483,0.646,37.01,0.3832,487.67,-27.0977,35.94,13.1392
-TEST_B0.3_Ridge,Classical,Ridge Regression,Test,20,0.5,62,6.4299,23.15,5.3015,65.24,0.3083,0.075,4.3,0.0414,36.85,0.6212,24.82,6.4674
-TEST_WINNING_TCN,Neural_TCN_Frozen,Frozen Tiny Causal TCN (lambda=0.5),Test,20,0.5,5938,4.3446,15.64,3.1444,21.51,0.6842,0.1013,5.8,0.0552,42.94,0.3089,33.0,4.3952
+B0.3_Ridge,Classical,Ridge Regression,Validation,20,1.0,62,8.9114,32.08,7.3469,67.62,0.127,0.0829,4.75,0.04,61.01,0.2259,0.93,8.9943
+B1_MLP,Neural_MLP,Shallow MLP,Validation,20,1.0,9890,6.3438,22.84,4.8124,27.39,0.5576,0.0894,5.12,0.0443,46.14,0.098,3.23,6.4332
+B2_TCN,Neural_TCN,Tiny Causal TCN,Validation,20,1.0,5938,6.2167,22.38,4.6089,27.38,0.5751,0.0888,5.09,0.0426,150.17,0.1102,14.42,6.3056
+B3_GRU,Neural_GRU,Lightweight GRU,Validation,20,1.0,3906,5.7505,20.7,4.2012,27.27,0.6365,0.0848,4.86,0.0457,46.56,0.1886,25.56,5.8353
+Sweep_TCN_lam_0_1,Neural_TCN_Sweep,TCN (lambda=0.1),Validation,20,0.1,5938,6.0714,21.86,4.5002,27.12,0.5948,0.0927,5.31,0.0503,46.4,0.0304,60.25,6.0806
+Sweep_TCN_lam_0_25,Neural_TCN_Sweep,TCN (lambda=0.25),Validation,20,0.25,5938,5.9033,21.25,4.389,27.39,0.6169,0.09,5.16,0.0436,87.49,0.0865,20.49,5.9258
+Sweep_TCN_lam_0_5,Neural_TCN_Sweep,TCN (lambda=0.5),Validation,20,0.5,5938,5.9722,21.5,4.3594,27.18,0.6079,0.0902,5.17,0.0426,53.92,0.0828,11.29,6.0173
+Sweep_TCN_lam_1_0,Neural_TCN_Sweep,TCN (lambda=1.0),Validation,20,1.0,5938,5.9231,21.32,4.3571,27.0,0.6143,0.0897,5.14,0.043,42.72,0.093,1.82,6.0128
+Sweep_TCN_lam_2_0,Neural_TCN_Sweep,TCN (lambda=2.0),Validation,20,2.0,5938,5.8633,21.11,4.3286,28.28,0.6221,0.0917,5.26,0.0419,47.08,0.0509,23.29,6.0468
+Sweep_TCN_lam_4_0,Neural_TCN_Sweep,TCN (lambda=4.0),Validation,20,4.0,5938,5.9463,21.41,4.3313,27.28,0.6113,0.0899,5.15,0.0421,82.81,0.0895,7.84,6.3058
+TEST_B0.1_Mean,Classical,Global Mean,Test,20,0.25,2,7.4744,26.91,6.1754,20.19,-0.1865,0.1395,7.99,0.0625,65.83,-0.0033,27.67,7.5092
+TEST_B0.2_Persistence,Classical,Persistence,Test,20,0.25,0,12.0878,43.52,9.9552,33.23,-2.1031,0.614,35.18,0.3371,2798.12,-18.4502,71.03,12.2413
+TEST_B0.3_Ridge,Classical,Ridge Regression,Test,20,0.25,62,6.2234,22.4,4.958,119.52,0.1775,0.085,4.87,0.0429,53.39,0.6274,10.75,6.2446
+TEST_WINNING_TCN,Neural_TCN_Frozen,Frozen Tiny Causal TCN (lambda=0.25),Test,20,0.25,5938,4.488,16.16,3.3323,35.45,0.5722,0.1242,7.12,0.0601,64.05,0.2041,23.99,4.519

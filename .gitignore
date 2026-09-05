@@ -48,6 +48,7 @@ yarn-error.*
 .vscode/
 
 # Python cache & build
+venv/
 __pycache__/
 *.pyc
 *.pyo
