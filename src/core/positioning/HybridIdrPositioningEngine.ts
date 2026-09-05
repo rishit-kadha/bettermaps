@@ -70,6 +70,10 @@ export class HybridIdrPositioningEngine implements IPositioningEngine {
     this.motionEstimator = estimator;
   }
 
+  public getMotionEstimator(): IMotionEstimator {
+    return this.motionEstimator;
+  }
+
   public setRouteConstraintProvider(
     provider: RouteConstraintProvider | null,
     routePoints?: { latitude: number; longitude: number }[] | null,

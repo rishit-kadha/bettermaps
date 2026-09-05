@@ -70,4 +70,4 @@ screenshots/
 *.zip
 
 # Raw IO-VNBD dataset (keep local only per IDR handover; do not commit)
-research/IO-VNBD/
+research/IO-VNBD/

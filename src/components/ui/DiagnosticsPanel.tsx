@@ -269,6 +269,131 @@ export const DiagnosticsPanel: React.FC<DiagnosticsPanelProps> = ({
           </View>
         </View>
 
+        {/* Development Only: IDR Motion Model Diagnostics */}
+        {telemetry.motionDiagnostics && (
+          <View
+            style={[
+              styles.modelDiagBox,
+              {
+                backgroundColor: theme.surfaceSubtle,
+                borderColor: theme.accent,
+              },
+            ]}
+          >
+            <View style={styles.modelDiagHeader}>
+              <Text style={[styles.modelDiagTitle, { color: theme.accent }]}>
+                IDR MOTION MODEL (DEV DIAGNOSTICS)
+              </Text>
+              <Text
+                style={[
+                  styles.modelStatusBadge,
+                  {
+                    color: telemetry.motionDiagnostics.valid
+                      ? theme.success
+                      : theme.danger,
+                  },
+                ]}
+              >
+                {telemetry.motionDiagnostics.valid ? "VALID" : "INVALID"}
+              </Text>
+            </View>
+
+            <Text
+              style={[styles.modelNameText, { color: theme.textPrimary }]}
+              numberOfLines={1}
+            >
+              {telemetry.motionDiagnostics.backendName}
+            </Text>
+            <Text
+              style={[styles.modelVerText, { color: theme.textSecondary }]}
+              numberOfLines={1}
+            >
+              ckpt: {telemetry.motionDiagnostics.modelVersion}
+            </Text>
+
+            <View style={styles.modelRow}>
+              <View style={styles.modelCol}>
+                <Text style={[styles.label, { color: theme.textMuted }]}>
+                  INFERENCE
+                </Text>
+                <Text
+                  style={[styles.modelValue, { color: theme.textPrimary }]}
+                >
+                  {telemetry.motionDiagnostics.lastInferenceDurationMs.toFixed(2)}{" "}
+                  ms
+                </Text>
+              </View>
+              <View style={styles.modelCol}>
+                <Text style={[styles.label, { color: theme.textMuted }]}>
+                  WINDOW
+                </Text>
+                <Text
+                  style={[styles.modelValue, { color: theme.textPrimary }]}
+                >
+                  {telemetry.motionDiagnostics.windowLength} /{" "}
+                  {telemetry.motionDiagnostics.targetWindowLength} spl
+                </Text>
+              </View>
+              <View style={styles.modelCol}>
+                <Text style={[styles.label, { color: theme.textMuted }]}>
+                  DROPPED
+                </Text>
+                <Text
+                  style={[
+                    styles.modelValue,
+                    {
+                      color:
+                        telemetry.motionDiagnostics.droppedPredictions > 0
+                          ? theme.warning
+                          : theme.textPrimary,
+                    },
+                  ]}
+                >
+                  {telemetry.motionDiagnostics.droppedPredictions} /{" "}
+                  {telemetry.motionDiagnostics.totalPredictions}
+                </Text>
+              </View>
+            </View>
+
+            <View style={styles.modelRow}>
+              <View style={styles.modelCol}>
+                <Text style={[styles.label, { color: theme.textMuted }]}>
+                  PRED VELOCITY
+                </Text>
+                <Text
+                  style={[styles.modelValue, { color: theme.textPrimary }]}
+                >
+                  {(
+                    telemetry.motionDiagnostics.predictedVelocityMps * 3.6
+                  ).toFixed(1)}{" "}
+                  <Text style={styles.unit}>km/h</Text>
+                </Text>
+              </View>
+              <View style={styles.modelCol}>
+                <Text style={[styles.label, { color: theme.textMuted }]}>
+                  PRED YAW RATE
+                </Text>
+                <Text
+                  style={[styles.modelValue, { color: theme.textPrimary }]}
+                >
+                  {telemetry.motionDiagnostics.predictedYawRateRadps.toFixed(3)}{" "}
+                  <Text style={styles.unit}>rad/s</Text>
+                </Text>
+              </View>
+              <View style={styles.modelCol}>
+                <Text style={[styles.label, { color: theme.textMuted }]}>
+                  CONFIDENCE
+                </Text>
+                <Text
+                  style={[styles.modelValue, { color: theme.textPrimary }]}
+                >
+                  {(telemetry.motionDiagnostics.confidence * 100).toFixed(0)}%
+                </Text>
+              </View>
+            </View>
+          </View>
+        )}
+
         {/* Footer */}
         <View style={styles.footerRow}>
           <Text style={[styles.footerText, { color: theme.textSecondary }]}>
@@ -423,5 +548,49 @@ const styles = StyleSheet.create({
   boldText: {
     fontWeight: "700",
     color: "#202124",
+  },
+  modelDiagBox: {
+    borderRadius: 8,
+    padding: 8,
+    borderWidth: 1,
+    gap: 4,
+  },
+  modelDiagHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    borderBottomWidth: 1,
+    borderBottomColor: "#ECEFF1",
+    paddingBottom: 4,
+    marginBottom: 2,
+  },
+  modelDiagTitle: {
+    fontSize: 9,
+    fontWeight: "800",
+    letterSpacing: 0.5,
+  },
+  modelStatusBadge: {
+    fontSize: 9,
+    fontWeight: "800",
+  },
+  modelNameText: {
+    fontSize: 11,
+    fontWeight: "700",
+  },
+  modelVerText: {
+    fontSize: 9,
+    fontFamily: "monospace",
+  },
+  modelRow: {
+    flexDirection: "row",
+    gap: 6,
+    marginTop: 2,
+  },
+  modelCol: {
+    flex: 1,
+  },
+  modelValue: {
+    fontSize: 11,
+    fontWeight: "700",
   },
 });

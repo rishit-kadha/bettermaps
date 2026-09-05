@@ -234,6 +234,13 @@ export class NavigationManager {
         : null,
       gnssStreamGateState: this.streamGate.getState(),
       positioningStatus: this.positioningEngine.getStatus(),
+      motionDiagnostics:
+        "getMotionEstimator" in this.positioningEngine &&
+        typeof (this.positioningEngine as any).getMotionEstimator === "function"
+          ? (this.positioningEngine as any)
+              .getMotionEstimator()
+              ?.getDiagnostics?.() ?? null
+          : null,
 
       // Navigation State
       navigationStatus: this.navigationStatus,

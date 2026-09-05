@@ -19,6 +19,7 @@ import {
   PositionEstimate,
   PositioningStatus,
 } from "./positioning";
+import { MotionEstimatorDiagnostics } from "../positioning/motionEstimator";
 
 export type NavigationMode = "follow_course" | "follow_north" | "free";
 
@@ -154,6 +155,7 @@ export interface NavigationTelemetry {
   currentPositionEstimate: PositionEstimate | null;
   gnssStreamGateState: GnssStreamGateState;
   positioningStatus: PositioningStatus;
+  motionDiagnostics?: MotionEstimatorDiagnostics | null;
 
   // Real Navigation Extension
   navigationStatus: NavigationStatus;
