@@ -161,7 +161,7 @@ def main():
         m1, train_ds, val_ds, 
         run_dir="artifacts/runs/B1_MLP", 
         lambda_omega=1.0, 
-        max_epochs=8, 
+        max_epochs=100, 
         device=device
     )
     registry_records.append({
@@ -183,7 +183,7 @@ def main():
         m2, train_ds, val_ds, 
         run_dir="artifacts/runs/B2_TCN", 
         lambda_omega=1.0, 
-        max_epochs=8, 
+        max_epochs=100, 
         device=device
     )
     registry_records.append({
@@ -205,7 +205,7 @@ def main():
         m3, train_ds, val_ds, 
         run_dir="artifacts/runs/B3_GRU", 
         lambda_omega=1.0, 
-        max_epochs=8, 
+        max_epochs=100, 
         device=device
     )
     registry_records.append({
@@ -235,7 +235,7 @@ def main():
             m_sweep, train_ds, val_ds,
             run_dir=f"artifacts/runs/{run_name}",
             lambda_omega=lam,
-            max_epochs=6,
+            max_epochs=100,
             device=device
         )
         rec = {

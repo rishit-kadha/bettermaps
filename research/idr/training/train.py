@@ -30,7 +30,7 @@ def train_model(
     lr: float = 1e-3,
     batch_size: int = 256,
     max_epochs: int = 15,
-    patience: int = 4,
+    patience: int = 15,
     device: str = "cpu"
 ) -> Dict[str, Any]:
     """

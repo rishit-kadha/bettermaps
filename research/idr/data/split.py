@@ -52,13 +52,13 @@ def partition_sessions(
     # S2 (Driver A, 93k samples): Test (held out long defensive drive)
     # S4 (Driver A, 8k samples): Validation
     # S3b (Driver A, 10k samples): Train
-    # M (Driver B, 105k samples): Train
+    # M (Driver B, 105k samples): Test (held out for cross-driver evaluation)
     # Y1 (Driver D, 70k samples): Train
     # Vf sessions: Vfa01 (Train), Vfa02 (Val)
     
-    fixed_train = ["S1", "S3b", "S3c", "M", "Y1", "Vfa01"]
+    fixed_train = ["S1", "S3b", "S3c", "Y1", "Vfa01"]
     fixed_val = ["S3a", "S4", "Vfa02"]
-    fixed_test = ["S2"]
+    fixed_test = ["S2", "M"]
     
     # Driver E remaining sessions (Vta, Vtb, Vw)
     driver_e = dynamic_reliable[
@@ -144,4 +144,3 @@ def partition_sessions(
 if __name__ == "__main__":
     res = partition_sessions()
     print(res["summary"][["split", "session_count", "total_samples", "duration_hours", "usable_windows", "drivers"]])
-
