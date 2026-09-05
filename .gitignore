@@ -66,5 +66,8 @@ screenshot_*.*
 screenshots/
 *_screenshot.*
 
-# Large zip archives (exclude .zip files per user instruction; push CSVs and folders)
+# Large zip archives
 *.zip
+
+# Raw IO-VNBD dataset (keep local only per IDR handover; do not commit)
+research/IO-VNBD/
