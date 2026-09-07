@@ -1,0 +1,81 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2860:7722"
+  },
+  "bounds": {
+    "minLat": 28.6,
+    "maxLat": 28.61,
+    "minLon": 77.22,
+    "maxLon": 77.23
+  },
+  "segments": [
+    {
+      "id": "delhi_s_c_hex_4",
+      "name": "C-Hexagon SW",
+      "startPoint": {
+        "latitude": 28.6095,
+        "longitude": 77.2295,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.6129,
+        "longitude": 77.225,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.6095,
+          "longitude": 77.2295,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6112,
+          "longitude": 77.22725,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6129,
+          "longitude": 77.225,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 579.6,
+      "bearingDeg": 310.7,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 11.1,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_ig_hex_s",
+      "endNodeId": "delhi_n_ig_hex_w"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_ig_hex_s",
+      "coordinate": {
+        "latitude": 28.6095,
+        "longitude": 77.2295,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_c_hex_3",
+        "delhi_s_c_hex_4"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_ig_hex_s",
+      "coordinate": {
+        "latitude": 28.6095,
+        "longitude": 77.2295,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_c_hex_3",
+        "delhi_s_c_hex_4"
+      ]
+    }
+  ]
+}

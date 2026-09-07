@@ -1,0 +1,81 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2861:7721"
+  },
+  "bounds": {
+    "minLat": 28.61,
+    "maxLat": 28.62,
+    "minLon": 77.21000000000001,
+    "maxLon": 77.22
+  },
+  "segments": [
+    {
+      "id": "delhi_s_janpath_3",
+      "name": "Janpath South",
+      "startPoint": {
+        "latitude": 28.6185,
+        "longitude": 77.2175,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.6129,
+        "longitude": 77.225,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.6185,
+          "longitude": 77.2175,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6157,
+          "longitude": 77.22125,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6129,
+          "longitude": 77.225,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 961.1,
+      "bearingDeg": 130.4,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 11.1,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_windsor",
+      "endNodeId": "delhi_n_ig_hex_w"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_windsor",
+      "coordinate": {
+        "latitude": 28.6185,
+        "longitude": 77.2175,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_janpath_2",
+        "delhi_s_janpath_3"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_windsor",
+      "coordinate": {
+        "latitude": 28.6185,
+        "longitude": 77.2175,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_janpath_2",
+        "delhi_s_janpath_3"
+      ]
+    }
+  ]
+}

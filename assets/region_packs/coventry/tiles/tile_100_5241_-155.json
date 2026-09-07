@@ -1,0 +1,125 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5241:-155"
+  },
+  "bounds": {
+    "minLat": 52.410000000000004,
+    "maxLat": 52.42,
+    "minLon": -1.55,
+    "maxLon": -1.54
+  },
+  "segments": [
+    {
+      "id": "s_170707815",
+      "name": "Holyhead Road",
+      "startPoint": {
+        "latitude": 52.4172641,
+        "longitude": -1.5420201
+      },
+      "endPoint": {
+        "latitude": 52.4142258,
+        "longitude": -1.5325085
+      },
+      "lengthMeters": 730.1,
+      "bearingDeg": 111.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_26092730",
+      "endNodeId": "n_3424757391",
+      "geometry": [
+        {
+          "latitude": 52.4172641,
+          "longitude": -1.5420201
+        },
+        {
+          "latitude": 52.4171379,
+          "longitude": -1.5414977
+        },
+        {
+          "latitude": 52.4170766,
+          "longitude": -1.541252
+        },
+        {
+          "latitude": 52.4168572,
+          "longitude": -1.5403099
+        },
+        {
+          "latitude": 52.4166432,
+          "longitude": -1.5395176
+        },
+        {
+          "latitude": 52.4163327,
+          "longitude": -1.5384017
+        },
+        {
+          "latitude": 52.4160902,
+          "longitude": -1.5375877
+        },
+        {
+          "latitude": 52.4160118,
+          "longitude": -1.5373361
+        },
+        {
+          "latitude": 52.4158814,
+          "longitude": -1.5369532
+        },
+        {
+          "latitude": 52.4157733,
+          "longitude": -1.536627
+        },
+        {
+          "latitude": 52.4152187,
+          "longitude": -1.5351829
+        },
+        {
+          "latitude": 52.4150565,
+          "longitude": -1.5347606
+        },
+        {
+          "latitude": 52.414907,
+          "longitude": -1.5343717
+        },
+        {
+          "latitude": 52.4147856,
+          "longitude": -1.5340368
+        },
+        {
+          "latitude": 52.4147263,
+          "longitude": -1.5338743
+        },
+        {
+          "latitude": 52.4145063,
+          "longitude": -1.5332711
+        },
+        {
+          "latitude": 52.4144878,
+          "longitude": -1.5332205
+        },
+        {
+          "latitude": 52.4142475,
+          "longitude": -1.5325749
+        },
+        {
+          "latitude": 52.4142258,
+          "longitude": -1.5325085
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_26092730",
+      "coordinate": {
+        "latitude": 52.4172641,
+        "longitude": -1.5420201
+      },
+      "connectedSegmentIds": [
+        "s_170707815"
+      ]
+    }
+  ],
+  "intersections": []
+}

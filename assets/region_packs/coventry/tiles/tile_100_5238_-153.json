@@ -1,0 +1,380 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5238:-153"
+  },
+  "bounds": {
+    "minLat": 52.38,
+    "maxLat": 52.39,
+    "minLon": -1.53,
+    "maxLon": -1.52
+  },
+  "segments": [
+    {
+      "id": "s_4080931",
+      "name": "Green Lane",
+      "startPoint": {
+        "latitude": 52.3881562,
+        "longitude": -1.5288468
+      },
+      "endPoint": {
+        "latitude": 52.3879072,
+        "longitude": -1.5288521
+      },
+      "lengthMeters": 27.9,
+      "bearingDeg": 190.3,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_21650725",
+      "endNodeId": "n_5062201146",
+      "geometry": [
+        {
+          "latitude": 52.3881562,
+          "longitude": -1.5288468
+        },
+        {
+          "latitude": 52.38808,
+          "longitude": -1.5288695
+        },
+        {
+          "latitude": 52.3880273,
+          "longitude": -1.5288763
+        },
+        {
+          "latitude": 52.3879689,
+          "longitude": -1.5288658
+        },
+        {
+          "latitude": 52.3879416,
+          "longitude": -1.5288596
+        },
+        {
+          "latitude": 52.3879072,
+          "longitude": -1.5288521
+        }
+      ]
+    },
+    {
+      "id": "s_42046291",
+      "name": "Coat of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.3881542,
+        "longitude": -1.5286368
+      },
+      "endPoint": {
+        "latitude": 52.3880745,
+        "longitude": -1.5280585
+      },
+      "lengthMeters": 40.2,
+      "bearingDeg": 106.8,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_9820934289",
+      "endNodeId": "n_292671993",
+      "geometry": [
+        {
+          "latitude": 52.3881542,
+          "longitude": -1.5286368
+        },
+        {
+          "latitude": 52.3881485,
+          "longitude": -1.5286058
+        },
+        {
+          "latitude": 52.3881376,
+          "longitude": -1.5285124
+        },
+        {
+          "latitude": 52.3881134,
+          "longitude": -1.5283383
+        },
+        {
+          "latitude": 52.3880745,
+          "longitude": -1.5280585
+        }
+      ]
+    },
+    {
+      "id": "s_124047673",
+      "name": "Coat of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.3880745,
+        "longitude": -1.5280585
+      },
+      "endPoint": {
+        "latitude": 52.3878037,
+        "longitude": -1.5250812
+      },
+      "lengthMeters": 204.5,
+      "bearingDeg": 104,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_292671993",
+      "endNodeId": "n_294844319",
+      "geometry": [
+        {
+          "latitude": 52.3880745,
+          "longitude": -1.5280585
+        },
+        {
+          "latitude": 52.388058,
+          "longitude": -1.5279502
+        },
+        {
+          "latitude": 52.3880528,
+          "longitude": -1.5279156
+        },
+        {
+          "latitude": 52.3880169,
+          "longitude": -1.5276136
+        },
+        {
+          "latitude": 52.387942,
+          "longitude": -1.5269831
+        },
+        {
+          "latitude": 52.3878991,
+          "longitude": -1.5264512
+        },
+        {
+          "latitude": 52.3878276,
+          "longitude": -1.5255656
+        },
+        {
+          "latitude": 52.3878037,
+          "longitude": -1.5250812
+        }
+      ]
+    },
+    {
+      "id": "s_1070047453",
+      "name": "Coat of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.388295,
+        "longitude": -1.5292334
+      },
+      "endPoint": {
+        "latitude": 52.3885381,
+        "longitude": -1.5301898
+      },
+      "lengthMeters": 70.3,
+      "bearingDeg": 292.9,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_9820934279",
+      "endNodeId": "n_12534738724",
+      "geometry": [
+        {
+          "latitude": 52.388295,
+          "longitude": -1.5292334
+        },
+        {
+          "latitude": 52.3883936,
+          "longitude": -1.5296165
+        },
+        {
+          "latitude": 52.3885381,
+          "longitude": -1.5301898
+        }
+      ]
+    },
+    {
+      "id": "s_1070047457",
+      "name": "Coat Of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.3881562,
+        "longitude": -1.5288468
+      },
+      "endPoint": {
+        "latitude": 52.388295,
+        "longitude": -1.5292334
+      },
+      "lengthMeters": 30.6,
+      "bearingDeg": 305,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_21650725",
+      "endNodeId": "n_9820934279",
+      "geometry": [
+        {
+          "latitude": 52.3881562,
+          "longitude": -1.5288468
+        },
+        {
+          "latitude": 52.3882196,
+          "longitude": -1.5289949
+        },
+        {
+          "latitude": 52.388236,
+          "longitude": -1.5290334
+        },
+        {
+          "latitude": 52.3882724,
+          "longitude": -1.5291454
+        },
+        {
+          "latitude": 52.388295,
+          "longitude": -1.5292334
+        }
+      ]
+    },
+    {
+      "id": "s_1070047459",
+      "name": "Coat Of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.3881562,
+        "longitude": -1.5288468
+      },
+      "endPoint": {
+        "latitude": 52.3881542,
+        "longitude": -1.5286368
+      },
+      "lengthMeters": 14.3,
+      "bearingDeg": 88.8,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_21650725",
+      "endNodeId": "n_9820934289",
+      "geometry": [
+        {
+          "latitude": 52.3881562,
+          "longitude": -1.5288468
+        },
+        {
+          "latitude": 52.3881585,
+          "longitude": -1.528669
+        },
+        {
+          "latitude": 52.3881542,
+          "longitude": -1.5286368
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_21650725",
+      "coordinate": {
+        "latitude": 52.3881562,
+        "longitude": -1.5288468
+      },
+      "connectedSegmentIds": [
+        "s_4080931",
+        "s_1070047457",
+        "s_1070047459"
+      ]
+    },
+    {
+      "id": "n_5062201146",
+      "coordinate": {
+        "latitude": 52.3879072,
+        "longitude": -1.5288521
+      },
+      "connectedSegmentIds": [
+        "s_4080931"
+      ]
+    },
+    {
+      "id": "n_9820934289",
+      "coordinate": {
+        "latitude": 52.3881542,
+        "longitude": -1.5286368
+      },
+      "connectedSegmentIds": [
+        "s_42046291",
+        "s_1070047459"
+      ]
+    },
+    {
+      "id": "n_292671993",
+      "coordinate": {
+        "latitude": 52.3880745,
+        "longitude": -1.5280585
+      },
+      "connectedSegmentIds": [
+        "s_42046291",
+        "s_124047673"
+      ]
+    },
+    {
+      "id": "n_294844319",
+      "coordinate": {
+        "latitude": 52.3878037,
+        "longitude": -1.5250812
+      },
+      "connectedSegmentIds": [
+        "s_124047673"
+      ]
+    },
+    {
+      "id": "n_9820934279",
+      "coordinate": {
+        "latitude": 52.388295,
+        "longitude": -1.5292334
+      },
+      "connectedSegmentIds": [
+        "s_1070047453",
+        "s_1070047457"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "n_21650725",
+      "coordinate": {
+        "latitude": 52.3881562,
+        "longitude": -1.5288468
+      },
+      "outboundSegmentIds": [
+        "s_4080931",
+        "s_1070047457",
+        "s_1070047459"
+      ]
+    },
+    {
+      "nodeId": "n_9820934289",
+      "coordinate": {
+        "latitude": 52.3881542,
+        "longitude": -1.5286368
+      },
+      "outboundSegmentIds": [
+        "s_42046291",
+        "s_1070047459"
+      ]
+    },
+    {
+      "nodeId": "n_292671993",
+      "coordinate": {
+        "latitude": 52.3880745,
+        "longitude": -1.5280585
+      },
+      "outboundSegmentIds": [
+        "s_42046291",
+        "s_124047673"
+      ]
+    },
+    {
+      "nodeId": "n_9820934279",
+      "coordinate": {
+        "latitude": 52.388295,
+        "longitude": -1.5292334
+      },
+      "outboundSegmentIds": [
+        "s_1070047453",
+        "s_1070047457"
+      ]
+    }
+  ]
+}

@@ -1,11 +1,6 @@
-import { Platform } from "react-native";
 import { ILocationProvider } from "../../core/types/location";
-import { AndroidGnssLocationProvider } from "./AndroidGnssLocationProvider";
-import { IosGnssLocationProvider } from "./IosGnssLocationProvider";
 import { MockLocationProvider } from "./MockLocationProvider";
 
-export * from "./AndroidGnssLocationProvider";
-export * from "./IosGnssLocationProvider";
 export * from "./MockLocationProvider";
 
 export type AvailableProviderId = "native_gnss" | "mock";
@@ -17,9 +12,22 @@ export type AvailableProviderId = "native_gnss" | "mock";
  * - Other/Web -> MockLocationProvider fallback
  */
 export const createPlatformGnssProvider = (): ILocationProvider => {
-  if (Platform.OS === "android") {
+  let platformOs = "unknown";
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const rn = require("react-native");
+    platformOs = rn?.Platform?.OS ?? "unknown";
+  } catch (_e) {
+    // Plain Node or non-RN environment
+  }
+
+  if (platformOs === "android") {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { AndroidGnssLocationProvider } = require("./AndroidGnssLocationProvider");
     return new AndroidGnssLocationProvider();
-  } else if (Platform.OS === "ios") {
+  } else if (platformOs === "ios") {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { IosGnssLocationProvider } = require("./IosGnssLocationProvider");
     return new IosGnssLocationProvider();
   }
   return new MockLocationProvider();
@@ -29,10 +37,13 @@ export const createPlatformGnssProvider = (): ILocationProvider => {
  * Provider Registry managing platform adapters.
  */
 class LocationProviderRegistry {
-  private nativeGnssProvider: ILocationProvider = createPlatformGnssProvider();
+  private nativeGnssProvider: ILocationProvider | null = null;
   private mockProvider = new MockLocationProvider();
 
   public getNativeGnssProvider(): ILocationProvider {
+    if (!this.nativeGnssProvider) {
+      this.nativeGnssProvider = createPlatformGnssProvider();
+    }
     return this.nativeGnssProvider;
   }
 
@@ -43,11 +54,11 @@ class LocationProviderRegistry {
   public getProvider(id: AvailableProviderId): ILocationProvider {
     switch (id) {
       case "native_gnss":
-        return this.nativeGnssProvider;
+        return this.getNativeGnssProvider();
       case "mock":
         return this.mockProvider;
       default:
-        return this.nativeGnssProvider;
+        return this.getNativeGnssProvider();
     }
   }
 }

@@ -95,9 +95,10 @@ export interface IPositioningEngine {
   processGnss(sample: NavLocation): PositionEstimate;
 
   /**
-   * Notified when the GNSS stream gate is DISABLED (simulating outage).
-   * Produces an invalid PositionEstimate (valid = false, position_source = "NONE").
+   * Optional ingestion of high-rate IMU sample for inertial dead-reckoning engines.
    */
+  processImu?(sample: import("./imu").ImuSample): PositionEstimate | null;
+
   onGnssBlocked(): PositionEstimate;
 
   /** Returns the most recent position estimate */

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
+    "strict": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "rootDir": "..",
+    "outDir": "../dist_test"
+  },
+  "include": [
+    "**/*",
+    "../src/core/**/*",
+    "../src/adapters/**/*",
+    "../src/services/**/*"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2860:7719"
+  },
+  "bounds": {
+    "minLat": 28.6,
+    "maxLat": 28.61,
+    "minLon": 77.19,
+    "maxLon": 77.2
+  },
+  "segments": [
+    {
+      "id": "delhi_s_shanti_path",
+      "name": "Shanti Path Diplomatic Avenue",
+      "startPoint": {
+        "latitude": 28.602,
+        "longitude": 77.195,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.585,
+        "longitude": 77.185,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.602,
+          "longitude": 77.195,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.5935,
+          "longitude": 77.19,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.585,
+          "longitude": 77.185,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 2127.6,
+      "bearingDeg": 207.3,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.9,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_shanti_n",
+      "endNodeId": "delhi_n_shanti_s"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_shanti_n",
+      "coordinate": {
+        "latitude": 28.602,
+        "longitude": 77.195,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_shanti_path"
+      ]
+    }
+  ],
+  "intersections": []
+}

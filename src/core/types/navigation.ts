@@ -163,4 +163,50 @@ export interface NavigationTelemetry {
   activeRoute: ActiveRoute | null;
   routeProgress: RouteProgress | null;
   routeError: string | null;
+  roadDiagnostics?: any | null;
+
+  // GRU Model Diagnostics (B3_GRU ONNX)
+  gruModelDiagnostics?: import("../../adapters/ml/GruOnnxEvaluator").GruOnnxEvaluatorDiagnostics | null;
+
+  // Extended GNSS / ESKF Fusion Diagnostics
+  gnssFixCount?: number;
+  lastGnssFixAgeMs?: number | null;
+  eskfGnssUpdateCount?: number;
+  gnssStatus?: "VALID" | "STALE" | "LOST" | "BLOCKED";
+  rawGnssLocation?: NavLocation | null;
+
+  // Extended Road Coverage & Memory Diagnostics
+  roadCoverageDiagnostics?: RoadCoverageTelemetry | null;
+  roadMemoryDiagnostics?: RoadMemoryTelemetry | null;
+}
+
+export interface RoadCoverageTelemetry {
+  sourcePosition: "LIVE" | "REPLAY";
+  currentPosition: { latitude: number; longitude: number } | null;
+  coverageAnchor: { latitude: number; longitude: number } | null;
+  planner: "ROUTE" | "FREE_DRIVE" | "ROUTE_DEVIATION" | "NONE";
+  requiredTileCount: number;
+  loadedTileCount: number;
+  pendingTileCount: number;
+  cacheHitCount: number;
+  cacheMissCount: number;
+  roadCandidatesCount: number;
+  roadUpdateCount: number;
+  lastCoverageUpdateTimestampMs: number | null;
+  coalescedSkipCount?: number;
+  lastTriggerReason?: string;
+  activeRegionId?: string | null;
+}
+
+export interface RoadMemoryTelemetry {
+  ramTileCount: number;
+  ramRoadBytes: number;
+  ramBudgetBytes: number;
+  l1CacheBytes: number;
+  persistentCacheBytes: number;
+  evictionCount: number;
+  lastEvictionKey: string | null;
+  memoryPressure: "NORMAL" | "PRESSURE" | "AGGRESSIVE";
+  activeSegmentCount: number;
+  indexedSegmentCount: number;
 }

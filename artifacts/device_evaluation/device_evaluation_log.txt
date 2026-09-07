@@ -1,0 +1,514 @@
+[2026-09-05 21:52:47] Configuring ADB reverse port forwarding...
+[2026-09-05 21:52:53] ADB reverse 8081: 0, 8088: 0
+[2026-09-05 21:54:15] Configuring ADB reverse port forwarding...
+[2026-09-05 21:54:21] ADB reverse 8081: 0, 8088: 0
+[2026-09-05 21:54:21] Local dev bridge server listening on http://127.0.0.1:8088
+[2026-09-05 21:54:21] Waiting for phone bridge connection on port 8088...
+[2026-09-05 21:54:21] Phone bridge connected successfully!
+[2026-09-05 21:54:21] Loaded 11 locked test sessions: ['M', 'S2', 'Vta10', 'Vta15', 'Vta21', 'Vta8', 'Vtb10', 'Vtb12', 'Vtb4', 'Vw14b', 'Vw8']
+[2026-09-05 21:54:21] Total planned evaluation runs: 50
+[2026-09-05 21:54:21] ============================================================
+[2026-09-05 21:54:21] [1/50] RUN: Session=M, Model=tcn, Outage=5s
+[2026-09-05 21:54:21] ============================================================
+[2026-09-05 21:54:24]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_5s\01_before.png)
+[2026-09-05 21:54:29]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_5s\02_pre_outage.png)
+[2026-09-05 21:54:29]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_5s\03_during_outage.png)
+[2026-09-05 21:54:30]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_5s\04_end_outage.png)
+[2026-09-05 21:54:31]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_5s\05_recovery.png)
+[2026-09-05 21:54:32]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_5s\06_final.png)
+[2026-09-05 21:54:33]   Run Results: Mean=1.02m, OutageMax=7.51m, OutageMean=3.31m, PostRec=0.67m, Leakage=0
+[2026-09-05 21:54:33] ============================================================
+[2026-09-05 21:54:33] [2/50] RUN: Session=M, Model=tcn, Outage=10s
+[2026-09-05 21:54:33] ============================================================
+[2026-09-05 21:54:35]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_10s\01_before.png)
+[2026-09-05 21:54:40]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_10s\02_pre_outage.png)
+[2026-09-05 21:54:41]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_10s\03_during_outage.png)
+[2026-09-05 21:54:42]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_10s\04_end_outage.png)
+[2026-09-05 21:54:44]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_10s\05_recovery.png)
+[2026-09-05 21:54:45]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_10s\06_final.png)
+[2026-09-05 21:54:46]   Run Results: Mean=2.57m, OutageMax=20.44m, OutageMean=10.22m, PostRec=0.7m, Leakage=0
+[2026-09-05 21:54:46] ============================================================
+[2026-09-05 21:54:46] [3/50] RUN: Session=M, Model=tcn, Outage=20s
+[2026-09-05 21:54:46] ============================================================
+[2026-09-05 21:54:48]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_20s\01_before.png)
+[2026-09-05 21:54:54]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_20s\02_pre_outage.png)
+[2026-09-05 21:54:57]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_20s\03_during_outage.png)
+[2026-09-05 21:54:58]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_20s\04_end_outage.png)
+[2026-09-05 21:54:59]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_20s\05_recovery.png)
+[2026-09-05 21:55:01]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_20s\06_final.png)
+[2026-09-05 21:55:02]   Run Results: Mean=5.06m, OutageMax=28.96m, OutageMean=14.37m, PostRec=0.73m, Leakage=0
+[2026-09-05 21:55:02] ============================================================
+[2026-09-05 21:55:02] [4/50] RUN: Session=M, Model=tcn, Outage=30s
+[2026-09-05 21:55:02] ============================================================
+[2026-09-05 21:55:04]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_30s\01_before.png)
+[2026-09-05 21:55:11]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_30s\02_pre_outage.png)
+[2026-09-05 21:55:14]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_30s\03_during_outage.png)
+[2026-09-05 21:55:16]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_30s\04_end_outage.png)
+[2026-09-05 21:55:18]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_30s\05_recovery.png)
+[2026-09-05 21:55:20]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_30s\06_final.png)
+[2026-09-05 21:55:21]   Run Results: Mean=8.34m, OutageMax=44.49m, OutageMean=21.53m, PostRec=0.69m, Leakage=0
+[2026-09-05 21:55:21] ============================================================
+[2026-09-05 21:55:21] [5/50] RUN: Session=M, Model=tcn, Outage=60s
+[2026-09-05 21:55:21] ============================================================
+[2026-09-05 21:55:23]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_60s\01_before.png)
+[2026-09-05 21:55:28]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_60s\02_pre_outage.png)
+[2026-09-05 21:55:34]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_60s\03_during_outage.png)
+[2026-09-05 21:55:40]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_60s\04_end_outage.png)
+[2026-09-05 21:55:41]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_60s\05_recovery.png)
+[2026-09-05 21:55:42]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\M\tcn_60s\06_final.png)
+[2026-09-05 21:55:43]   Run Results: Mean=0m, OutageMax=0m, OutageMean=0m, PostRec=0m, Leakage=0
+[2026-09-05 21:55:43] ============================================================
+[2026-09-05 21:55:43] [6/50] RUN: Session=S2, Model=tcn, Outage=5s
+[2026-09-05 21:55:43] ============================================================
+[2026-09-05 21:55:45]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_5s\01_before.png)
+[2026-09-05 21:55:50]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_5s\02_pre_outage.png)
+[2026-09-05 21:55:51]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_5s\03_during_outage.png)
+[2026-09-05 21:55:52]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_5s\04_end_outage.png)
+[2026-09-05 21:55:53]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_5s\05_recovery.png)
+[2026-09-05 21:55:54]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_5s\06_final.png)
+[2026-09-05 21:55:55]   Run Results: Mean=0.24m, OutageMax=2.4m, OutageMean=1.3m, PostRec=0.21m, Leakage=0
+[2026-09-05 21:55:55] ============================================================
+[2026-09-05 21:55:55] [7/50] RUN: Session=S2, Model=tcn, Outage=10s
+[2026-09-05 21:55:55] ============================================================
+[2026-09-05 21:55:57]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_10s\01_before.png)
+[2026-09-05 21:56:02]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_10s\02_pre_outage.png)
+[2026-09-05 21:56:03]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_10s\03_during_outage.png)
+[2026-09-05 21:56:07]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_10s\04_end_outage.png)
+[2026-09-05 21:56:08]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_10s\05_recovery.png)
+[2026-09-05 21:56:09]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_10s\06_final.png)
+[2026-09-05 21:56:10]   Run Results: Mean=0.33m, OutageMax=1.88m, OutageMean=1.17m, PostRec=0.32m, Leakage=0
+[2026-09-05 21:56:10] ============================================================
+[2026-09-05 21:56:10] [8/50] RUN: Session=S2, Model=tcn, Outage=20s
+[2026-09-05 21:56:10] ============================================================
+[2026-09-05 21:56:13]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_20s\01_before.png)
+[2026-09-05 21:56:17]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_20s\02_pre_outage.png)
+[2026-09-05 21:56:19]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_20s\03_during_outage.png)
+[2026-09-05 21:56:21]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_20s\04_end_outage.png)
+[2026-09-05 21:56:22]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_20s\05_recovery.png)
+[2026-09-05 21:56:24]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_20s\06_final.png)
+[2026-09-05 21:56:24]   Run Results: Mean=3.01m, OutageMax=21.7m, OutageMean=7.96m, PostRec=0.26m, Leakage=0
+[2026-09-05 21:56:24] ============================================================
+[2026-09-05 21:56:24] [9/50] RUN: Session=S2, Model=tcn, Outage=30s
+[2026-09-05 21:56:24] ============================================================
+[2026-09-05 21:56:27]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_30s\01_before.png)
+[2026-09-05 21:56:31]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_30s\02_pre_outage.png)
+[2026-09-05 21:56:35]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_30s\03_during_outage.png)
+[2026-09-05 21:56:37]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_30s\04_end_outage.png)
+[2026-09-05 21:56:38]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_30s\05_recovery.png)
+[2026-09-05 21:56:40]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_30s\06_final.png)
+[2026-09-05 21:56:40]   Run Results: Mean=6.06m, OutageMax=28.51m, OutageMean=13.07m, PostRec=0.35m, Leakage=0
+[2026-09-05 21:56:40] ============================================================
+[2026-09-05 21:56:40] [10/50] RUN: Session=S2, Model=tcn, Outage=60s
+[2026-09-05 21:56:40] ============================================================
+[2026-09-05 21:56:43]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_60s\01_before.png)
+[2026-09-05 21:56:48]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_60s\02_pre_outage.png)
+[2026-09-05 21:56:54]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_60s\03_during_outage.png)
+[2026-09-05 21:57:00]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_60s\04_end_outage.png)
+[2026-09-05 21:57:01]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_60s\05_recovery.png)
+[2026-09-05 21:57:02]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\tcn_60s\06_final.png)
+[2026-09-05 21:57:03]   Run Results: Mean=31.86m, OutageMax=116.98m, OutageMean=51.81m, PostRec=0.19m, Leakage=0
+[2026-09-05 21:57:03] ============================================================
+[2026-09-05 21:57:03] [11/50] RUN: Session=Vta10, Model=tcn, Outage=5s
+[2026-09-05 21:57:03] ============================================================
+[2026-09-05 21:57:06]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_5s\01_before.png)
+[2026-09-05 21:57:10]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_5s\02_pre_outage.png)
+[2026-09-05 21:57:11]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_5s\03_during_outage.png)
+[2026-09-05 21:57:12]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_5s\04_end_outage.png)
+[2026-09-05 21:57:12]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_5s\05_recovery.png)
+[2026-09-05 21:57:14]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_5s\06_final.png)
+[2026-09-05 21:57:15]   Run Results: Mean=4.87m, OutageMax=47.46m, OutageMean=18.59m, PostRec=2.73m, Leakage=0
+[2026-09-05 21:57:15] ============================================================
+[2026-09-05 21:57:15] [12/50] RUN: Session=Vta10, Model=tcn, Outage=10s
+[2026-09-05 21:57:15] ============================================================
+[2026-09-05 21:57:17]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_10s\01_before.png)
+[2026-09-05 21:57:22]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_10s\02_pre_outage.png)
+[2026-09-05 21:57:23]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_10s\03_during_outage.png)
+[2026-09-05 21:57:24]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_10s\04_end_outage.png)
+[2026-09-05 21:57:25]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_10s\05_recovery.png)
+[2026-09-05 21:57:26]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_10s\06_final.png)
+[2026-09-05 21:57:27]   Run Results: Mean=8.79m, OutageMax=69.28m, OutageMean=29.56m, PostRec=2.85m, Leakage=0
+[2026-09-05 21:57:27] ============================================================
+[2026-09-05 21:57:27] [13/50] RUN: Session=Vta10, Model=tcn, Outage=20s
+[2026-09-05 21:57:27] ============================================================
+[2026-09-05 21:57:29]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_20s\01_before.png)
+[2026-09-05 21:57:34]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_20s\02_pre_outage.png)
+[2026-09-05 21:57:36]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_20s\03_during_outage.png)
+[2026-09-05 21:57:38]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_20s\04_end_outage.png)
+[2026-09-05 21:57:39]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_20s\05_recovery.png)
+[2026-09-05 21:57:40]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_20s\06_final.png)
+[2026-09-05 21:57:41]   Run Results: Mean=23.98m, OutageMax=99.83m, OutageMean=60.7m, PostRec=3.02m, Leakage=0
+[2026-09-05 21:57:41] ============================================================
+[2026-09-05 21:57:41] [14/50] RUN: Session=Vta10, Model=tcn, Outage=30s
+[2026-09-05 21:57:41] ============================================================
+[2026-09-05 21:57:43]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_30s\01_before.png)
+[2026-09-05 21:57:48]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_30s\02_pre_outage.png)
+[2026-09-05 21:57:51]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_30s\03_during_outage.png)
+[2026-09-05 21:57:54]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_30s\04_end_outage.png)
+[2026-09-05 21:57:55]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_30s\05_recovery.png)
+[2026-09-05 21:57:57]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_30s\06_final.png)
+[2026-09-05 21:57:57]   Run Results: Mean=31.49m, OutageMax=177.81m, OutageMean=66.72m, PostRec=2.72m, Leakage=0
+[2026-09-05 21:57:57] ============================================================
+[2026-09-05 21:57:57] [15/50] RUN: Session=Vta10, Model=tcn, Outage=60s
+[2026-09-05 21:57:57] ============================================================
+[2026-09-05 21:58:00]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_60s\01_before.png)
+[2026-09-05 21:58:05]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_60s\02_pre_outage.png)
+[2026-09-05 21:58:11]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_60s\03_during_outage.png)
+[2026-09-05 21:58:16]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_60s\04_end_outage.png)
+[2026-09-05 21:58:17]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_60s\05_recovery.png)
+[2026-09-05 21:58:19]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta10\tcn_60s\06_final.png)
+[2026-09-05 21:58:19]   Run Results: Mean=164.02m, OutageMax=722.63m, OutageMean=254.48m, PostRec=1.76m, Leakage=0
+[2026-09-05 21:58:19] ============================================================
+[2026-09-05 21:58:19] [16/50] RUN: Session=Vta15, Model=tcn, Outage=5s
+[2026-09-05 21:58:19] ============================================================
+[2026-09-05 21:58:22]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_5s\01_before.png)
+[2026-09-05 21:58:26]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_5s\02_pre_outage.png)
+[2026-09-05 21:58:27]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_5s\03_during_outage.png)
+[2026-09-05 21:58:27]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_5s\04_end_outage.png)
+[2026-09-05 21:58:28]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_5s\05_recovery.png)
+[2026-09-05 21:58:30]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_5s\06_final.png)
+[2026-09-05 21:58:30]   Run Results: Mean=2.48m, OutageMax=12.96m, OutageMean=6.29m, PostRec=1.8m, Leakage=0
+[2026-09-05 21:58:30] ============================================================
+[2026-09-05 21:58:30] [17/50] RUN: Session=Vta15, Model=tcn, Outage=10s
+[2026-09-05 21:58:30] ============================================================
+[2026-09-05 21:58:33]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_10s\01_before.png)
+[2026-09-05 21:58:37]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_10s\02_pre_outage.png)
+[2026-09-05 21:58:39]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_10s\03_during_outage.png)
+[2026-09-05 21:58:39]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_10s\04_end_outage.png)
+[2026-09-05 21:58:40]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_10s\05_recovery.png)
+[2026-09-05 21:58:43]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_10s\06_final.png)
+[2026-09-05 21:58:44]   Run Results: Mean=3.01m, OutageMax=12.85m, OutageMean=7.45m, PostRec=1.96m, Leakage=0
+[2026-09-05 21:58:44] ============================================================
+[2026-09-05 21:58:44] [18/50] RUN: Session=Vta15, Model=tcn, Outage=20s
+[2026-09-05 21:58:44] ============================================================
+[2026-09-05 21:58:46]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_20s\01_before.png)
+[2026-09-05 21:58:50]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_20s\02_pre_outage.png)
+[2026-09-05 21:58:53]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_20s\03_during_outage.png)
+[2026-09-05 21:58:54]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_20s\04_end_outage.png)
+[2026-09-05 21:58:55]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_20s\05_recovery.png)
+[2026-09-05 21:58:57]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_20s\06_final.png)
+[2026-09-05 21:58:58]   Run Results: Mean=11.78m, OutageMax=70.12m, OutageMean=28.78m, PostRec=2.07m, Leakage=0
+[2026-09-05 21:58:58] ============================================================
+[2026-09-05 21:58:58] [19/50] RUN: Session=Vta15, Model=tcn, Outage=30s
+[2026-09-05 21:58:58] ============================================================
+[2026-09-05 21:59:00]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_30s\01_before.png)
+[2026-09-05 21:59:04]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_30s\02_pre_outage.png)
+[2026-09-05 21:59:08]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_30s\03_during_outage.png)
+[2026-09-05 21:59:11]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_30s\04_end_outage.png)
+[2026-09-05 21:59:11]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_30s\05_recovery.png)
+[2026-09-05 21:59:13]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta15\tcn_30s\06_final.png)
+[2026-09-05 21:59:14]   Run Results: Mean=17.21m, OutageMax=112.73m, OutageMean=35.37m, PostRec=2.12m, Leakage=0
+[2026-09-05 21:59:14] ============================================================
+[2026-09-05 21:59:14] [20/50] RUN: Session=Vta21, Model=tcn, Outage=5s
+[2026-09-05 21:59:14] ============================================================
+[2026-09-05 21:59:16]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_5s\01_before.png)
+[2026-09-05 21:59:21]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_5s\02_pre_outage.png)
+[2026-09-05 21:59:21]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_5s\03_during_outage.png)
+[2026-09-05 21:59:22]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_5s\04_end_outage.png)
+[2026-09-05 21:59:23]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_5s\05_recovery.png)
+[2026-09-05 21:59:24]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_5s\06_final.png)
+[2026-09-05 21:59:25]   Run Results: Mean=2.95m, OutageMax=30.5m, OutageMean=12.74m, PostRec=1.7m, Leakage=0
+[2026-09-05 21:59:25] ============================================================
+[2026-09-05 21:59:25] [21/50] RUN: Session=Vta21, Model=tcn, Outage=10s
+[2026-09-05 21:59:25] ============================================================
+[2026-09-05 21:59:28]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_10s\01_before.png)
+[2026-09-05 21:59:32]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_10s\02_pre_outage.png)
+[2026-09-05 21:59:33]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_10s\03_during_outage.png)
+[2026-09-05 21:59:34]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_10s\04_end_outage.png)
+[2026-09-05 21:59:35]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_10s\05_recovery.png)
+[2026-09-05 21:59:37]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_10s\06_final.png)
+[2026-09-05 21:59:37]   Run Results: Mean=7.38m, OutageMax=60.47m, OutageMean=28.24m, PostRec=1.74m, Leakage=0
+[2026-09-05 21:59:37] ============================================================
+[2026-09-05 21:59:37] [22/50] RUN: Session=Vta21, Model=tcn, Outage=20s
+[2026-09-05 21:59:37] ============================================================
+[2026-09-05 21:59:40]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_20s\01_before.png)
+[2026-09-05 21:59:44]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_20s\02_pre_outage.png)
+[2026-09-05 21:59:46]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_20s\03_during_outage.png)
+[2026-09-05 21:59:48]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_20s\04_end_outage.png)
+[2026-09-05 21:59:49]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_20s\05_recovery.png)
+[2026-09-05 21:59:51]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_20s\06_final.png)
+[2026-09-05 21:59:51]   Run Results: Mean=12.42m, OutageMax=54.24m, OutageMean=30.45m, PostRec=1.58m, Leakage=0
+[2026-09-05 21:59:51] ============================================================
+[2026-09-05 21:59:51] [23/50] RUN: Session=Vta21, Model=tcn, Outage=30s
+[2026-09-05 21:59:51] ============================================================
+[2026-09-05 21:59:54]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_30s\01_before.png)
+[2026-09-05 21:59:58]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_30s\02_pre_outage.png)
+[2026-09-05 22:00:02]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_30s\03_during_outage.png)
+[2026-09-05 22:00:05]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_30s\04_end_outage.png)
+[2026-09-05 22:00:05]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_30s\05_recovery.png)
+[2026-09-05 22:00:07]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_30s\06_final.png)
+[2026-09-05 22:00:08]   Run Results: Mean=30.13m, OutageMax=158m, OutageMean=64.98m, PostRec=1.25m, Leakage=0
+[2026-09-05 22:00:08] ============================================================
+[2026-09-05 22:00:08] [24/50] RUN: Session=Vta21, Model=tcn, Outage=60s
+[2026-09-05 22:00:08] ============================================================
+[2026-09-05 22:00:10]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_60s\01_before.png)
+[2026-09-05 22:00:15]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_60s\02_pre_outage.png)
+[2026-09-05 22:00:21]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_60s\03_during_outage.png)
+[2026-09-05 22:00:28]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_60s\04_end_outage.png)
+[2026-09-05 22:00:28]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_60s\05_recovery.png)
+[2026-09-05 22:00:29]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta21\tcn_60s\06_final.png)
+[2026-09-05 22:00:30]   Run Results: Mean=114.78m, OutageMax=447.98m, OutageMean=181.77m, PostRec=1.77m, Leakage=0
+[2026-09-05 22:00:30] ============================================================
+[2026-09-05 22:00:30] [25/50] RUN: Session=Vta8, Model=tcn, Outage=5s
+[2026-09-05 22:00:30] ============================================================
+[2026-09-05 22:00:32]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_5s\01_before.png)
+[2026-09-05 22:00:37]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_5s\02_pre_outage.png)
+[2026-09-05 22:00:38]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_5s\03_during_outage.png)
+[2026-09-05 22:00:38]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_5s\04_end_outage.png)
+[2026-09-05 22:00:39]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_5s\05_recovery.png)
+[2026-09-05 22:00:40]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_5s\06_final.png)
+[2026-09-05 22:00:41]   Run Results: Mean=0.12m, OutageMax=0.37m, OutageMean=0.19m, PostRec=0.02m, Leakage=0
+[2026-09-05 22:00:41] ============================================================
+[2026-09-05 22:00:41] [26/50] RUN: Session=Vta8, Model=tcn, Outage=10s
+[2026-09-05 22:00:41] ============================================================
+[2026-09-05 22:00:44]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_10s\01_before.png)
+[2026-09-05 22:00:48]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_10s\02_pre_outage.png)
+[2026-09-05 22:00:49]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_10s\03_during_outage.png)
+[2026-09-05 22:00:50]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_10s\04_end_outage.png)
+[2026-09-05 22:00:51]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_10s\05_recovery.png)
+[2026-09-05 22:00:53]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_10s\06_final.png)
+[2026-09-05 22:00:54]   Run Results: Mean=0.17m, OutageMax=0.74m, OutageMean=0.39m, PostRec=0.04m, Leakage=0
+[2026-09-05 22:00:54] ============================================================
+[2026-09-05 22:00:54] [27/50] RUN: Session=Vta8, Model=tcn, Outage=20s
+[2026-09-05 22:00:54] ============================================================
+[2026-09-05 22:00:58]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_20s\01_before.png)
+[2026-09-05 22:01:02]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_20s\02_pre_outage.png)
+[2026-09-05 22:01:04]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_20s\03_during_outage.png)
+[2026-09-05 22:01:06]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_20s\04_end_outage.png)
+[2026-09-05 22:01:07]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_20s\05_recovery.png)
+[2026-09-05 22:01:09]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_20s\06_final.png)
+[2026-09-05 22:01:09]   Run Results: Mean=0.36m, OutageMax=2.44m, OutageMean=0.78m, PostRec=0.04m, Leakage=0
+[2026-09-05 22:01:09] ============================================================
+[2026-09-05 22:01:09] [28/50] RUN: Session=Vta8, Model=tcn, Outage=30s
+[2026-09-05 22:01:09] ============================================================
+[2026-09-05 22:01:12]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_30s\01_before.png)
+[2026-09-05 22:01:17]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_30s\02_pre_outage.png)
+[2026-09-05 22:01:20]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_30s\03_during_outage.png)
+[2026-09-05 22:01:22]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_30s\04_end_outage.png)
+[2026-09-05 22:01:23]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_30s\05_recovery.png)
+[2026-09-05 22:01:25]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_30s\06_final.png)
+[2026-09-05 22:01:26]   Run Results: Mean=1.53m, OutageMax=9.56m, OutageMean=3.18m, PostRec=0m, Leakage=0
+[2026-09-05 22:01:26] ============================================================
+[2026-09-05 22:01:26] [29/50] RUN: Session=Vta8, Model=tcn, Outage=60s
+[2026-09-05 22:01:26] ============================================================
+[2026-09-05 22:01:28]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_60s\01_before.png)
+[2026-09-05 22:01:32]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_60s\02_pre_outage.png)
+[2026-09-05 22:01:39]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_60s\03_during_outage.png)
+[2026-09-05 22:01:45]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_60s\04_end_outage.png)
+[2026-09-05 22:01:45]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_60s\05_recovery.png)
+[2026-09-05 22:01:47]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vta8\tcn_60s\06_final.png)
+[2026-09-05 22:01:48]   Run Results: Mean=4.11m, OutageMax=9.64m, OutageMean=6.4m, PostRec=0.2m, Leakage=0
+[2026-09-05 22:01:48] [30/50] Session Vtb10: SKIPPED (duration limitation)
+[2026-09-05 22:01:48] ============================================================
+[2026-09-05 22:01:48] [31/50] RUN: Session=Vtb12, Model=tcn, Outage=5s
+[2026-09-05 22:01:48] ============================================================
+[2026-09-05 22:01:50]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb12\tcn_5s\01_before.png)
+[2026-09-05 22:01:54]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb12\tcn_5s\02_pre_outage.png)
+[2026-09-05 22:01:55]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb12\tcn_5s\03_during_outage.png)
+[2026-09-05 22:01:56]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb12\tcn_5s\04_end_outage.png)
+[2026-09-05 22:01:57]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb12\tcn_5s\05_recovery.png)
+[2026-09-05 22:02:00]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb12\tcn_5s\06_final.png)
+[2026-09-05 22:02:00]   Run Results: Mean=1.66m, OutageMax=15.12m, OutageMean=5.37m, PostRec=1.04m, Leakage=0
+[2026-09-05 22:02:00] ============================================================
+[2026-09-05 22:02:00] [32/50] RUN: Session=Vtb12, Model=tcn, Outage=10s
+[2026-09-05 22:02:00] ============================================================
+[2026-09-05 22:02:03]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb12\tcn_10s\01_before.png)
+[2026-09-05 22:02:07]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb12\tcn_10s\02_pre_outage.png)
+[2026-09-05 22:02:09]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb12\tcn_10s\03_during_outage.png)
+[2026-09-05 22:02:09]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb12\tcn_10s\04_end_outage.png)
+[2026-09-05 22:02:10]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb12\tcn_10s\05_recovery.png)
+[2026-09-05 22:02:12]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb12\tcn_10s\06_final.png)
+[2026-09-05 22:02:13]   Run Results: Mean=4.85m, OutageMax=38.57m, OutageMean=17.15m, PostRec=1.09m, Leakage=0
+[2026-09-05 22:02:13] ============================================================
+[2026-09-05 22:02:13] [33/50] RUN: Session=Vtb4, Model=tcn, Outage=5s
+[2026-09-05 22:02:13] ============================================================
+[2026-09-05 22:02:15]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_5s\01_before.png)
+[2026-09-05 22:02:19]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_5s\02_pre_outage.png)
+[2026-09-05 22:02:20]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_5s\03_during_outage.png)
+[2026-09-05 22:02:21]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_5s\04_end_outage.png)
+[2026-09-05 22:02:21]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_5s\05_recovery.png)
+[2026-09-05 22:02:23]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_5s\06_final.png)
+[2026-09-05 22:02:24]   Run Results: Mean=1.26m, OutageMax=16.55m, OutageMean=6.64m, PostRec=0.49m, Leakage=0
+[2026-09-05 22:02:24] ============================================================
+[2026-09-05 22:02:24] [34/50] RUN: Session=Vtb4, Model=tcn, Outage=10s
+[2026-09-05 22:02:24] ============================================================
+[2026-09-05 22:02:26]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_10s\01_before.png)
+[2026-09-05 22:02:30]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_10s\02_pre_outage.png)
+[2026-09-05 22:02:32]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_10s\03_during_outage.png)
+[2026-09-05 22:02:33]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_10s\04_end_outage.png)
+[2026-09-05 22:02:33]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_10s\05_recovery.png)
+[2026-09-05 22:02:35]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_10s\06_final.png)
+[2026-09-05 22:02:36]   Run Results: Mean=4.89m, OutageMax=45.82m, OutageMean=20.99m, PostRec=0.38m, Leakage=0
+[2026-09-05 22:02:36] ============================================================
+[2026-09-05 22:02:36] [35/50] RUN: Session=Vtb4, Model=tcn, Outage=20s
+[2026-09-05 22:02:36] ============================================================
+[2026-09-05 22:02:38]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_20s\01_before.png)
+[2026-09-05 22:02:42]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_20s\02_pre_outage.png)
+[2026-09-05 22:02:45]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_20s\03_during_outage.png)
+[2026-09-05 22:02:47]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_20s\04_end_outage.png)
+[2026-09-05 22:02:48]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_20s\05_recovery.png)
+[2026-09-05 22:02:49]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vtb4\tcn_20s\06_final.png)
+[2026-09-05 22:02:50]   Run Results: Mean=12.22m, OutageMax=55.19m, OutageMean=33.67m, PostRec=0.11m, Leakage=0
+[2026-09-05 22:02:50] ============================================================
+[2026-09-05 22:02:50] [36/50] RUN: Session=Vw14b, Model=tcn, Outage=5s
+[2026-09-05 22:02:50] ============================================================
+[2026-09-05 22:02:52]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_5s\01_before.png)
+[2026-09-05 22:02:57]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_5s\02_pre_outage.png)
+[2026-09-05 22:02:58]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_5s\03_during_outage.png)
+[2026-09-05 22:02:58]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_5s\04_end_outage.png)
+[2026-09-05 22:02:59]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_5s\05_recovery.png)
+[2026-09-05 22:03:01]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_5s\06_final.png)
+[2026-09-05 22:03:01]   Run Results: Mean=3.04m, OutageMax=12.81m, OutageMean=6.56m, PostRec=2.64m, Leakage=0
+[2026-09-05 22:03:01] ============================================================
+[2026-09-05 22:03:01] [37/50] RUN: Session=Vw14b, Model=tcn, Outage=10s
+[2026-09-05 22:03:01] ============================================================
+[2026-09-05 22:03:04]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_10s\01_before.png)
+[2026-09-05 22:03:08]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_10s\02_pre_outage.png)
+[2026-09-05 22:03:09]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_10s\03_during_outage.png)
+[2026-09-05 22:03:10]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_10s\04_end_outage.png)
+[2026-09-05 22:03:11]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_10s\05_recovery.png)
+[2026-09-05 22:03:13]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_10s\06_final.png)
+[2026-09-05 22:03:14]   Run Results: Mean=5.84m, OutageMax=41.19m, OutageMean=17.48m, PostRec=2.68m, Leakage=0
+[2026-09-05 22:03:14] ============================================================
+[2026-09-05 22:03:14] [38/50] RUN: Session=Vw14b, Model=tcn, Outage=20s
+[2026-09-05 22:03:14] ============================================================
+[2026-09-05 22:03:16]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_20s\01_before.png)
+[2026-09-05 22:03:20]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_20s\02_pre_outage.png)
+[2026-09-05 22:03:23]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_20s\03_during_outage.png)
+[2026-09-05 22:03:25]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_20s\04_end_outage.png)
+[2026-09-05 22:03:26]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_20s\05_recovery.png)
+[2026-09-05 22:03:27]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_20s\06_final.png)
+[2026-09-05 22:03:28]   Run Results: Mean=15.7m, OutageMax=87.99m, OutageMean=39.97m, PostRec=2.73m, Leakage=0
+[2026-09-05 22:03:28] ============================================================
+[2026-09-05 22:03:28] [39/50] RUN: Session=Vw14b, Model=tcn, Outage=30s
+[2026-09-05 22:03:28] ============================================================
+[2026-09-05 22:03:31]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_30s\01_before.png)
+[2026-09-05 22:03:35]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_30s\02_pre_outage.png)
+[2026-09-05 22:03:38]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_30s\03_during_outage.png)
+[2026-09-05 22:03:41]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_30s\04_end_outage.png)
+[2026-09-05 22:03:42]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_30s\05_recovery.png)
+[2026-09-05 22:03:44]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_30s\06_final.png)
+[2026-09-05 22:03:44]   Run Results: Mean=37.93m, OutageMax=205.81m, OutageMean=79.17m, PostRec=2.6m, Leakage=0
+[2026-09-05 22:03:44] ============================================================
+[2026-09-05 22:03:44] [40/50] RUN: Session=Vw14b, Model=tcn, Outage=60s
+[2026-09-05 22:03:44] ============================================================
+[2026-09-05 22:03:47]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_60s\01_before.png)
+[2026-09-05 22:03:51]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_60s\02_pre_outage.png)
+[2026-09-05 22:03:58]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_60s\03_during_outage.png)
+[2026-09-05 22:04:03]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_60s\04_end_outage.png)
+[2026-09-05 22:04:04]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_60s\05_recovery.png)
+[2026-09-05 22:04:06]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw14b\tcn_60s\06_final.png)
+[2026-09-05 22:04:06]   Run Results: Mean=165.93m, OutageMax=689.89m, OutageMean=259.6m, PostRec=2.59m, Leakage=0
+[2026-09-05 22:04:06] ============================================================
+[2026-09-05 22:04:06] [41/50] RUN: Session=Vw8, Model=tcn, Outage=5s
+[2026-09-05 22:04:06] ============================================================
+[2026-09-05 22:04:09]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_5s\01_before.png)
+[2026-09-05 22:04:13]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_5s\02_pre_outage.png)
+[2026-09-05 22:04:14]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_5s\03_during_outage.png)
+[2026-09-05 22:04:15]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_5s\04_end_outage.png)
+[2026-09-05 22:04:16]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_5s\05_recovery.png)
+[2026-09-05 22:04:17]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_5s\06_final.png)
+[2026-09-05 22:04:18]   Run Results: Mean=1.32m, OutageMax=18.83m, OutageMean=5.83m, PostRec=0.64m, Leakage=0
+[2026-09-05 22:04:18] ============================================================
+[2026-09-05 22:04:18] [42/50] RUN: Session=Vw8, Model=tcn, Outage=10s
+[2026-09-05 22:04:18] ============================================================
+[2026-09-05 22:04:20]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_10s\01_before.png)
+[2026-09-05 22:04:24]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_10s\02_pre_outage.png)
+[2026-09-05 22:04:26]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_10s\03_during_outage.png)
+[2026-09-05 22:04:27]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_10s\04_end_outage.png)
+[2026-09-05 22:04:27]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_10s\05_recovery.png)
+[2026-09-05 22:04:29]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_10s\06_final.png)
+[2026-09-05 22:04:30]   Run Results: Mean=4.85m, OutageMax=35.03m, OutageMean=19.11m, PostRec=0.88m, Leakage=0
+[2026-09-05 22:04:30] ============================================================
+[2026-09-05 22:04:30] [43/50] RUN: Session=Vw8, Model=tcn, Outage=20s
+[2026-09-05 22:04:30] ============================================================
+[2026-09-05 22:04:32]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_20s\01_before.png)
+[2026-09-05 22:04:37]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_20s\02_pre_outage.png)
+[2026-09-05 22:04:39]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_20s\03_during_outage.png)
+[2026-09-05 22:04:41]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_20s\04_end_outage.png)
+[2026-09-05 22:04:42]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_20s\05_recovery.png)
+[2026-09-05 22:04:43]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_20s\06_final.png)
+[2026-09-05 22:04:44]   Run Results: Mean=10.12m, OutageMax=70.39m, OutageMean=27.77m, PostRec=0.51m, Leakage=0
+[2026-09-05 22:04:44] ============================================================
+[2026-09-05 22:04:44] [44/50] RUN: Session=Vw8, Model=tcn, Outage=30s
+[2026-09-05 22:04:44] ============================================================
+[2026-09-05 22:04:47]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_30s\01_before.png)
+[2026-09-05 22:04:51]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_30s\02_pre_outage.png)
+[2026-09-05 22:04:55]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_30s\03_during_outage.png)
+[2026-09-05 22:04:57]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_30s\04_end_outage.png)
+[2026-09-05 22:04:58]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_30s\05_recovery.png)
+[2026-09-05 22:05:00]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_30s\06_final.png)
+[2026-09-05 22:05:01]   Run Results: Mean=25.28m, OutageMax=142.79m, OutageMean=54.55m, PostRec=0.24m, Leakage=0
+[2026-09-05 22:05:01] ============================================================
+[2026-09-05 22:05:01] [45/50] RUN: Session=Vw8, Model=tcn, Outage=60s
+[2026-09-05 22:05:01] ============================================================
+[2026-09-05 22:05:03]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_60s\01_before.png)
+[2026-09-05 22:05:07]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_60s\02_pre_outage.png)
+[2026-09-05 22:05:14]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_60s\03_during_outage.png)
+[2026-09-05 22:05:20]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_60s\04_end_outage.png)
+[2026-09-05 22:05:20]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_60s\05_recovery.png)
+[2026-09-05 22:05:22]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\Vw8\tcn_60s\06_final.png)
+[2026-09-05 22:05:23]   Run Results: Mean=57.94m, OutageMax=144.89m, OutageMean=91.95m, PostRec=0.92m, Leakage=0
+[2026-09-05 22:05:23] ============================================================
+[2026-09-05 22:05:23] [46/50] RUN: Session=S2, Model=kinematic, Outage=5s
+[2026-09-05 22:05:23] ============================================================
+[2026-09-05 22:05:25]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_5s\01_before.png)
+[2026-09-05 22:05:29]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_5s\02_pre_outage.png)
+[2026-09-05 22:05:30]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_5s\03_during_outage.png)
+[2026-09-05 22:05:31]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_5s\04_end_outage.png)
+[2026-09-05 22:05:32]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_5s\05_recovery.png)
+[2026-09-05 22:05:33]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_5s\06_final.png)
+[2026-09-05 22:05:34]   Run Results: Mean=0.25m, OutageMax=2.41m, OutageMean=1.35m, PostRec=0.2m, Leakage=0
+[2026-09-05 22:05:34] ============================================================
+[2026-09-05 22:05:34] [47/50] RUN: Session=S2, Model=kinematic, Outage=10s
+[2026-09-05 22:05:34] ============================================================
+[2026-09-05 22:05:36]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_10s\01_before.png)
+[2026-09-05 22:05:41]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_10s\02_pre_outage.png)
+[2026-09-05 22:05:42]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_10s\03_during_outage.png)
+[2026-09-05 22:05:43]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_10s\04_end_outage.png)
+[2026-09-05 22:05:44]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_10s\05_recovery.png)
+[2026-09-05 22:05:46]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_10s\06_final.png)
+[2026-09-05 22:05:46]   Run Results: Mean=0.49m, OutageMax=3.05m, OutageMean=1.77m, PostRec=0.26m, Leakage=0
+[2026-09-05 22:05:46] ============================================================
+[2026-09-05 22:05:46] [48/50] RUN: Session=S2, Model=kinematic, Outage=20s
+[2026-09-05 22:05:46] ============================================================
+[2026-09-05 22:05:49]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_20s\01_before.png)
+[2026-09-05 22:05:53]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_20s\02_pre_outage.png)
+[2026-09-05 22:05:56]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_20s\03_during_outage.png)
+[2026-09-05 22:05:57]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_20s\04_end_outage.png)
+[2026-09-05 22:05:58]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_20s\05_recovery.png)
+[2026-09-05 22:06:00]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_20s\06_final.png)
+[2026-09-05 22:06:01]   Run Results: Mean=2.58m, OutageMax=19.15m, OutageMean=7.27m, PostRec=0.3m, Leakage=0
+[2026-09-05 22:06:01] ============================================================
+[2026-09-05 22:06:01] [49/50] RUN: Session=S2, Model=kinematic, Outage=30s
+[2026-09-05 22:06:01] ============================================================
+[2026-09-05 22:06:03]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_30s\01_before.png)
+[2026-09-05 22:06:08]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_30s\02_pre_outage.png)
+[2026-09-05 22:06:11]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_30s\03_during_outage.png)
+[2026-09-05 22:06:14]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_30s\04_end_outage.png)
+[2026-09-05 22:06:15]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_30s\05_recovery.png)
+[2026-09-05 22:06:17]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_30s\06_final.png)
+[2026-09-05 22:06:17]   Run Results: Mean=6.25m, OutageMax=28.54m, OutageMean=13.42m, PostRec=0.35m, Leakage=0
+[2026-09-05 22:06:17] ============================================================
+[2026-09-05 22:06:17] [50/50] RUN: Session=S2, Model=kinematic, Outage=60s
+[2026-09-05 22:06:17] ============================================================
+[2026-09-05 22:06:20]   Captured Milestone 01: Before (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_60s\01_before.png)
+[2026-09-05 22:06:24]   Captured Milestone 02: Pre-Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_60s\02_pre_outage.png)
+[2026-09-05 22:06:31]   Captured Milestone 03: During Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_60s\03_during_outage.png)
+[2026-09-05 22:06:37]   Captured Milestone 04: End Outage (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_60s\04_end_outage.png)
+[2026-09-05 22:06:37]   Captured Milestone 05: Recovery (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_60s\05_recovery.png)
+[2026-09-05 22:06:39]   Captured Milestone 06: Final (C:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\artifacts\device_evaluation\screenshots\S2\kinematic_60s\06_final.png)
+[2026-09-05 22:06:40]   Run Results: Mean=32.35m, OutageMax=114.06m, OutageMean=50.53m, PostRec=0.11m, Leakage=0
+[2026-09-05 22:06:40] 
+Evaluation Complete! Summary:
+  model_backend  outage_duration_sec  sessions  outage_mean_err_m  outage_median_err_m  outage_p90_err_m  outage_max_err_m  post_rec_mean_err_m
+0     kinematic                    5         1           1.350000                1.500          2.390000              2.41             0.200000
+1     kinematic                   10         1           1.770000                1.990          2.650000              3.05             0.260000
+2     kinematic                   20         1           7.270000                3.160         17.150000             19.15             0.300000
+3     kinematic                   30         1          13.420000               16.760         25.750000             28.54             0.350000
+4     kinematic                   60         1          50.530000               28.760        113.030000            114.06             0.110000
+5           tcn                    5        10           6.682000                4.750         13.927000             47.46             1.194000
+6           tcn                   10        10          15.176000               15.080         30.359000             69.28             1.264000
+7           tcn                   20         9          27.161111               27.840         48.776667             99.83             1.227778
+8           tcn                   30         8          42.321250               27.775         86.257500            205.81             1.246250
+9           tcn                   60         7         120.858571              118.520        259.935714            722.63             1.061429
+[2026-09-05 22:06:40] Physical device evaluation execution finished.

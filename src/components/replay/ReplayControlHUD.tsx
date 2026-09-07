@@ -1,15 +1,16 @@
 /**
- * ReplayControlHUD
+ * ReplayControlHUD.tsx
  *
- * Developer Floating Panel & Replay Controls for Phase 4 Testing Harness.
+ * Clean, production-grade Replay Control HUD for BetterMaps SIH-Demo.
  *
- * Provides:
- * - Transport controls: Play, Pause, Reset, Seek
- * - Speed multiplier pills (0.25x, 0.5x, 1x, 2x, 5x)
- * - Experiment Mode selector (C0, R0, R1, R2, R3)
- * - Diagnostic Leakage Counter: gnssMeasurementsDeliveredToEstimator
- * - Real-time quantitative error readout & milestone table (5s, 10s, 20s, 30s, 60s)
- * - Trajectory visibility toggles
+ * Focused exclusively on the FINAL IDR production pipeline:
+ * - Real-time virtual clock transport (Play / Pause / Reset)
+ * - Fixed 1x playback pacing
+ * - Production Pipeline Badge: FINAL IDR (GRU ✓ · ESKF ✓ · NHC ✓ · ROAD ✓ · ROUTE ✓)
+ * - Real-time quantitative position error and SIH drift percentage
+ * - Checkpoint milestone error & drift chips (5s, 10s, 20s, 30s, 60s)
+ * - Visual map layer action buttons: [ Route ], [ Reference ], [ IDR Trace ], [ Roads ]
+ * - Interactive Test Drive session picker (IO-VNBD S1, S2, Vta8, Vta10, Vtb4, Vtb10)
  */
 
 import React, { useState } from "react";
@@ -18,30 +19,37 @@ import {
   Text,
   TouchableOpacity,
   View,
-  ScrollView,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import {
+  EvaluationMode,
   ExperimentMode,
   ReplaySpeed,
   ReplayTelemetry,
 } from "../../services/replay/types";
+import { ModelBackendType } from "../../core/positioning/motionEstimator";
 import { useTheme } from "../../theme/ThemeContext";
+import { SessionPickerModal } from "./SessionPickerModal";
 
 interface ReplayControlHUDProps {
   telemetry: ReplayTelemetry;
   onPlay: () => void;
   onPause: () => void;
   onReset: () => void;
-  onSetSpeed: (speed: ReplaySpeed) => void;
-  onSetMode: (mode: ExperimentMode) => void;
+  onSetSpeed?: (speed: ReplaySpeed) => void;
+  onSetMode?: (mode: ExperimentMode) => void;
+  onSelectEvaluationMode?: (mode: EvaluationMode) => void;
+  onSelectModelBackend?: (backend: ModelBackendType) => void;
   onToggleRouteConstraint: () => void;
   onToggleReferenceVisible: () => void;
   onToggleEstimatedVisible: () => void;
   isReferenceVisible: boolean;
   isEstimatedVisible: boolean;
+  isRoadLayerVisible?: boolean;
+  onToggleRoadLayer?: () => void;
   onClose: () => void;
+  onSelectSession: (sessionId: string) => void;
 }
 
 export const ReplayControlHUD: React.FC<ReplayControlHUDProps> = ({
@@ -50,462 +58,623 @@ export const ReplayControlHUD: React.FC<ReplayControlHUDProps> = ({
   onPause,
   onReset,
   onSetSpeed,
-  onSetMode,
   onToggleRouteConstraint,
   onToggleReferenceVisible,
   onToggleEstimatedVisible,
   isReferenceVisible,
   isEstimatedVisible,
+  isRoadLayerVisible = false,
+  onToggleRoadLayer,
   onClose,
+  onSelectSession,
 }) => {
   const insets = useSafeAreaInsets();
-  const { theme } = useTheme();
+  const { theme, isDark } = useTheme();
   const [isExpanded, setIsExpanded] = useState(true);
+  const [isSessionPickerOpen, setIsSessionPickerOpen] = useState(false);
 
-  const formatMs = (ms: number): string => {
-    const totalSec = Math.floor(ms / 1000);
+  const safeNum = (
+    val: number | null | undefined,
+    digits = 1,
+    fallback = "--",
+    suffix = "",
+  ): string => {
+    if (
+      val === null ||
+      val === undefined ||
+      typeof val !== "number" ||
+      isNaN(val) ||
+      !isFinite(val)
+    ) {
+      return fallback;
+    }
+    return `${val.toFixed(digits)}${suffix}`;
+  };
+
+  const formatMs = (ms: number | null | undefined): string => {
+    if (
+      ms === null ||
+      ms === undefined ||
+      typeof ms !== "number" ||
+      isNaN(ms) ||
+      !isFinite(ms)
+    ) {
+      return "00:00.0";
+    }
+    const safeMs = Math.max(0, ms);
+    const totalSec = Math.floor(safeMs / 1000);
     const m = Math.floor(totalSec / 60);
     const s = totalSec % 60;
-    const tenths = Math.floor((ms % 1000) / 100);
+    const tenths = Math.floor((safeMs % 1000) / 100);
     return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}.${tenths}`;
   };
 
-  const speedOptions: ReplaySpeed[] = [0.25, 0.5, 1.0, 2.0, 5.0];
-
-  const experimentModes: { id: ExperimentMode; label: string }[] = [
-    { id: "C0_REFERENCE_ONLY", label: "C0: Ref Control" },
-    { id: "R0_PURE_DR", label: "R0: Pure DR" },
-    { id: "R1_ROUTE_CONSTRAINED", label: "R1: Route Constr" },
-    { id: "R2_FULL_GNSS", label: "R2: Full GNSS" },
-    { id: "R3_DROP_RECOVERY", label: "R3: Drop/Recov" },
-  ];
-
   const isPlaying = telemetry.clockState === "PLAYING";
   const progressPercent =
-    telemetry.totalDurationMs > 0
-      ? Math.min(
-          100,
-          (telemetry.elapsedTimeMs / telemetry.totalDurationMs) * 100,
+    telemetry.totalDurationMs &&
+    telemetry.totalDurationMs > 0 &&
+    typeof telemetry.elapsedTimeMs === "number"
+      ? Math.max(
+          0,
+          Math.min(
+            100,
+            (telemetry.elapsedTimeMs / telemetry.totalDurationMs) * 100,
+          ),
         )
       : 0;
 
+  const rawSessionId = telemetry.sessionId || "S1";
+  const cleanId = rawSessionId.replace(/^iovnbd_/i, "").toUpperCase();
+  const displaySessionLabel = `IO-VNBD ${cleanId}`;
+
+  const topOffset = Math.max(insets.top, 24) + 10;
+
   return (
-    <View
-      style={[
-        styles.container,
-        {
-          top: Math.max(insets.top, 16) + 8,
-          backgroundColor: theme.surface,
-          borderColor: theme.surfaceBorder,
-        },
-      ]}
-    >
-      {/* Top Header Bar */}
-      <View style={[styles.header, { borderBottomColor: theme.surfaceBorder }]}>
-        <View style={styles.headerLeft}>
-          <View style={styles.sessionBadge}>
-            <Text style={styles.sessionBadgeText}>IO-VNBD S1</Text>
-          </View>
-          <Text style={[styles.timeText, { color: theme.textPrimary }]}>
-            {formatMs(telemetry.elapsedTimeMs)} /{" "}
-            {formatMs(telemetry.totalDurationMs)}
-          </Text>
-        </View>
-
-        <View style={styles.headerRight}>
-          <TouchableOpacity
-            onPress={() => setIsExpanded(!isExpanded)}
-            style={[
-              styles.iconButton,
-              { backgroundColor: theme.surfaceSubtle },
-            ]}
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          >
-            <Ionicons
-              name={isExpanded ? "chevron-up" : "chevron-down"}
-              size={18}
-              color={theme.textPrimary}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={onClose}
-            style={[
-              styles.iconButton,
-              { backgroundColor: theme.surfaceSubtle, marginLeft: 6 },
-            ]}
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          >
-            <Ionicons name="close" size={18} color={theme.textPrimary} />
-          </TouchableOpacity>
-        </View>
-      </View>
-
-      {/* Progress Bar Line */}
-      <View style={styles.progressBarTrack}>
+    <>
+      <View
+        style={[
+          styles.container,
+          {
+            top: topOffset,
+            backgroundColor: theme.surface,
+            borderColor: theme.surfaceBorder,
+          },
+        ]}
+      >
+        {/* Top Header Bar */}
         <View
-          style={[styles.progressBarFill, { width: `${progressPercent}%` }]}
-        />
-      </View>
-
-      {/* Collapsible Body */}
-      {isExpanded && (
-        <View style={styles.scrollContent}>
-          {/* 1. Transport Controls */}
-          <View style={styles.transportRow}>
+          style={[styles.header, { borderBottomColor: theme.surfaceBorder }]}
+        >
+          <View style={styles.headerLeft}>
+            {/* Interactive Test Drive Selector Badge */}
             <TouchableOpacity
-              onPress={isPlaying ? onPause : onPlay}
-              style={[
-                styles.primaryTransportBtn,
-                { backgroundColor: isPlaying ? "#FFA000" : "#4CAF50" },
-              ]}
+              onPress={() => setIsSessionPickerOpen(true)}
+              style={[styles.sessionBadge, { backgroundColor: theme.accent }]}
+              activeOpacity={0.7}
+              accessibilityLabel={`Select test drive session, current is ${displaySessionLabel}`}
+              hitSlop={{ top: 6, bottom: 6, left: 6, right: 6 }}
             >
-              <Ionicons
-                name={isPlaying ? "pause" : "play"}
-                size={18}
-                color="#FFFFFF"
-              />
-              <Text style={styles.primaryTransportText}>
-                {isPlaying ? "PAUSE" : "PLAY"}
-              </Text>
+              <View style={styles.badgeContent}>
+                <Text style={styles.sessionBadgeSub}>TEST DRIVE</Text>
+                <View style={styles.badgeTitleRow}>
+                  <Text style={styles.sessionBadgeText}>
+                    {displaySessionLabel}
+                  </Text>
+                  <Ionicons
+                    name="chevron-down"
+                    size={12}
+                    color="#FFFFFF"
+                    style={{ marginLeft: 3 }}
+                  />
+                </View>
+              </View>
             </TouchableOpacity>
 
+            <Text style={[styles.timeText, { color: theme.textPrimary }]}>
+              {formatMs(telemetry.elapsedTimeMs)} /{" "}
+              {formatMs(telemetry.totalDurationMs)}
+            </Text>
+          </View>
+
+          <View style={styles.headerRight}>
             <TouchableOpacity
-              onPress={onReset}
+              onPress={() => setIsExpanded(!isExpanded)}
               style={[
-                styles.secondaryTransportBtn,
+                styles.iconButton,
                 { backgroundColor: theme.surfaceSubtle },
               ]}
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+              accessibilityLabel={
+                isExpanded ? "Collapse Replay HUD" : "Expand Replay HUD"
+              }
             >
-              <Ionicons name="reload" size={16} color={theme.textPrimary} />
-              <Text
-                style={[
-                  styles.secondaryTransportText,
-                  { color: theme.textPrimary },
-                ]}
-              >
-                RESET
-              </Text>
+              <Ionicons
+                name={isExpanded ? "chevron-up" : "chevron-down"}
+                size={18}
+                color={theme.textPrimary}
+              />
             </TouchableOpacity>
-
-            {/* Speed Pills */}
-            <View style={styles.speedRow}>
-              {speedOptions.map((s) => (
-                <TouchableOpacity
-                  key={s}
-                  onPress={() => onSetSpeed(s)}
-                  style={[
-                    styles.speedPill,
-                    telemetry.speed === s
-                      ? { backgroundColor: theme.accent }
-                      : { backgroundColor: theme.surfaceSubtle },
-                  ]}
-                >
-                  <Text
-                    style={[
-                      styles.speedPillText,
-                      telemetry.speed === s
-                        ? { color: "#FFFFFF" }
-                        : { color: theme.textSecondary },
-                    ]}
-                  >
-                    {s}x
-                  </Text>
-                </TouchableOpacity>
-              ))}
-            </View>
-          </View>
-
-          {/* 2. Experiment Mode Selector */}
-          <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>
-              EXPERIMENT MODE
-            </Text>
-            <ScrollView
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={styles.modeScrollContent}
-              keyboardShouldPersistTaps="always"
+            <TouchableOpacity
+              onPress={onClose}
+              style={[
+                styles.iconButton,
+                { backgroundColor: theme.surfaceSubtle, marginLeft: 6 },
+              ]}
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+              accessibilityLabel="Close Replay Lab"
             >
-              {experimentModes.map((m) => {
-                const isSelected = telemetry.experimentMode === m.id;
-                return (
-                  <TouchableOpacity
-                    key={m.id}
-                    onPress={() => {
-                      console.log("HUD onSetMode tapped:", m.id);
-                      onSetMode(m.id);
-                    }}
-                    style={[
-                      styles.modePill,
-                      isSelected
-                        ? {
-                            backgroundColor: theme.accent,
-                            borderColor: theme.accent,
-                          }
-                        : {
-                            backgroundColor: theme.surfaceSubtle,
-                            borderColor: theme.surfaceBorder,
-                          },
-                    ]}
-                  >
-                    <Text
-                      style={[
-                        styles.modePillText,
-                        isSelected
-                          ? { color: "#FFFFFF", fontWeight: "700" }
-                          : { color: theme.textPrimary },
-                      ]}
-                    >
-                      {m.label}
-                    </Text>
-                  </TouchableOpacity>
-                );
-              })}
-            </ScrollView>
+              <Ionicons name="close" size={18} color={theme.textPrimary} />
+            </TouchableOpacity>
           </View>
+        </View>
 
-          {/* 3. Real-Time Telemetry & Diagnostic Leakage Counter */}
+        {/* Progress Bar Line */}
+        <View style={styles.progressBarTrack}>
           <View
             style={[
-              styles.diagnosticCard,
-              { backgroundColor: theme.surfaceSubtle },
+              styles.progressBarFill,
+              { width: `${progressPercent}%`, backgroundColor: theme.accent },
             ]}
-          >
-            <View style={styles.diagnosticRow}>
-              <View style={styles.diagCol}>
-                <Text
-                  style={[styles.diagLabel, { color: theme.textSecondary }]}
-                >
-                  GNSS TO ESTIMATOR
+          />
+        </View>
+
+        {/* Collapsible Body */}
+        {isExpanded && (
+          <View style={styles.bodyContent}>
+            {/* Row 1: Transport Controls & Production Pipeline Badge */}
+            <View style={styles.transportRow}>
+              <TouchableOpacity
+                onPress={isPlaying ? onPause : onPlay}
+                style={[
+                  styles.primaryTransportBtn,
+                  { backgroundColor: isPlaying ? "#FFA000" : "#2E7D32" },
+                ]}
+                activeOpacity={0.8}
+                accessibilityLabel={isPlaying ? "Pause replay" : "Play replay"}
+              >
+                <Ionicons
+                  name={isPlaying ? "pause" : "play"}
+                  size={15}
+                  color="#FFFFFF"
+                />
+                <Text style={styles.primaryTransportText}>
+                  {isPlaying ? "PAUSE" : "PLAY"}
                 </Text>
-                <View style={styles.leakageBadge}>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={onReset}
+                style={[
+                  styles.secondaryTransportBtn,
+                  {
+                    backgroundColor: theme.surfaceSubtle,
+                    borderColor: theme.surfaceBorderSubtle,
+                  },
+                ]}
+                activeOpacity={0.8}
+                accessibilityLabel="Reset replay trajectory and timer"
+              >
+                <Ionicons name="reload" size={14} color={theme.textPrimary} />
+                <Text
+                  style={[
+                    styles.secondaryTransportText,
+                    { color: theme.textPrimary },
+                  ]}
+                >
+                  RESET
+                </Text>
+              </TouchableOpacity>
+
+              {/* Fixed 1x Speed Badge */}
+              <View
+                style={[
+                  styles.speedBadge,
+                  {
+                    backgroundColor: theme.surfaceSubtle,
+                    borderColor: theme.surfaceBorderSubtle,
+                  },
+                ]}
+              >
+                <Text style={[styles.speedBadgeText, { color: theme.textPrimary }]}>
+                  1x
+                </Text>
+              </View>
+
+              {/* FINAL IDR Pipeline Badge */}
+              <View
+                style={[
+                  styles.pipelineBadge,
+                  {
+                    backgroundColor: isDark ? "#102318" : "#E8F5E9",
+                    borderColor: isDark ? "#1B5E20" : "#C8E6C9",
+                  },
+                ]}
+              >
+                <Text style={[styles.pipelineTitle, { color: "#2E7D32" }]}>
+                  FINAL IDR
+                </Text>
+                <Text style={[styles.pipelineChecks, { color: "#2E7D32" }]}>
+                  GRU ✓ · ESKF ✓ · NHC ✓
+                </Text>
+              </View>
+            </View>
+
+            {/* Row 2: Real-time Quantitative Telemetry Card */}
+            {/* Row 2: Real-time Quantitative Telemetry Card */}
+            <View
+              style={[
+                styles.metricCard,
+                {
+                  backgroundColor: theme.surfaceSubtle,
+                  borderColor: theme.surfaceBorderSubtle,
+                },
+              ]}
+            >
+              {/* Col 1: Mode & Position Source */}
+              <View style={styles.metricCol}>
+                <Text style={[styles.metricLabel, { color: theme.textSecondary }]}>
+                  MODE & SOURCE
+                </Text>
+                <View style={styles.gnssStatusRow}>
                   <View
                     style={[
-                      styles.leakageDot,
+                      styles.gnssStatusDot,
                       {
-                        backgroundColor:
-                          telemetry.gnssDeliveredCount === 0 &&
-                          (telemetry.experimentMode === "R0_PURE_DR" ||
-                            telemetry.experimentMode === "R1_ROUTE_CONSTRAINED")
-                            ? "#4CAF50"
-                            : telemetry.gnssPermittedIntoEstimator
-                              ? "#2196F3"
-                              : "#F44336",
+                        backgroundColor: telemetry.isDeadReckoning
+                          ? "#D32F2F"
+                          : "#1976D2",
                       },
                     ]}
                   />
                   <Text
-                    style={[styles.diagValue, { color: theme.textPrimary }]}
+                    style={[
+                      styles.metricVal,
+                      {
+                        color: telemetry.isDeadReckoning
+                          ? "#D32F2F"
+                          : "#1976D2",
+                        fontWeight: "800",
+                      },
+                    ]}
                   >
-                    {telemetry.gnssDeliveredCount} fixes
+                    {telemetry.isDeadReckoning ? "IDR (OUTAGE)" : "GNSS LOCKED"}
                   </Text>
                 </View>
+                <Text style={[styles.metricSub, { color: theme.textMuted }]}>
+                  {telemetry.isDeadReckoning
+                    ? "B3-GRU + 15-State ESKF"
+                    : "Reference GNSS Anchor"}
+                </Text>
               </View>
 
-              <View style={styles.diagCol}>
+              {/* Col 2: Prominent SIH Outage Drift Card */}
+              <View
+                style={[
+                  styles.metricCol,
+                  styles.driftColHighlight,
+                  {
+                    backgroundColor:
+                      telemetry.cumulativeDriftPercent !== null
+                        ? telemetry.cumulativeDriftPercent <= 10.0
+                          ? "rgba(46, 125, 50, 0.12)"
+                          : "rgba(211, 47, 47, 0.12)"
+                        : "transparent",
+                    borderColor:
+                      telemetry.cumulativeDriftPercent !== null
+                        ? telemetry.cumulativeDriftPercent <= 10.0
+                          ? "#2E7D32"
+                          : "#D32F2F"
+                        : "transparent",
+                  },
+                ]}
+              >
                 <Text
-                  style={[styles.diagLabel, { color: theme.textSecondary }]}
+                  style={[
+                    styles.metricLabel,
+                    {
+                      color:
+                        telemetry.cumulativeDriftPercent !== null
+                          ? telemetry.cumulativeDriftPercent <= 10.0
+                            ? "#2E7D32"
+                            : "#D32F2F"
+                          : theme.textSecondary,
+                      fontWeight: "800",
+                    },
+                  ]}
                 >
-                  POSITION ERROR
+                  SIH OUTAGE DRIFT
                 </Text>
                 <Text
                   style={[
-                    styles.diagValue,
-                    { color: "#FF9800", fontWeight: "800" },
+                    styles.metricValHighlight,
+                    {
+                      color:
+                        telemetry.cumulativeDriftPercent !== null
+                          ? telemetry.cumulativeDriftPercent <= 10.0
+                            ? "#2E7D32"
+                            : "#D32F2F"
+                          : theme.textMuted,
+                      fontSize: 18,
+                      fontWeight: "900",
+                    },
                   ]}
                 >
-                  {telemetry.instantaneousErrorMeters !== null
-                    ? `${telemetry.instantaneousErrorMeters.toFixed(1)} m`
-                    : "--"}
-                </Text>
-              </View>
-
-              <View style={styles.diagCol}>
-                <Text
-                  style={[styles.diagLabel, { color: theme.textSecondary }]}
-                >
-                  DRIFT RATIO
-                </Text>
-                <Text style={[styles.diagValue, { color: theme.textPrimary }]}>
                   {telemetry.cumulativeDriftPercent !== null
-                    ? `${telemetry.cumulativeDriftPercent.toFixed(1)}%`
-                    : "--"}
+                    ? `${safeNum(telemetry.cumulativeDriftPercent, 1)}%`
+                    : "N/A"}
+                </Text>
+                <Text
+                  style={[
+                    styles.metricSub,
+                    {
+                      color:
+                        telemetry.cumulativeDriftPercent !== null
+                          ? telemetry.cumulativeDriftPercent <= 10.0
+                            ? "#2E7D32"
+                            : "#D32F2F"
+                          : theme.textMuted,
+                      fontWeight: "700",
+                    },
+                  ]}
+                >
+                  {telemetry.cumulativeDriftPercent !== null
+                    ? telemetry.cumulativeDriftPercent <= 10.0
+                      ? "Target <10% (PASS ✓)"
+                      : "Target <10% (ABOVE TARGET ✗)"
+                    : "Outage Only"}
+                </Text>
+              </View>
+
+              {/* Col 3: Endpoint Error & Outage Distance */}
+              <View style={styles.metricCol}>
+                <Text style={[styles.metricLabel, { color: theme.textSecondary }]}>
+                  ENDPOINT ERROR
+                </Text>
+                <Text
+                  style={[
+                    styles.metricValHighlight,
+                    { color: "#F57C00", fontWeight: "800" },
+                  ]}
+                >
+                  {safeNum(telemetry.instantaneousErrorMeters, 1, "--", " m")}
+                </Text>
+                <Text style={[styles.metricSub, { color: theme.textMuted }]}>
+                  Outage Dist: {safeNum(telemetry.cumulativeDistanceTraveledM, 0, "0", " m")}
                 </Text>
               </View>
             </View>
-          </View>
 
-          {/* 4. Milestone Checkpoint Table (5s, 10s, 20s, 30s, 60s) */}
-          <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>
-              ELAPSED TIME MILESTONES (ERROR)
-            </Text>
-            <View style={styles.milestoneRow}>
-              <View
-                style={[
-                  styles.milestoneBox,
-                  { backgroundColor: theme.surfaceSubtle },
-                ]}
-              >
-                <Text style={styles.milestoneLabel}>5s</Text>
+            {/* Row 3: Elapsed Time Milestones (Errors & Drift %) */}
+            <View style={styles.milestoneSection}>
+              <View style={styles.milestoneHeaderRow}>
                 <Text
-                  style={[styles.milestoneVal, { color: theme.textPrimary }]}
+                  style={[styles.sectionTitle, { color: theme.textSecondary }]}
                 >
-                  {telemetry.milestoneErrors.at5s !== null
-                    ? `${telemetry.milestoneErrors.at5s}m`
-                    : "--"}
+                  ELAPSED TIME MILESTONES (METERS & DRIFT %)
                 </Text>
               </View>
-              <View
-                style={[
-                  styles.milestoneBox,
-                  { backgroundColor: theme.surfaceSubtle },
-                ]}
-              >
-                <Text style={styles.milestoneLabel}>10s</Text>
-                <Text
-                  style={[styles.milestoneVal, { color: theme.textPrimary }]}
-                >
-                  {telemetry.milestoneErrors.at10s !== null
-                    ? `${telemetry.milestoneErrors.at10s}m`
-                    : "--"}
-                </Text>
-              </View>
-              <View
-                style={[
-                  styles.milestoneBox,
-                  { backgroundColor: theme.surfaceSubtle },
-                ]}
-              >
-                <Text style={styles.milestoneLabel}>20s</Text>
-                <Text
-                  style={[styles.milestoneVal, { color: theme.textPrimary }]}
-                >
-                  {telemetry.milestoneErrors.at20s !== null
-                    ? `${telemetry.milestoneErrors.at20s}m`
-                    : "--"}
-                </Text>
-              </View>
-              <View
-                style={[
-                  styles.milestoneBox,
-                  { backgroundColor: theme.surfaceSubtle },
-                ]}
-              >
-                <Text style={styles.milestoneLabel}>30s</Text>
-                <Text
-                  style={[styles.milestoneVal, { color: theme.textPrimary }]}
-                >
-                  {telemetry.milestoneErrors.at30s !== null
-                    ? `${telemetry.milestoneErrors.at30s}m`
-                    : "--"}
-                </Text>
-              </View>
-              <View
-                style={[
-                  styles.milestoneBox,
-                  { backgroundColor: theme.surfaceSubtle },
-                ]}
-              >
-                <Text style={styles.milestoneLabel}>60s</Text>
-                <Text
-                  style={[styles.milestoneVal, { color: theme.textPrimary }]}
-                >
-                  {telemetry.milestoneErrors.at60s !== null
-                    ? `${telemetry.milestoneErrors.at60s}m`
-                    : "--"}
-                </Text>
+
+              <View style={styles.milestonesGrid}>
+                {(
+                  [
+                    {
+                      label: "5s",
+                      err: telemetry.milestoneErrors?.at5s,
+                      drift: telemetry.milestoneDrifts?.at5s,
+                    },
+                    {
+                      label: "10s",
+                      err: telemetry.milestoneErrors?.at10s,
+                      drift: telemetry.milestoneDrifts?.at10s,
+                    },
+                    {
+                      label: "20s",
+                      err: telemetry.milestoneErrors?.at20s,
+                      drift: telemetry.milestoneDrifts?.at20s,
+                    },
+                    {
+                      label: "30s",
+                      err: telemetry.milestoneErrors?.at30s,
+                      drift: telemetry.milestoneDrifts?.at30s,
+                    },
+                    {
+                      label: "60s",
+                      err: telemetry.milestoneErrors?.at60s,
+                      drift: telemetry.milestoneDrifts?.at60s,
+                    },
+                  ] as const
+                ).map((m) => (
+                  <View
+                    key={m.label}
+                    style={[
+                      styles.milestoneBox,
+                      {
+                        backgroundColor: theme.surfaceSubtle,
+                        borderColor: theme.surfaceBorderSubtle,
+                      },
+                    ]}
+                  >
+                    <Text
+                      style={[
+                        styles.milestoneLabel,
+                        { color: theme.textMuted },
+                      ]}
+                    >
+                      {m.label}
+                    </Text>
+                    <Text
+                      style={[
+                        styles.milestoneMeters,
+                        { color: theme.textPrimary },
+                      ]}
+                      numberOfLines={1}
+                    >
+                      {safeNum(m.err, 1, "--", "m")}
+                    </Text>
+                    <Text
+                      style={[
+                        styles.milestoneDrift,
+                        { color: theme.accent },
+                      ]}
+                      numberOfLines={1}
+                    >
+                      {m.drift !== null && m.drift !== undefined
+                        ? `${m.drift}%`
+                        : "--"}
+                    </Text>
+                  </View>
+                ))}
               </View>
             </View>
-          </View>
 
-          {/* 5. Toggles Row */}
-          <View style={styles.togglesRow}>
-            <TouchableOpacity
-              onPress={onToggleRouteConstraint}
-              style={[
-                styles.toggleButton,
-                telemetry.routeConstraintActive
-                  ? { backgroundColor: "#4CAF50" }
-                  : { backgroundColor: theme.surfaceSubtle },
-              ]}
-            >
-              <Ionicons
-                name="git-commit"
-                size={14}
-                color={
-                  telemetry.routeConstraintActive
-                    ? "#FFFFFF"
-                    : theme.textSecondary
-                }
-              />
-              <Text
+            {/* Row 4: Layer Action Toggles ([ Route ], [ Reference ], [ IDR Trace ], [ Roads ]) */}
+            <View style={styles.togglesRow}>
+              {/* 1. [ Route ] Toggle */}
+              <TouchableOpacity
+                onPress={onToggleRouteConstraint}
                 style={[
-                  styles.toggleText,
+                  styles.toggleBtn,
                   telemetry.routeConstraintActive
-                    ? { color: "#FFFFFF", fontWeight: "700" }
-                    : { color: theme.textSecondary },
+                    ? { backgroundColor: "#2E7D32", borderColor: "#2E7D32" }
+                    : {
+                        backgroundColor: theme.surfaceSubtle,
+                        borderColor: theme.surfaceBorderSubtle,
+                      },
                 ]}
+                activeOpacity={0.8}
+                accessibilityLabel="Toggle Navigation Route Corridor"
               >
-                Route Constr
-              </Text>
-            </TouchableOpacity>
+                <Ionicons
+                  name="git-commit"
+                  size={13}
+                  color={
+                    telemetry.routeConstraintActive
+                      ? "#FFFFFF"
+                      : theme.textSecondary
+                  }
+                />
+                <Text
+                  style={[
+                    styles.toggleBtnText,
+                    telemetry.routeConstraintActive
+                      ? { color: "#FFFFFF", fontWeight: "700" }
+                      : { color: theme.textSecondary },
+                  ]}
+                >
+                  Route {telemetry.routeConstraintActive ? "✓" : ""}
+                </Text>
+              </TouchableOpacity>
 
-            <TouchableOpacity
-              onPress={onToggleReferenceVisible}
-              style={[
-                styles.toggleButton,
-                isReferenceVisible
-                  ? { backgroundColor: "#00BCD4" }
-                  : { backgroundColor: theme.surfaceSubtle },
-              ]}
-            >
-              <Ionicons
-                name="eye"
-                size={14}
-                color={isReferenceVisible ? "#FFFFFF" : theme.textSecondary}
-              />
-              <Text
+              {/* 2. [ Reference ] Toggle */}
+              <TouchableOpacity
+                onPress={onToggleReferenceVisible}
                 style={[
-                  styles.toggleText,
+                  styles.toggleBtn,
                   isReferenceVisible
-                    ? { color: "#FFFFFF", fontWeight: "700" }
-                    : { color: theme.textSecondary },
+                    ? { backgroundColor: "#0097A7", borderColor: "#0097A7" }
+                    : {
+                        backgroundColor: theme.surfaceSubtle,
+                        borderColor: theme.surfaceBorderSubtle,
+                      },
                 ]}
+                activeOpacity={0.8}
+                accessibilityLabel="Toggle Reference GPS Trajectory"
               >
-                Reference
-              </Text>
-            </TouchableOpacity>
+                <Ionicons
+                  name="eye"
+                  size={13}
+                  color={isReferenceVisible ? "#FFFFFF" : theme.textSecondary}
+                />
+                <Text
+                  style={[
+                    styles.toggleBtnText,
+                    isReferenceVisible
+                      ? { color: "#FFFFFF", fontWeight: "700" }
+                      : { color: theme.textSecondary },
+                  ]}
+                >
+                  Reference
+                </Text>
+              </TouchableOpacity>
 
-            <TouchableOpacity
-              onPress={onToggleEstimatedVisible}
-              style={[
-                styles.toggleButton,
-                isEstimatedVisible
-                  ? { backgroundColor: "#FFA000" }
-                  : { backgroundColor: theme.surfaceSubtle },
-              ]}
-            >
-              <Ionicons
-                name="navigate"
-                size={14}
-                color={isEstimatedVisible ? "#FFFFFF" : theme.textSecondary}
-              />
-              <Text
+              {/* 3. [ IDR Trace ] Toggle */}
+              <TouchableOpacity
+                onPress={onToggleEstimatedVisible}
                 style={[
-                  styles.toggleText,
+                  styles.toggleBtn,
                   isEstimatedVisible
-                    ? { color: "#FFFFFF", fontWeight: "700" }
-                    : { color: theme.textSecondary },
+                    ? { backgroundColor: "#F57C00", borderColor: "#F57C00" }
+                    : {
+                        backgroundColor: theme.surfaceSubtle,
+                        borderColor: theme.surfaceBorderSubtle,
+                      },
                 ]}
+                activeOpacity={0.8}
+                accessibilityLabel="Toggle IDR Dead Reckoning Trajectory"
               >
-                IDR Trace
-              </Text>
-            </TouchableOpacity>
+                <Ionicons
+                  name="navigate"
+                  size={13}
+                  color={isEstimatedVisible ? "#FFFFFF" : theme.textSecondary}
+                />
+                <Text
+                  style={[
+                    styles.toggleBtnText,
+                    isEstimatedVisible
+                      ? { color: "#FFFFFF", fontWeight: "700" }
+                      : { color: theme.textSecondary },
+                  ]}
+                >
+                  IDR Trace
+                </Text>
+              </TouchableOpacity>
+
+              {/* 4. [ Roads ] Toggle */}
+              {onToggleRoadLayer && (
+                <TouchableOpacity
+                  onPress={onToggleRoadLayer}
+                  style={[
+                    styles.toggleBtn,
+                    isRoadLayerVisible
+                      ? { backgroundColor: "#00E676", borderColor: "#00E676" }
+                      : {
+                          backgroundColor: theme.surfaceSubtle,
+                          borderColor: theme.surfaceBorderSubtle,
+                        },
+                  ]}
+                  activeOpacity={0.8}
+                  accessibilityLabel="Toggle Real Road Network Geometry"
+                >
+                  <Ionicons
+                    name="map"
+                    size={13}
+                    color={isRoadLayerVisible ? "#000000" : theme.textSecondary}
+                  />
+                  <Text
+                    style={[
+                      styles.toggleBtnText,
+                      isRoadLayerVisible
+                        ? { color: "#000000", fontWeight: "800" }
+                        : { color: theme.textSecondary },
+                    ]}
+                  >
+                    Roads
+                  </Text>
+                </TouchableOpacity>
+              )}
+            </View>
           </View>
-        </View>
-      )}
-    </View>
+        )}
+      </View>
+
+      {/* Dedicated Session Picker Modal Component */}
+      <SessionPickerModal
+        visible={isSessionPickerOpen}
+        currentSessionId={telemetry.sessionId}
+        onSelectSession={onSelectSession}
+        onClose={() => setIsSessionPickerOpen(false)}
+      />
+    </>
   );
 };
 
@@ -518,7 +687,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     elevation: 12,
     shadowColor: "#000",
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.28,
     shadowRadius: 8,
     shadowOffset: { width: 0, height: 4 },
     zIndex: 99,
@@ -529,7 +698,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingHorizontal: 12,
-    paddingVertical: 10,
+    paddingVertical: 8,
     borderBottomWidth: 1,
   },
   headerLeft: {
@@ -537,22 +706,35 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   sessionBadge: {
-    backgroundColor: "#1A73E8",
     paddingHorizontal: 8,
     paddingVertical: 3,
-    borderRadius: 6,
+    borderRadius: 7,
     marginRight: 8,
+    minHeight: 32,
+    justifyContent: "center",
+  },
+  badgeContent: {
+    justifyContent: "center",
+  },
+  sessionBadgeSub: {
+    color: "rgba(255, 255, 255, 0.75)",
+    fontSize: 7.5,
+    fontWeight: "800",
+    letterSpacing: 0.5,
+  },
+  badgeTitleRow: {
+    flexDirection: "row",
+    alignItems: "center",
   },
   sessionBadgeText: {
     color: "#FFFFFF",
     fontSize: 11,
     fontWeight: "800",
-    letterSpacing: 0.5,
   },
   timeText: {
     fontSize: 12,
     fontWeight: "700",
-    fontVariant: ["tabular-nums"],
+    fontFamily: "monospace",
   },
   headerRight: {
     flexDirection: "row",
@@ -567,23 +749,20 @@ const styles = StyleSheet.create({
   },
   progressBarTrack: {
     height: 3,
-    backgroundColor: "rgba(0,0,0,0.1)",
+    backgroundColor: "rgba(150, 150, 150, 0.2)",
     width: "100%",
   },
   progressBarFill: {
-    height: 3,
-    backgroundColor: "#1A73E8",
+    height: "100%",
   },
-  scrollBody: {
-    maxHeight: 280,
-  },
-  scrollContent: {
-    padding: 12,
+  bodyContent: {
+    padding: 10,
+    gap: 8,
   },
   transportRow: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 10,
+    gap: 6,
   },
   primaryTransportBtn: {
     flexDirection: "row",
@@ -591,13 +770,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 7,
     borderRadius: 8,
-    marginRight: 6,
+    gap: 4,
   },
   primaryTransportText: {
     color: "#FFFFFF",
     fontSize: 11,
     fontWeight: "800",
-    marginLeft: 4,
+    letterSpacing: 0.5,
   },
   secondaryTransportBtn: {
     flexDirection: "row",
@@ -605,125 +784,143 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 7,
     borderRadius: 8,
-    marginRight: 8,
+    borderWidth: 1,
+    gap: 4,
   },
   secondaryTransportText: {
     fontSize: 11,
     fontWeight: "700",
-    marginLeft: 4,
   },
-  speedRow: {
-    flexDirection: "row",
+  speedBadge: {
+    paddingHorizontal: 9,
+    paddingVertical: 7,
+    borderRadius: 8,
+    borderWidth: 1,
     alignItems: "center",
-    flex: 1,
-    justifyContent: "flex-end",
+    justifyContent: "center",
   },
-  speedPill: {
-    paddingHorizontal: 6,
-    paddingVertical: 5,
-    borderRadius: 6,
-    marginLeft: 3,
-  },
-  speedPillText: {
-    fontSize: 10,
-    fontWeight: "700",
-  },
-  section: {
-    marginBottom: 8,
-  },
-  sectionTitle: {
-    fontSize: 9,
+  speedBadgeText: {
+    fontSize: 11,
     fontWeight: "800",
-    letterSpacing: 0.8,
-    marginBottom: 4,
   },
-  modeScrollContent: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingVertical: 2,
-  },
-  modePill: {
-    paddingHorizontal: 10,
+  pipelineBadge: {
+    flex: 1,
+    paddingHorizontal: 8,
     paddingVertical: 5,
     borderRadius: 8,
     borderWidth: 1,
-    marginRight: 6,
+    justifyContent: "center",
   },
-  modePillText: {
-    fontSize: 11,
+  pipelineTitle: {
+    fontSize: 9.5,
+    fontWeight: "800",
+    letterSpacing: 0.5,
   },
-  diagnosticCard: {
-    borderRadius: 10,
-    padding: 8,
-    marginBottom: 8,
-  },
-  diagnosticRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  diagCol: {
-    flex: 1,
-    alignItems: "center",
-  },
-  diagLabel: {
+  pipelineChecks: {
     fontSize: 8,
     fontWeight: "700",
-    letterSpacing: 0.5,
+    marginTop: 1,
+  },
+  metricCard: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 8,
+    borderRadius: 10,
+    borderWidth: 1,
+    gap: 6,
+  },
+  metricCol: {
+    flex: 1,
+  },
+  driftColHighlight: {
+    padding: 4,
+    borderRadius: 6,
+    borderWidth: 1,
+  },
+  metricLabel: {
+    fontSize: 8,
+    fontWeight: "700",
+    letterSpacing: 0.4,
     marginBottom: 2,
   },
-  diagValue: {
+  metricVal: {
     fontSize: 12,
     fontWeight: "700",
-    fontVariant: ["tabular-nums"],
   },
-  leakageBadge: {
+  metricValHighlight: {
+    fontSize: 13.5,
+    fontWeight: "800",
+  },
+  metricSub: {
+    fontSize: 8,
+    marginTop: 1,
+  },
+  gnssStatusRow: {
     flexDirection: "row",
     alignItems: "center",
+    gap: 4,
   },
-  leakageDot: {
+  gnssStatusDot: {
     width: 6,
     height: 6,
     borderRadius: 3,
-    marginRight: 4,
   },
-  milestoneRow: {
+  milestoneSection: {
+    gap: 4,
+  },
+  milestoneHeaderRow: {
     flexDirection: "row",
     justifyContent: "space-between",
+    alignItems: "center",
+  },
+  sectionTitle: {
+    fontSize: 8.5,
+    fontWeight: "800",
+    letterSpacing: 0.4,
+  },
+  milestonesGrid: {
+    flexDirection: "row",
+    gap: 5,
   },
   milestoneBox: {
     flex: 1,
     alignItems: "center",
-    paddingVertical: 4,
-    marginHorizontal: 2,
-    borderRadius: 6,
+    paddingVertical: 5,
+    paddingHorizontal: 2,
+    borderRadius: 8,
+    borderWidth: 1,
   },
   milestoneLabel: {
     fontSize: 8,
-    color: "#888",
     fontWeight: "700",
   },
-  milestoneVal: {
-    fontSize: 10,
+  milestoneMeters: {
+    fontSize: 10.5,
+    fontWeight: "800",
+    marginTop: 1,
+  },
+  milestoneDrift: {
+    fontSize: 8.5,
     fontWeight: "700",
-    fontVariant: ["tabular-nums"],
+    marginTop: 1,
   },
   togglesRow: {
     flexDirection: "row",
-    justifyContent: "space-between",
-    marginTop: 4,
+    gap: 6,
   },
-  toggleButton: {
+  toggleBtn: {
+    flex: 1,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    paddingVertical: 6,
-    paddingHorizontal: 10,
+    paddingVertical: 7,
+    paddingHorizontal: 4,
     borderRadius: 8,
-    flex: 1,
-    marginHorizontal: 3,
+    borderWidth: 1,
+    gap: 4,
   },
-  toggleText: {
+  toggleBtnText: {
     fontSize: 10,
-    marginLeft: 4,
+    fontWeight: "700",
   },
 });

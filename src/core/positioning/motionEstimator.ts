@@ -31,6 +31,7 @@ export type ModelBackendType =
   | "kinematic"
   | "tcn"
   | "gru"
+  | "sih_gru"
   | "mlp"
   | "hetero_tcn";
 
@@ -254,21 +255,38 @@ export class KinematicBaselineEstimator implements IMotionEstimator {
   private detectZupt(window: ImuSample[]): boolean {
     if (window.length < 3) return false;
 
-    // Examine recent samples (up to last 5 = 0.5s at 10 Hz)
-    const recent = window.slice(-5);
-    const accelMags = recent.map((s) => Math.abs(s.accel.y));
-    const gyroMags = recent.map((s) => {
-      const g = this.config.yawChannel === "pitch" ? s.gyro.y : s.gyro.z;
-      return Math.abs(g);
-    });
+    // Examine recent samples (up to last 10 samples)
+    const recent = window.slice(-Math.min(window.length, 10));
 
-    const maxAccel = Math.max(...accelMags);
-    const maxGyro = Math.max(...gyroMags);
+    // 1. Gyro angular velocity magnitude check (must be nearly 0 across all 3 axes)
+    for (const s of recent) {
+      const gyroNorm = Math.sqrt(
+        s.gyro.x * s.gyro.x + s.gyro.y * s.gyro.y + s.gyro.z * s.gyro.z,
+      );
+      if (gyroNorm >= this.config.zuptGyroThreshold && gyroNorm >= 0.08) {
+        return false;
+      }
+    }
 
-    return (
-      maxAccel < this.config.zuptAccelThreshold &&
-      maxGyro < this.config.zuptGyroThreshold
+    // 2. Accel magnitude variance check (gravity norm should be steady regardless of phone tilt)
+    const accelNorms = recent.map((s) =>
+      Math.sqrt(
+        s.accel.x * s.accel.x + s.accel.y * s.accel.y + s.accel.z * s.accel.z,
+      ),
     );
+    const meanAccelNorm =
+      accelNorms.reduce((sum, v) => sum + v, 0) / accelNorms.length;
+
+    // Reject free-fall or extreme shock (must be roughly 1g, between 7.0 and 12.5 m/s^2)
+    if (meanAccelNorm < 7.0 || meanAccelNorm > 12.5) return false;
+
+    const accelVar =
+      accelNorms.reduce(
+        (sum, v) => sum + (v - meanAccelNorm) * (v - meanAccelNorm),
+        0,
+      ) / accelNorms.length;
+
+    return accelVar < this.config.zuptAccelThreshold && accelVar < 0.15;
   }
 }
 
@@ -280,21 +298,38 @@ export interface LearnedModelConfig {
   yawSign?: number;
   forwardAccelChannel?: "x" | "y" | "z";
   forwardAccelSign?: number;
-  /** Custom inference evaluator (e.g. ONNX runtime hook) */
-  customEvaluator?: (inputTensor: number[][]) => {
-    forwardVelocity: number;
-    yawRate: number;
-    variance?: [number, number];
-  };
+  /** Custom inference evaluator (e.g. ONNX runtime hook). May be async. */
+  customEvaluator?: (inputTensor: number[][]) =>
+    | { forwardVelocity: number; yawRate: number; variance?: [number, number] }
+    | Promise<{ forwardVelocity: number; yawRate: number; variance?: [number, number] } | undefined | null>;
 }
 
 /**
- * Normalization statistics matching training set from normalization.json:
- * Channels: [a_long, a_lat, a_vert, omega_yaw, omega_pitch, omega_roll]
+ * Normalization statistics from artifacts/data/normalization.json
+ * Fitted on the IO-VNBD train split (strict train-only, no leakage).
+ * Channels: [a_long_mps2, a_lat_mps2, a_vert_mps2, omega_yaw_radps, omega_pitch_radps, omega_roll_radps]
+ *
+ * These are the EXACT training values.
+ * The previous approximate values (means: [-0.046304...], stds: [0.7226...]) were
+ * wrong and have been replaced here.
  */
 const DEFAULT_NORMALIZATION = {
-  means: [-0.046304, 0.088613, -0.06173, 0.003923, 0.000412, -0.001649],
-  stds: [0.722591, 0.697424, 0.702888, 0.076214, 0.043513, 0.049386],
+  means: [
+    -7.844409011248388e-10, // a_long   (≈ 0)
+     1.4318219498932194e-8, // a_lat    (≈ 0)
+    -3.097397538454061e-8,  // a_vert   (≈ 0)
+    -0.004003141075372696,  // omega_yaw
+     0.0003153611614834517, // omega_pitch
+    -0.0003211716830264777, // omega_roll
+  ],
+  stds: [
+    1.698140025138855,   // a_long
+    1.0665215253829956,  // a_lat
+    1.731066107749939,   // a_vert
+    0.25936752557754517, // omega_yaw
+    0.15234968066215515, // omega_pitch
+    0.1211884394288063,  // omega_roll
+  ],
 };
 
 /**
@@ -325,12 +360,15 @@ export class LearnedMotionEstimator implements IMotionEstimator {
   private droppedPredictions = 0;
   private lastEstimate: MotionEstimate | null = null;
   private windowSize = 0;
+  /** Caches the last resolved result from an async customEvaluator */
+  private _cachedEvaluatorResult: { forwardVelocity: number; yawRate: number; variance?: [number, number] } | null = null;
 
   constructor(backend: ModelBackendType = "tcn", config?: LearnedModelConfig) {
     this.backendType = backend;
     const names: Record<ModelBackendType, string> = {
       tcn: "Tiny Causal TCN (Locked Test Winner - B2)",
-      gru: "Lightweight GRU (Recurrent Baseline - B3)",
+      gru: "Lightweight GRU (Current Baseline - B3)",
+      sih_gru: "SIH Dead Reckoning (Friend's 50-step GRU)",
       mlp: "Shallow MLP (Feedforward Baseline - B1)",
       hetero_tcn: "Heteroscedastic TCN (Learned Uncertainty)",
       kinematic: "Classical Kinematic Baseline",
@@ -358,6 +396,7 @@ export class LearnedMotionEstimator implements IMotionEstimator {
     this.currentVelocity = 0.0;
     this.lastTimestamp = null;
     this.lastEstimate = null;
+    this._cachedEvaluatorResult = null;
     this.totalPredictions = 0;
     this.droppedPredictions = 0;
   }
@@ -435,14 +474,60 @@ export class LearnedMotionEstimator implements IMotionEstimator {
     let velVar = 1.5 * 1.5; // Configured prior standard deviation (1.5 m/s)
     let yawVar = 0.15 * 0.15; // Configured prior standard deviation (0.15 rad/s)
 
+    const isStationary = this.detectZupt(window);
+
     if (this.config.customEvaluator) {
       try {
-        const customRes = this.config.customEvaluator([normFeatures]);
-        predVelocity = Math.max(0.0, customRes.forwardVelocity);
-        predYawRate = customRes.yawRate;
-        if (customRes.variance) {
-          velVar = customRes.variance[0];
-          yawVar = customRes.variance[1];
+        const resultOrPromise = this.config.customEvaluator([normFeatures]);
+
+        if (resultOrPromise instanceof Promise) {
+          // Async evaluator — fire and cache; use last resolved result this tick
+          resultOrPromise
+            .then((res) => {
+              if (res != null) {
+                this._cachedEvaluatorResult = res;
+              }
+            })
+            .catch((err) => {
+              this.droppedPredictions++;
+              console.warn("LearnedMotionEstimator async customEvaluator failed:", err);
+            });
+
+          // Use cached result from previous async resolution
+          if (this._cachedEvaluatorResult) {
+            predVelocity = Math.max(0.0, this._cachedEvaluatorResult.forwardVelocity);
+            predYawRate = this._cachedEvaluatorResult.yawRate;
+            if (this._cachedEvaluatorResult.variance) {
+              velVar = this._cachedEvaluatorResult.variance[0];
+              yawVar = this._cachedEvaluatorResult.variance[1];
+            }
+          } else {
+            // No cached result yet — fall through to kinematic for this tick
+            if (isStationary) {
+              this.currentVelocity = 0.0;
+              predVelocity = 0.0;
+              predYawRate = 0.0;
+              velVar = 0.04;
+              yawVar = 0.0025;
+            } else {
+              const rawV = this.currentVelocity + forwardAccel * dt;
+              const damping = 0.018;
+              this.currentVelocity = Math.max(0.0, rawV * (1.0 - damping * dt));
+              predVelocity = this.currentVelocity;
+              predYawRate = yawRate;
+              velVar = Math.max(0.25, 0.03 * predVelocity * predVelocity + 0.1);
+              yawVar = Math.max(0.01, 0.02 * Math.abs(predYawRate) + 0.005);
+            }
+          }
+        } else if (resultOrPromise != null) {
+          // Synchronous evaluator result
+          predVelocity = Math.max(0.0, resultOrPromise.forwardVelocity);
+          predYawRate = resultOrPromise.yawRate;
+          if (resultOrPromise.variance) {
+            velVar = resultOrPromise.variance[0];
+            yawVar = resultOrPromise.variance[1];
+          }
+          this._cachedEvaluatorResult = resultOrPromise;
         }
       } catch (err) {
         this.droppedPredictions++;
@@ -450,7 +535,6 @@ export class LearnedMotionEstimator implements IMotionEstimator {
       }
     } else {
       // Deterministic runtime motion propagation with ZUPT detection
-      const isStationary = this.detectZupt(window);
       if (isStationary) {
         this.currentVelocity = 0.0;
         predVelocity = 0.0;
@@ -466,6 +550,18 @@ export class LearnedMotionEstimator implements IMotionEstimator {
         velVar = Math.max(0.25, 0.03 * predVelocity * predVelocity + 0.1);
         yawVar = Math.max(0.01, 0.02 * Math.abs(predYawRate) + 0.005);
       }
+    }
+
+    // Physical stationary gating:
+    // If the physical IMU window proves the device is stationary, override the estimate
+    // with Zero-Velocity (v=0, yawRate=0) to prevent out-of-distribution neural drift
+    // while remaining fully responsive the instant movement resumes.
+    if (isStationary) {
+      this.currentVelocity = 0.0;
+      predVelocity = 0.0;
+      predYawRate = 0.0;
+      velVar = 0.01;
+      yawVar = 0.001;
     }
 
     // Measure inference execution latency
@@ -512,13 +608,39 @@ export class LearnedMotionEstimator implements IMotionEstimator {
 
   private detectZupt(window: ImuSample[]): boolean {
     if (window.length < 3) return false;
-    const recent = window.slice(-5);
-    const accelMags = recent.map((s) => Math.abs(s.accel.y));
-    const gyroMags = recent.map((s) => {
-      const g = this.config.yawChannel === "pitch" ? s.gyro.y : s.gyro.z;
-      return Math.abs(g);
-    });
-    return Math.max(...accelMags) < 0.25 && Math.max(...gyroMags) < 0.05;
+
+    // Examine recent samples (up to last 10 samples)
+    const recent = window.slice(-Math.min(window.length, 10));
+
+    // 1. Gyro angular velocity magnitude check (must be nearly 0 across all 3 axes)
+    for (const s of recent) {
+      const gyroNorm = Math.sqrt(
+        s.gyro.x * s.gyro.x + s.gyro.y * s.gyro.y + s.gyro.z * s.gyro.z,
+      );
+      if (gyroNorm >= 0.08) {
+        return false;
+      }
+    }
+
+    // 2. Accel magnitude variance check (gravity norm should be steady regardless of phone tilt)
+    const accelNorms = recent.map((s) =>
+      Math.sqrt(
+        s.accel.x * s.accel.x + s.accel.y * s.accel.y + s.accel.z * s.accel.z,
+      ),
+    );
+    const meanAccelNorm =
+      accelNorms.reduce((sum, v) => sum + v, 0) / accelNorms.length;
+
+    // Reject free-fall or extreme shock (must be roughly 1g, between 7.0 and 12.5 m/s^2)
+    if (meanAccelNorm < 7.0 || meanAccelNorm > 12.5) return false;
+
+    const accelVar =
+      accelNorms.reduce(
+        (sum, v) => sum + (v - meanAccelNorm) * (v - meanAccelNorm),
+        0,
+      ) / accelNorms.length;
+
+    return accelVar < 0.15;
   }
 }
 

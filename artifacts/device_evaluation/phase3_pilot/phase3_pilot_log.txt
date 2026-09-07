@@ -1,0 +1,78 @@
+[2026-09-06 18:22:53] ============================================================
+[2026-09-06 18:22:53] STARTING PHASE 3 LIVE IDR INTEGRATION PHYSICAL PILOT
+[2026-09-06 18:22:53] Target Device: OnePlus Nord CE4 (d988dd17)
+[2026-09-06 18:22:53] ============================================================
+[2026-09-06 18:22:53] Configuring ADB reverse port 8088...
+[2026-09-06 18:22:58] ADB reverse 8088 exit code: 0
+[2026-09-06 18:22:58] Local bridge server active on http://127.0.0.1:8088
+[2026-09-06 18:22:58] Waiting for BetterMaps phone bridge on port 8088...
+[2026-09-06 18:22:59] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:01] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:03] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:05] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:07] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:09] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:11] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:13] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:15] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:17] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:19] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:21] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:23] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:25] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:27] WARNING: Command GET_LIVE_STATUS timed out after 1.5s
+[2026-09-06 18:23:28] ERROR: Phone failed to connect to bridge within timeout.
+[2026-09-06 18:23:28] FATAL: Cannot connect to BetterMaps app on phone.
+[2026-09-06 18:30:50] ============================================================
+[2026-09-06 18:30:50] STARTING PHASE 3 LIVE IDR INTEGRATION PHYSICAL PILOT
+[2026-09-06 18:30:50] Target Device: OnePlus Nord CE4 (d988dd17)
+[2026-09-06 18:30:50] ============================================================
+[2026-09-06 18:30:50] Ensuring phone is awake...
+[2026-09-06 18:30:55] Configuring ADB reverse ports 8081 & 8088...
+[2026-09-06 18:30:56] ADB reverse results: 8081=0, 8088=0
+[2026-09-06 18:30:56] Local bridge server active on http://127.0.0.1:8088
+[2026-09-06 18:30:56] Waiting for BetterMaps phone bridge on port 8088...
+[2026-09-06 18:30:56] Phone bridge connected successfully!
+[2026-09-06 18:30:56] Initial Status: gateState=GNSS_STREAM_ENABLED, roadUpdates=0
+[2026-09-06 18:30:56] ------------------------------------------------------------
+[2026-09-06 18:30:56] TRIAL [1/6]: Baseline (GNSS Open)
+[2026-09-06 18:30:56] Description: Baseline with continuous GNSS stream active
+[2026-09-06 18:30:56] ------------------------------------------------------------
+[2026-09-06 18:30:58] Config Applied: {'status': 'configured', 'gateState': 'GNSS_STREAM_ENABLED', 'roadConstraintEnabled': False, 'routeConstraintEnabled': False}
+[2026-09-06 18:30:58] Pre-trial state: roadUpdates=0, routeUpdates=0, gnssDelivered=58
+[2026-09-06 18:31:16] Post-trial state: roadDelta=0, routeDelta=0, gnssDelta=18
+[2026-09-06 18:31:16] Telemetry: mode=None, confidence=None, heading=None
+[2026-09-06 18:31:17] ------------------------------------------------------------
+[2026-09-06 18:31:17] TRIAL [2/6]: Free-Drive GNSS Outage (Road OFF)
+[2026-09-06 18:31:17] Description: Simulated tunnel outage with pure dead-reckoning (Road OFF)
+[2026-09-06 18:31:17] ------------------------------------------------------------
+[2026-09-06 18:31:18] Config Applied: {'status': 'configured', 'gateState': 'GNSS_STREAM_DISABLED', 'roadConstraintEnabled': False, 'routeConstraintEnabled': False}
+[2026-09-06 18:31:19] Pre-trial state: roadUpdates=0, routeUpdates=0, gnssDelivered=80
+[2026-09-06 18:31:40] Post-trial state: roadDelta=0, routeDelta=0, gnssDelta=0
+[2026-09-06 18:31:40] Telemetry: mode=None, confidence=None, heading=None
+[2026-09-06 18:31:41] ------------------------------------------------------------
+[2026-09-06 18:31:41] TRIAL [3/6]: Free-Drive GNSS Outage (Road ON)
+[2026-09-06 18:31:41] Description: Simulated tunnel outage with road-constrained IDR (Road ON)
+[2026-09-06 18:31:41] ------------------------------------------------------------
+[2026-09-06 18:31:43] Config Applied: {'status': 'configured', 'gateState': 'GNSS_STREAM_DISABLED', 'roadConstraintEnabled': True, 'routeConstraintEnabled': False}
+[2026-09-06 18:31:43] Pre-trial state: roadUpdates=0, routeUpdates=0, gnssDelivered=81
+[2026-09-06 18:32:06] Post-trial state: roadDelta=0, routeDelta=0, gnssDelta=0
+[2026-09-06 18:32:06] Telemetry: mode=None, confidence=None, heading=None
+[2026-09-06 18:32:07] ------------------------------------------------------------
+[2026-09-06 18:32:07] TRIAL [4/6]: Route Mode GNSS Outage (Road OFF)
+[2026-09-06 18:32:07] Description: Corridor route constraint active during GNSS outage (Road OFF)
+[2026-09-06 18:32:07] ------------------------------------------------------------
+[2026-09-06 18:32:08] Setting active route corridor on device...
+[2026-09-06 18:32:08] Config Applied: {'status': 'configured', 'gateState': 'GNSS_STREAM_DISABLED', 'roadConstraintEnabled': False, 'routeConstraintEnabled': True}
+[2026-09-06 18:32:18] WARNING: Command GET_LIVE_STATUS timed out after 10.0s
+[2026-09-06 18:32:18] Pre-trial state: roadUpdates=0, routeUpdates=0, gnssDelivered=0
+[2026-09-06 18:32:40] Post-trial state: roadDelta=0, routeDelta=0, gnssDelta=1
+[2026-09-06 18:32:40] Telemetry: mode=None, confidence=None, heading=None
+[2026-09-06 18:32:41] ------------------------------------------------------------
+[2026-09-06 18:32:41] TRIAL [5/6]: Route Mode GNSS Outage (Road ON)
+[2026-09-06 18:32:41] Description: Dual road + route constraints active during GNSS outage (Road ON)
+[2026-09-06 18:32:41] ------------------------------------------------------------
+[2026-09-06 18:32:42] Setting active route corridor on device...
+[2026-09-06 18:32:43] Config Applied: {'status': 'configured', 'gateState': 'GNSS_STREAM_DISABLED', 'roadConstraintEnabled': True, 'routeConstraintEnabled': True}
+[2026-09-06 18:32:53] WARNING: Command GET_LIVE_STATUS timed out after 10.0s
+[2026-09-06 18:32:53] Pre-trial state: roadUpdates=0, routeUpdates=0, gnssDelivered=0

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" width="900" height="550" style="background:#0F172A; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;">
+<text x="100" y="45" fill="#F8FAFC" font-size="20" font-weight="bold">GNSS Reacquisition & Error Convergence Profile</text>
+<text x="100" y="70" fill="#94A3B8" font-size="13">Pre-outage -> Outage End -> First Fix -> 1s -> 2s -> 5s Post-Recovery</text>
+<line x1="100" y1="470.0" x2="840" y2="470.0" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="474.0" fill="#64748B" font-size="12" text-anchor="end">0m</text>
+<line x1="100" y1="455.818973446986" x2="840" y2="455.818973446986" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="459.818973446986" fill="#64748B" font-size="12" text-anchor="end">20m</text>
+<line x1="100" y1="441.6379468939719" x2="840" y2="441.6379468939719" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="445.6379468939719" fill="#64748B" font-size="12" text-anchor="end">40m</text>
+<line x1="100" y1="427.4569203409579" x2="840" y2="427.4569203409579" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="431.4569203409579" fill="#64748B" font-size="12" text-anchor="end">60m</text>
+<line x1="100" y1="413.2758937879438" x2="840" y2="413.2758937879438" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="417.2758937879438" fill="#64748B" font-size="12" text-anchor="end">80m</text>
+<line x1="100" y1="399.0948672349298" x2="840" y2="399.0948672349298" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="403.0948672349298" fill="#64748B" font-size="12" text-anchor="end">100m</text>
+<line x1="100" y1="384.91384068191576" x2="840" y2="384.91384068191576" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="388.91384068191576" fill="#64748B" font-size="12" text-anchor="end">120m</text>
+<line x1="100" y1="370.7328141289017" x2="840" y2="370.7328141289017" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="374.7328141289017" fill="#64748B" font-size="12" text-anchor="end">140m</text>
+<line x1="100" y1="356.55178757588766" x2="840" y2="356.55178757588766" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="360.55178757588766" fill="#64748B" font-size="12" text-anchor="end">160m</text>
+<line x1="100" y1="342.3707610228736" x2="840" y2="342.3707610228736" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="346.3707610228736" fill="#64748B" font-size="12" text-anchor="end">180m</text>
+<line x1="100" y1="328.18973446985956" x2="840" y2="328.18973446985956" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="332.18973446985956" fill="#64748B" font-size="12" text-anchor="end">200m</text>
+<line x1="100" y1="314.00870791684554" x2="840" y2="314.00870791684554" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="318.00870791684554" fill="#64748B" font-size="12" text-anchor="end">220m</text>
+<line x1="100" y1="299.82768136383146" x2="840" y2="299.82768136383146" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="303.82768136383146" fill="#64748B" font-size="12" text-anchor="end">240m</text>
+<line x1="100" y1="285.6466548108174" x2="840" y2="285.6466548108174" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="289.6466548108174" fill="#64748B" font-size="12" text-anchor="end">260m</text>
+<line x1="100" y1="271.46562825780336" x2="840" y2="271.46562825780336" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="275.46562825780336" fill="#64748B" font-size="12" text-anchor="end">280m</text>
+<line x1="100" y1="257.28460170478934" x2="840" y2="257.28460170478934" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="261.28460170478934" fill="#64748B" font-size="12" text-anchor="end">300m</text>
+<line x1="100" y1="243.1035751517753" x2="840" y2="243.1035751517753" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="247.1035751517753" fill="#64748B" font-size="12" text-anchor="end">320m</text>
+<line x1="100" y1="228.92254859876124" x2="840" y2="228.92254859876124" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="232.92254859876124" fill="#64748B" font-size="12" text-anchor="end">340m</text>
+<line x1="100" y1="214.74152204574722" x2="840" y2="214.74152204574722" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="218.74152204574722" fill="#64748B" font-size="12" text-anchor="end">360m</text>
+<line x1="100" y1="200.5604954927332" x2="840" y2="200.5604954927332" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="204.5604954927332" fill="#64748B" font-size="12" text-anchor="end">380m</text>
+<line x1="100" y1="186.37946893971912" x2="840" y2="186.37946893971912" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="190.37946893971912" fill="#64748B" font-size="12" text-anchor="end">400m</text>
+<line x1="100" y1="172.1984423867051" x2="840" y2="172.1984423867051" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="176.1984423867051" fill="#64748B" font-size="12" text-anchor="end">420m</text>
+<line x1="100" y1="158.01741583369102" x2="840" y2="158.01741583369102" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="162.01741583369102" fill="#64748B" font-size="12" text-anchor="end">440m</text>
+<line x1="100" y1="143.836389280677" x2="840" y2="143.836389280677" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="147.836389280677" fill="#64748B" font-size="12" text-anchor="end">460m</text>
+<line x1="100" y1="129.65536272766292" x2="840" y2="129.65536272766292" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="133.65536272766292" fill="#64748B" font-size="12" text-anchor="end">480m</text>
+<line x1="100" y1="115.4743361746489" x2="840" y2="115.4743361746489" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="119.4743361746489" fill="#64748B" font-size="12" text-anchor="end">500m</text>
+<line x1="100" y1="101.29330962163482" x2="840" y2="101.29330962163482" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="105.29330962163482" fill="#64748B" font-size="12" text-anchor="end">520m</text>
+<line x1="100.0" y1="100" x2="100.0" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="100.0" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">Outage End</text>
+<line x1="285.0" y1="100" x2="285.0" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="285.0" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">First Fix</text>
+<line x1="470.0" y1="100" x2="470.0" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="470.0" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">+1s</text>
+<line x1="655.0" y1="100" x2="655.0" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="655.0" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">+2s</text>
+<line x1="840.0" y1="100" x2="840.0" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="840.0" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">+5s</text>
+<line x1="100" y1="470" x2="840" y2="470" stroke="#64748B" stroke-width="2"/>
+<line x1="100" y1="100" x2="100" y2="470" stroke="#64748B" stroke-width="2"/>
+<text x="470.0" y="525" fill="#CBD5E1" font-size="14" font-weight="600" text-anchor="middle">GNSS Restoration Sequence</text>
+<text x="35" y="285.0" fill="#CBD5E1" font-size="14" font-weight="600" text-anchor="middle" transform="rotate(-90 35 285.0)">Position Error (Meters)</text>
+<path d="M 100.0 148.26086956521738 L 285.0 346.25636229839944 L 470.0 445.261199178267 L 655.0 451.07542006500273 L 840.0 446.51622002820875" fill="none" stroke="#F59E0B" stroke-width="3.5" stroke-linejoin="round"/>
+<circle cx="100.0" cy="148.26086956521738" r="6" fill="#F59E0B" stroke="#0F172A" stroke-width="2.5"/>
+<text x="100.0" y="136.26086956521738" fill="#F59E0B" font-size="11" font-weight="bold" text-anchor="middle">453.8m</text>
+<circle cx="285.0" cy="346.25636229839944" r="6" fill="#F59E0B" stroke="#0F172A" stroke-width="2.5"/>
+<text x="285.0" y="334.25636229839944" fill="#F59E0B" font-size="11" font-weight="bold" text-anchor="middle">174.5m</text>
+<circle cx="470.0" cy="445.261199178267" r="6" fill="#F59E0B" stroke="#0F172A" stroke-width="2.5"/>
+<text x="470.0" y="433.261199178267" fill="#F59E0B" font-size="11" font-weight="bold" text-anchor="middle">34.9m</text>
+<circle cx="655.0" cy="451.07542006500273" r="6" fill="#F59E0B" stroke="#0F172A" stroke-width="2.5"/>
+<text x="655.0" y="439.07542006500273" fill="#F59E0B" font-size="11" font-weight="bold" text-anchor="middle">26.7m</text>
+<circle cx="840.0" cy="446.51622002820875" r="6" fill="#F59E0B" stroke="#0F172A" stroke-width="2.5"/>
+<text x="840.0" y="434.51622002820875" fill="#F59E0B" font-size="11" font-weight="bold" text-anchor="middle">33.1m</text>
+<path d="M 100.0 252.00925982706812 L 285.0 361.3591555773594 L 470.0 442.86460569080765 L 655.0 448.813546329797 L 840.0 444.8428588949531" fill="none" stroke="#38BDF8" stroke-width="3.5" stroke-linejoin="round"/>
+<circle cx="100.0" cy="252.00925982706812" r="6" fill="#38BDF8" stroke="#0F172A" stroke-width="2.5"/>
+<text x="100.0" y="240.00925982706812" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">307.4m</text>
+<circle cx="285.0" cy="361.3591555773594" r="6" fill="#38BDF8" stroke="#0F172A" stroke-width="2.5"/>
+<text x="285.0" y="349.3591555773594" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">153.2m</text>
+<circle cx="470.0" cy="442.86460569080765" r="6" fill="#38BDF8" stroke="#0F172A" stroke-width="2.5"/>
+<text x="470.0" y="430.86460569080765" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">38.3m</text>
+<circle cx="655.0" cy="448.813546329797" r="6" fill="#38BDF8" stroke="#0F172A" stroke-width="2.5"/>
+<text x="655.0" y="436.813546329797" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">29.9m</text>
+<circle cx="840.0" cy="444.8428588949531" r="6" fill="#38BDF8" stroke="#0F172A" stroke-width="2.5"/>
+<text x="840.0" y="432.8428588949531" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">35.5m</text>
+<rect x="560" y="125" width="260" height="60" fill="#1E293B" stroke="#334155" rx="6"/>
+<line x1="575" y1="145" x2="605" y2="145" stroke="#F59E0B" stroke-width="3"/>
+<circle cx="590" cy="145" r="4" fill="#F59E0B"/>
+<text x="615" y="149" fill="#F8FAFC" font-size="12" font-weight="600">30s Outage Recovery</text>
+<line x1="575" y1="167" x2="605" y2="167" stroke="#38BDF8" stroke-width="3"/>
+<circle cx="590" cy="167" r="4" fill="#38BDF8"/>
+<text x="615" y="171" fill="#F8FAFC" font-size="12" font-weight="600">20s Outage Recovery</text>
+</svg>

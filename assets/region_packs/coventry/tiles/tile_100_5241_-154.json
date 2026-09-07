@@ -1,0 +1,3270 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5241:-154"
+  },
+  "bounds": {
+    "minLat": 52.410000000000004,
+    "maxLat": 52.42,
+    "minLon": -1.54,
+    "maxLon": -1.53
+  },
+  "segments": [
+    {
+      "id": "s_4410965",
+      "name": "Lake View Road",
+      "startPoint": {
+        "latitude": 52.4140443,
+        "longitude": -1.539445
+      },
+      "endPoint": {
+        "latitude": 52.4121063,
+        "longitude": -1.5342923
+      },
+      "lengthMeters": 410.6,
+      "bearingDeg": 121,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_26990945",
+      "endNodeId": "n_1571129941",
+      "geometry": [
+        {
+          "latitude": 52.4140443,
+          "longitude": -1.539445
+        },
+        {
+          "latitude": 52.4139749,
+          "longitude": -1.5392556
+        },
+        {
+          "latitude": 52.4138481,
+          "longitude": -1.5388725
+        },
+        {
+          "latitude": 52.4138111,
+          "longitude": -1.5387645
+        },
+        {
+          "latitude": 52.4121063,
+          "longitude": -1.5342923
+        }
+      ]
+    },
+    {
+      "id": "s_4718779",
+      "name": "Lammas Road",
+      "startPoint": {
+        "latitude": 52.4146051,
+        "longitude": -1.5330743
+      },
+      "endPoint": {
+        "latitude": 52.4144878,
+        "longitude": -1.5332205
+      },
+      "lengthMeters": 16.4,
+      "bearingDeg": 217.2,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30049342",
+      "endNodeId": "n_30049341",
+      "geometry": [
+        {
+          "latitude": 52.4146051,
+          "longitude": -1.5330743
+        },
+        {
+          "latitude": 52.4144878,
+          "longitude": -1.5332205
+        }
+      ]
+    },
+    {
+      "id": "s_4718780",
+      "name": "Browett Road",
+      "startPoint": {
+        "latitude": 52.4147323,
+        "longitude": -1.530609
+      },
+      "endPoint": {
+        "latitude": 52.4171795,
+        "longitude": -1.531543
+      },
+      "lengthMeters": 281.9,
+      "bearingDeg": 316.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_1650435342",
+      "endNodeId": "n_30049326",
+      "geometry": [
+        {
+          "latitude": 52.4147323,
+          "longitude": -1.530609
+        },
+        {
+          "latitude": 52.4148024,
+          "longitude": -1.5307176
+        },
+        {
+          "latitude": 52.4148654,
+          "longitude": -1.5307845
+        },
+        {
+          "latitude": 52.4149397,
+          "longitude": -1.5308112
+        },
+        {
+          "latitude": 52.4155157,
+          "longitude": -1.5309446
+        },
+        {
+          "latitude": 52.4159466,
+          "longitude": -1.5310381
+        },
+        {
+          "latitude": 52.4162827,
+          "longitude": -1.5311455
+        },
+        {
+          "latitude": 52.4164042,
+          "longitude": -1.5311954
+        },
+        {
+          "latitude": 52.4171795,
+          "longitude": -1.531543
+        }
+      ]
+    },
+    {
+      "id": "s_4718782",
+      "name": "Oakfield Road",
+      "startPoint": {
+        "latitude": 52.4178191,
+        "longitude": -1.5319433
+      },
+      "endPoint": {
+        "latitude": 52.4190653,
+        "longitude": -1.5300044
+      },
+      "lengthMeters": 191,
+      "bearingDeg": 43.5,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30049327",
+      "endNodeId": "n_30049340",
+      "geometry": [
+        {
+          "latitude": 52.4178191,
+          "longitude": -1.5319433
+        },
+        {
+          "latitude": 52.4190653,
+          "longitude": -1.5300044
+        }
+      ]
+    },
+    {
+      "id": "s_4744095",
+      "name": "Marriott Road",
+      "startPoint": {
+        "latitude": 52.4155157,
+        "longitude": -1.5309446
+      },
+      "endPoint": {
+        "latitude": 52.4164878,
+        "longitude": -1.5293238
+      },
+      "lengthMeters": 154.9,
+      "bearingDeg": 74.4,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30233236",
+      "endNodeId": "n_30233260",
+      "geometry": [
+        {
+          "latitude": 52.4155157,
+          "longitude": -1.5309446
+        },
+        {
+          "latitude": 52.4155268,
+          "longitude": -1.5308793
+        },
+        {
+          "latitude": 52.4155509,
+          "longitude": -1.5308141
+        },
+        {
+          "latitude": 52.4164878,
+          "longitude": -1.5293238
+        }
+      ]
+    },
+    {
+      "id": "s_4744096",
+      "name": "Batemans Acre South",
+      "startPoint": {
+        "latitude": 52.4162827,
+        "longitude": -1.5311455
+      },
+      "endPoint": {
+        "latitude": 52.4169244,
+        "longitude": -1.5300712
+      },
+      "lengthMeters": 102.4,
+      "bearingDeg": 61.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30233235",
+      "endNodeId": "n_30233261",
+      "geometry": [
+        {
+          "latitude": 52.4162827,
+          "longitude": -1.5311455
+        },
+        {
+          "latitude": 52.4163146,
+          "longitude": -1.5310483
+        },
+        {
+          "latitude": 52.4163508,
+          "longitude": -1.530973
+        },
+        {
+          "latitude": 52.4169244,
+          "longitude": -1.5300712
+        }
+      ]
+    },
+    {
+      "id": "s_4744097",
+      "name": "Ro-Oak Road",
+      "startPoint": {
+        "latitude": 52.4184571,
+        "longitude": -1.5324178
+      },
+      "endPoint": {
+        "latitude": 52.4194662,
+        "longitude": -1.5308512
+      },
+      "lengthMeters": 154.5,
+      "bearingDeg": 44.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30233237",
+      "endNodeId": "n_26092790",
+      "geometry": [
+        {
+          "latitude": 52.4184571,
+          "longitude": -1.5324178
+        },
+        {
+          "latitude": 52.4184912,
+          "longitude": -1.5323625
+        },
+        {
+          "latitude": 52.4194662,
+          "longitude": -1.5308512
+        }
+      ]
+    },
+    {
+      "id": "s_4746395",
+      "name": "Moseley Avenue",
+      "startPoint": {
+        "latitude": 52.4147323,
+        "longitude": -1.530609
+      },
+      "endPoint": {
+        "latitude": 52.416072,
+        "longitude": -1.5284883
+      },
+      "lengthMeters": 207.1,
+      "bearingDeg": 43.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "secondary",
+      "startNodeId": "n_1650435342",
+      "endNodeId": "n_13395052477",
+      "geometry": [
+        {
+          "latitude": 52.4147323,
+          "longitude": -1.530609
+        },
+        {
+          "latitude": 52.415067,
+          "longitude": -1.5300853
+        },
+        {
+          "latitude": 52.4154969,
+          "longitude": -1.5294076
+        },
+        {
+          "latitude": 52.4160358,
+          "longitude": -1.5285554
+        },
+        {
+          "latitude": 52.416072,
+          "longitude": -1.5284883
+        }
+      ]
+    },
+    {
+      "id": "s_4746396",
+      "name": "Hopkins Road",
+      "startPoint": {
+        "latitude": 52.4169244,
+        "longitude": -1.5300712
+      },
+      "endPoint": {
+        "latitude": 52.4160358,
+        "longitude": -1.5285554
+      },
+      "lengthMeters": 142.6,
+      "bearingDeg": 133.8,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "residential",
+      "startNodeId": "n_30233261",
+      "endNodeId": "n_30233278",
+      "geometry": [
+        {
+          "latitude": 52.4169244,
+          "longitude": -1.5300712
+        },
+        {
+          "latitude": 52.4164878,
+          "longitude": -1.5293238
+        },
+        {
+          "latitude": 52.4160358,
+          "longitude": -1.5285554
+        }
+      ]
+    },
+    {
+      "id": "s_4746400",
+      "name": "Trensale Avenue",
+      "startPoint": {
+        "latitude": 52.4162433,
+        "longitude": -1.5346316
+      },
+      "endPoint": {
+        "latitude": 52.4171795,
+        "longitude": -1.531543
+      },
+      "lengthMeters": 241.4,
+      "bearingDeg": 69.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30233244",
+      "endNodeId": "n_30049326",
+      "geometry": [
+        {
+          "latitude": 52.4162433,
+          "longitude": -1.5346316
+        },
+        {
+          "latitude": 52.416274,
+          "longitude": -1.5344961
+        },
+        {
+          "latitude": 52.4163463,
+          "longitude": -1.5340776
+        },
+        {
+          "latitude": 52.4164072,
+          "longitude": -1.5337323
+        },
+        {
+          "latitude": 52.4164156,
+          "longitude": -1.5336863
+        },
+        {
+          "latitude": 52.4165452,
+          "longitude": -1.5329272
+        },
+        {
+          "latitude": 52.4165901,
+          "longitude": -1.5325814
+        },
+        {
+          "latitude": 52.4166254,
+          "longitude": -1.5324596
+        },
+        {
+          "latitude": 52.4166627,
+          "longitude": -1.5323496
+        },
+        {
+          "latitude": 52.4169059,
+          "longitude": -1.53197
+        },
+        {
+          "latitude": 52.4171795,
+          "longitude": -1.531543
+        }
+      ]
+    },
+    {
+      "id": "s_4746401",
+      "name": "Redesdale Avenue",
+      "startPoint": {
+        "latitude": 52.4158814,
+        "longitude": -1.5369532
+      },
+      "endPoint": {
+        "latitude": 52.4184571,
+        "longitude": -1.5324178
+      },
+      "lengthMeters": 421.5,
+      "bearingDeg": 38.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30233295",
+      "endNodeId": "n_30233237",
+      "geometry": [
+        {
+          "latitude": 52.4158814,
+          "longitude": -1.5369532
+        },
+        {
+          "latitude": 52.4159723,
+          "longitude": -1.5368341
+        },
+        {
+          "latitude": 52.4162066,
+          "longitude": -1.5364588
+        },
+        {
+          "latitude": 52.4169535,
+          "longitude": -1.5352626
+        },
+        {
+          "latitude": 52.4174629,
+          "longitude": -1.5344365
+        },
+        {
+          "latitude": 52.4179734,
+          "longitude": -1.5333069
+        },
+        {
+          "latitude": 52.4182431,
+          "longitude": -1.5327535
+        },
+        {
+          "latitude": 52.4182553,
+          "longitude": -1.5327284
+        },
+        {
+          "latitude": 52.4184225,
+          "longitude": -1.5324724
+        },
+        {
+          "latitude": 52.4184571,
+          "longitude": -1.5324178
+        }
+      ]
+    },
+    {
+      "id": "s_4883203",
+      "name": "Lammas Road",
+      "startPoint": {
+        "latitude": 52.4146418,
+        "longitude": -1.530752
+      },
+      "endPoint": {
+        "latitude": 52.413522,
+        "longitude": -1.5299255
+      },
+      "lengthMeters": 141.1,
+      "bearingDeg": 134.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "residential",
+      "startNodeId": "n_1650435316",
+      "endNodeId": "n_522057619",
+      "geometry": [
+        {
+          "latitude": 52.4146418,
+          "longitude": -1.530752
+        },
+        {
+          "latitude": 52.4145647,
+          "longitude": -1.5306214
+        },
+        {
+          "latitude": 52.4144866,
+          "longitude": -1.5305065
+        },
+        {
+          "latitude": 52.4144092,
+          "longitude": -1.5304016
+        },
+        {
+          "latitude": 52.4143419,
+          "longitude": -1.5303221
+        },
+        {
+          "latitude": 52.4142325,
+          "longitude": -1.5302144
+        },
+        {
+          "latitude": 52.41414,
+          "longitude": -1.5301368
+        },
+        {
+          "latitude": 52.4140484,
+          "longitude": -1.5300693
+        },
+        {
+          "latitude": 52.4139558,
+          "longitude": -1.5300196
+        },
+        {
+          "latitude": 52.4138618,
+          "longitude": -1.5299778
+        },
+        {
+          "latitude": 52.4137748,
+          "longitude": -1.5299482
+        },
+        {
+          "latitude": 52.4136888,
+          "longitude": -1.5299289
+        },
+        {
+          "latitude": 52.4135925,
+          "longitude": -1.5299201
+        },
+        {
+          "latitude": 52.413522,
+          "longitude": -1.5299255
+        }
+      ]
+    },
+    {
+      "id": "s_4883206",
+      "name": "Batsford Road",
+      "startPoint": {
+        "latitude": 52.4179734,
+        "longitude": -1.5333069
+      },
+      "endPoint": {
+        "latitude": 52.4152287,
+        "longitude": -1.5340831
+      },
+      "lengthMeters": 434.9,
+      "bearingDeg": 147.4,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_31044210",
+      "endNodeId": "n_30233250",
+      "geometry": [
+        {
+          "latitude": 52.4179734,
+          "longitude": -1.5333069
+        },
+        {
+          "latitude": 52.417908,
+          "longitude": -1.5332382
+        },
+        {
+          "latitude": 52.4174149,
+          "longitude": -1.5329494
+        },
+        {
+          "latitude": 52.4166254,
+          "longitude": -1.5324596
+        },
+        {
+          "latitude": 52.4158059,
+          "longitude": -1.5320321
+        },
+        {
+          "latitude": 52.4156651,
+          "longitude": -1.5319593
+        },
+        {
+          "latitude": 52.4155965,
+          "longitude": -1.5319516
+        },
+        {
+          "latitude": 52.4155306,
+          "longitude": -1.5320061
+        },
+        {
+          "latitude": 52.4154854,
+          "longitude": -1.5320959
+        },
+        {
+          "latitude": 52.4154097,
+          "longitude": -1.5326066
+        },
+        {
+          "latitude": 52.4153762,
+          "longitude": -1.5328199
+        },
+        {
+          "latitude": 52.4153396,
+          "longitude": -1.5331001
+        },
+        {
+          "latitude": 52.4153106,
+          "longitude": -1.5333221
+        },
+        {
+          "latitude": 52.4152619,
+          "longitude": -1.5336889
+        },
+        {
+          "latitude": 52.4152165,
+          "longitude": -1.5339661
+        },
+        {
+          "latitude": 52.4152287,
+          "longitude": -1.5340831
+        }
+      ]
+    },
+    {
+      "id": "s_4883207",
+      "name": "Laburnum Avenue",
+      "startPoint": {
+        "latitude": 52.4193666,
+        "longitude": -1.5340584
+      },
+      "endPoint": {
+        "latitude": 52.4203915,
+        "longitude": -1.5327891
+      },
+      "lengthMeters": 142.8,
+      "bearingDeg": 37.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_31580868",
+      "endNodeId": "n_31580865",
+      "geometry": [
+        {
+          "latitude": 52.4193666,
+          "longitude": -1.5340584
+        },
+        {
+          "latitude": 52.4203915,
+          "longitude": -1.5327891
+        }
+      ]
+    },
+    {
+      "id": "s_4883208",
+      "name": "Lilac Avenue",
+      "startPoint": {
+        "latitude": 52.4187197,
+        "longitude": -1.5354258
+      },
+      "endPoint": {
+        "latitude": 52.4193666,
+        "longitude": -1.5340584
+      },
+      "lengthMeters": 117.6,
+      "bearingDeg": 53,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_31580873",
+      "endNodeId": "n_31580868",
+      "geometry": [
+        {
+          "latitude": 52.4187197,
+          "longitude": -1.5354258
+        },
+        {
+          "latitude": 52.4190475,
+          "longitude": -1.5347116
+        },
+        {
+          "latitude": 52.4193101,
+          "longitude": -1.53413
+        },
+        {
+          "latitude": 52.4193666,
+          "longitude": -1.5340584
+        }
+      ]
+    },
+    {
+      "id": "s_35879602",
+      "name": "Four Pounds Avenue",
+      "startPoint": {
+        "latitude": 52.4115237,
+        "longitude": -1.5340175
+      },
+      "endPoint": {
+        "latitude": 52.411644,
+        "longitude": -1.5339205
+      },
+      "lengthMeters": 14.9,
+      "bearingDeg": 26.2,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "secondary",
+      "startNodeId": "n_419337603",
+      "endNodeId": "n_419337604",
+      "geometry": [
+        {
+          "latitude": 52.4115237,
+          "longitude": -1.5340175
+        },
+        {
+          "latitude": 52.411644,
+          "longitude": -1.5339205
+        }
+      ]
+    },
+    {
+      "id": "s_35879604",
+      "name": "Four Pounds Avenue",
+      "startPoint": {
+        "latitude": 52.4116235,
+        "longitude": -1.5337576
+      },
+      "endPoint": {
+        "latitude": 52.4114972,
+        "longitude": -1.5338652
+      },
+      "lengthMeters": 15.8,
+      "bearingDeg": 207.5,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "secondary",
+      "startNodeId": "n_419337600",
+      "endNodeId": "n_419337599",
+      "geometry": [
+        {
+          "latitude": 52.4116235,
+          "longitude": -1.5337576
+        },
+        {
+          "latitude": 52.4114972,
+          "longitude": -1.5338652
+        }
+      ]
+    },
+    {
+      "id": "s_35879605",
+      "name": "Four Pounds Avenue",
+      "startPoint": {
+        "latitude": 52.4114972,
+        "longitude": -1.5338652
+      },
+      "endPoint": {
+        "latitude": 52.4086161,
+        "longitude": -1.5363704
+      },
+      "lengthMeters": 362.6,
+      "bearingDeg": 208.1,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "secondary",
+      "startNodeId": "n_419337599",
+      "endNodeId": "n_944322137",
+      "geometry": [
+        {
+          "latitude": 52.4114972,
+          "longitude": -1.5338652
+        },
+        {
+          "latitude": 52.4107112,
+          "longitude": -1.5345518
+        },
+        {
+          "latitude": 52.4106087,
+          "longitude": -1.5346381
+        },
+        {
+          "latitude": 52.4102141,
+          "longitude": -1.5349889
+        },
+        {
+          "latitude": 52.409663,
+          "longitude": -1.53546
+        },
+        {
+          "latitude": 52.4091969,
+          "longitude": -1.5358694
+        },
+        {
+          "latitude": 52.4088728,
+          "longitude": -1.5361528
+        },
+        {
+          "latitude": 52.4086161,
+          "longitude": -1.5363704
+        }
+      ]
+    },
+    {
+      "id": "s_72177676",
+      "name": "Allan Road",
+      "startPoint": {
+        "latitude": 52.4158295,
+        "longitude": -1.5330524
+      },
+      "endPoint": {
+        "latitude": 52.4153762,
+        "longitude": -1.5328199
+      },
+      "lengthMeters": 52.8,
+      "bearingDeg": 162.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_858016193",
+      "endNodeId": "n_858016194",
+      "geometry": [
+        {
+          "latitude": 52.4158295,
+          "longitude": -1.5330524
+        },
+        {
+          "latitude": 52.4156306,
+          "longitude": -1.5329504
+        },
+        {
+          "latitude": 52.4153762,
+          "longitude": -1.5328199
+        }
+      ]
+    },
+    {
+      "id": "s_72182345",
+      "name": "Croome Close",
+      "startPoint": {
+        "latitude": 52.4168745,
+        "longitude": -1.5339162
+      },
+      "endPoint": {
+        "latitude": 52.4164156,
+        "longitude": -1.5336863
+      },
+      "lengthMeters": 53.4,
+      "bearingDeg": 163,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_858048999",
+      "endNodeId": "n_858049000",
+      "geometry": [
+        {
+          "latitude": 52.4168745,
+          "longitude": -1.5339162
+        },
+        {
+          "latitude": 52.4164156,
+          "longitude": -1.5336863
+        }
+      ]
+    },
+    {
+      "id": "s_143569802",
+      "name": "Lake View Road",
+      "startPoint": {
+        "latitude": 52.4121063,
+        "longitude": -1.5342923
+      },
+      "endPoint": {
+        "latitude": 52.4118239,
+        "longitude": -1.5335861
+      },
+      "lengthMeters": 57.4,
+      "bearingDeg": 121.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_1571129941",
+      "endNodeId": "n_30209843",
+      "geometry": [
+        {
+          "latitude": 52.4121063,
+          "longitude": -1.5342923
+        },
+        {
+          "latitude": 52.4118885,
+          "longitude": -1.5337141
+        },
+        {
+          "latitude": 52.4118239,
+          "longitude": -1.5335861
+        }
+      ]
+    },
+    {
+      "id": "s_143569803",
+      "name": "Four Pounds Avenue",
+      "startPoint": {
+        "latitude": 52.4118239,
+        "longitude": -1.5335861
+      },
+      "endPoint": {
+        "latitude": 52.4116235,
+        "longitude": -1.5337576
+      },
+      "lengthMeters": 25.1,
+      "bearingDeg": 207.6,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "secondary",
+      "startNodeId": "n_30209843",
+      "endNodeId": "n_419337600",
+      "geometry": [
+        {
+          "latitude": 52.4118239,
+          "longitude": -1.5335861
+        },
+        {
+          "latitude": 52.4116235,
+          "longitude": -1.5337576
+        }
+      ]
+    },
+    {
+      "id": "s_150782100",
+      "name": "Four Pounds Avenue",
+      "startPoint": {
+        "latitude": 52.4123571,
+        "longitude": -1.5331126
+      },
+      "endPoint": {
+        "latitude": 52.4118239,
+        "longitude": -1.5335861
+      },
+      "lengthMeters": 67.4,
+      "bearingDeg": 208.4,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "secondary",
+      "startNodeId": "n_1636591770",
+      "endNodeId": "n_30209843",
+      "geometry": [
+        {
+          "latitude": 52.4123571,
+          "longitude": -1.5331126
+        },
+        {
+          "latitude": 52.4118239,
+          "longitude": -1.5335861
+        }
+      ]
+    },
+    {
+      "id": "s_150782103",
+      "name": "Four Pounds Avenue",
+      "startPoint": {
+        "latitude": 52.4125169,
+        "longitude": -1.5329644
+      },
+      "endPoint": {
+        "latitude": 52.4123571,
+        "longitude": -1.5331126
+      },
+      "lengthMeters": 20.4,
+      "bearingDeg": 209.5,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "secondary",
+      "startNodeId": "n_481313647",
+      "endNodeId": "n_1636591770",
+      "geometry": [
+        {
+          "latitude": 52.4125169,
+          "longitude": -1.5329644
+        },
+        {
+          "latitude": 52.4123571,
+          "longitude": -1.5331126
+        }
+      ]
+    },
+    {
+      "id": "s_151361685",
+      "name": "Four Pounds Avenue",
+      "startPoint": {
+        "latitude": 52.4139242,
+        "longitude": -1.5317486
+      },
+      "endPoint": {
+        "latitude": 52.4125169,
+        "longitude": -1.5329644
+      },
+      "lengthMeters": 176.9,
+      "bearingDeg": 211.6,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "secondary",
+      "startNodeId": "n_5743321470",
+      "endNodeId": "n_481313647",
+      "geometry": [
+        {
+          "latitude": 52.4139242,
+          "longitude": -1.5317486
+        },
+        {
+          "latitude": 52.4138471,
+          "longitude": -1.5318265
+        },
+        {
+          "latitude": 52.4138039,
+          "longitude": -1.531864
+        },
+        {
+          "latitude": 52.413285,
+          "longitude": -1.5323153
+        },
+        {
+          "latitude": 52.4131967,
+          "longitude": -1.5323927
+        },
+        {
+          "latitude": 52.4131213,
+          "longitude": -1.5324464
+        },
+        {
+          "latitude": 52.4125169,
+          "longitude": -1.5329644
+        }
+      ]
+    },
+    {
+      "id": "s_152209862",
+      "name": "Stepping Stones Road",
+      "startPoint": {
+        "latitude": 52.415094,
+        "longitude": -1.5374916
+      },
+      "endPoint": {
+        "latitude": 52.4131967,
+        "longitude": -1.5323927
+      },
+      "lengthMeters": 405.2,
+      "bearingDeg": 121.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "residential",
+      "startNodeId": "n_26990947",
+      "endNodeId": "n_944322112",
+      "geometry": [
+        {
+          "latitude": 52.415094,
+          "longitude": -1.5374916
+        },
+        {
+          "latitude": 52.414891,
+          "longitude": -1.5369535
+        },
+        {
+          "latitude": 52.414498,
+          "longitude": -1.5359111
+        },
+        {
+          "latitude": 52.4142895,
+          "longitude": -1.5353581
+        },
+        {
+          "latitude": 52.4141272,
+          "longitude": -1.5349282
+        },
+        {
+          "latitude": 52.4136797,
+          "longitude": -1.5337434
+        },
+        {
+          "latitude": 52.4134559,
+          "longitude": -1.5331508
+        },
+        {
+          "latitude": 52.4134306,
+          "longitude": -1.5330869
+        },
+        {
+          "latitude": 52.4132299,
+          "longitude": -1.5325215
+        },
+        {
+          "latitude": 52.4131967,
+          "longitude": -1.5323927
+        }
+      ]
+    },
+    {
+      "id": "s_152209876",
+      "name": "Cricket Close",
+      "startPoint": {
+        "latitude": 52.4117129,
+        "longitude": -1.5324717
+      },
+      "endPoint": {
+        "latitude": 52.4115513,
+        "longitude": -1.5324605
+      },
+      "lengthMeters": 18,
+      "bearingDeg": 177.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_1650435352",
+      "endNodeId": "n_1650435345",
+      "geometry": [
+        {
+          "latitude": 52.4117129,
+          "longitude": -1.5324717
+        },
+        {
+          "latitude": 52.4115513,
+          "longitude": -1.5324605
+        }
+      ]
+    },
+    {
+      "id": "s_152209891",
+      "name": "Bowls Court",
+      "startPoint": {
+        "latitude": 52.4121257,
+        "longitude": -1.5328536
+      },
+      "endPoint": {
+        "latitude": 52.4121336,
+        "longitude": -1.5326273
+      },
+      "lengthMeters": 15.4,
+      "bearingDeg": 86.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_1650435330",
+      "endNodeId": "n_1650435385",
+      "geometry": [
+        {
+          "latitude": 52.4121257,
+          "longitude": -1.5328536
+        },
+        {
+          "latitude": 52.4121293,
+          "longitude": -1.5327501
+        },
+        {
+          "latitude": 52.4121336,
+          "longitude": -1.5326273
+        }
+      ]
+    },
+    {
+      "id": "s_152209899",
+      "name": "Pavilion Way",
+      "startPoint": {
+        "latitude": 52.4118239,
+        "longitude": -1.5335861
+      },
+      "endPoint": {
+        "latitude": 52.4117403,
+        "longitude": -1.5315525
+      },
+      "lengthMeters": 140.9,
+      "bearingDeg": 120.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "residential",
+      "startNodeId": "n_30209843",
+      "endNodeId": "n_1650435372",
+      "geometry": [
+        {
+          "latitude": 52.4118239,
+          "longitude": -1.5335861
+        },
+        {
+          "latitude": 52.4117731,
+          "longitude": -1.5334426
+        },
+        {
+          "latitude": 52.4117393,
+          "longitude": -1.5333341
+        },
+        {
+          "latitude": 52.4117185,
+          "longitude": -1.533229
+        },
+        {
+          "latitude": 52.4117088,
+          "longitude": -1.5331317
+        },
+        {
+          "latitude": 52.4117035,
+          "longitude": -1.5329992
+        },
+        {
+          "latitude": 52.411704,
+          "longitude": -1.5328926
+        },
+        {
+          "latitude": 52.4117129,
+          "longitude": -1.5324717
+        },
+        {
+          "latitude": 52.4117172,
+          "longitude": -1.5323288
+        },
+        {
+          "latitude": 52.4117311,
+          "longitude": -1.5318677
+        },
+        {
+          "latitude": 52.4117403,
+          "longitude": -1.5315525
+        }
+      ]
+    },
+    {
+      "id": "s_152209905",
+      "name": "Bowls Court",
+      "startPoint": {
+        "latitude": 52.411704,
+        "longitude": -1.5328926
+      },
+      "endPoint": {
+        "latitude": 52.4121293,
+        "longitude": -1.5327501
+      },
+      "lengthMeters": 49.4,
+      "bearingDeg": 356.5,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_1650435335",
+      "endNodeId": "n_1650435297",
+      "geometry": [
+        {
+          "latitude": 52.411704,
+          "longitude": -1.5328926
+        },
+        {
+          "latitude": 52.4118204,
+          "longitude": -1.5329044
+        },
+        {
+          "latitude": 52.411847,
+          "longitude": -1.5329007
+        },
+        {
+          "latitude": 52.4118724,
+          "longitude": -1.5328912
+        },
+        {
+          "latitude": 52.4119076,
+          "longitude": -1.5328704
+        },
+        {
+          "latitude": 52.4119208,
+          "longitude": -1.5328601
+        },
+        {
+          "latitude": 52.4119428,
+          "longitude": -1.5328429
+        },
+        {
+          "latitude": 52.4119804,
+          "longitude": -1.5328015
+        },
+        {
+          "latitude": 52.4120063,
+          "longitude": -1.5327829
+        },
+        {
+          "latitude": 52.4120248,
+          "longitude": -1.5327749
+        },
+        {
+          "latitude": 52.4120347,
+          "longitude": -1.5327707
+        },
+        {
+          "latitude": 52.4121293,
+          "longitude": -1.5327501
+        }
+      ]
+    },
+    {
+      "id": "s_152209914",
+      "name": "Pavillion Way",
+      "startPoint": {
+        "latitude": 52.4117311,
+        "longitude": -1.5318677
+      },
+      "endPoint": {
+        "latitude": 52.4117964,
+        "longitude": -1.5318712
+      },
+      "lengthMeters": 7.3,
+      "bearingDeg": 358.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_1650435360",
+      "endNodeId": "n_1650435361",
+      "geometry": [
+        {
+          "latitude": 52.4117311,
+          "longitude": -1.5318677
+        },
+        {
+          "latitude": 52.4117964,
+          "longitude": -1.5318712
+        }
+      ]
+    },
+    {
+      "id": "s_167365345",
+      "name": "Four Pounds Avenue",
+      "startPoint": {
+        "latitude": 52.4132299,
+        "longitude": -1.5325215
+      },
+      "endPoint": {
+        "latitude": 52.4139651,
+        "longitude": -1.531873
+      },
+      "lengthMeters": 92.9,
+      "bearingDeg": 27,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "secondary",
+      "startNodeId": "n_26990936",
+      "endNodeId": "n_5743321469",
+      "geometry": [
+        {
+          "latitude": 52.4132299,
+          "longitude": -1.5325215
+        },
+        {
+          "latitude": 52.4137107,
+          "longitude": -1.5321197
+        },
+        {
+          "latitude": 52.4137941,
+          "longitude": -1.5320474
+        },
+        {
+          "latitude": 52.4138183,
+          "longitude": -1.5320264
+        },
+        {
+          "latitude": 52.4138498,
+          "longitude": -1.5319991
+        },
+        {
+          "latitude": 52.4139651,
+          "longitude": -1.531873
+        }
+      ]
+    },
+    {
+      "id": "s_175884725",
+      "name": "Sussex Road",
+      "startPoint": {
+        "latitude": 52.4144787,
+        "longitude": -1.5381853
+      },
+      "endPoint": {
+        "latitude": 52.4125169,
+        "longitude": -1.5329644
+      },
+      "lengthMeters": 416,
+      "bearingDeg": 121.8,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "residential",
+      "startNodeId": "n_26990946",
+      "endNodeId": "n_481313647",
+      "geometry": [
+        {
+          "latitude": 52.4144787,
+          "longitude": -1.5381853
+        },
+        {
+          "latitude": 52.4142807,
+          "longitude": -1.537662
+        },
+        {
+          "latitude": 52.4138157,
+          "longitude": -1.5364326
+        },
+        {
+          "latitude": 52.4136232,
+          "longitude": -1.5359238
+        },
+        {
+          "latitude": 52.4127743,
+          "longitude": -1.5336797
+        },
+        {
+          "latitude": 52.4125587,
+          "longitude": -1.5331098
+        },
+        {
+          "latitude": 52.4125169,
+          "longitude": -1.5329644
+        }
+      ]
+    },
+    {
+      "id": "s_335310265",
+      "name": "Lammas Road",
+      "startPoint": {
+        "latitude": 52.4146051,
+        "longitude": -1.5330743
+      },
+      "endPoint": {
+        "latitude": 52.4146418,
+        "longitude": -1.530752
+      },
+      "lengthMeters": 170.1,
+      "bearingDeg": 54.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30049342",
+      "endNodeId": "n_1650435316",
+      "geometry": [
+        {
+          "latitude": 52.4146051,
+          "longitude": -1.5330743
+        },
+        {
+          "latitude": 52.4146629,
+          "longitude": -1.5329433
+        },
+        {
+          "latitude": 52.4147385,
+          "longitude": -1.5327456
+        },
+        {
+          "latitude": 52.4148147,
+          "longitude": -1.5324214
+        },
+        {
+          "latitude": 52.414836,
+          "longitude": -1.5323001
+        },
+        {
+          "latitude": 52.4148529,
+          "longitude": -1.5322039
+        },
+        {
+          "latitude": 52.4148711,
+          "longitude": -1.531984
+        },
+        {
+          "latitude": 52.4148749,
+          "longitude": -1.5317756
+        },
+        {
+          "latitude": 52.414874,
+          "longitude": -1.5317434
+        },
+        {
+          "latitude": 52.414858,
+          "longitude": -1.5315351
+        },
+        {
+          "latitude": 52.4148322,
+          "longitude": -1.5313507
+        },
+        {
+          "latitude": 52.414791,
+          "longitude": -1.5311658
+        },
+        {
+          "latitude": 52.4146418,
+          "longitude": -1.530752
+        }
+      ]
+    },
+    {
+      "id": "s_442497717",
+      "name": "Holyhead Road",
+      "startPoint": {
+        "latitude": 52.4135901,
+        "longitude": -1.5307705
+      },
+      "endPoint": {
+        "latitude": 52.4139242,
+        "longitude": -1.5317486
+      },
+      "lengthMeters": 76,
+      "bearingDeg": 299.4,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_4401777722",
+      "endNodeId": "n_5743321470",
+      "geometry": [
+        {
+          "latitude": 52.4135901,
+          "longitude": -1.5307705
+        },
+        {
+          "latitude": 52.4138128,
+          "longitude": -1.5314178
+        },
+        {
+          "latitude": 52.4138266,
+          "longitude": -1.5314539
+        },
+        {
+          "latitude": 52.4138534,
+          "longitude": -1.5315282
+        },
+        {
+          "latitude": 52.4139242,
+          "longitude": -1.5317486
+        }
+      ]
+    },
+    {
+      "id": "s_442502676",
+      "name": "Holyhead Road",
+      "startPoint": {
+        "latitude": 52.4139651,
+        "longitude": -1.531873
+      },
+      "endPoint": {
+        "latitude": 52.4142258,
+        "longitude": -1.5325085
+      },
+      "lengthMeters": 52.5,
+      "bearingDeg": 296.4,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_5743321469",
+      "endNodeId": "n_3424757391",
+      "geometry": [
+        {
+          "latitude": 52.4139651,
+          "longitude": -1.531873
+        },
+        {
+          "latitude": 52.4140235,
+          "longitude": -1.5320658
+        },
+        {
+          "latitude": 52.4141034,
+          "longitude": -1.5322852
+        },
+        {
+          "latitude": 52.4141409,
+          "longitude": -1.5323852
+        },
+        {
+          "latitude": 52.4142258,
+          "longitude": -1.5325085
+        }
+      ]
+    },
+    {
+      "id": "s_443368393",
+      "name": "Four Pounds Avenue",
+      "startPoint": {
+        "latitude": 52.4125587,
+        "longitude": -1.5331098
+      },
+      "endPoint": {
+        "latitude": 52.4132299,
+        "longitude": -1.5325215
+      },
+      "lengthMeters": 84.6,
+      "bearingDeg": 28.1,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "secondary",
+      "startNodeId": "n_26990938",
+      "endNodeId": "n_26990936",
+      "geometry": [
+        {
+          "latitude": 52.4125587,
+          "longitude": -1.5331098
+        },
+        {
+          "latitude": 52.4132299,
+          "longitude": -1.5325215
+        }
+      ]
+    },
+    {
+      "id": "s_443368394",
+      "name": "Four Pounds Avenue",
+      "startPoint": {
+        "latitude": 52.411644,
+        "longitude": -1.5339205
+      },
+      "endPoint": {
+        "latitude": 52.4125587,
+        "longitude": -1.5331098
+      },
+      "lengthMeters": 115.6,
+      "bearingDeg": 27.2,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "secondary",
+      "startNodeId": "n_419337604",
+      "endNodeId": "n_26990938",
+      "geometry": [
+        {
+          "latitude": 52.411644,
+          "longitude": -1.5339205
+        },
+        {
+          "latitude": 52.4118885,
+          "longitude": -1.5337141
+        },
+        {
+          "latitude": 52.4125587,
+          "longitude": -1.5331098
+        }
+      ]
+    },
+    {
+      "id": "s_444749870",
+      "name": "Moseley Avenue",
+      "startPoint": {
+        "latitude": 52.4146418,
+        "longitude": -1.530752
+      },
+      "endPoint": {
+        "latitude": 52.4142919,
+        "longitude": -1.5312698
+      },
+      "lengthMeters": 52.5,
+      "bearingDeg": 224.5,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "secondary",
+      "startNodeId": "n_1650435316",
+      "endNodeId": "n_5743321462",
+      "geometry": [
+        {
+          "latitude": 52.4146418,
+          "longitude": -1.530752
+        },
+        {
+          "latitude": 52.4144671,
+          "longitude": -1.531033
+        },
+        {
+          "latitude": 52.4142919,
+          "longitude": -1.5312698
+        }
+      ]
+    },
+    {
+      "id": "s_605575071",
+      "name": "Holyhead Road",
+      "startPoint": {
+        "latitude": 52.4142258,
+        "longitude": -1.5325085
+      },
+      "endPoint": {
+        "latitude": 52.4140464,
+        "longitude": -1.5317716
+      },
+      "lengthMeters": 53.9,
+      "bearingDeg": 109.7,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_3424757391",
+      "endNodeId": "n_605794",
+      "geometry": [
+        {
+          "latitude": 52.4142258,
+          "longitude": -1.5325085
+        },
+        {
+          "latitude": 52.4141404,
+          "longitude": -1.5321183
+        },
+        {
+          "latitude": 52.4141263,
+          "longitude": -1.5320704
+        },
+        {
+          "latitude": 52.4141033,
+          "longitude": -1.5319887
+        },
+        {
+          "latitude": 52.4140464,
+          "longitude": -1.5317716
+        }
+      ]
+    },
+    {
+      "id": "s_605575072",
+      "name": "Moseley Avenue",
+      "startPoint": {
+        "latitude": 52.4140083,
+        "longitude": -1.531654
+      },
+      "endPoint": {
+        "latitude": 52.4139242,
+        "longitude": -1.5317486
+      },
+      "lengthMeters": 11.3,
+      "bearingDeg": 214.5,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 11.1,
+      "roadClass": "secondary",
+      "startNodeId": "n_5743321493",
+      "endNodeId": "n_5743321470",
+      "geometry": [
+        {
+          "latitude": 52.4140083,
+          "longitude": -1.531654
+        },
+        {
+          "latitude": 52.4139242,
+          "longitude": -1.5317486
+        }
+      ]
+    },
+    {
+      "id": "s_605575073",
+      "name": "Holyhead Road",
+      "startPoint": {
+        "latitude": 52.4139242,
+        "longitude": -1.5317486
+      },
+      "endPoint": {
+        "latitude": 52.4139651,
+        "longitude": -1.531873
+      },
+      "lengthMeters": 9.6,
+      "bearingDeg": 298.3,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_5743321470",
+      "endNodeId": "n_5743321469",
+      "geometry": [
+        {
+          "latitude": 52.4139242,
+          "longitude": -1.5317486
+        },
+        {
+          "latitude": 52.4139651,
+          "longitude": -1.531873
+        }
+      ]
+    },
+    {
+      "id": "s_605575074",
+      "name": "Four Pounds Avenue",
+      "startPoint": {
+        "latitude": 52.4139651,
+        "longitude": -1.531873
+      },
+      "endPoint": {
+        "latitude": 52.4140464,
+        "longitude": -1.5317716
+      },
+      "lengthMeters": 11.4,
+      "bearingDeg": 37.3,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "secondary",
+      "startNodeId": "n_5743321469",
+      "endNodeId": "n_605794",
+      "geometry": [
+        {
+          "latitude": 52.4139651,
+          "longitude": -1.531873
+        },
+        {
+          "latitude": 52.4140464,
+          "longitude": -1.5317716
+        }
+      ]
+    },
+    {
+      "id": "s_605575075",
+      "name": "Moseley Avenue",
+      "startPoint": {
+        "latitude": 52.4140464,
+        "longitude": -1.5317716
+      },
+      "endPoint": {
+        "latitude": 52.4142919,
+        "longitude": -1.5312698
+      },
+      "lengthMeters": 43.9,
+      "bearingDeg": 42.3,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "secondary",
+      "startNodeId": "n_605794",
+      "endNodeId": "n_5743321462",
+      "geometry": [
+        {
+          "latitude": 52.4140464,
+          "longitude": -1.5317716
+        },
+        {
+          "latitude": 52.4141369,
+          "longitude": -1.5316364
+        },
+        {
+          "latitude": 52.414155,
+          "longitude": -1.5315905
+        },
+        {
+          "latitude": 52.4142919,
+          "longitude": -1.5312698
+        }
+      ]
+    },
+    {
+      "id": "s_605575078",
+      "name": "Holyhead Road",
+      "startPoint": {
+        "latitude": 52.4140083,
+        "longitude": -1.531654
+      },
+      "endPoint": {
+        "latitude": 52.4134287,
+        "longitude": -1.5300032
+      },
+      "lengthMeters": 129.2,
+      "bearingDeg": 120.3,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_5743321493",
+      "endNodeId": "n_5743321489",
+      "geometry": [
+        {
+          "latitude": 52.4140083,
+          "longitude": -1.531654
+        },
+        {
+          "latitude": 52.4139078,
+          "longitude": -1.531372
+        },
+        {
+          "latitude": 52.4134579,
+          "longitude": -1.5300913
+        },
+        {
+          "latitude": 52.4134462,
+          "longitude": -1.5300539
+        },
+        {
+          "latitude": 52.4134287,
+          "longitude": -1.5300032
+        }
+      ]
+    },
+    {
+      "id": "s_605575549",
+      "name": "Holyhead Road",
+      "startPoint": {
+        "latitude": 52.4140464,
+        "longitude": -1.5317716
+      },
+      "endPoint": {
+        "latitude": 52.4140083,
+        "longitude": -1.531654
+      },
+      "lengthMeters": 9,
+      "bearingDeg": 118.7,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_605794",
+      "endNodeId": "n_5743321493",
+      "geometry": [
+        {
+          "latitude": 52.4140464,
+          "longitude": -1.5317716
+        },
+        {
+          "latitude": 52.4140322,
+          "longitude": -1.5317291
+        },
+        {
+          "latitude": 52.4140083,
+          "longitude": -1.531654
+        }
+      ]
+    },
+    {
+      "id": "s_701043710",
+      "name": "Moseley Avenue",
+      "startPoint": {
+        "latitude": 52.4142919,
+        "longitude": -1.5312698
+      },
+      "endPoint": {
+        "latitude": 52.4140083,
+        "longitude": -1.531654
+      },
+      "lengthMeters": 40.9,
+      "bearingDeg": 219.5,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 11.1,
+      "roadClass": "secondary",
+      "startNodeId": "n_5743321462",
+      "endNodeId": "n_5743321493",
+      "geometry": [
+        {
+          "latitude": 52.4142919,
+          "longitude": -1.5312698
+        },
+        {
+          "latitude": 52.4141738,
+          "longitude": -1.5314295
+        },
+        {
+          "latitude": 52.4141468,
+          "longitude": -1.531464
+        },
+        {
+          "latitude": 52.4141155,
+          "longitude": -1.5315108
+        },
+        {
+          "latitude": 52.4140761,
+          "longitude": -1.5315617
+        },
+        {
+          "latitude": 52.4140083,
+          "longitude": -1.531654
+        }
+      ]
+    },
+    {
+      "id": "s_1105496643",
+      "name": "Holyhead Road",
+      "startPoint": {
+        "latitude": 52.4134287,
+        "longitude": -1.5300032
+      },
+      "endPoint": {
+        "latitude": 52.4133049,
+        "longitude": -1.5296584
+      },
+      "lengthMeters": 27.1,
+      "bearingDeg": 120.5,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_5743321489",
+      "endNodeId": "n_6270458435",
+      "geometry": [
+        {
+          "latitude": 52.4134287,
+          "longitude": -1.5300032
+        },
+        {
+          "latitude": 52.4133049,
+          "longitude": -1.5296584
+        }
+      ]
+    },
+    {
+      "id": "s_1245345547",
+      "name": "Moseley Avenue",
+      "startPoint": {
+        "latitude": 52.4146418,
+        "longitude": -1.530752
+      },
+      "endPoint": {
+        "latitude": 52.4147323,
+        "longitude": -1.530609
+      },
+      "lengthMeters": 14,
+      "bearingDeg": 43.9,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "secondary",
+      "startNodeId": "n_1650435316",
+      "endNodeId": "n_1650435342",
+      "geometry": [
+        {
+          "latitude": 52.4146418,
+          "longitude": -1.530752
+        },
+        {
+          "latitude": 52.4147323,
+          "longitude": -1.530609
+        }
+      ]
+    },
+    {
+      "id": "s_1245345548",
+      "name": "Browett Road",
+      "startPoint": {
+        "latitude": 52.4179798,
+        "longitude": -1.530303
+      },
+      "endPoint": {
+        "latitude": 52.4185431,
+        "longitude": -1.5294231
+      },
+      "lengthMeters": 86.5,
+      "bearingDeg": 43.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30049330",
+      "endNodeId": "n_9089583446",
+      "geometry": [
+        {
+          "latitude": 52.4179798,
+          "longitude": -1.530303
+        },
+        {
+          "latitude": 52.4184176,
+          "longitude": -1.5296196
+        },
+        {
+          "latitude": 52.4185431,
+          "longitude": -1.5294231
+        }
+      ]
+    },
+    {
+      "id": "s_1245345549",
+      "name": "Humberstone Road",
+      "startPoint": {
+        "latitude": 52.4179798,
+        "longitude": -1.530303
+      },
+      "endPoint": {
+        "latitude": 52.4177836,
+        "longitude": -1.5299728
+      },
+      "lengthMeters": 31.3,
+      "bearingDeg": 134.3,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30049330",
+      "endNodeId": "n_30049361",
+      "geometry": [
+        {
+          "latitude": 52.4179798,
+          "longitude": -1.530303
+        },
+        {
+          "latitude": 52.4177836,
+          "longitude": -1.5299728
+        }
+      ]
+    },
+    {
+      "id": "s_1245345553",
+      "name": "Evenlode Crescent",
+      "startPoint": {
+        "latitude": 52.4162433,
+        "longitude": -1.5346316
+      },
+      "endPoint": {
+        "latitude": 52.414907,
+        "longitude": -1.5343717
+      },
+      "lengthMeters": 163.6,
+      "bearingDeg": 151.2,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30233244",
+      "endNodeId": "n_605793",
+      "geometry": [
+        {
+          "latitude": 52.4162433,
+          "longitude": -1.5346316
+        },
+        {
+          "latitude": 52.4156686,
+          "longitude": -1.5341146
+        },
+        {
+          "latitude": 52.4155202,
+          "longitude": -1.5340476
+        },
+        {
+          "latitude": 52.4153397,
+          "longitude": -1.5340414
+        },
+        {
+          "latitude": 52.4153285,
+          "longitude": -1.534041
+        },
+        {
+          "latitude": 52.4152287,
+          "longitude": -1.5340831
+        },
+        {
+          "latitude": 52.4151212,
+          "longitude": -1.5341695
+        },
+        {
+          "latitude": 52.414907,
+          "longitude": -1.5343717
+        }
+      ]
+    },
+    {
+      "id": "s_1245345554",
+      "name": "Evenlode Crescent",
+      "startPoint": {
+        "latitude": 52.417601,
+        "longitude": -1.536037
+      },
+      "endPoint": {
+        "latitude": 52.4162433,
+        "longitude": -1.5346316
+      },
+      "lengthMeters": 179.1,
+      "bearingDeg": 141.3,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30233256",
+      "endNodeId": "n_30233244",
+      "geometry": [
+        {
+          "latitude": 52.417601,
+          "longitude": -1.536037
+        },
+        {
+          "latitude": 52.4171691,
+          "longitude": -1.5354693
+        },
+        {
+          "latitude": 52.4169535,
+          "longitude": -1.5352626
+        },
+        {
+          "latitude": 52.4162433,
+          "longitude": -1.5346316
+        }
+      ]
+    },
+    {
+      "id": "s_1245345555",
+      "name": "Lavender Avenue",
+      "startPoint": {
+        "latitude": 52.417601,
+        "longitude": -1.536037
+      },
+      "endPoint": {
+        "latitude": 52.4199545,
+        "longitude": -1.5318692
+      },
+      "lengthMeters": 388.3,
+      "bearingDeg": 52.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30233256",
+      "endNodeId": "n_26092789",
+      "geometry": [
+        {
+          "latitude": 52.417601,
+          "longitude": -1.536037
+        },
+        {
+          "latitude": 52.4178611,
+          "longitude": -1.5354782
+        },
+        {
+          "latitude": 52.4180761,
+          "longitude": -1.53501
+        },
+        {
+          "latitude": 52.418402,
+          "longitude": -1.5342998
+        },
+        {
+          "latitude": 52.418919,
+          "longitude": -1.533206
+        },
+        {
+          "latitude": 52.4189432,
+          "longitude": -1.5331465
+        },
+        {
+          "latitude": 52.4189795,
+          "longitude": -1.5330934
+        },
+        {
+          "latitude": 52.4199545,
+          "longitude": -1.5318692
+        }
+      ]
+    },
+    {
+      "id": "s_1431942216",
+      "name": "Browett Road",
+      "startPoint": {
+        "latitude": 52.4171795,
+        "longitude": -1.531543
+      },
+      "endPoint": {
+        "latitude": 52.4179798,
+        "longitude": -1.530303
+      },
+      "lengthMeters": 122.4,
+      "bearingDeg": 43.4,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30049326",
+      "endNodeId": "n_30049330",
+      "geometry": [
+        {
+          "latitude": 52.4171795,
+          "longitude": -1.531543
+        },
+        {
+          "latitude": 52.4179798,
+          "longitude": -1.530303
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_26990945",
+      "coordinate": {
+        "latitude": 52.4140443,
+        "longitude": -1.539445
+      },
+      "connectedSegmentIds": [
+        "s_4410965"
+      ]
+    },
+    {
+      "id": "n_1571129941",
+      "coordinate": {
+        "latitude": 52.4121063,
+        "longitude": -1.5342923
+      },
+      "connectedSegmentIds": [
+        "s_4410965",
+        "s_143569802"
+      ]
+    },
+    {
+      "id": "n_30049342",
+      "coordinate": {
+        "latitude": 52.4146051,
+        "longitude": -1.5330743
+      },
+      "connectedSegmentIds": [
+        "s_4718779",
+        "s_335310265"
+      ]
+    },
+    {
+      "id": "n_30049341",
+      "coordinate": {
+        "latitude": 52.4144878,
+        "longitude": -1.5332205
+      },
+      "connectedSegmentIds": [
+        "s_4718779"
+      ]
+    },
+    {
+      "id": "n_1650435342",
+      "coordinate": {
+        "latitude": 52.4147323,
+        "longitude": -1.530609
+      },
+      "connectedSegmentIds": [
+        "s_4718780",
+        "s_4746395",
+        "s_1245345547"
+      ]
+    },
+    {
+      "id": "n_30049326",
+      "coordinate": {
+        "latitude": 52.4171795,
+        "longitude": -1.531543
+      },
+      "connectedSegmentIds": [
+        "s_4718780",
+        "s_4718781",
+        "s_4746400",
+        "s_1431942216"
+      ]
+    },
+    {
+      "id": "n_30049327",
+      "coordinate": {
+        "latitude": 52.4178191,
+        "longitude": -1.5319433
+      },
+      "connectedSegmentIds": [
+        "s_4718782"
+      ]
+    },
+    {
+      "id": "n_30049340",
+      "coordinate": {
+        "latitude": 52.4190653,
+        "longitude": -1.5300044
+      },
+      "connectedSegmentIds": [
+        "s_4718782"
+      ]
+    },
+    {
+      "id": "n_30233236",
+      "coordinate": {
+        "latitude": 52.4155157,
+        "longitude": -1.5309446
+      },
+      "connectedSegmentIds": [
+        "s_4744095"
+      ]
+    },
+    {
+      "id": "n_30233235",
+      "coordinate": {
+        "latitude": 52.4162827,
+        "longitude": -1.5311455
+      },
+      "connectedSegmentIds": [
+        "s_4744096"
+      ]
+    },
+    {
+      "id": "n_30233261",
+      "coordinate": {
+        "latitude": 52.4169244,
+        "longitude": -1.5300712
+      },
+      "connectedSegmentIds": [
+        "s_4744096",
+        "s_4744098",
+        "s_4746396"
+      ]
+    },
+    {
+      "id": "n_30233237",
+      "coordinate": {
+        "latitude": 52.4184571,
+        "longitude": -1.5324178
+      },
+      "connectedSegmentIds": [
+        "s_4744097",
+        "s_4746401"
+      ]
+    },
+    {
+      "id": "n_26092790",
+      "coordinate": {
+        "latitude": 52.4194662,
+        "longitude": -1.5308512
+      },
+      "connectedSegmentIds": [
+        "s_4744097"
+      ]
+    },
+    {
+      "id": "n_30233244",
+      "coordinate": {
+        "latitude": 52.4162433,
+        "longitude": -1.5346316
+      },
+      "connectedSegmentIds": [
+        "s_4746400",
+        "s_1245345553",
+        "s_1245345554"
+      ]
+    },
+    {
+      "id": "n_30233295",
+      "coordinate": {
+        "latitude": 52.4158814,
+        "longitude": -1.5369532
+      },
+      "connectedSegmentIds": [
+        "s_4746401"
+      ]
+    },
+    {
+      "id": "n_1650435316",
+      "coordinate": {
+        "latitude": 52.4146418,
+        "longitude": -1.530752
+      },
+      "connectedSegmentIds": [
+        "s_4883203",
+        "s_335310265",
+        "s_444749870",
+        "s_1245345547"
+      ]
+    },
+    {
+      "id": "n_31635998",
+      "coordinate": {
+        "latitude": 52.415067,
+        "longitude": -1.5300853
+      },
+      "connectedSegmentIds": [
+        "s_4883205"
+      ]
+    },
+    {
+      "id": "n_31044210",
+      "coordinate": {
+        "latitude": 52.4179734,
+        "longitude": -1.5333069
+      },
+      "connectedSegmentIds": [
+        "s_4883206"
+      ]
+    },
+    {
+      "id": "n_30233250",
+      "coordinate": {
+        "latitude": 52.4152287,
+        "longitude": -1.5340831
+      },
+      "connectedSegmentIds": [
+        "s_4883206"
+      ]
+    },
+    {
+      "id": "n_31580868",
+      "coordinate": {
+        "latitude": 52.4193666,
+        "longitude": -1.5340584
+      },
+      "connectedSegmentIds": [
+        "s_4883207",
+        "s_4883208"
+      ]
+    },
+    {
+      "id": "n_31580873",
+      "coordinate": {
+        "latitude": 52.4187197,
+        "longitude": -1.5354258
+      },
+      "connectedSegmentIds": [
+        "s_4883208"
+      ]
+    },
+    {
+      "id": "n_419337603",
+      "coordinate": {
+        "latitude": 52.4115237,
+        "longitude": -1.5340175
+      },
+      "connectedSegmentIds": [
+        "s_35879602",
+        "s_168049231"
+      ]
+    },
+    {
+      "id": "n_419337604",
+      "coordinate": {
+        "latitude": 52.411644,
+        "longitude": -1.5339205
+      },
+      "connectedSegmentIds": [
+        "s_35879602",
+        "s_443368394"
+      ]
+    },
+    {
+      "id": "n_419337600",
+      "coordinate": {
+        "latitude": 52.4116235,
+        "longitude": -1.5337576
+      },
+      "connectedSegmentIds": [
+        "s_35879604",
+        "s_143569803"
+      ]
+    },
+    {
+      "id": "n_419337599",
+      "coordinate": {
+        "latitude": 52.4114972,
+        "longitude": -1.5338652
+      },
+      "connectedSegmentIds": [
+        "s_35879604",
+        "s_35879605"
+      ]
+    },
+    {
+      "id": "n_858016193",
+      "coordinate": {
+        "latitude": 52.4158295,
+        "longitude": -1.5330524
+      },
+      "connectedSegmentIds": [
+        "s_72177676"
+      ]
+    },
+    {
+      "id": "n_858016194",
+      "coordinate": {
+        "latitude": 52.4153762,
+        "longitude": -1.5328199
+      },
+      "connectedSegmentIds": [
+        "s_72177676"
+      ]
+    },
+    {
+      "id": "n_858048999",
+      "coordinate": {
+        "latitude": 52.4168745,
+        "longitude": -1.5339162
+      },
+      "connectedSegmentIds": [
+        "s_72182345"
+      ]
+    },
+    {
+      "id": "n_858049000",
+      "coordinate": {
+        "latitude": 52.4164156,
+        "longitude": -1.5336863
+      },
+      "connectedSegmentIds": [
+        "s_72182345"
+      ]
+    },
+    {
+      "id": "n_30209843",
+      "coordinate": {
+        "latitude": 52.4118239,
+        "longitude": -1.5335861
+      },
+      "connectedSegmentIds": [
+        "s_143569802",
+        "s_143569803",
+        "s_150782100",
+        "s_152209899"
+      ]
+    },
+    {
+      "id": "n_1636591770",
+      "coordinate": {
+        "latitude": 52.4123571,
+        "longitude": -1.5331126
+      },
+      "connectedSegmentIds": [
+        "s_150782100",
+        "s_150782103"
+      ]
+    },
+    {
+      "id": "n_481313647",
+      "coordinate": {
+        "latitude": 52.4125169,
+        "longitude": -1.5329644
+      },
+      "connectedSegmentIds": [
+        "s_150782103",
+        "s_151361685",
+        "s_175884725"
+      ]
+    },
+    {
+      "id": "n_5743321470",
+      "coordinate": {
+        "latitude": 52.4139242,
+        "longitude": -1.5317486
+      },
+      "connectedSegmentIds": [
+        "s_151361685",
+        "s_442497717",
+        "s_605575072",
+        "s_605575073"
+      ]
+    },
+    {
+      "id": "n_26990947",
+      "coordinate": {
+        "latitude": 52.415094,
+        "longitude": -1.5374916
+      },
+      "connectedSegmentIds": [
+        "s_152209862"
+      ]
+    },
+    {
+      "id": "n_944322112",
+      "coordinate": {
+        "latitude": 52.4131967,
+        "longitude": -1.5323927
+      },
+      "connectedSegmentIds": [
+        "s_152209862"
+      ]
+    },
+    {
+      "id": "n_1650435352",
+      "coordinate": {
+        "latitude": 52.4117129,
+        "longitude": -1.5324717
+      },
+      "connectedSegmentIds": [
+        "s_152209876"
+      ]
+    },
+    {
+      "id": "n_1650435345",
+      "coordinate": {
+        "latitude": 52.4115513,
+        "longitude": -1.5324605
+      },
+      "connectedSegmentIds": [
+        "s_152209876"
+      ]
+    },
+    {
+      "id": "n_1650435330",
+      "coordinate": {
+        "latitude": 52.4121257,
+        "longitude": -1.5328536
+      },
+      "connectedSegmentIds": [
+        "s_152209891"
+      ]
+    },
+    {
+      "id": "n_1650435385",
+      "coordinate": {
+        "latitude": 52.4121336,
+        "longitude": -1.5326273
+      },
+      "connectedSegmentIds": [
+        "s_152209891"
+      ]
+    },
+    {
+      "id": "n_1650435372",
+      "coordinate": {
+        "latitude": 52.4117403,
+        "longitude": -1.5315525
+      },
+      "connectedSegmentIds": [
+        "s_152209899"
+      ]
+    },
+    {
+      "id": "n_1650435335",
+      "coordinate": {
+        "latitude": 52.411704,
+        "longitude": -1.5328926
+      },
+      "connectedSegmentIds": [
+        "s_152209905"
+      ]
+    },
+    {
+      "id": "n_1650435297",
+      "coordinate": {
+        "latitude": 52.4121293,
+        "longitude": -1.5327501
+      },
+      "connectedSegmentIds": [
+        "s_152209905"
+      ]
+    },
+    {
+      "id": "n_1650435360",
+      "coordinate": {
+        "latitude": 52.4117311,
+        "longitude": -1.5318677
+      },
+      "connectedSegmentIds": [
+        "s_152209914"
+      ]
+    },
+    {
+      "id": "n_1650435361",
+      "coordinate": {
+        "latitude": 52.4117964,
+        "longitude": -1.5318712
+      },
+      "connectedSegmentIds": [
+        "s_152209914"
+      ]
+    },
+    {
+      "id": "n_26990936",
+      "coordinate": {
+        "latitude": 52.4132299,
+        "longitude": -1.5325215
+      },
+      "connectedSegmentIds": [
+        "s_167365345",
+        "s_443368393"
+      ]
+    },
+    {
+      "id": "n_5743321469",
+      "coordinate": {
+        "latitude": 52.4139651,
+        "longitude": -1.531873
+      },
+      "connectedSegmentIds": [
+        "s_167365345",
+        "s_442502676",
+        "s_605575073",
+        "s_605575074"
+      ]
+    },
+    {
+      "id": "n_3424757391",
+      "coordinate": {
+        "latitude": 52.4142258,
+        "longitude": -1.5325085
+      },
+      "connectedSegmentIds": [
+        "s_170707815",
+        "s_442502676",
+        "s_605575071"
+      ]
+    },
+    {
+      "id": "n_26990946",
+      "coordinate": {
+        "latitude": 52.4144787,
+        "longitude": -1.5381853
+      },
+      "connectedSegmentIds": [
+        "s_175884725"
+      ]
+    },
+    {
+      "id": "n_4401777722",
+      "coordinate": {
+        "latitude": 52.4135901,
+        "longitude": -1.5307705
+      },
+      "connectedSegmentIds": [
+        "s_442497717",
+        "s_442497719"
+      ]
+    },
+    {
+      "id": "n_26990938",
+      "coordinate": {
+        "latitude": 52.4125587,
+        "longitude": -1.5331098
+      },
+      "connectedSegmentIds": [
+        "s_443368393",
+        "s_443368394"
+      ]
+    },
+    {
+      "id": "n_5743321462",
+      "coordinate": {
+        "latitude": 52.4142919,
+        "longitude": -1.5312698
+      },
+      "connectedSegmentIds": [
+        "s_444749870",
+        "s_605575075",
+        "s_701043710"
+      ]
+    },
+    {
+      "id": "n_605794",
+      "coordinate": {
+        "latitude": 52.4140464,
+        "longitude": -1.5317716
+      },
+      "connectedSegmentIds": [
+        "s_605575071",
+        "s_605575074",
+        "s_605575075",
+        "s_605575549"
+      ]
+    },
+    {
+      "id": "n_5743321493",
+      "coordinate": {
+        "latitude": 52.4140083,
+        "longitude": -1.531654
+      },
+      "connectedSegmentIds": [
+        "s_605575072",
+        "s_605575078",
+        "s_605575549",
+        "s_701043710"
+      ]
+    },
+    {
+      "id": "n_5743321489",
+      "coordinate": {
+        "latitude": 52.4134287,
+        "longitude": -1.5300032
+      },
+      "connectedSegmentIds": [
+        "s_605575078",
+        "s_1105496643"
+      ]
+    },
+    {
+      "id": "n_30049330",
+      "coordinate": {
+        "latitude": 52.4179798,
+        "longitude": -1.530303
+      },
+      "connectedSegmentIds": [
+        "s_1245345548",
+        "s_1245345549",
+        "s_1431942216"
+      ]
+    },
+    {
+      "id": "n_605793",
+      "coordinate": {
+        "latitude": 52.414907,
+        "longitude": -1.5343717
+      },
+      "connectedSegmentIds": [
+        "s_1245345553"
+      ]
+    },
+    {
+      "id": "n_30233256",
+      "coordinate": {
+        "latitude": 52.417601,
+        "longitude": -1.536037
+      },
+      "connectedSegmentIds": [
+        "s_1245345554",
+        "s_1245345555"
+      ]
+    },
+    {
+      "id": "n_26092789",
+      "coordinate": {
+        "latitude": 52.4199545,
+        "longitude": -1.5318692
+      },
+      "connectedSegmentIds": [
+        "s_1245345555"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "n_1571129941",
+      "coordinate": {
+        "latitude": 52.4121063,
+        "longitude": -1.5342923
+      },
+      "outboundSegmentIds": [
+        "s_4410965",
+        "s_143569802"
+      ]
+    },
+    {
+      "nodeId": "n_30049342",
+      "coordinate": {
+        "latitude": 52.4146051,
+        "longitude": -1.5330743
+      },
+      "outboundSegmentIds": [
+        "s_4718779",
+        "s_335310265"
+      ]
+    },
+    {
+      "nodeId": "n_1650435342",
+      "coordinate": {
+        "latitude": 52.4147323,
+        "longitude": -1.530609
+      },
+      "outboundSegmentIds": [
+        "s_4718780",
+        "s_4746395",
+        "s_1245345547"
+      ]
+    },
+    {
+      "nodeId": "n_30049326",
+      "coordinate": {
+        "latitude": 52.4171795,
+        "longitude": -1.531543
+      },
+      "outboundSegmentIds": [
+        "s_4718780",
+        "s_4718781",
+        "s_4746400",
+        "s_1431942216"
+      ]
+    },
+    {
+      "nodeId": "n_30233261",
+      "coordinate": {
+        "latitude": 52.4169244,
+        "longitude": -1.5300712
+      },
+      "outboundSegmentIds": [
+        "s_4744096",
+        "s_4744098",
+        "s_4746396"
+      ]
+    },
+    {
+      "nodeId": "n_30233237",
+      "coordinate": {
+        "latitude": 52.4184571,
+        "longitude": -1.5324178
+      },
+      "outboundSegmentIds": [
+        "s_4744097",
+        "s_4746401"
+      ]
+    },
+    {
+      "nodeId": "n_30233244",
+      "coordinate": {
+        "latitude": 52.4162433,
+        "longitude": -1.5346316
+      },
+      "outboundSegmentIds": [
+        "s_4746400",
+        "s_1245345553",
+        "s_1245345554"
+      ]
+    },
+    {
+      "nodeId": "n_1650435316",
+      "coordinate": {
+        "latitude": 52.4146418,
+        "longitude": -1.530752
+      },
+      "outboundSegmentIds": [
+        "s_4883203",
+        "s_335310265",
+        "s_444749870",
+        "s_1245345547"
+      ]
+    },
+    {
+      "nodeId": "n_31580868",
+      "coordinate": {
+        "latitude": 52.4193666,
+        "longitude": -1.5340584
+      },
+      "outboundSegmentIds": [
+        "s_4883207",
+        "s_4883208"
+      ]
+    },
+    {
+      "nodeId": "n_419337603",
+      "coordinate": {
+        "latitude": 52.4115237,
+        "longitude": -1.5340175
+      },
+      "outboundSegmentIds": [
+        "s_35879602",
+        "s_168049231"
+      ]
+    },
+    {
+      "nodeId": "n_419337604",
+      "coordinate": {
+        "latitude": 52.411644,
+        "longitude": -1.5339205
+      },
+      "outboundSegmentIds": [
+        "s_35879602",
+        "s_443368394"
+      ]
+    },
+    {
+      "nodeId": "n_419337600",
+      "coordinate": {
+        "latitude": 52.4116235,
+        "longitude": -1.5337576
+      },
+      "outboundSegmentIds": [
+        "s_35879604",
+        "s_143569803"
+      ]
+    },
+    {
+      "nodeId": "n_419337599",
+      "coordinate": {
+        "latitude": 52.4114972,
+        "longitude": -1.5338652
+      },
+      "outboundSegmentIds": [
+        "s_35879604",
+        "s_35879605"
+      ]
+    },
+    {
+      "nodeId": "n_30209843",
+      "coordinate": {
+        "latitude": 52.4118239,
+        "longitude": -1.5335861
+      },
+      "outboundSegmentIds": [
+        "s_143569802",
+        "s_143569803",
+        "s_150782100",
+        "s_152209899"
+      ]
+    },
+    {
+      "nodeId": "n_1636591770",
+      "coordinate": {
+        "latitude": 52.4123571,
+        "longitude": -1.5331126
+      },
+      "outboundSegmentIds": [
+        "s_150782100",
+        "s_150782103"
+      ]
+    },
+    {
+      "nodeId": "n_481313647",
+      "coordinate": {
+        "latitude": 52.4125169,
+        "longitude": -1.5329644
+      },
+      "outboundSegmentIds": [
+        "s_150782103",
+        "s_151361685",
+        "s_175884725"
+      ]
+    },
+    {
+      "nodeId": "n_5743321470",
+      "coordinate": {
+        "latitude": 52.4139242,
+        "longitude": -1.5317486
+      },
+      "outboundSegmentIds": [
+        "s_151361685",
+        "s_442497717",
+        "s_605575072",
+        "s_605575073"
+      ]
+    },
+    {
+      "nodeId": "n_26990936",
+      "coordinate": {
+        "latitude": 52.4132299,
+        "longitude": -1.5325215
+      },
+      "outboundSegmentIds": [
+        "s_167365345",
+        "s_443368393"
+      ]
+    },
+    {
+      "nodeId": "n_5743321469",
+      "coordinate": {
+        "latitude": 52.4139651,
+        "longitude": -1.531873
+      },
+      "outboundSegmentIds": [
+        "s_167365345",
+        "s_442502676",
+        "s_605575073",
+        "s_605575074"
+      ]
+    },
+    {
+      "nodeId": "n_3424757391",
+      "coordinate": {
+        "latitude": 52.4142258,
+        "longitude": -1.5325085
+      },
+      "outboundSegmentIds": [
+        "s_170707815",
+        "s_442502676",
+        "s_605575071"
+      ]
+    },
+    {
+      "nodeId": "n_4401777722",
+      "coordinate": {
+        "latitude": 52.4135901,
+        "longitude": -1.5307705
+      },
+      "outboundSegmentIds": [
+        "s_442497717",
+        "s_442497719"
+      ]
+    },
+    {
+      "nodeId": "n_26990938",
+      "coordinate": {
+        "latitude": 52.4125587,
+        "longitude": -1.5331098
+      },
+      "outboundSegmentIds": [
+        "s_443368393",
+        "s_443368394"
+      ]
+    },
+    {
+      "nodeId": "n_5743321462",
+      "coordinate": {
+        "latitude": 52.4142919,
+        "longitude": -1.5312698
+      },
+      "outboundSegmentIds": [
+        "s_444749870",
+        "s_605575075",
+        "s_701043710"
+      ]
+    },
+    {
+      "nodeId": "n_605794",
+      "coordinate": {
+        "latitude": 52.4140464,
+        "longitude": -1.5317716
+      },
+      "outboundSegmentIds": [
+        "s_605575071",
+        "s_605575074",
+        "s_605575075",
+        "s_605575549"
+      ]
+    },
+    {
+      "nodeId": "n_5743321493",
+      "coordinate": {
+        "latitude": 52.4140083,
+        "longitude": -1.531654
+      },
+      "outboundSegmentIds": [
+        "s_605575072",
+        "s_605575078",
+        "s_605575549",
+        "s_701043710"
+      ]
+    },
+    {
+      "nodeId": "n_5743321489",
+      "coordinate": {
+        "latitude": 52.4134287,
+        "longitude": -1.5300032
+      },
+      "outboundSegmentIds": [
+        "s_605575078",
+        "s_1105496643"
+      ]
+    },
+    {
+      "nodeId": "n_30049330",
+      "coordinate": {
+        "latitude": 52.4179798,
+        "longitude": -1.530303
+      },
+      "outboundSegmentIds": [
+        "s_1245345548",
+        "s_1245345549",
+        "s_1431942216"
+      ]
+    },
+    {
+      "nodeId": "n_30233256",
+      "coordinate": {
+        "latitude": 52.417601,
+        "longitude": -1.536037
+      },
+      "outboundSegmentIds": [
+        "s_1245345554",
+        "s_1245345555"
+      ]
+    }
+  ]
+}

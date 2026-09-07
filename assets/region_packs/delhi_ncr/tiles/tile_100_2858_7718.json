@@ -1,0 +1,81 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2858:7718"
+  },
+  "bounds": {
+    "minLat": 28.580000000000002,
+    "maxLat": 28.59,
+    "minLon": 77.18,
+    "maxLon": 77.19
+  },
+  "segments": [
+    {
+      "id": "delhi_s_moti_bagh_ring",
+      "name": "Mahatma Gandhi Ring Road West",
+      "startPoint": {
+        "latitude": 28.585,
+        "longitude": 77.185,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.583,
+        "longitude": 77.178,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.585,
+          "longitude": 77.185,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.584,
+          "longitude": 77.1815,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.583,
+          "longitude": 77.178,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 718.8,
+      "bearingDeg": 252,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 16.7,
+      "roadClass": "trunk",
+      "startNodeId": "delhi_n_shanti_s",
+      "endNodeId": "delhi_n_moti_bagh_ring"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_shanti_s",
+      "coordinate": {
+        "latitude": 28.585,
+        "longitude": 77.185,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_shanti_path",
+        "delhi_s_moti_bagh_ring"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_shanti_s",
+      "coordinate": {
+        "latitude": 28.585,
+        "longitude": 77.185,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_shanti_path",
+        "delhi_s_moti_bagh_ring"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5238:-149"
+  },
+  "bounds": {
+    "minLat": 52.38,
+    "maxLat": 52.39,
+    "minLon": -1.49,
+    "maxLon": -1.48
+  },
+  "segments": [
+    {
+      "id": "s_144398881",
+      "name": "Abbey Road",
+      "startPoint": {
+        "latitude": 52.3885251,
+        "longitude": -1.4897492
+      },
+      "endPoint": {
+        "latitude": 52.3893908,
+        "longitude": -1.490471
+      },
+      "lengthMeters": 119.8,
+      "bearingDeg": 312.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.3,
+      "roadClass": "unclassified",
+      "startNodeId": "n_30984261",
+      "endNodeId": "n_30984262",
+      "geometry": [
+        {
+          "latitude": 52.3885251,
+          "longitude": -1.4897492
+        },
+        {
+          "latitude": 52.3886516,
+          "longitude": -1.4899788
+        },
+        {
+          "latitude": 52.3889243,
+          "longitude": -1.4902727
+        },
+        {
+          "latitude": 52.3891981,
+          "longitude": -1.4905618
+        },
+        {
+          "latitude": 52.3892481,
+          "longitude": -1.4906011
+        },
+        {
+          "latitude": 52.3892922,
+          "longitude": -1.4906092
+        },
+        {
+          "latitude": 52.3893258,
+          "longitude": -1.4905959
+        },
+        {
+          "latitude": 52.3893579,
+          "longitude": -1.4905598
+        },
+        {
+          "latitude": 52.3893908,
+          "longitude": -1.490471
+        }
+      ]
+    },
+    {
+      "id": "s_151361684",
+      "name": "Leaf Lane",
+      "startPoint": {
+        "latitude": 52.3886516,
+        "longitude": -1.4899788
+      },
+      "endPoint": {
+        "latitude": 52.3874098,
+        "longitude": -1.4907521
+      },
+      "lengthMeters": 187.1,
+      "bearingDeg": 180.8,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.3,
+      "roadClass": "unclassified",
+      "startNodeId": "n_25529735",
+      "endNodeId": "n_25529730",
+      "geometry": [
+        {
+          "latitude": 52.3886516,
+          "longitude": -1.4899788
+        },
+        {
+          "latitude": 52.3886219,
+          "longitude": -1.4899795
+        },
+        {
+          "latitude": 52.3885899,
+          "longitude": -1.4899968
+        },
+        {
+          "latitude": 52.3885626,
+          "longitude": -1.4900245
+        },
+        {
+          "latitude": 52.3885276,
+          "longitude": -1.4901265
+        },
+        {
+          "latitude": 52.3882754,
+          "longitude": -1.4909786
+        },
+        {
+          "latitude": 52.3882517,
+          "longitude": -1.491047
+        },
+        {
+          "latitude": 52.3882339,
+          "longitude": -1.4910799
+        },
+        {
+          "latitude": 52.3882182,
+          "longitude": -1.4910994
+        },
+        {
+          "latitude": 52.3881996,
+          "longitude": -1.4911103
+        },
+        {
+          "latitude": 52.3881793,
+          "longitude": -1.4911183
+        },
+        {
+          "latitude": 52.388155,
+          "longitude": -1.4911174
+        },
+        {
+          "latitude": 52.3881067,
+          "longitude": -1.4910987
+        },
+        {
+          "latitude": 52.3874639,
+          "longitude": -1.4907738
+        },
+        {
+          "latitude": 52.3874098,
+          "longitude": -1.4907521
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_30984261",
+      "coordinate": {
+        "latitude": 52.3885251,
+        "longitude": -1.4897492
+      },
+      "connectedSegmentIds": [
+        "s_144398881"
+      ]
+    },
+    {
+      "id": "n_25529735",
+      "coordinate": {
+        "latitude": 52.3886516,
+        "longitude": -1.4899788
+      },
+      "connectedSegmentIds": [
+        "s_151361684"
+      ]
+    }
+  ],
+  "intersections": []
+}

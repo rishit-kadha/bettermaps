@@ -1,0 +1,81 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2858:7722"
+  },
+  "bounds": {
+    "minLat": 28.580000000000002,
+    "maxLat": 28.59,
+    "minLon": 77.22,
+    "maxLon": 77.23
+  },
+  "segments": [
+    {
+      "id": "delhi_s_lodhi_2",
+      "name": "Lodhi Road East",
+      "startPoint": {
+        "latitude": 28.5895,
+        "longitude": 77.221,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.5885,
+        "longitude": 77.234,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.5895,
+          "longitude": 77.221,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.589,
+          "longitude": 77.22749999999999,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.5885,
+          "longitude": 77.234,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 1274.1,
+      "bearingDeg": 95,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 11.1,
+      "roadClass": "secondary",
+      "startNodeId": "delhi_n_lodhi_e",
+      "endNodeId": "delhi_n_lodhi_cgo"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_lodhi_e",
+      "coordinate": {
+        "latitude": 28.5895,
+        "longitude": 77.221,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_lodhi_1",
+        "delhi_s_lodhi_2"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_lodhi_e",
+      "coordinate": {
+        "latitude": 28.5895,
+        "longitude": 77.221,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_lodhi_1",
+        "delhi_s_lodhi_2"
+      ]
+    }
+  ]
+}

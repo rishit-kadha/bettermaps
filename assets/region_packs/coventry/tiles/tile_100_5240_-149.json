@@ -1,0 +1,273 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5240:-149"
+  },
+  "bounds": {
+    "minLat": 52.4,
+    "maxLat": 52.410000000000004,
+    "minLon": -1.49,
+    "maxLon": -1.48
+  },
+  "segments": [
+    {
+      "id": "s_4415177",
+      "name": "Binley Road",
+      "startPoint": {
+        "latitude": 52.4069228,
+        "longitude": -1.4886493
+      },
+      "endPoint": {
+        "latitude": 52.4076562,
+        "longitude": -1.490705
+      },
+      "lengthMeters": 163.1,
+      "bearingDeg": 315.1,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_458300333",
+      "endNodeId": "n_31112607",
+      "geometry": [
+        {
+          "latitude": 52.4069228,
+          "longitude": -1.4886493
+        },
+        {
+          "latitude": 52.406959,
+          "longitude": -1.4887085
+        },
+        {
+          "latitude": 52.4069872,
+          "longitude": -1.4887569
+        },
+        {
+          "latitude": 52.40704,
+          "longitude": -1.4888313
+        },
+        {
+          "latitude": 52.407098,
+          "longitude": -1.4889601
+        },
+        {
+          "latitude": 52.4071639,
+          "longitude": -1.4891437
+        },
+        {
+          "latitude": 52.4071803,
+          "longitude": -1.4892054
+        },
+        {
+          "latitude": 52.4072735,
+          "longitude": -1.4895326
+        },
+        {
+          "latitude": 52.407285,
+          "longitude": -1.4895735
+        },
+        {
+          "latitude": 52.4073033,
+          "longitude": -1.4896493
+        },
+        {
+          "latitude": 52.4074409,
+          "longitude": -1.4901577
+        },
+        {
+          "latitude": 52.4074994,
+          "longitude": -1.4903544
+        },
+        {
+          "latitude": 52.4075575,
+          "longitude": -1.4905104
+        },
+        {
+          "latitude": 52.4076184,
+          "longitude": -1.4906398
+        },
+        {
+          "latitude": 52.4076562,
+          "longitude": -1.490705
+        }
+      ]
+    },
+    {
+      "id": "s_211479045",
+      "name": "Terry Road",
+      "startPoint": {
+        "latitude": 52.4002543,
+        "longitude": -1.4881333
+      },
+      "endPoint": {
+        "latitude": 52.4029813,
+        "longitude": -1.4937615
+      },
+      "lengthMeters": 566.9,
+      "bearingDeg": 270.8,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.3,
+      "roadClass": "unclassified",
+      "startNodeId": "n_1995934960",
+      "endNodeId": "n_31021700",
+      "geometry": [
+        {
+          "latitude": 52.4002543,
+          "longitude": -1.4881333
+        },
+        {
+          "latitude": 52.4002564,
+          "longitude": -1.4883881
+        },
+        {
+          "latitude": 52.4002664,
+          "longitude": -1.488756
+        },
+        {
+          "latitude": 52.4002782,
+          "longitude": -1.4890611
+        },
+        {
+          "latitude": 52.4002944,
+          "longitude": -1.4894803
+        },
+        {
+          "latitude": 52.4002987,
+          "longitude": -1.4895921
+        },
+        {
+          "latitude": 52.4003217,
+          "longitude": -1.4901294
+        },
+        {
+          "latitude": 52.4003323,
+          "longitude": -1.4904617
+        },
+        {
+          "latitude": 52.4003507,
+          "longitude": -1.490765
+        },
+        {
+          "latitude": 52.4003627,
+          "longitude": -1.4909695
+        },
+        {
+          "latitude": 52.4003726,
+          "longitude": -1.4911433
+        },
+        {
+          "latitude": 52.4003886,
+          "longitude": -1.4911814
+        },
+        {
+          "latitude": 52.4005678,
+          "longitude": -1.4913452
+        },
+        {
+          "latitude": 52.4009172,
+          "longitude": -1.4916628
+        },
+        {
+          "latitude": 52.4009368,
+          "longitude": -1.4916955
+        },
+        {
+          "latitude": 52.4011702,
+          "longitude": -1.4921981
+        },
+        {
+          "latitude": 52.401242,
+          "longitude": -1.4923528
+        },
+        {
+          "latitude": 52.4014722,
+          "longitude": -1.4928485
+        },
+        {
+          "latitude": 52.4014915,
+          "longitude": -1.49289
+        },
+        {
+          "latitude": 52.4016785,
+          "longitude": -1.493299
+        },
+        {
+          "latitude": 52.4017468,
+          "longitude": -1.4934484
+        },
+        {
+          "latitude": 52.4017611,
+          "longitude": -1.4934739
+        },
+        {
+          "latitude": 52.4017737,
+          "longitude": -1.4934853
+        },
+        {
+          "latitude": 52.4017892,
+          "longitude": -1.4934931
+        },
+        {
+          "latitude": 52.4018093,
+          "longitude": -1.4935001
+        },
+        {
+          "latitude": 52.4018705,
+          "longitude": -1.4935161
+        },
+        {
+          "latitude": 52.4024136,
+          "longitude": -1.493646
+        },
+        {
+          "latitude": 52.4029813,
+          "longitude": -1.4937615
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_458300333",
+      "coordinate": {
+        "latitude": 52.4069228,
+        "longitude": -1.4886493
+      },
+      "connectedSegmentIds": [
+        "s_4415177"
+      ]
+    },
+    {
+      "id": "n_605708",
+      "coordinate": {
+        "latitude": 52.4094695,
+        "longitude": -1.4888027
+      },
+      "connectedSegmentIds": [
+        "s_147915073"
+      ]
+    },
+    {
+      "id": "n_1995934960",
+      "coordinate": {
+        "latitude": 52.4002543,
+        "longitude": -1.4881333
+      },
+      "connectedSegmentIds": [
+        "s_211479045"
+      ]
+    },
+    {
+      "id": "n_304784",
+      "coordinate": {
+        "latitude": 52.4072131,
+        "longitude": -1.4883252
+      },
+      "connectedSegmentIds": [
+        "s_640206489"
+      ]
+    }
+  ],
+  "intersections": []
+}

@@ -1,0 +1,34 @@
+diff --git a/node_modules/expo-modules-core/expo-module-gradle-plugin/src/main/kotlin/expo/modules/plugin/gradle/ExpoModuleExtension.kt b/node_modules/expo-modules-core/expo-module-gradle-plugin/src/main/kotlin/expo/modules/plugin/gradle/ExpoModuleExtension.kt
+index 1234567..abcdefg 100644
+--- a/node_modules/expo-modules-core/expo-module-gradle-plugin/src/main/kotlin/expo/modules/plugin/gradle/ExpoModuleExtension.kt
++++ b/node_modules/expo-modules-core/expo-module-gradle-plugin/src/main/kotlin/expo/modules/plugin/gradle/ExpoModuleExtension.kt
+@@ -45,6 +45,10 @@ open class ExpoModuleExtension(val project: Project) {
+ 
+   var canBePublished: Boolean = true
+ 
++  fun canBePublished(value: Boolean) {
++    canBePublished = value
++  }
++
+   var enableCompileTimeOptimization: Boolean =
+     findBoolProperty("expo.enableCompileTimeOptimization", default = true)
+ 
+diff --git a/node_modules/expo-modules-core/expo-module-gradle-plugin/src/main/kotlin/expo/modules/plugin/ProjectConfiguration.kt b/node_modules/expo-modules-core/expo-module-gradle-plugin/src/main/kotlin/expo/modules/plugin/ProjectConfiguration.kt
+index 1234567..abcdefg 100644
+--- a/node_modules/expo-modules-core/expo-module-gradle-plugin/src/main/kotlin/expo/modules/plugin/ProjectConfiguration.kt
++++ b/node_modules/expo-modules-core/expo-module-gradle-plugin/src/main/kotlin/expo/modules/plugin/ProjectConfiguration.kt
+@@ -96,7 +96,12 @@ internal fun Project.applyPublishing(expoModulesExtension: ExpoModuleExtension)
+   libraryExtension
+     .applyPublishingVariant()
+ 
+-  afterEvaluate {
++  afterEvaluate {
++    if (project.components.findByName("release") == null) {
++      createEmptyExpoPublishTask()
++      createEmptyExpoPublishToMavenLocalTask()
++      return@afterEvaluate
++    }
++
+     val publicationInfo = PublicationInfo(this)
+ 
+     publishingExtension()

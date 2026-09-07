@@ -1,0 +1,95 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5239:-149"
+  },
+  "bounds": {
+    "minLat": 52.39,
+    "maxLat": 52.4,
+    "minLon": -1.49,
+    "maxLon": -1.48
+  },
+  "segments": [
+    {
+      "id": "s_432614410",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.3912904,
+        "longitude": -1.4891799
+      },
+      "endPoint": {
+        "latitude": 52.3912448,
+        "longitude": -1.4900668
+      },
+      "lengthMeters": 65,
+      "bearingDeg": 288.5,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "primary",
+      "startNodeId": "n_1052307282",
+      "endNodeId": "n_21307822",
+      "geometry": [
+        {
+          "latitude": 52.3912904,
+          "longitude": -1.4891799
+        },
+        {
+          "latitude": 52.3913358,
+          "longitude": -1.4894019
+        },
+        {
+          "latitude": 52.3913583,
+          "longitude": -1.4895656
+        },
+        {
+          "latitude": 52.3913599,
+          "longitude": -1.4896735
+        },
+        {
+          "latitude": 52.391349,
+          "longitude": -1.4897983
+        },
+        {
+          "latitude": 52.3913299,
+          "longitude": -1.4898817
+        },
+        {
+          "latitude": 52.3913096,
+          "longitude": -1.4899453
+        },
+        {
+          "latitude": 52.3912883,
+          "longitude": -1.4899927
+        },
+        {
+          "latitude": 52.3912448,
+          "longitude": -1.4900668
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_358490524",
+      "coordinate": {
+        "latitude": 52.3913212,
+        "longitude": -1.4889629
+      },
+      "connectedSegmentIds": [
+        "s_154000529"
+      ]
+    },
+    {
+      "id": "n_1052307282",
+      "coordinate": {
+        "latitude": 52.3912904,
+        "longitude": -1.4891799
+      },
+      "connectedSegmentIds": [
+        "s_432614410"
+      ]
+    }
+  ],
+  "intersections": []
+}

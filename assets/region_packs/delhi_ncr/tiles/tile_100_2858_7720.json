@@ -1,0 +1,67 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2858:7720"
+  },
+  "bounds": {
+    "minLat": 28.580000000000002,
+    "maxLat": 28.59,
+    "minLon": 77.2,
+    "maxLon": 77.21000000000001
+  },
+  "segments": [
+    {
+      "id": "delhi_s_lodhi_1",
+      "name": "Lodhi Road West",
+      "startPoint": {
+        "latitude": 28.588,
+        "longitude": 77.208,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.5895,
+        "longitude": 77.221,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.588,
+          "longitude": 77.208,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.58875,
+          "longitude": 77.2145,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.5895,
+          "longitude": 77.221,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 1280.2,
+      "bearingDeg": 82.5,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 11.1,
+      "roadClass": "secondary",
+      "startNodeId": "delhi_n_lodhi_safdarjung",
+      "endNodeId": "delhi_n_lodhi_e"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_lodhi_safdarjung",
+      "coordinate": {
+        "latitude": 28.588,
+        "longitude": 77.208,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_lodhi_1"
+      ]
+    }
+  ],
+  "intersections": []
+}

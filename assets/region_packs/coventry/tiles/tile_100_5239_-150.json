@@ -1,0 +1,3604 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5239:-150"
+  },
+  "bounds": {
+    "minLat": 52.39,
+    "maxLat": 52.4,
+    "minLon": -1.5,
+    "maxLon": -1.49
+  },
+  "segments": [
+    {
+      "id": "s_4014373",
+      "name": "Courtleet Road",
+      "startPoint": {
+        "latitude": 52.3945308,
+        "longitude": -1.4973419
+      },
+      "endPoint": {
+        "latitude": 52.3937383,
+        "longitude": -1.4993777
+      },
+      "lengthMeters": 165,
+      "bearingDeg": 280.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.3,
+      "roadClass": "unclassified",
+      "startNodeId": "n_21264234",
+      "endNodeId": "n_21264227",
+      "geometry": [
+        {
+          "latitude": 52.3945308,
+          "longitude": -1.4973419
+        },
+        {
+          "latitude": 52.3945355,
+          "longitude": -1.4973825
+        },
+        {
+          "latitude": 52.3945292,
+          "longitude": -1.4974401
+        },
+        {
+          "latitude": 52.3937383,
+          "longitude": -1.4993777
+        }
+      ]
+    },
+    {
+      "id": "s_4014374",
+      "name": "Frankpledge Road",
+      "startPoint": {
+        "latitude": 52.3945308,
+        "longitude": -1.4973419
+      },
+      "endPoint": {
+        "latitude": 52.3928893,
+        "longitude": -1.496453
+      },
+      "lengthMeters": 194.6,
+      "bearingDeg": 131.2,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.3,
+      "roadClass": "unclassified",
+      "startNodeId": "n_21264234",
+      "endNodeId": "n_21256637",
+      "geometry": [
+        {
+          "latitude": 52.3945308,
+          "longitude": -1.4973419
+        },
+        {
+          "latitude": 52.3945148,
+          "longitude": -1.497312
+        },
+        {
+          "latitude": 52.3945019,
+          "longitude": -1.4973058
+        },
+        {
+          "latitude": 52.3944581,
+          "longitude": -1.4972846
+        },
+        {
+          "latitude": 52.3943701,
+          "longitude": -1.4972471
+        },
+        {
+          "latitude": 52.3942465,
+          "longitude": -1.4971902
+        },
+        {
+          "latitude": 52.3941942,
+          "longitude": -1.4971661
+        },
+        {
+          "latitude": 52.3941367,
+          "longitude": -1.4971364
+        },
+        {
+          "latitude": 52.3941206,
+          "longitude": -1.4971281
+        },
+        {
+          "latitude": 52.3939211,
+          "longitude": -1.4970251
+        },
+        {
+          "latitude": 52.3938716,
+          "longitude": -1.4969943
+        },
+        {
+          "latitude": 52.3936915,
+          "longitude": -1.4968822
+        },
+        {
+          "latitude": 52.3935654,
+          "longitude": -1.4967922
+        },
+        {
+          "latitude": 52.3934563,
+          "longitude": -1.4967142
+        },
+        {
+          "latitude": 52.393428,
+          "longitude": -1.496694
+        },
+        {
+          "latitude": 52.3931277,
+          "longitude": -1.4964796
+        },
+        {
+          "latitude": 52.3930326,
+          "longitude": -1.4964215
+        },
+        {
+          "latitude": 52.3929664,
+          "longitude": -1.4964271
+        },
+        {
+          "latitude": 52.3928893,
+          "longitude": -1.496453
+        }
+      ]
+    },
+    {
+      "id": "s_4016062",
+      "name": "Daventry Road",
+      "startPoint": {
+        "latitude": 52.3928893,
+        "longitude": -1.496453
+      },
+      "endPoint": {
+        "latitude": 52.3932983,
+        "longitude": -1.4988323
+      },
+      "lengthMeters": 167.7,
+      "bearingDeg": 285.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "tertiary",
+      "startNodeId": "n_21256637",
+      "endNodeId": "n_360474530",
+      "geometry": [
+        {
+          "latitude": 52.3928893,
+          "longitude": -1.496453
+        },
+        {
+          "latitude": 52.3929949,
+          "longitude": -1.4970744
+        },
+        {
+          "latitude": 52.3930289,
+          "longitude": -1.4972745
+        },
+        {
+          "latitude": 52.3931537,
+          "longitude": -1.49799
+        },
+        {
+          "latitude": 52.3932488,
+          "longitude": -1.4985528
+        },
+        {
+          "latitude": 52.3932983,
+          "longitude": -1.4988323
+        }
+      ]
+    },
+    {
+      "id": "s_4019060",
+      "name": "Cheylesmore & Stivichall Bypass",
+      "startPoint": {
+        "latitude": 52.3909923,
+        "longitude": -1.4904921
+      },
+      "endPoint": {
+        "latitude": 52.3904257,
+        "longitude": -1.4907285
+      },
+      "lengthMeters": 66.4,
+      "bearingDeg": 217,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "trunk",
+      "startNodeId": "n_21307823",
+      "endNodeId": "n_1052307139",
+      "geometry": [
+        {
+          "latitude": 52.3909923,
+          "longitude": -1.4904921
+        },
+        {
+          "latitude": 52.3909483,
+          "longitude": -1.4905464
+        },
+        {
+          "latitude": 52.3909138,
+          "longitude": -1.4905813
+        },
+        {
+          "latitude": 52.3908777,
+          "longitude": -1.490609
+        },
+        {
+          "latitude": 52.3908329,
+          "longitude": -1.4906396
+        },
+        {
+          "latitude": 52.3907887,
+          "longitude": -1.4906655
+        },
+        {
+          "latitude": 52.3907402,
+          "longitude": -1.4906862
+        },
+        {
+          "latitude": 52.3906856,
+          "longitude": -1.4907001
+        },
+        {
+          "latitude": 52.3905996,
+          "longitude": -1.4907128
+        },
+        {
+          "latitude": 52.3904257,
+          "longitude": -1.4907285
+        }
+      ]
+    },
+    {
+      "id": "s_4019066",
+      "name": "Daventry Road",
+      "startPoint": {
+        "latitude": 52.3921215,
+        "longitude": -1.4934889
+      },
+      "endPoint": {
+        "latitude": 52.3926568,
+        "longitude": -1.4943868
+      },
+      "lengthMeters": 86,
+      "bearingDeg": 312.7,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "tertiary",
+      "startNodeId": "n_21307796",
+      "endNodeId": "n_1052307137",
+      "geometry": [
+        {
+          "latitude": 52.3921215,
+          "longitude": -1.4934889
+        },
+        {
+          "latitude": 52.3923493,
+          "longitude": -1.4938939
+        },
+        {
+          "latitude": 52.392456,
+          "longitude": -1.4940315
+        },
+        {
+          "latitude": 52.3925483,
+          "longitude": -1.4941464
+        },
+        {
+          "latitude": 52.3925786,
+          "longitude": -1.4941868
+        },
+        {
+          "latitude": 52.3926052,
+          "longitude": -1.4942288
+        },
+        {
+          "latitude": 52.3926246,
+          "longitude": -1.4942717
+        },
+        {
+          "latitude": 52.3926413,
+          "longitude": -1.4943226
+        },
+        {
+          "latitude": 52.3926568,
+          "longitude": -1.4943868
+        }
+      ]
+    },
+    {
+      "id": "s_4019071",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.3933082,
+        "longitude": -1.4943091
+      },
+      "endPoint": {
+        "latitude": 52.3925712,
+        "longitude": -1.4937705
+      },
+      "lengthMeters": 89.9,
+      "bearingDeg": 158.6,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_304735",
+      "endNodeId": "n_390470836",
+      "geometry": [
+        {
+          "latitude": 52.3933082,
+          "longitude": -1.4943091
+        },
+        {
+          "latitude": 52.3927982,
+          "longitude": -1.4939808
+        },
+        {
+          "latitude": 52.3925712,
+          "longitude": -1.4937705
+        }
+      ]
+    },
+    {
+      "id": "s_4019072",
+      "name": "Whitley Island",
+      "startPoint": {
+        "latitude": 52.3912448,
+        "longitude": -1.4900668
+      },
+      "endPoint": {
+        "latitude": 52.3909923,
+        "longitude": -1.4904921
+      },
+      "lengthMeters": 40.3,
+      "bearingDeg": 225.8,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_21307822",
+      "endNodeId": "n_21307823",
+      "geometry": [
+        {
+          "latitude": 52.3912448,
+          "longitude": -1.4900668
+        },
+        {
+          "latitude": 52.3909923,
+          "longitude": -1.4904921
+        }
+      ]
+    },
+    {
+      "id": "s_4019143",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.3976677,
+        "longitude": -1.4963469
+      },
+      "endPoint": {
+        "latitude": 52.3960692,
+        "longitude": -1.4956608
+      },
+      "lengthMeters": 184.1,
+      "bearingDeg": 154.7,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_344294798",
+      "endNodeId": "n_304738",
+      "geometry": [
+        {
+          "latitude": 52.3976677,
+          "longitude": -1.4963469
+        },
+        {
+          "latitude": 52.3974983,
+          "longitude": -1.4962158
+        },
+        {
+          "latitude": 52.397225,
+          "longitude": -1.4961025
+        },
+        {
+          "latitude": 52.3968145,
+          "longitude": -1.4959461
+        },
+        {
+          "latitude": 52.3960692,
+          "longitude": -1.4956608
+        }
+      ]
+    },
+    {
+      "id": "s_4038614",
+      "name": "Calder Close",
+      "startPoint": {
+        "latitude": 52.3940023,
+        "longitude": -1.4961722
+      },
+      "endPoint": {
+        "latitude": 52.3936915,
+        "longitude": -1.4968822
+      },
+      "lengthMeters": 69.1,
+      "bearingDeg": 160.3,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.3,
+      "roadClass": "unclassified",
+      "startNodeId": "n_21380741",
+      "endNodeId": "n_390476547",
+      "geometry": [
+        {
+          "latitude": 52.3940023,
+          "longitude": -1.4961722
+        },
+        {
+          "latitude": 52.3939203,
+          "longitude": -1.4961241
+        },
+        {
+          "latitude": 52.3938753,
+          "longitude": -1.4961646
+        },
+        {
+          "latitude": 52.3938567,
+          "longitude": -1.4961825
+        },
+        {
+          "latitude": 52.3938422,
+          "longitude": -1.4962028
+        },
+        {
+          "latitude": 52.3938283,
+          "longitude": -1.4962351
+        },
+        {
+          "latitude": 52.393807,
+          "longitude": -1.496313
+        },
+        {
+          "latitude": 52.3937784,
+          "longitude": -1.4964299
+        },
+        {
+          "latitude": 52.3937513,
+          "longitude": -1.4965474
+        },
+        {
+          "latitude": 52.3937243,
+          "longitude": -1.4967026
+        },
+        {
+          "latitude": 52.3936915,
+          "longitude": -1.4968822
+        }
+      ]
+    },
+    {
+      "id": "s_4049641",
+      "name": "Cecily Road",
+      "startPoint": {
+        "latitude": 52.3922799,
+        "longitude": -1.4969856
+      },
+      "endPoint": {
+        "latitude": 52.3924599,
+        "longitude": -1.4982249
+      },
+      "lengthMeters": 86.8,
+      "bearingDeg": 286.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_21382444",
+      "endNodeId": "n_1046625142",
+      "geometry": [
+        {
+          "latitude": 52.3922799,
+          "longitude": -1.4969856
+        },
+        {
+          "latitude": 52.3924398,
+          "longitude": -1.497895
+        },
+        {
+          "latitude": 52.3924526,
+          "longitude": -1.4979912
+        },
+        {
+          "latitude": 52.3924588,
+          "longitude": -1.4980702
+        },
+        {
+          "latitude": 52.3924622,
+          "longitude": -1.4981519
+        },
+        {
+          "latitude": 52.3924599,
+          "longitude": -1.4982249
+        }
+      ]
+    },
+    {
+      "id": "s_4049643",
+      "name": "Montalt Road",
+      "startPoint": {
+        "latitude": 52.3911497,
+        "longitude": -1.4975942
+      },
+      "endPoint": {
+        "latitude": 52.3918993,
+        "longitude": -1.5026123
+      },
+      "lengthMeters": 351.2,
+      "bearingDeg": 279.9,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_21256647",
+      "endNodeId": "n_1875167803",
+      "geometry": [
+        {
+          "latitude": 52.3911497,
+          "longitude": -1.4975942
+        },
+        {
+          "latitude": 52.3911673,
+          "longitude": -1.4977601
+        },
+        {
+          "latitude": 52.3912569,
+          "longitude": -1.4983324
+        },
+        {
+          "latitude": 52.3913737,
+          "longitude": -1.4990788
+        },
+        {
+          "latitude": 52.3919016,
+          "longitude": -1.5024175
+        },
+        {
+          "latitude": 52.3919087,
+          "longitude": -1.5024809
+        },
+        {
+          "latitude": 52.3919081,
+          "longitude": -1.5025288
+        },
+        {
+          "latitude": 52.3919061,
+          "longitude": -1.5025662
+        },
+        {
+          "latitude": 52.3918993,
+          "longitude": -1.5026123
+        }
+      ]
+    },
+    {
+      "id": "s_4049645",
+      "name": "Crecy Road",
+      "startPoint": {
+        "latitude": 52.390828,
+        "longitude": -1.4989254
+      },
+      "endPoint": {
+        "latitude": 52.391252,
+        "longitude": -1.5026019
+      },
+      "lengthMeters": 259.8,
+      "bearingDeg": 257.9,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_26931453",
+      "endNodeId": "n_21475708",
+      "geometry": [
+        {
+          "latitude": 52.390828,
+          "longitude": -1.4989254
+        },
+        {
+          "latitude": 52.3908197,
+          "longitude": -1.4989891
+        },
+        {
+          "latitude": 52.3908028,
+          "longitude": -1.4991484
+        },
+        {
+          "latitude": 52.3907872,
+          "longitude": -1.4993021
+        },
+        {
+          "latitude": 52.3907663,
+          "longitude": -1.4995301
+        },
+        {
+          "latitude": 52.3907551,
+          "longitude": -1.4997799
+        },
+        {
+          "latitude": 52.3907638,
+          "longitude": -1.5000251
+        },
+        {
+          "latitude": 52.3907896,
+          "longitude": -1.5002748
+        },
+        {
+          "latitude": 52.3908328,
+          "longitude": -1.5005008
+        },
+        {
+          "latitude": 52.3908933,
+          "longitude": -1.5007309
+        },
+        {
+          "latitude": 52.3909638,
+          "longitude": -1.5009624
+        },
+        {
+          "latitude": 52.3910411,
+          "longitude": -1.5012174
+        },
+        {
+          "latitude": 52.391119,
+          "longitude": -1.5015129
+        },
+        {
+          "latitude": 52.3911772,
+          "longitude": -1.5018223
+        },
+        {
+          "latitude": 52.3912122,
+          "longitude": -1.5021319
+        },
+        {
+          "latitude": 52.391252,
+          "longitude": -1.5026019
+        }
+      ]
+    },
+    {
+      "id": "s_4049646",
+      "name": "Eltham Road",
+      "startPoint": {
+        "latitude": 52.3906718,
+        "longitude": -1.4988791
+      },
+      "endPoint": {
+        "latitude": 52.3926983,
+        "longitude": -1.4994125
+      },
+      "lengthMeters": 228.5,
+      "bearingDeg": 349.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_21475725",
+      "endNodeId": "n_401526505",
+      "geometry": [
+        {
+          "latitude": 52.3906718,
+          "longitude": -1.4988791
+        },
+        {
+          "latitude": 52.390828,
+          "longitude": -1.4989254
+        },
+        {
+          "latitude": 52.3913737,
+          "longitude": -1.4990788
+        },
+        {
+          "latitude": 52.3925919,
+          "longitude": -1.499421
+        },
+        {
+          "latitude": 52.3926983,
+          "longitude": -1.4994125
+        }
+      ]
+    },
+    {
+      "id": "s_4821218",
+      "name": "Shortley Road",
+      "startPoint": {
+        "latitude": 52.3960692,
+        "longitude": -1.4956608
+      },
+      "endPoint": {
+        "latitude": 52.396148,
+        "longitude": -1.4928481
+      },
+      "lengthMeters": 193.9,
+      "bearingDeg": 78.2,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "residential",
+      "startNodeId": "n_304738",
+      "endNodeId": "n_30984240",
+      "geometry": [
+        {
+          "latitude": 52.3960692,
+          "longitude": -1.4956608
+        },
+        {
+          "latitude": 52.396089,
+          "longitude": -1.4955049
+        },
+        {
+          "latitude": 52.3960921,
+          "longitude": -1.4954447
+        },
+        {
+          "latitude": 52.3960858,
+          "longitude": -1.4953577
+        },
+        {
+          "latitude": 52.396043,
+          "longitude": -1.4950629
+        },
+        {
+          "latitude": 52.3960242,
+          "longitude": -1.4949474
+        },
+        {
+          "latitude": 52.396013,
+          "longitude": -1.4948768
+        },
+        {
+          "latitude": 52.3959929,
+          "longitude": -1.4945882
+        },
+        {
+          "latitude": 52.3960005,
+          "longitude": -1.4941503
+        },
+        {
+          "latitude": 52.3960646,
+          "longitude": -1.4934501
+        },
+        {
+          "latitude": 52.3960664,
+          "longitude": -1.4934299
+        },
+        {
+          "latitude": 52.3960725,
+          "longitude": -1.4933799
+        },
+        {
+          "latitude": 52.3961025,
+          "longitude": -1.4931322
+        },
+        {
+          "latitude": 52.3961093,
+          "longitude": -1.493085
+        },
+        {
+          "latitude": 52.396148,
+          "longitude": -1.4928481
+        }
+      ]
+    },
+    {
+      "id": "s_4821220",
+      "name": "Pegmill Close",
+      "startPoint": {
+        "latitude": 52.3955189,
+        "longitude": -1.4939983
+      },
+      "endPoint": {
+        "latitude": 52.3960005,
+        "longitude": -1.4941503
+      },
+      "lengthMeters": 54.5,
+      "bearingDeg": 349.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_30984242",
+      "endNodeId": "n_30984237",
+      "geometry": [
+        {
+          "latitude": 52.3955189,
+          "longitude": -1.4939983
+        },
+        {
+          "latitude": 52.3960005,
+          "longitude": -1.4941503
+        }
+      ]
+    },
+    {
+      "id": "s_4821222",
+      "name": "Swifts Corner",
+      "startPoint": {
+        "latitude": 52.3947153,
+        "longitude": -1.4944366
+      },
+      "endPoint": {
+        "latitude": 52.3954249,
+        "longitude": -1.4953804
+      },
+      "lengthMeters": 107.6,
+      "bearingDeg": 331.2,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "residential",
+      "startNodeId": "n_30984248",
+      "endNodeId": "n_30984244",
+      "geometry": [
+        {
+          "latitude": 52.3947153,
+          "longitude": -1.4944366
+        },
+        {
+          "latitude": 52.3952337,
+          "longitude": -1.4949034
+        },
+        {
+          "latitude": 52.395393,
+          "longitude": -1.4951252
+        },
+        {
+          "latitude": 52.3954171,
+          "longitude": -1.4951832
+        },
+        {
+          "latitude": 52.3954279,
+          "longitude": -1.4952199
+        },
+        {
+          "latitude": 52.3954326,
+          "longitude": -1.4952509
+        },
+        {
+          "latitude": 52.3954326,
+          "longitude": -1.4952817
+        },
+        {
+          "latitude": 52.3954249,
+          "longitude": -1.4953804
+        }
+      ]
+    },
+    {
+      "id": "s_4821223",
+      "name": "Whitley Village",
+      "startPoint": {
+        "latitude": 52.3924529,
+        "longitude": -1.492239
+      },
+      "endPoint": {
+        "latitude": 52.3943059,
+        "longitude": -1.4948119
+      },
+      "lengthMeters": 282.9,
+      "bearingDeg": 308.2,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "residential",
+      "startNodeId": "n_30984254",
+      "endNodeId": "n_304740",
+      "geometry": [
+        {
+          "latitude": 52.3924529,
+          "longitude": -1.492239
+        },
+        {
+          "latitude": 52.3925602,
+          "longitude": -1.4924627
+        },
+        {
+          "latitude": 52.392587,
+          "longitude": -1.4925166
+        },
+        {
+          "latitude": 52.392666,
+          "longitude": -1.4926646
+        },
+        {
+          "latitude": 52.3927747,
+          "longitude": -1.492861
+        },
+        {
+          "latitude": 52.3929155,
+          "longitude": -1.4930797
+        },
+        {
+          "latitude": 52.3930847,
+          "longitude": -1.4932904
+        },
+        {
+          "latitude": 52.393368,
+          "longitude": -1.4935895
+        },
+        {
+          "latitude": 52.3933924,
+          "longitude": -1.4936152
+        },
+        {
+          "latitude": 52.3937817,
+          "longitude": -1.493974
+        },
+        {
+          "latitude": 52.3941555,
+          "longitude": -1.4943002
+        },
+        {
+          "latitude": 52.3942916,
+          "longitude": -1.4944275
+        },
+        {
+          "latitude": 52.3943072,
+          "longitude": -1.4944608
+        },
+        {
+          "latitude": 52.3943205,
+          "longitude": -1.4944891
+        },
+        {
+          "latitude": 52.3943291,
+          "longitude": -1.4946101
+        },
+        {
+          "latitude": 52.3943193,
+          "longitude": -1.4946951
+        },
+        {
+          "latitude": 52.3943059,
+          "longitude": -1.4948119
+        }
+      ]
+    },
+    {
+      "id": "s_8132596",
+      "name": "Calder Close",
+      "startPoint": {
+        "latitude": 52.3939674,
+        "longitude": -1.4959465
+      },
+      "endPoint": {
+        "latitude": 52.3939203,
+        "longitude": -1.4961241
+      },
+      "lengthMeters": 13.1,
+      "bearingDeg": 246.5,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.3,
+      "roadClass": "unclassified",
+      "startNodeId": "n_21380721",
+      "endNodeId": "n_21380704",
+      "geometry": [
+        {
+          "latitude": 52.3939674,
+          "longitude": -1.4959465
+        },
+        {
+          "latitude": 52.3939203,
+          "longitude": -1.4961241
+        }
+      ]
+    },
+    {
+      "id": "s_8133291",
+      "name": "Esher Drive",
+      "startPoint": {
+        "latitude": 52.3903788,
+        "longitude": -1.4975029
+      },
+      "endPoint": {
+        "latitude": 52.3903954,
+        "longitude": -1.4987776
+      },
+      "lengthMeters": 86.6,
+      "bearingDeg": 272.4,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_21256649",
+      "endNodeId": "n_574749742",
+      "geometry": [
+        {
+          "latitude": 52.3903788,
+          "longitude": -1.4975029
+        },
+        {
+          "latitude": 52.3903925,
+          "longitude": -1.4980301
+        },
+        {
+          "latitude": 52.3904021,
+          "longitude": -1.4984341
+        },
+        {
+          "latitude": 52.3904053,
+          "longitude": -1.4985698
+        },
+        {
+          "latitude": 52.3903954,
+          "longitude": -1.4987776
+        }
+      ]
+    },
+    {
+      "id": "s_30186234",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.3915057,
+        "longitude": -1.4923437
+      },
+      "endPoint": {
+        "latitude": 52.3916853,
+        "longitude": -1.4926259
+      },
+      "lengthMeters": 27.7,
+      "bearingDeg": 317.7,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_332611555",
+      "endNodeId": "n_3669120682",
+      "geometry": [
+        {
+          "latitude": 52.3915057,
+          "longitude": -1.4923437
+        },
+        {
+          "latitude": 52.3916411,
+          "longitude": -1.4925458
+        },
+        {
+          "latitude": 52.3916853,
+          "longitude": -1.4926259
+        }
+      ]
+    },
+    {
+      "id": "s_30186239",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.3943059,
+        "longitude": -1.4948119
+      },
+      "endPoint": {
+        "latitude": 52.3933082,
+        "longitude": -1.4943091
+      },
+      "lengthMeters": 116.1,
+      "bearingDeg": 162.9,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_304740",
+      "endNodeId": "n_304735",
+      "geometry": [
+        {
+          "latitude": 52.3943059,
+          "longitude": -1.4948119
+        },
+        {
+          "latitude": 52.3933082,
+          "longitude": -1.4943091
+        }
+      ]
+    },
+    {
+      "id": "s_34626604",
+      "name": "Bar Road",
+      "startPoint": {
+        "latitude": 52.397225,
+        "longitude": -1.4961025
+      },
+      "endPoint": {
+        "latitude": 52.397318,
+        "longitude": -1.4948663
+      },
+      "lengthMeters": 85.2,
+      "bearingDeg": 80.8,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.3,
+      "roadClass": "unclassified",
+      "startNodeId": "n_304737",
+      "endNodeId": "n_402503160",
+      "geometry": [
+        {
+          "latitude": 52.397225,
+          "longitude": -1.4961025
+        },
+        {
+          "latitude": 52.3972428,
+          "longitude": -1.4959219
+        },
+        {
+          "latitude": 52.3972746,
+          "longitude": -1.4956578
+        },
+        {
+          "latitude": 52.3973274,
+          "longitude": -1.4953132
+        },
+        {
+          "latitude": 52.3973309,
+          "longitude": -1.4952605
+        },
+        {
+          "latitude": 52.3973344,
+          "longitude": -1.4952084
+        },
+        {
+          "latitude": 52.397323,
+          "longitude": -1.4949712
+        },
+        {
+          "latitude": 52.397318,
+          "longitude": -1.4948663
+        }
+      ]
+    },
+    {
+      "id": "s_40401062",
+      "name": "Whitley Island",
+      "startPoint": {
+        "latitude": 52.391696,
+        "longitude": -1.4904019
+      },
+      "endPoint": {
+        "latitude": 52.3912448,
+        "longitude": -1.4900668
+      },
+      "lengthMeters": 64.2,
+      "bearingDeg": 129.3,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_21307948",
+      "endNodeId": "n_21307822",
+      "geometry": [
+        {
+          "latitude": 52.391696,
+          "longitude": -1.4904019
+        },
+        {
+          "latitude": 52.3915568,
+          "longitude": -1.4901234
+        },
+        {
+          "latitude": 52.3915323,
+          "longitude": -1.490078
+        },
+        {
+          "latitude": 52.391511,
+          "longitude": -1.4900444
+        },
+        {
+          "latitude": 52.3914878,
+          "longitude": -1.4900169
+        },
+        {
+          "latitude": 52.3914596,
+          "longitude": -1.4899956
+        },
+        {
+          "latitude": 52.3914287,
+          "longitude": -1.4899811
+        },
+        {
+          "latitude": 52.3913945,
+          "longitude": -1.4899751
+        },
+        {
+          "latitude": 52.391365,
+          "longitude": -1.4899754
+        },
+        {
+          "latitude": 52.3913269,
+          "longitude": -1.4899856
+        },
+        {
+          "latitude": 52.3913053,
+          "longitude": -1.4899977
+        },
+        {
+          "latitude": 52.391282,
+          "longitude": -1.4900186
+        },
+        {
+          "latitude": 52.3912448,
+          "longitude": -1.4900668
+        }
+      ]
+    },
+    {
+      "id": "s_40401067",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.3925712,
+        "longitude": -1.4937705
+      },
+      "endPoint": {
+        "latitude": 52.3921851,
+        "longitude": -1.4921233
+      },
+      "lengthMeters": 134.1,
+      "bearingDeg": 150.7,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_390470836",
+      "endNodeId": "n_21307944",
+      "geometry": [
+        {
+          "latitude": 52.3925712,
+          "longitude": -1.4937705
+        },
+        {
+          "latitude": 52.3924485,
+          "longitude": -1.4936577
+        },
+        {
+          "latitude": 52.3923719,
+          "longitude": -1.4935699
+        },
+        {
+          "latitude": 52.3923251,
+          "longitude": -1.4935072
+        },
+        {
+          "latitude": 52.3922854,
+          "longitude": -1.493448
+        },
+        {
+          "latitude": 52.3922422,
+          "longitude": -1.4933702
+        },
+        {
+          "latitude": 52.3922098,
+          "longitude": -1.4932937
+        },
+        {
+          "latitude": 52.3921808,
+          "longitude": -1.493211
+        },
+        {
+          "latitude": 52.3921568,
+          "longitude": -1.4931249
+        },
+        {
+          "latitude": 52.3921416,
+          "longitude": -1.493041
+        },
+        {
+          "latitude": 52.392131,
+          "longitude": -1.4929496
+        },
+        {
+          "latitude": 52.3921227,
+          "longitude": -1.4928441
+        },
+        {
+          "latitude": 52.3921226,
+          "longitude": -1.4927465
+        },
+        {
+          "latitude": 52.3921324,
+          "longitude": -1.4925969
+        },
+        {
+          "latitude": 52.3921451,
+          "longitude": -1.492465
+        },
+        {
+          "latitude": 52.392161,
+          "longitude": -1.4923142
+        },
+        {
+          "latitude": 52.3921851,
+          "longitude": -1.4921233
+        }
+      ]
+    },
+    {
+      "id": "s_40401070",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.3921215,
+        "longitude": -1.4934889
+      },
+      "endPoint": {
+        "latitude": 52.3976677,
+        "longitude": -1.4963469
+      },
+      "lengthMeters": 653.5,
+      "bearingDeg": 317.7,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_21307796",
+      "endNodeId": "n_344294798",
+      "geometry": [
+        {
+          "latitude": 52.3921215,
+          "longitude": -1.4934889
+        },
+        {
+          "latitude": 52.3922909,
+          "longitude": -1.4937418
+        },
+        {
+          "latitude": 52.3923747,
+          "longitude": -1.4938488
+        },
+        {
+          "latitude": 52.392454,
+          "longitude": -1.4939527
+        },
+        {
+          "latitude": 52.3925369,
+          "longitude": -1.4940482
+        },
+        {
+          "latitude": 52.3925967,
+          "longitude": -1.4941109
+        },
+        {
+          "latitude": 52.392672,
+          "longitude": -1.4941727
+        },
+        {
+          "latitude": 52.3927466,
+          "longitude": -1.4942395
+        },
+        {
+          "latitude": 52.3928207,
+          "longitude": -1.494301
+        },
+        {
+          "latitude": 52.393005,
+          "longitude": -1.4944403
+        },
+        {
+          "latitude": 52.3934761,
+          "longitude": -1.4947216
+        },
+        {
+          "latitude": 52.3942188,
+          "longitude": -1.495082
+        },
+        {
+          "latitude": 52.3948543,
+          "longitude": -1.4953496
+        },
+        {
+          "latitude": 52.3955729,
+          "longitude": -1.4956242
+        },
+        {
+          "latitude": 52.3961806,
+          "longitude": -1.4958625
+        },
+        {
+          "latitude": 52.3967001,
+          "longitude": -1.4960501
+        },
+        {
+          "latitude": 52.3970716,
+          "longitude": -1.4961843
+        },
+        {
+          "latitude": 52.3974886,
+          "longitude": -1.4963204
+        },
+        {
+          "latitude": 52.3976677,
+          "longitude": -1.4963469
+        }
+      ]
+    },
+    {
+      "id": "s_40401072",
+      "name": "Whitley Island",
+      "startPoint": {
+        "latitude": 52.3915057,
+        "longitude": -1.4923437
+      },
+      "endPoint": {
+        "latitude": 52.3921851,
+        "longitude": -1.4921233
+      },
+      "lengthMeters": 89.4,
+      "bearingDeg": 335.1,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_332611555",
+      "endNodeId": "n_21307944",
+      "geometry": [
+        {
+          "latitude": 52.3915057,
+          "longitude": -1.4923437
+        },
+        {
+          "latitude": 52.3916163,
+          "longitude": -1.492428
+        },
+        {
+          "latitude": 52.3916984,
+          "longitude": -1.4924868
+        },
+        {
+          "latitude": 52.3917422,
+          "longitude": -1.4925048
+        },
+        {
+          "latitude": 52.3917927,
+          "longitude": -1.4925163
+        },
+        {
+          "latitude": 52.3918386,
+          "longitude": -1.4925208
+        },
+        {
+          "latitude": 52.3918866,
+          "longitude": -1.4925151
+        },
+        {
+          "latitude": 52.3919326,
+          "longitude": -1.4925009
+        },
+        {
+          "latitude": 52.3919684,
+          "longitude": -1.4924832
+        },
+        {
+          "latitude": 52.3920104,
+          "longitude": -1.4924543
+        },
+        {
+          "latitude": 52.3920515,
+          "longitude": -1.4924114
+        },
+        {
+          "latitude": 52.3920987,
+          "longitude": -1.4923469
+        },
+        {
+          "latitude": 52.3921276,
+          "longitude": -1.4922851
+        },
+        {
+          "latitude": 52.3921574,
+          "longitude": -1.4922126
+        },
+        {
+          "latitude": 52.3921851,
+          "longitude": -1.4921233
+        }
+      ]
+    },
+    {
+      "id": "s_40401078",
+      "name": "Daventry Road",
+      "startPoint": {
+        "latitude": 52.3933708,
+        "longitude": -1.4992313
+      },
+      "endPoint": {
+        "latitude": 52.394181,
+        "longitude": -1.5040724
+      },
+      "lengthMeters": 340.7,
+      "bearingDeg": 285.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_21278826",
+      "endNodeId": "n_21259806",
+      "geometry": [
+        {
+          "latitude": 52.3933708,
+          "longitude": -1.4992313
+        },
+        {
+          "latitude": 52.393418,
+          "longitude": -1.4995068
+        },
+        {
+          "latitude": 52.3936685,
+          "longitude": -1.5009705
+        },
+        {
+          "latitude": 52.3938132,
+          "longitude": -1.5018032
+        },
+        {
+          "latitude": 52.3938874,
+          "longitude": -1.5022329
+        },
+        {
+          "latitude": 52.3939524,
+          "longitude": -1.5025994
+        },
+        {
+          "latitude": 52.3940078,
+          "longitude": -1.5029156
+        },
+        {
+          "latitude": 52.3940442,
+          "longitude": -1.503138
+        },
+        {
+          "latitude": 52.3941001,
+          "longitude": -1.5034705
+        },
+        {
+          "latitude": 52.3941187,
+          "longitude": -1.5035992
+        },
+        {
+          "latitude": 52.3941517,
+          "longitude": -1.5038357
+        },
+        {
+          "latitude": 52.394181,
+          "longitude": -1.5040724
+        }
+      ]
+    },
+    {
+      "id": "s_41993108",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.3933082,
+        "longitude": -1.4943091
+      },
+      "endPoint": {
+        "latitude": 52.3927141,
+        "longitude": -1.493715
+      },
+      "lengthMeters": 77.4,
+      "bearingDeg": 149.5,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_304735",
+      "endNodeId": "n_365418554",
+      "geometry": [
+        {
+          "latitude": 52.3933082,
+          "longitude": -1.4943091
+        },
+        {
+          "latitude": 52.3928275,
+          "longitude": -1.4938447
+        },
+        {
+          "latitude": 52.3927141,
+          "longitude": -1.493715
+        }
+      ]
+    },
+    {
+      "id": "s_73951900",
+      "name": "Whitley Court",
+      "startPoint": {
+        "latitude": 52.3941555,
+        "longitude": -1.4943002
+      },
+      "endPoint": {
+        "latitude": 52.3943413,
+        "longitude": -1.4934346
+      },
+      "lengthMeters": 75,
+      "bearingDeg": 63.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_874898382",
+      "endNodeId": "n_1076368433",
+      "geometry": [
+        {
+          "latitude": 52.3941555,
+          "longitude": -1.4943002
+        },
+        {
+          "latitude": 52.3942347,
+          "longitude": -1.4940382
+        },
+        {
+          "latitude": 52.3942576,
+          "longitude": -1.4940047
+        },
+        {
+          "latitude": 52.3942828,
+          "longitude": -1.4939794
+        },
+        {
+          "latitude": 52.3943017,
+          "longitude": -1.4939487
+        },
+        {
+          "latitude": 52.3943526,
+          "longitude": -1.4938045
+        },
+        {
+          "latitude": 52.3943523,
+          "longitude": -1.4937808
+        },
+        {
+          "latitude": 52.3942521,
+          "longitude": -1.493654
+        },
+        {
+          "latitude": 52.3942478,
+          "longitude": -1.4936428
+        },
+        {
+          "latitude": 52.3942494,
+          "longitude": -1.4936299
+        },
+        {
+          "latitude": 52.3943413,
+          "longitude": -1.4934346
+        }
+      ]
+    },
+    {
+      "id": "s_90266388",
+      "name": "Cecily Road",
+      "startPoint": {
+        "latitude": 52.3925469,
+        "longitude": -1.4982916
+      },
+      "endPoint": {
+        "latitude": 52.3942226,
+        "longitude": -1.5045156
+      },
+      "lengthMeters": 507.1,
+      "bearingDeg": 266.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_26931448",
+      "endNodeId": "n_21475700",
+      "geometry": [
+        {
+          "latitude": 52.3925469,
+          "longitude": -1.4982916
+        },
+        {
+          "latitude": 52.3925422,
+          "longitude": -1.4984209
+        },
+        {
+          "latitude": 52.3925414,
+          "longitude": -1.4984614
+        },
+        {
+          "latitude": 52.3925434,
+          "longitude": -1.498505
+        },
+        {
+          "latitude": 52.3925507,
+          "longitude": -1.4985539
+        },
+        {
+          "latitude": 52.3926983,
+          "longitude": -1.4994125
+        },
+        {
+          "latitude": 52.3933499,
+          "longitude": -1.5031153
+        },
+        {
+          "latitude": 52.3934107,
+          "longitude": -1.5034599
+        },
+        {
+          "latitude": 52.393476,
+          "longitude": -1.5038296
+        },
+        {
+          "latitude": 52.3935472,
+          "longitude": -1.5042311
+        },
+        {
+          "latitude": 52.3935813,
+          "longitude": -1.5044235
+        },
+        {
+          "latitude": 52.3935855,
+          "longitude": -1.5044432
+        },
+        {
+          "latitude": 52.3935908,
+          "longitude": -1.5044624
+        },
+        {
+          "latitude": 52.3936006,
+          "longitude": -1.504485
+        },
+        {
+          "latitude": 52.3936129,
+          "longitude": -1.5045029
+        },
+        {
+          "latitude": 52.3936268,
+          "longitude": -1.5045166
+        },
+        {
+          "latitude": 52.393642,
+          "longitude": -1.5045239
+        },
+        {
+          "latitude": 52.3936534,
+          "longitude": -1.5045262
+        },
+        {
+          "latitude": 52.3936637,
+          "longitude": -1.5045269
+        },
+        {
+          "latitude": 52.3938549,
+          "longitude": -1.5045208
+        },
+        {
+          "latitude": 52.3940813,
+          "longitude": -1.5045155
+        },
+        {
+          "latitude": 52.3942226,
+          "longitude": -1.5045156
+        }
+      ]
+    },
+    {
+      "id": "s_144394837",
+      "name": "Whitley Court",
+      "startPoint": {
+        "latitude": 52.3943413,
+        "longitude": -1.4934346
+      },
+      "endPoint": {
+        "latitude": 52.3945574,
+        "longitude": -1.4936676
+      },
+      "lengthMeters": 29.4,
+      "bearingDeg": 10.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_1076368433",
+      "endNodeId": "n_874898529",
+      "geometry": [
+        {
+          "latitude": 52.3943413,
+          "longitude": -1.4934346
+        },
+        {
+          "latitude": 52.3943591,
+          "longitude": -1.4934294
+        },
+        {
+          "latitude": 52.3943756,
+          "longitude": -1.4934419
+        },
+        {
+          "latitude": 52.3945574,
+          "longitude": -1.4936676
+        }
+      ]
+    },
+    {
+      "id": "s_144394853",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.3960692,
+        "longitude": -1.4956608
+      },
+      "endPoint": {
+        "latitude": 52.3943059,
+        "longitude": -1.4948119
+      },
+      "lengthMeters": 204.4,
+      "bearingDeg": 165.1,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_304738",
+      "endNodeId": "n_304740",
+      "geometry": [
+        {
+          "latitude": 52.3960692,
+          "longitude": -1.4956608
+        },
+        {
+          "latitude": 52.3954249,
+          "longitude": -1.4953804
+        },
+        {
+          "latitude": 52.3948901,
+          "longitude": -1.4951165
+        },
+        {
+          "latitude": 52.3943059,
+          "longitude": -1.4948119
+        }
+      ]
+    },
+    {
+      "id": "s_148191141",
+      "name": "Cheylesmore & Stivichall Bypass",
+      "startPoint": {
+        "latitude": 52.3927141,
+        "longitude": -1.493715
+      },
+      "endPoint": {
+        "latitude": 52.3891269,
+        "longitude": -1.4915116
+      },
+      "lengthMeters": 479.9,
+      "bearingDeg": 143.7,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "trunk",
+      "startNodeId": "n_365418554",
+      "endNodeId": "n_365152250",
+      "geometry": [
+        {
+          "latitude": 52.3927141,
+          "longitude": -1.493715
+        },
+        {
+          "latitude": 52.3926555,
+          "longitude": -1.4936444
+        },
+        {
+          "latitude": 52.3925742,
+          "longitude": -1.4935354
+        },
+        {
+          "latitude": 52.3924921,
+          "longitude": -1.4934148
+        },
+        {
+          "latitude": 52.3924137,
+          "longitude": -1.4932917
+        },
+        {
+          "latitude": 52.3923081,
+          "longitude": -1.4931026
+        },
+        {
+          "latitude": 52.3922261,
+          "longitude": -1.4929418
+        },
+        {
+          "latitude": 52.3921475,
+          "longitude": -1.4927798
+        },
+        {
+          "latitude": 52.3920686,
+          "longitude": -1.4926106
+        },
+        {
+          "latitude": 52.3919893,
+          "longitude": -1.4924431
+        },
+        {
+          "latitude": 52.3918755,
+          "longitude": -1.4922008
+        },
+        {
+          "latitude": 52.3917945,
+          "longitude": -1.4920372
+        },
+        {
+          "latitude": 52.3917097,
+          "longitude": -1.4918829
+        },
+        {
+          "latitude": 52.3916215,
+          "longitude": -1.4917318
+        },
+        {
+          "latitude": 52.3915298,
+          "longitude": -1.4915918
+        },
+        {
+          "latitude": 52.3914339,
+          "longitude": -1.4914626
+        },
+        {
+          "latitude": 52.3913287,
+          "longitude": -1.4913409
+        },
+        {
+          "latitude": 52.3912202,
+          "longitude": -1.4912402
+        },
+        {
+          "latitude": 52.3911004,
+          "longitude": -1.4911449
+        },
+        {
+          "latitude": 52.3909829,
+          "longitude": -1.4910709
+        },
+        {
+          "latitude": 52.3908571,
+          "longitude": -1.4910113
+        },
+        {
+          "latitude": 52.3907293,
+          "longitude": -1.4909654
+        },
+        {
+          "latitude": 52.3906055,
+          "longitude": -1.4909397
+        },
+        {
+          "latitude": 52.3904813,
+          "longitude": -1.490931
+        },
+        {
+          "latitude": 52.3903704,
+          "longitude": -1.4909344
+        },
+        {
+          "latitude": 52.3902658,
+          "longitude": -1.4909508
+        },
+        {
+          "latitude": 52.3901663,
+          "longitude": -1.4909811
+        },
+        {
+          "latitude": 52.3900637,
+          "longitude": -1.4910179
+        },
+        {
+          "latitude": 52.3899847,
+          "longitude": -1.4910484
+        },
+        {
+          "latitude": 52.3897983,
+          "longitude": -1.4911452
+        },
+        {
+          "latitude": 52.3894406,
+          "longitude": -1.4913478
+        },
+        {
+          "latitude": 52.3891269,
+          "longitude": -1.4915116
+        }
+      ]
+    },
+    {
+      "id": "s_154000529",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.391696,
+        "longitude": -1.4904019
+      },
+      "endPoint": {
+        "latitude": 52.3913212,
+        "longitude": -1.4889629
+      },
+      "lengthMeters": 106.3,
+      "bearingDeg": 118.5,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "primary",
+      "startNodeId": "n_21307948",
+      "endNodeId": "n_358490524",
+      "geometry": [
+        {
+          "latitude": 52.391696,
+          "longitude": -1.4904019
+        },
+        {
+          "latitude": 52.3916318,
+          "longitude": -1.4902078
+        },
+        {
+          "latitude": 52.3915824,
+          "longitude": -1.490047
+        },
+        {
+          "latitude": 52.3915286,
+          "longitude": -1.4898493
+        },
+        {
+          "latitude": 52.391472,
+          "longitude": -1.4896315
+        },
+        {
+          "latitude": 52.3914325,
+          "longitude": -1.489465
+        },
+        {
+          "latitude": 52.3913345,
+          "longitude": -1.4890202
+        },
+        {
+          "latitude": 52.3913212,
+          "longitude": -1.4889629
+        }
+      ]
+    },
+    {
+      "id": "s_186903609",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.3967001,
+        "longitude": -1.4960501
+      },
+      "endPoint": {
+        "latitude": 52.3974886,
+        "longitude": -1.4963204
+      },
+      "lengthMeters": 93.9,
+      "bearingDeg": 323.8,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 8.3,
+      "roadClass": "unclassified",
+      "startNodeId": "n_1976513352",
+      "endNodeId": "n_1976513349",
+      "geometry": [
+        {
+          "latitude": 52.3967001,
+          "longitude": -1.4960501
+        },
+        {
+          "latitude": 52.3968367,
+          "longitude": -1.4962141
+        },
+        {
+          "latitude": 52.3968566,
+          "longitude": -1.4962445
+        },
+        {
+          "latitude": 52.396892,
+          "longitude": -1.4962922
+        },
+        {
+          "latitude": 52.3971155,
+          "longitude": -1.4963676
+        },
+        {
+          "latitude": 52.3971729,
+          "longitude": -1.4963593
+        },
+        {
+          "latitude": 52.3972594,
+          "longitude": -1.496345
+        },
+        {
+          "latitude": 52.3974886,
+          "longitude": -1.4963204
+        }
+      ]
+    },
+    {
+      "id": "s_201492045",
+      "name": "Daventry Road",
+      "startPoint": {
+        "latitude": 52.3927048,
+        "longitude": -1.4948999
+      },
+      "endPoint": {
+        "latitude": 52.393005,
+        "longitude": -1.4944403
+      },
+      "lengthMeters": 51.1,
+      "bearingDeg": 73,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "tertiary",
+      "startNodeId": "n_21256640",
+      "endNodeId": "n_21307834",
+      "geometry": [
+        {
+          "latitude": 52.3927048,
+          "longitude": -1.4948999
+        },
+        {
+          "latitude": 52.3927342,
+          "longitude": -1.4947428
+        },
+        {
+          "latitude": 52.392755,
+          "longitude": -1.4946683
+        },
+        {
+          "latitude": 52.392791,
+          "longitude": -1.4945756
+        },
+        {
+          "latitude": 52.3928231,
+          "longitude": -1.4945214
+        },
+        {
+          "latitude": 52.3928622,
+          "longitude": -1.4944743
+        },
+        {
+          "latitude": 52.3928868,
+          "longitude": -1.4944526
+        },
+        {
+          "latitude": 52.3929113,
+          "longitude": -1.4944423
+        },
+        {
+          "latitude": 52.3929367,
+          "longitude": -1.4944354
+        },
+        {
+          "latitude": 52.3929592,
+          "longitude": -1.4944325
+        },
+        {
+          "latitude": 52.3929818,
+          "longitude": -1.494435
+        },
+        {
+          "latitude": 52.393005,
+          "longitude": -1.4944403
+        }
+      ]
+    },
+    {
+      "id": "s_224768415",
+      "name": "Whitley Island",
+      "startPoint": {
+        "latitude": 52.3909923,
+        "longitude": -1.4904921
+      },
+      "endPoint": {
+        "latitude": 52.3908957,
+        "longitude": -1.4918437
+      },
+      "lengthMeters": 107,
+      "bearingDeg": 227,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_21307823",
+      "endNodeId": "n_21307825",
+      "geometry": [
+        {
+          "latitude": 52.3909923,
+          "longitude": -1.4904921
+        },
+        {
+          "latitude": 52.3909039,
+          "longitude": -1.4906476
+        },
+        {
+          "latitude": 52.3908305,
+          "longitude": -1.4907816
+        },
+        {
+          "latitude": 52.3907868,
+          "longitude": -1.4908778
+        },
+        {
+          "latitude": 52.3907648,
+          "longitude": -1.4909461
+        },
+        {
+          "latitude": 52.3907454,
+          "longitude": -1.4910264
+        },
+        {
+          "latitude": 52.3907344,
+          "longitude": -1.4910998
+        },
+        {
+          "latitude": 52.3907248,
+          "longitude": -1.4911927
+        },
+        {
+          "latitude": 52.3907269,
+          "longitude": -1.4912833
+        },
+        {
+          "latitude": 52.390733,
+          "longitude": -1.4913806
+        },
+        {
+          "latitude": 52.3907473,
+          "longitude": -1.4914803
+        },
+        {
+          "latitude": 52.3907734,
+          "longitude": -1.4915751
+        },
+        {
+          "latitude": 52.3908108,
+          "longitude": -1.4916755
+        },
+        {
+          "latitude": 52.3908957,
+          "longitude": -1.4918437
+        }
+      ]
+    },
+    {
+      "id": "s_224773433",
+      "name": "Cheylesmore & Stivichall Bypass",
+      "startPoint": {
+        "latitude": 52.3904257,
+        "longitude": -1.4907285
+      },
+      "endPoint": {
+        "latitude": 52.3886728,
+        "longitude": -1.4917616
+      },
+      "lengthMeters": 208.5,
+      "bearingDeg": 189.1,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "trunk",
+      "startNodeId": "n_1052307139",
+      "endNodeId": "n_27486387",
+      "geometry": [
+        {
+          "latitude": 52.3904257,
+          "longitude": -1.4907285
+        },
+        {
+          "latitude": 52.3903184,
+          "longitude": -1.4907567
+        },
+        {
+          "latitude": 52.3901822,
+          "longitude": -1.4907955
+        },
+        {
+          "latitude": 52.3900505,
+          "longitude": -1.4908377
+        },
+        {
+          "latitude": 52.3899268,
+          "longitude": -1.4908876
+        },
+        {
+          "latitude": 52.3897347,
+          "longitude": -1.4909787
+        },
+        {
+          "latitude": 52.3895879,
+          "longitude": -1.4910556
+        },
+        {
+          "latitude": 52.3894743,
+          "longitude": -1.4911287
+        },
+        {
+          "latitude": 52.3893854,
+          "longitude": -1.4911873
+        },
+        {
+          "latitude": 52.3892897,
+          "longitude": -1.4912564
+        },
+        {
+          "latitude": 52.3891766,
+          "longitude": -1.491344
+        },
+        {
+          "latitude": 52.3889243,
+          "longitude": -1.4915463
+        },
+        {
+          "latitude": 52.3886728,
+          "longitude": -1.4917616
+        }
+      ]
+    },
+    {
+      "id": "s_362643341",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.3916853,
+        "longitude": -1.4926259
+      },
+      "endPoint": {
+        "latitude": 52.3921215,
+        "longitude": -1.4934889
+      },
+      "lengthMeters": 76,
+      "bearingDeg": 309.1,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_3669120682",
+      "endNodeId": "n_21307796",
+      "geometry": [
+        {
+          "latitude": 52.3916853,
+          "longitude": -1.4926259
+        },
+        {
+          "latitude": 52.3919091,
+          "longitude": -1.4930768
+        },
+        {
+          "latitude": 52.3921215,
+          "longitude": -1.4934889
+        }
+      ]
+    },
+    {
+      "id": "s_362720756",
+      "name": "Whitley Island",
+      "startPoint": {
+        "latitude": 52.3908957,
+        "longitude": -1.4918437
+      },
+      "endPoint": {
+        "latitude": 52.3915057,
+        "longitude": -1.4923437
+      },
+      "lengthMeters": 75.9,
+      "bearingDeg": 335.3,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_21307825",
+      "endNodeId": "n_332611555",
+      "geometry": [
+        {
+          "latitude": 52.3908957,
+          "longitude": -1.4918437
+        },
+        {
+          "latitude": 52.3910498,
+          "longitude": -1.49196
+        },
+        {
+          "latitude": 52.3912122,
+          "longitude": -1.4920916
+        },
+        {
+          "latitude": 52.3913626,
+          "longitude": -1.492223
+        },
+        {
+          "latitude": 52.3915057,
+          "longitude": -1.4923437
+        }
+      ]
+    },
+    {
+      "id": "s_364429430",
+      "name": "Cheylesmore & Stivichall Bypass",
+      "startPoint": {
+        "latitude": 52.3901955,
+        "longitude": -1.4918113
+      },
+      "endPoint": {
+        "latitude": 52.3908957,
+        "longitude": -1.4918437
+      },
+      "lengthMeters": 78.5,
+      "bearingDeg": 4.9,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 17.9,
+      "roadClass": "trunk",
+      "startNodeId": "n_3661145560",
+      "endNodeId": "n_21307825",
+      "geometry": [
+        {
+          "latitude": 52.3901955,
+          "longitude": -1.4918113
+        },
+        {
+          "latitude": 52.3903861,
+          "longitude": -1.4917843
+        },
+        {
+          "latitude": 52.3904957,
+          "longitude": -1.4917722
+        },
+        {
+          "latitude": 52.3905817,
+          "longitude": -1.4917665
+        },
+        {
+          "latitude": 52.3906414,
+          "longitude": -1.4917696
+        },
+        {
+          "latitude": 52.3907006,
+          "longitude": -1.491778
+        },
+        {
+          "latitude": 52.3907858,
+          "longitude": -1.4917993
+        },
+        {
+          "latitude": 52.3908957,
+          "longitude": -1.4918437
+        }
+      ]
+    },
+    {
+      "id": "s_364429431",
+      "name": "Whitley Island",
+      "startPoint": {
+        "latitude": 52.3921851,
+        "longitude": -1.4921233
+      },
+      "endPoint": {
+        "latitude": 52.391696,
+        "longitude": -1.4904019
+      },
+      "lengthMeters": 131.9,
+      "bearingDeg": 77.1,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_21307944",
+      "endNodeId": "n_21307948",
+      "geometry": [
+        {
+          "latitude": 52.3921851,
+          "longitude": -1.4921233
+        },
+        {
+          "latitude": 52.3921953,
+          "longitude": -1.4920504
+        },
+        {
+          "latitude": 52.3921993,
+          "longitude": -1.4919798
+        },
+        {
+          "latitude": 52.3921997,
+          "longitude": -1.4919122
+        },
+        {
+          "latitude": 52.3921954,
+          "longitude": -1.491841
+        },
+        {
+          "latitude": 52.3921824,
+          "longitude": -1.4917689
+        },
+        {
+          "latitude": 52.3921489,
+          "longitude": -1.4916531
+        },
+        {
+          "latitude": 52.3921043,
+          "longitude": -1.4915167
+        },
+        {
+          "latitude": 52.392029,
+          "longitude": -1.4912976
+        },
+        {
+          "latitude": 52.3919139,
+          "longitude": -1.4909937
+        },
+        {
+          "latitude": 52.3918388,
+          "longitude": -1.490798
+        },
+        {
+          "latitude": 52.3917461,
+          "longitude": -1.4905435
+        },
+        {
+          "latitude": 52.391696,
+          "longitude": -1.4904019
+        }
+      ]
+    },
+    {
+      "id": "s_1087097262",
+      "name": "London Road",
+      "startPoint": {
+        "latitude": 52.3982599,
+        "longitude": -1.4966252
+      },
+      "endPoint": {
+        "latitude": 52.3976677,
+        "longitude": -1.4963469
+      },
+      "lengthMeters": 68.6,
+      "bearingDeg": 161.8,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "trunk",
+      "startNodeId": "n_9960500025",
+      "endNodeId": "n_344294798",
+      "geometry": [
+        {
+          "latitude": 52.3982599,
+          "longitude": -1.4966252
+        },
+        {
+          "latitude": 52.3980828,
+          "longitude": -1.4965299
+        },
+        {
+          "latitude": 52.3979595,
+          "longitude": -1.4964636
+        },
+        {
+          "latitude": 52.3977142,
+          "longitude": -1.4963642
+        },
+        {
+          "latitude": 52.3976677,
+          "longitude": -1.4963469
+        }
+      ]
+    },
+    {
+      "id": "s_1246949386",
+      "name": "Daventry Road",
+      "startPoint": {
+        "latitude": 52.3932983,
+        "longitude": -1.4988323
+      },
+      "endPoint": {
+        "latitude": 52.3933708,
+        "longitude": -1.4992313
+      },
+      "lengthMeters": 28.2,
+      "bearingDeg": 286.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_360474530",
+      "endNodeId": "n_21278826",
+      "geometry": [
+        {
+          "latitude": 52.3932983,
+          "longitude": -1.4988323
+        },
+        {
+          "latitude": 52.3933708,
+          "longitude": -1.4992313
+        }
+      ]
+    },
+    {
+      "id": "s_1246949388",
+      "name": "Daventry Road",
+      "startPoint": {
+        "latitude": 52.3927048,
+        "longitude": -1.4948999
+      },
+      "endPoint": {
+        "latitude": 52.3928445,
+        "longitude": -1.4961831
+      },
+      "lengthMeters": 88.8,
+      "bearingDeg": 271.3,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "tertiary",
+      "startNodeId": "n_21256640",
+      "endNodeId": "n_26931450",
+      "geometry": [
+        {
+          "latitude": 52.3927048,
+          "longitude": -1.4948999
+        },
+        {
+          "latitude": 52.3927079,
+          "longitude": -1.4951166
+        },
+        {
+          "latitude": 52.3927229,
+          "longitude": -1.4953456
+        },
+        {
+          "latitude": 52.3927729,
+          "longitude": -1.4957652
+        },
+        {
+          "latitude": 52.3928073,
+          "longitude": -1.4959659
+        },
+        {
+          "latitude": 52.3928445,
+          "longitude": -1.4961831
+        }
+      ]
+    },
+    {
+      "id": "s_1246949390",
+      "name": "Daventry Road",
+      "startPoint": {
+        "latitude": 52.3928445,
+        "longitude": -1.4961831
+      },
+      "endPoint": {
+        "latitude": 52.3928893,
+        "longitude": -1.496453
+      },
+      "lengthMeters": 19,
+      "bearingDeg": 285.2,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "tertiary",
+      "startNodeId": "n_26931450",
+      "endNodeId": "n_21256637",
+      "geometry": [
+        {
+          "latitude": 52.3928445,
+          "longitude": -1.4961831
+        },
+        {
+          "latitude": 52.3928893,
+          "longitude": -1.496453
+        }
+      ]
+    },
+    {
+      "id": "s_1246963226",
+      "name": "Daventry Road",
+      "startPoint": {
+        "latitude": 52.3926568,
+        "longitude": -1.4943868
+      },
+      "endPoint": {
+        "latitude": 52.3927048,
+        "longitude": -1.4948999
+      },
+      "lengthMeters": 35.3,
+      "bearingDeg": 283.1,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 13.4,
+      "roadClass": "tertiary",
+      "startNodeId": "n_1052307137",
+      "endNodeId": "n_21256640",
+      "geometry": [
+        {
+          "latitude": 52.3926568,
+          "longitude": -1.4943868
+        },
+        {
+          "latitude": 52.3926662,
+          "longitude": -1.494453
+        },
+        {
+          "latitude": 52.3926758,
+          "longitude": -1.4945316
+        },
+        {
+          "latitude": 52.3927048,
+          "longitude": -1.4948999
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_21278826",
+      "coordinate": {
+        "latitude": 52.3933708,
+        "longitude": -1.4992313
+      },
+      "connectedSegmentIds": [
+        "s_4013121",
+        "s_40401078",
+        "s_1246949386"
+      ]
+    },
+    {
+      "id": "n_360474530",
+      "coordinate": {
+        "latitude": 52.3932983,
+        "longitude": -1.4988323
+      },
+      "connectedSegmentIds": [
+        "s_4013148",
+        "s_4016062",
+        "s_1246949386"
+      ]
+    },
+    {
+      "id": "n_21264234",
+      "coordinate": {
+        "latitude": 52.3945308,
+        "longitude": -1.4973419
+      },
+      "connectedSegmentIds": [
+        "s_4014373",
+        "s_4014374"
+      ]
+    },
+    {
+      "id": "n_21264227",
+      "coordinate": {
+        "latitude": 52.3937383,
+        "longitude": -1.4993777
+      },
+      "connectedSegmentIds": [
+        "s_4014373"
+      ]
+    },
+    {
+      "id": "n_21256637",
+      "coordinate": {
+        "latitude": 52.3928893,
+        "longitude": -1.496453
+      },
+      "connectedSegmentIds": [
+        "s_4014374",
+        "s_4016062",
+        "s_1246949390"
+      ]
+    },
+    {
+      "id": "n_21307823",
+      "coordinate": {
+        "latitude": 52.3909923,
+        "longitude": -1.4904921
+      },
+      "connectedSegmentIds": [
+        "s_4019060",
+        "s_4019072",
+        "s_224768415"
+      ]
+    },
+    {
+      "id": "n_1052307139",
+      "coordinate": {
+        "latitude": 52.3904257,
+        "longitude": -1.4907285
+      },
+      "connectedSegmentIds": [
+        "s_4019060",
+        "s_224773433"
+      ]
+    },
+    {
+      "id": "n_21307796",
+      "coordinate": {
+        "latitude": 52.3921215,
+        "longitude": -1.4934889
+      },
+      "connectedSegmentIds": [
+        "s_4019066",
+        "s_40401070",
+        "s_362643341"
+      ]
+    },
+    {
+      "id": "n_1052307137",
+      "coordinate": {
+        "latitude": 52.3926568,
+        "longitude": -1.4943868
+      },
+      "connectedSegmentIds": [
+        "s_4019066",
+        "s_1246963226"
+      ]
+    },
+    {
+      "id": "n_304735",
+      "coordinate": {
+        "latitude": 52.3933082,
+        "longitude": -1.4943091
+      },
+      "connectedSegmentIds": [
+        "s_4019071",
+        "s_30186239",
+        "s_41993108"
+      ]
+    },
+    {
+      "id": "n_390470836",
+      "coordinate": {
+        "latitude": 52.3925712,
+        "longitude": -1.4937705
+      },
+      "connectedSegmentIds": [
+        "s_4019071",
+        "s_40401067"
+      ]
+    },
+    {
+      "id": "n_21307822",
+      "coordinate": {
+        "latitude": 52.3912448,
+        "longitude": -1.4900668
+      },
+      "connectedSegmentIds": [
+        "s_4019072",
+        "s_40401062",
+        "s_432614410"
+      ]
+    },
+    {
+      "id": "n_344294798",
+      "coordinate": {
+        "latitude": 52.3976677,
+        "longitude": -1.4963469
+      },
+      "connectedSegmentIds": [
+        "s_4019143",
+        "s_40401070",
+        "s_1087097262"
+      ]
+    },
+    {
+      "id": "n_304738",
+      "coordinate": {
+        "latitude": 52.3960692,
+        "longitude": -1.4956608
+      },
+      "connectedSegmentIds": [
+        "s_4019143",
+        "s_4821218",
+        "s_144394853"
+      ]
+    },
+    {
+      "id": "n_9960500025",
+      "coordinate": {
+        "latitude": 52.3982599,
+        "longitude": -1.4966252
+      },
+      "connectedSegmentIds": [
+        "s_4019146",
+        "s_1087097262"
+      ]
+    },
+    {
+      "id": "n_21380741",
+      "coordinate": {
+        "latitude": 52.3940023,
+        "longitude": -1.4961722
+      },
+      "connectedSegmentIds": [
+        "s_4038614"
+      ]
+    },
+    {
+      "id": "n_390476547",
+      "coordinate": {
+        "latitude": 52.3936915,
+        "longitude": -1.4968822
+      },
+      "connectedSegmentIds": [
+        "s_4038614"
+      ]
+    },
+    {
+      "id": "n_21382444",
+      "coordinate": {
+        "latitude": 52.3922799,
+        "longitude": -1.4969856
+      },
+      "connectedSegmentIds": [
+        "s_4038974",
+        "s_4049641"
+      ]
+    },
+    {
+      "id": "n_26931450",
+      "coordinate": {
+        "latitude": 52.3928445,
+        "longitude": -1.4961831
+      },
+      "connectedSegmentIds": [
+        "s_4049640",
+        "s_1246949388",
+        "s_1246949390"
+      ]
+    },
+    {
+      "id": "n_1046625142",
+      "coordinate": {
+        "latitude": 52.3924599,
+        "longitude": -1.4982249
+      },
+      "connectedSegmentIds": [
+        "s_4049641"
+      ]
+    },
+    {
+      "id": "n_21256647",
+      "coordinate": {
+        "latitude": 52.3911497,
+        "longitude": -1.4975942
+      },
+      "connectedSegmentIds": [
+        "s_4049643"
+      ]
+    },
+    {
+      "id": "n_26931453",
+      "coordinate": {
+        "latitude": 52.390828,
+        "longitude": -1.4989254
+      },
+      "connectedSegmentIds": [
+        "s_4049645"
+      ]
+    },
+    {
+      "id": "n_21475725",
+      "coordinate": {
+        "latitude": 52.3906718,
+        "longitude": -1.4988791
+      },
+      "connectedSegmentIds": [
+        "s_4049646"
+      ]
+    },
+    {
+      "id": "n_401526505",
+      "coordinate": {
+        "latitude": 52.3926983,
+        "longitude": -1.4994125
+      },
+      "connectedSegmentIds": [
+        "s_4049646"
+      ]
+    },
+    {
+      "id": "n_30984240",
+      "coordinate": {
+        "latitude": 52.396148,
+        "longitude": -1.4928481
+      },
+      "connectedSegmentIds": [
+        "s_4821218"
+      ]
+    },
+    {
+      "id": "n_30984242",
+      "coordinate": {
+        "latitude": 52.3955189,
+        "longitude": -1.4939983
+      },
+      "connectedSegmentIds": [
+        "s_4821220"
+      ]
+    },
+    {
+      "id": "n_30984237",
+      "coordinate": {
+        "latitude": 52.3960005,
+        "longitude": -1.4941503
+      },
+      "connectedSegmentIds": [
+        "s_4821220"
+      ]
+    },
+    {
+      "id": "n_30984248",
+      "coordinate": {
+        "latitude": 52.3947153,
+        "longitude": -1.4944366
+      },
+      "connectedSegmentIds": [
+        "s_4821222"
+      ]
+    },
+    {
+      "id": "n_30984244",
+      "coordinate": {
+        "latitude": 52.3954249,
+        "longitude": -1.4953804
+      },
+      "connectedSegmentIds": [
+        "s_4821222"
+      ]
+    },
+    {
+      "id": "n_30984254",
+      "coordinate": {
+        "latitude": 52.3924529,
+        "longitude": -1.492239
+      },
+      "connectedSegmentIds": [
+        "s_4821223"
+      ]
+    },
+    {
+      "id": "n_304740",
+      "coordinate": {
+        "latitude": 52.3943059,
+        "longitude": -1.4948119
+      },
+      "connectedSegmentIds": [
+        "s_4821223",
+        "s_30186239",
+        "s_144394853"
+      ]
+    },
+    {
+      "id": "n_21380721",
+      "coordinate": {
+        "latitude": 52.3939674,
+        "longitude": -1.4959465
+      },
+      "connectedSegmentIds": [
+        "s_8132596"
+      ]
+    },
+    {
+      "id": "n_21380704",
+      "coordinate": {
+        "latitude": 52.3939203,
+        "longitude": -1.4961241
+      },
+      "connectedSegmentIds": [
+        "s_8132596"
+      ]
+    },
+    {
+      "id": "n_21256649",
+      "coordinate": {
+        "latitude": 52.3903788,
+        "longitude": -1.4975029
+      },
+      "connectedSegmentIds": [
+        "s_8133291"
+      ]
+    },
+    {
+      "id": "n_574749742",
+      "coordinate": {
+        "latitude": 52.3903954,
+        "longitude": -1.4987776
+      },
+      "connectedSegmentIds": [
+        "s_8133291"
+      ]
+    },
+    {
+      "id": "n_332611555",
+      "coordinate": {
+        "latitude": 52.3915057,
+        "longitude": -1.4923437
+      },
+      "connectedSegmentIds": [
+        "s_30186234",
+        "s_40401072",
+        "s_362720756"
+      ]
+    },
+    {
+      "id": "n_3669120682",
+      "coordinate": {
+        "latitude": 52.3916853,
+        "longitude": -1.4926259
+      },
+      "connectedSegmentIds": [
+        "s_30186234",
+        "s_362643341"
+      ]
+    },
+    {
+      "id": "n_304737",
+      "coordinate": {
+        "latitude": 52.397225,
+        "longitude": -1.4961025
+      },
+      "connectedSegmentIds": [
+        "s_34626604"
+      ]
+    },
+    {
+      "id": "n_402503160",
+      "coordinate": {
+        "latitude": 52.397318,
+        "longitude": -1.4948663
+      },
+      "connectedSegmentIds": [
+        "s_34626604"
+      ]
+    },
+    {
+      "id": "n_21307948",
+      "coordinate": {
+        "latitude": 52.391696,
+        "longitude": -1.4904019
+      },
+      "connectedSegmentIds": [
+        "s_40401062",
+        "s_154000529",
+        "s_364429431"
+      ]
+    },
+    {
+      "id": "n_21307944",
+      "coordinate": {
+        "latitude": 52.3921851,
+        "longitude": -1.4921233
+      },
+      "connectedSegmentIds": [
+        "s_40401067",
+        "s_40401072",
+        "s_364429431"
+      ]
+    },
+    {
+      "id": "n_365418554",
+      "coordinate": {
+        "latitude": 52.3927141,
+        "longitude": -1.493715
+      },
+      "connectedSegmentIds": [
+        "s_41993108",
+        "s_148191141"
+      ]
+    },
+    {
+      "id": "n_874898382",
+      "coordinate": {
+        "latitude": 52.3941555,
+        "longitude": -1.4943002
+      },
+      "connectedSegmentIds": [
+        "s_73951900"
+      ]
+    },
+    {
+      "id": "n_1076368433",
+      "coordinate": {
+        "latitude": 52.3943413,
+        "longitude": -1.4934346
+      },
+      "connectedSegmentIds": [
+        "s_73951900",
+        "s_144394837"
+      ]
+    },
+    {
+      "id": "n_26931448",
+      "coordinate": {
+        "latitude": 52.3925469,
+        "longitude": -1.4982916
+      },
+      "connectedSegmentIds": [
+        "s_90266388"
+      ]
+    },
+    {
+      "id": "n_874898529",
+      "coordinate": {
+        "latitude": 52.3945574,
+        "longitude": -1.4936676
+      },
+      "connectedSegmentIds": [
+        "s_144394837"
+      ]
+    },
+    {
+      "id": "n_1976513352",
+      "coordinate": {
+        "latitude": 52.3967001,
+        "longitude": -1.4960501
+      },
+      "connectedSegmentIds": [
+        "s_186903609"
+      ]
+    },
+    {
+      "id": "n_1976513349",
+      "coordinate": {
+        "latitude": 52.3974886,
+        "longitude": -1.4963204
+      },
+      "connectedSegmentIds": [
+        "s_186903609"
+      ]
+    },
+    {
+      "id": "n_21256640",
+      "coordinate": {
+        "latitude": 52.3927048,
+        "longitude": -1.4948999
+      },
+      "connectedSegmentIds": [
+        "s_201492045",
+        "s_1246949388",
+        "s_1246963226"
+      ]
+    },
+    {
+      "id": "n_21307834",
+      "coordinate": {
+        "latitude": 52.393005,
+        "longitude": -1.4944403
+      },
+      "connectedSegmentIds": [
+        "s_201492045"
+      ]
+    },
+    {
+      "id": "n_21307825",
+      "coordinate": {
+        "latitude": 52.3908957,
+        "longitude": -1.4918437
+      },
+      "connectedSegmentIds": [
+        "s_224768415",
+        "s_362720756",
+        "s_364429430"
+      ]
+    },
+    {
+      "id": "n_3661145560",
+      "coordinate": {
+        "latitude": 52.3901955,
+        "longitude": -1.4918113
+      },
+      "connectedSegmentIds": [
+        "s_364429430",
+        "s_432614407"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "n_21278826",
+      "coordinate": {
+        "latitude": 52.3933708,
+        "longitude": -1.4992313
+      },
+      "outboundSegmentIds": [
+        "s_4013121",
+        "s_40401078",
+        "s_1246949386"
+      ]
+    },
+    {
+      "nodeId": "n_360474530",
+      "coordinate": {
+        "latitude": 52.3932983,
+        "longitude": -1.4988323
+      },
+      "outboundSegmentIds": [
+        "s_4013148",
+        "s_4016062",
+        "s_1246949386"
+      ]
+    },
+    {
+      "nodeId": "n_21264234",
+      "coordinate": {
+        "latitude": 52.3945308,
+        "longitude": -1.4973419
+      },
+      "outboundSegmentIds": [
+        "s_4014373",
+        "s_4014374"
+      ]
+    },
+    {
+      "nodeId": "n_21256637",
+      "coordinate": {
+        "latitude": 52.3928893,
+        "longitude": -1.496453
+      },
+      "outboundSegmentIds": [
+        "s_4014374",
+        "s_4016062",
+        "s_1246949390"
+      ]
+    },
+    {
+      "nodeId": "n_21307823",
+      "coordinate": {
+        "latitude": 52.3909923,
+        "longitude": -1.4904921
+      },
+      "outboundSegmentIds": [
+        "s_4019060",
+        "s_4019072",
+        "s_224768415"
+      ]
+    },
+    {
+      "nodeId": "n_1052307139",
+      "coordinate": {
+        "latitude": 52.3904257,
+        "longitude": -1.4907285
+      },
+      "outboundSegmentIds": [
+        "s_4019060",
+        "s_224773433"
+      ]
+    },
+    {
+      "nodeId": "n_21307796",
+      "coordinate": {
+        "latitude": 52.3921215,
+        "longitude": -1.4934889
+      },
+      "outboundSegmentIds": [
+        "s_4019066",
+        "s_40401070",
+        "s_362643341"
+      ]
+    },
+    {
+      "nodeId": "n_1052307137",
+      "coordinate": {
+        "latitude": 52.3926568,
+        "longitude": -1.4943868
+      },
+      "outboundSegmentIds": [
+        "s_4019066",
+        "s_1246963226"
+      ]
+    },
+    {
+      "nodeId": "n_304735",
+      "coordinate": {
+        "latitude": 52.3933082,
+        "longitude": -1.4943091
+      },
+      "outboundSegmentIds": [
+        "s_4019071",
+        "s_30186239",
+        "s_41993108"
+      ]
+    },
+    {
+      "nodeId": "n_390470836",
+      "coordinate": {
+        "latitude": 52.3925712,
+        "longitude": -1.4937705
+      },
+      "outboundSegmentIds": [
+        "s_4019071",
+        "s_40401067"
+      ]
+    },
+    {
+      "nodeId": "n_21307822",
+      "coordinate": {
+        "latitude": 52.3912448,
+        "longitude": -1.4900668
+      },
+      "outboundSegmentIds": [
+        "s_4019072",
+        "s_40401062",
+        "s_432614410"
+      ]
+    },
+    {
+      "nodeId": "n_344294798",
+      "coordinate": {
+        "latitude": 52.3976677,
+        "longitude": -1.4963469
+      },
+      "outboundSegmentIds": [
+        "s_4019143",
+        "s_40401070",
+        "s_1087097262"
+      ]
+    },
+    {
+      "nodeId": "n_304738",
+      "coordinate": {
+        "latitude": 52.3960692,
+        "longitude": -1.4956608
+      },
+      "outboundSegmentIds": [
+        "s_4019143",
+        "s_4821218",
+        "s_144394853"
+      ]
+    },
+    {
+      "nodeId": "n_9960500025",
+      "coordinate": {
+        "latitude": 52.3982599,
+        "longitude": -1.4966252
+      },
+      "outboundSegmentIds": [
+        "s_4019146",
+        "s_1087097262"
+      ]
+    },
+    {
+      "nodeId": "n_21382444",
+      "coordinate": {
+        "latitude": 52.3922799,
+        "longitude": -1.4969856
+      },
+      "outboundSegmentIds": [
+        "s_4038974",
+        "s_4049641"
+      ]
+    },
+    {
+      "nodeId": "n_26931450",
+      "coordinate": {
+        "latitude": 52.3928445,
+        "longitude": -1.4961831
+      },
+      "outboundSegmentIds": [
+        "s_4049640",
+        "s_1246949388",
+        "s_1246949390"
+      ]
+    },
+    {
+      "nodeId": "n_304740",
+      "coordinate": {
+        "latitude": 52.3943059,
+        "longitude": -1.4948119
+      },
+      "outboundSegmentIds": [
+        "s_4821223",
+        "s_30186239",
+        "s_144394853"
+      ]
+    },
+    {
+      "nodeId": "n_332611555",
+      "coordinate": {
+        "latitude": 52.3915057,
+        "longitude": -1.4923437
+      },
+      "outboundSegmentIds": [
+        "s_30186234",
+        "s_40401072",
+        "s_362720756"
+      ]
+    },
+    {
+      "nodeId": "n_3669120682",
+      "coordinate": {
+        "latitude": 52.3916853,
+        "longitude": -1.4926259
+      },
+      "outboundSegmentIds": [
+        "s_30186234",
+        "s_362643341"
+      ]
+    },
+    {
+      "nodeId": "n_21307948",
+      "coordinate": {
+        "latitude": 52.391696,
+        "longitude": -1.4904019
+      },
+      "outboundSegmentIds": [
+        "s_40401062",
+        "s_154000529",
+        "s_364429431"
+      ]
+    },
+    {
+      "nodeId": "n_21307944",
+      "coordinate": {
+        "latitude": 52.3921851,
+        "longitude": -1.4921233
+      },
+      "outboundSegmentIds": [
+        "s_40401067",
+        "s_40401072",
+        "s_364429431"
+      ]
+    },
+    {
+      "nodeId": "n_365418554",
+      "coordinate": {
+        "latitude": 52.3927141,
+        "longitude": -1.493715
+      },
+      "outboundSegmentIds": [
+        "s_41993108",
+        "s_148191141"
+      ]
+    },
+    {
+      "nodeId": "n_1076368433",
+      "coordinate": {
+        "latitude": 52.3943413,
+        "longitude": -1.4934346
+      },
+      "outboundSegmentIds": [
+        "s_73951900",
+        "s_144394837"
+      ]
+    },
+    {
+      "nodeId": "n_21256640",
+      "coordinate": {
+        "latitude": 52.3927048,
+        "longitude": -1.4948999
+      },
+      "outboundSegmentIds": [
+        "s_201492045",
+        "s_1246949388",
+        "s_1246963226"
+      ]
+    },
+    {
+      "nodeId": "n_21307825",
+      "coordinate": {
+        "latitude": 52.3908957,
+        "longitude": -1.4918437
+      },
+      "outboundSegmentIds": [
+        "s_224768415",
+        "s_362720756",
+        "s_364429430"
+      ]
+    },
+    {
+      "nodeId": "n_3661145560",
+      "coordinate": {
+        "latitude": 52.3901955,
+        "longitude": -1.4918113
+      },
+      "outboundSegmentIds": [
+        "s_364429430",
+        "s_432614407"
+      ]
+    }
+  ]
+}

@@ -56,6 +56,28 @@ export interface IovnbdMetadata {
   last_reference: { latitude: number; longitude: number };
   extraction_timestamp_utc: string;
   fixture_version: string;
+  /** Per-session IMU axis calibration from reference-correlated analysis */
+  calibration?: {
+    /** Which gyro channel maps to vehicle yaw rate */
+    yaw_channel: 'pitch' | 'yaw' | 'roll';
+    /** Sign multiplier: +1.0 or -1.0 (negative = anti-correlated with reference) */
+    yaw_sign: number;
+    /** Measured evidence used to determine calibration */
+    evidence: {
+      /** Pearson correlation coefficient between ref_yaw_deg_s and the chosen gyro channel */
+      pearson_r: number;
+      /** Fraction of moving samples where sign(ref_yaw) === sign(gyro_channel * yaw_sign) */
+      sign_agreement: number;
+      /** Mean ratio ref_yaw / gyro_channel over moving samples where |gyro| > 0.01 */
+      mean_ratio: number;
+      /** Number of samples used */
+      n_samples: number;
+      /** Analysis window (seconds) */
+      window_sec: string;
+      /** Minimum vehicle speed for sample inclusion (km/h) */
+      min_speed_kmh: number;
+    };
+  } | null;
 }
 
 export interface IovnbdFixture {
@@ -79,7 +101,21 @@ export type ExperimentMode =
   | "R0_PURE_DR"
   | "R1_ROUTE_CONSTRAINED"
   | "R2_FULL_GNSS"
-  | "R3_DROP_RECOVERY";
+  | "R3_DROP_RECOVERY"
+  | "R0_IMU_ONLY"
+  | "R1_IMU_ML_VEL"
+  | "R2_IMU_ML_VEL_YAW"
+  | "R3_IMU_ML_NHC"
+  | "R4_IMU_ML_NHC_ROAD"
+  | "R5_IMU_ML_NHC_ROUTE"
+  | "R6_FULL_DROP_RECOVERY";
+
+/**
+ * Canonical Final Estimator Evaluation Modes:
+ * - FINAL_IDR: Full production estimator (TCN + 15-state ESKF + NHC + Road Network + Route Prior)
+ * - FINAL_IDR_ROAD_ABLATION: Identical production estimator with road network context ablated (Road OFF)
+ */
+export type EvaluationMode = "FINAL_IDR" | "FINAL_IDR_ROAD_ABLATION";
 
 export interface MilestoneErrors {
   at5s: number | null;
@@ -114,11 +150,31 @@ export interface ReplayTelemetry {
   isDeadReckoning: boolean;
   routeConstraintActive: boolean;
 
-  // Real-time Error Metrics
   instantaneousErrorMeters: number | null;
   cumulativeDistanceTraveledM: number;
   cumulativeDriftPercent: number | null;
   milestoneErrors: MilestoneErrors;
+  milestoneDrifts: MilestoneErrors;
+
+  // Session & Model Context
+  sessionId: string;
+  modelBackendName: string;
+  outageDurationSec: number;
+  outageStartSec: number;
+
+  // Final Evaluation Mode & Diagnostics
+  evaluationMode?: EvaluationMode;
+  roadConstraintEnabled?: boolean;
+  routeConstraintEnabled?: boolean;
+  roadUpdateCount?: number;
+  routeUpdateCount?: number;
+  roadCoverageDiagnostics?: import("../../core/types/navigation").RoadCoverageTelemetry | null;
+  roadMemoryDiagnostics?: import("../../core/types/navigation").RoadMemoryTelemetry | null;
+
+  // Trail snapshots — included atomically so map polylines clear on reset/session-change
+  // in the same React render cycle as the other telemetry fields.
+  referenceTrail: { latitude: number; longitude: number }[];
+  estimatedTrail: { latitude: number; longitude: number }[];
 }
 
 export type ReplayTelemetryListener = (telemetry: ReplayTelemetry) => void;

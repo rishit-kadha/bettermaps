@@ -1,0 +1,651 @@
+<USER_REQUEST>
+# BetterMaps — Physical Device Replay UI Visual Audit
+
+Perform a VISUAL + INTERACTION AUDIT of the BetterMaps Replay System on the PHYSICAL OnePlus Nord CE4.
+
+This task is primarily for:
+1. Seeing the replay UI as it actually renders on-device.
+2. Finding overlaps, clipping, spacing problems, inconsistent colors, broken states, and interaction issues.
+3. Documenting every finding in a Markdown audit file that can be used as context for a later UI-fix task.
+
+IMPORTANT:
+Do NOT make UI fixes during this task unless absolutely necessary to make the screen render or interact with the test.
+This is an AUDIT-FIRST task.
+
+Do NOT modify:
+- ESKF
+- road network
+- route constraints
+- road matcher
+- motion models
+- replay/evaluation mathematics
+- test methodology
+
+The goal is to inspect and document, not redesign.
+
+---
+
+# 1. Physical Device Requirement
+
+Use the connected physical OnePlus Nord CE4.
+
+Expected device:
+
+- Model: OnePlus Nord CE4 / CPH2661
+- ADB serial: d988dd17
+
+Verify the device is connected before starting.
+
+Do NOT use only the Android emulator for visual inspection.
+
+The physical-device rendering is the source of truth.
+
+---
+
+# 2. Build and Launch
+
+Build/run the current BetterMaps app using the existing development workflow.
+
+Do not change the project configuration unnecessarily.
+
+Open the actual Replay / Evaluation page.
+
+Verify that the app launches successfully before beginning the audit.
+
+---
+
+# 3. Capture the INITIAL Replay Screen
+
+Before interacting with anything, capture a screenshot of the replay page.
+
+Inspect:
+
+- page margins
+- safe-area handling
+- header positioning
+- title/subtitle alignment
+- session selector
+- replay status
+- map size
+- controls
+- diagnostics area
+- bottom navigation if present
+- spacing between sections
+- card/panel sizes
+- icon alignment
+- typography hierarchy
+- text clipping
+- text wrapping
+- button dimensions
+- empty states
+
+Look specifically for:
+
+- overlapping components
+- controls touching screen edges
+- elements behind system bars
+- excessive empty space
+- cramped spacing
+- inconsistent alignment
+- inconsistent corner radius
+- inconsistent shadows
+- inconsistent icon sizing
+- inconsistent typography
+- accidental default React Native styling
+
+---
+
+# 4. Inspect the Session Selector
+
+Open the test-drive/session selector.
+
+Capture a screenshot.
+
+Inspect:
+
+- modal/bottom sheet positioning
+- sheet height
+- safe-area handling
+- list scrolling
+- row spacing
+- selected state
+- selected indicator
+- text hierarchy
+- close/back interaction
+- touch target sizes
+- clipping
+- list boundaries
+- scrollbar behavior if present
+
+Try selecting multiple sessions.
+
+Use actual available IO-VNBD/replay sessions.
+
+Do not invent data.
+
+Check whether:
+
+- the selected session is visually obvious
+- long session names overflow
+- session metadata overlaps
+- list rows become visually ambiguous
+- the selected state is consistent with the BetterMaps theme
+
+---
+
+# 5. Active Replay Inspection
+
+Select a real test drive and start replay.
+
+Let enough of the trajectory render to produce a visible path/trail.
+
+Capture screenshots during:
+
+### State A
+Replay just started.
+
+### State B
+Replay progressing with visible trajectory.
+
+### State C
+GNSS outage / IDR state if the current replay UI exposes it.
+
+### State D
+Replay completed or reaches the end.
+
+For each screenshot inspect:
+
+- map trail
+- current marker
+- route geometry
+- estimated path
+- GNSS/reference path if intentionally displayed
+- diagnostic overlays
+- status labels
+- progress
+- control placement
+- map-camera behavior
+
+Look for path rendering problems such as:
+
+- old paths remaining
+- duplicate paths
+- paths drawn twice
+- stale session geometry
+- incorrect color
+- incorrect line width
+- path extending beyond expected bounds
+- map camera becoming detached from current position
+
+---
+
+# 6. RESET TEST
+
+This is a critical audit.
+
+Perform:
+
+1. Select session A.
+2. Start replay.
+3. Let the trajectory accumulate.
+4. Press RESET.
+5. Capture a screenshot immediately after reset.
+
+Verify visually that:
+
+- all replay-generated paths disappear
+- old trail disappears
+- stale markers disappear where appropriate
+- stale diagnostics disappear
+- progress resets
+- replay status resets
+- map state resets appropriately
+- no old geometry remains
+
+Then wait several seconds WITHOUT starting another replay.
+
+Capture another screenshot.
+
+This is specifically intended to catch:
+
+> RESET clears state → stale replay callback fires → old path reappears.
+
+If the old path reappears after reset, document it as a HIGH-PRIORITY finding.
+
+---
+
+# 7. SESSION SWITCH TEST
+
+Perform:
+
+1. Run session A.
+2. Reset.
+3. Change to session B.
+4. Capture screenshot before starting B.
+5. Start B.
+6. Let B render.
+7. Capture screenshot.
+
+Verify:
+
+- no trajectory from A remains
+- no session A labels remain
+- no stale timestamps remain
+- no old diagnostics remain
+- no stale marker remains
+- route/trail belongs exclusively to B
+- session selector displays B
+- map camera state is appropriate for B
+
+Look especially for stale asynchronous state.
+
+---
+
+# 8. Theme Audit
+
+Inspect the entire replay page for visual consistency with the current BetterMaps theme.
+
+Check:
+
+- background
+- surfaces/cards
+- borders
+- primary text
+- secondary text
+- muted text
+- accent
+- success
+- warning
+- error/danger
+- selected session
+- buttons
+- reset button
+- modal
+- replay controls
+- diagnostic panel
+- status indicators
+- icons
+
+Check for hard-coded/default colors that look visually disconnected.
+
+Examples of things to flag:
+
+- default React Native blue
+- platform-default grey
+- inconsistent dark/light backgrounds
+- low contrast
+- text that becomes unreadable against the surface
+- icons using unrelated colors
+- reset button visually indistinguishable from ordinary controls
+- selected state not matching the rest of the app
+
+Do NOT assume a color is wrong merely because it is different.
+Judge whether it is semantically and visually consistent with the current BetterMaps theme.
+
+---
+
+# 9. Dark/Light Theme Inspection
+
+If the current app supports theme switching, inspect the replay page in every supported theme.
+
+Capture screenshots.
+
+Check for:
+
+- text disappearing
+- borders becoming invisible
+- controls using stale colors
+- map overlays becoming unreadable
+- selected-state contrast problems
+- cards retaining the wrong background
+- modal retaining wrong colors
+
+Do NOT redesign the theme.
+
+Just document inconsistencies.
+
+---
+
+# 10. Typography Audit
+
+Inspect:
+
+- font sizes
+- font weights
+- uppercase/lowercase usage
+- line height
+- numeric alignment
+- label hierarchy
+- truncation
+- long session names
+- diagnostic text
+- button labels
+
+Pay particular attention to:
+
+- text touching icons
+- text touching card edges
+- multi-line labels unexpectedly changing layout
+- numerical telemetry overflowing
+- buttons becoming too narrow because of text
+
+---
+
+# 11. Touch / Interaction Audit
+
+Physically interact with:
+
+- session selector
+- session rows
+- start
+- pause/resume if available
+- reset
+- diagnostics
+- back/close buttons
+- theme controls if present
+
+Check:
+
+- tap target size
+- whether taps register reliably
+- whether nearby elements steal touches
+- whether modal closes correctly
+- whether scrolling works
+- whether controls are reachable with one hand
+- whether any button is partially off-screen
+
+Document interaction problems separately from visual problems.
+
+---
+
+# 12. Different Screen Sizes / Orientation
+
+Use the physical phone's actual screen dimensions.
+
+Record:
+
+- resolution
+- density if easy to retrieve
+- orientation
+
+Do not arbitrarily rotate the device unless the app supports it.
+
+If the app supports both portrait and landscape, inspect both.
+
+Otherwise, document that only the supported orientation was tested.
+
+---
+
+# 13. Screenshot Requirements
+
+Capture screenshots for at least:
+
+1. Replay initial state
+2. Session selector open
+3. Session selected
+4. Active replay
+5. Replay during visible path accumulation
+6. Reset immediately after clearing
+7. State after reset has remained clean for several seconds
+8. Session switched from A → B
+9. Active replay of session B
+10. Any theme variant supported
+
+Store screenshots in the existing project artifact/evaluation area.
+
+Use descriptive names.
+
+Example:
+
+artifacts/replay_ui_audit/
+  01_initial.png
+  02_session_picker.png
+  03_session_selected.png
+  04_active_replay.png
+  05_path_accumulated.png
+  06_after_reset.png
+  07_reset_stable.png
+  08_session_b_selected.png
+  09_session_b_active.png
+  10_theme_variant.png
+
+Do not overwrite previous evaluation screenshots.
+
+---
+
+# 14. Create a Dedicated Audit Markdown File
+
+Create:
+
+`docs/REPLAY_UI_PHYSICAL_DEVICE_AUDIT.md`
+
+This file is extremely important because it will be used later as context for a separate UI-fix task.
+
+Structure it as:
+
+# Replay UI Physical Device Audit
+
+## Device
+
+- Device model
+- Android version if available
+- ADB serial
+- App/build variant
+- Date/time
+- Screen dimensions
+
+## Scope
+
+State that this was a physical-device visual and interaction audit of the Replay System.
+
+## Screenshots
+
+List each screenshot and what state it represents.
+
+## Executive Summary
+
+Give a concise overall assessment.
+
+## Findings
+
+Use this format for EVERY issue:
+
+### AUDIT-001 — <short name>
+
+**Severity:** Critical / High / Medium / Low
+
+**Category:** Visual / Layout / Interaction / State / Theme / Typography / Map / Other
+
+**Screen:** <screen/state>
+
+**Observed:**
+Exact description of what was seen.
+
+**Expected:**
+What a polished BetterMaps replay UI should do.
+
+**Evidence:**
+Screenshot filename.
+
+**Likely Area:**
+Component/file if it can be confidently identified.
+
+**Recommended Fix:**
+High-level recommendation only.
+Do not implement the fix during this audit.
+
+Then:
+
+### AUDIT-002 — ...
+
+etc.
+
+---
+
+## Confirmed Good Behavior
+
+Document important things that worked correctly.
+
+Examples:
+
+- session selection works
+- reset removes paths
+- selected session is obvious
+- no stale path after reset
+- theme contrast is good
+- replay controls are reachable
+
+This section prevents future agents from unnecessarily changing working behavior.
+
+---
+
+## State/Interaction Findings
+
+Separate findings related to:
+
+- reset
+- session switching
+- stale callbacks
+- replay lifecycle
+- asynchronous loading
+- map state
+
+---
+
+## Theme Findings
+
+Document every theme inconsistency separately.
+
+---
+
+## Layout Findings
+
+Document:
+
+- overlaps
+- clipping
+- spacing
+- alignment
+- safe area
+- modal sizing
+
+---
+
+## Screenshot Index
+
+Create a table:
+
+| ID | Screenshot | State | Notes |
+|----|------------|-------|------|
+| 01 | ... | ... | ... |
+
+---
+
+## Priority Summary
+
+Create:
+
+| ID | Issue | Severity | Area |
+|----|------|----------|------|
+
+Sort by severity.
+
+---
+
+## Recommended Fix Order
+
+Provide a recommended order for a future UI-fix task.
+
+Do NOT make those fixes now.
+
+---
+
+# 15. Important Finding Rules
+
+Be precise.
+
+Do NOT write vague statements like:
+
+"UI could look better."
+
+Instead write:
+
+"Session picker bottom sheet extends beneath the Android navigation/safe-area region, causing the final row to be partially obscured."
+
+Or:
+
+"The reset button clears the visible polyline immediately, but 1–2 seconds later the previous replay trail reappears, indicating a stale replay callback is repopulating the trajectory buffer."
+
+Or:
+
+"The selected session label and metadata have insufficient horizontal separation and visually collide on the physical 1080px-wide device."
+
+Only document things you actually observe.
+
+---
+
+# 16. Do Not Fix Findings
+
+During this task:
+
+DO NOT:
+- redesign components
+- change colors
+- change spacing
+- rewrite replay state
+- modify estimator
+- modify route/road logic
+- alter test data
+- change replay semantics
+
+The audit document is the output.
+
+The next task will consume this document and implement the fixes.
+
+---
+
+# 17. Final Verification
+
+After completing the visual audit:
+
+Run the relevant existing tests to ensure the inspection did not affect functionality.
+
+Do not create fake passing tests.
+
+Report:
+
+### Physical Device
+- connected device
+- build/run result
+
+### Screenshots
+- number captured
+- artifact directory
+
+### Findings
+- Critical
+- High
+- Medium
+- Low
+- no issues where applicable
+
+### Tests
+- existing tests run
+- results
+
+### Documentation
+- path to `docs/REPLAY_UI_PHYSICAL_DEVICE_AUDIT.md`
+
+Finally give a concise statement:
+
+> "The replay UI has been physically inspected on the OnePlus Nord CE4. The attached audit documents all observed visual, layout, interaction, state, and theme inconsistencies and can be used as context for the next UI-fix task."
+
+Do not claim the UI is polished unless the physical inspection supports that conclusion.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-06T13:34:09+05:30.
+
+The user's current state is as follows:
+Other open documents:
+- c:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\tests\integration\RoadContextInfluenceAudit.test.ts (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>

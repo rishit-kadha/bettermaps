@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" width="900" height="550" style="background:#0F172A; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;">
+<text x="100" y="45" fill="#F8FAFC" font-size="20" font-weight="bold">Trajectory Position Error Growth vs Outage Duration</text>
+<text x="100" y="70" fill="#94A3B8" font-size="13">Mean, Median, P95, and Peak Error | Physical OnePlus Nord CE4 (SM7675)</text>
+<line x1="100" y1="470.0" x2="840" y2="470.0" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="474.0" fill="#64748B" font-size="12" text-anchor="end">0m</text>
+<line x1="100" y1="459.86301369863014" x2="840" y2="459.86301369863014" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="463.86301369863014" fill="#64748B" font-size="12" text-anchor="end">50m</text>
+<line x1="100" y1="449.7260273972603" x2="840" y2="449.7260273972603" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="453.7260273972603" fill="#64748B" font-size="12" text-anchor="end">100m</text>
+<line x1="100" y1="439.5890410958904" x2="840" y2="439.5890410958904" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="443.5890410958904" fill="#64748B" font-size="12" text-anchor="end">150m</text>
+<line x1="100" y1="429.45205479452056" x2="840" y2="429.45205479452056" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="433.45205479452056" fill="#64748B" font-size="12" text-anchor="end">200m</text>
+<line x1="100" y1="419.3150684931507" x2="840" y2="419.3150684931507" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="423.3150684931507" fill="#64748B" font-size="12" text-anchor="end">250m</text>
+<line x1="100" y1="409.17808219178085" x2="840" y2="409.17808219178085" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="413.17808219178085" fill="#64748B" font-size="12" text-anchor="end">300m</text>
+<line x1="100" y1="399.04109589041093" x2="840" y2="399.04109589041093" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="403.04109589041093" fill="#64748B" font-size="12" text-anchor="end">350m</text>
+<line x1="100" y1="388.9041095890411" x2="840" y2="388.9041095890411" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="392.9041095890411" fill="#64748B" font-size="12" text-anchor="end">400m</text>
+<line x1="100" y1="378.7671232876712" x2="840" y2="378.7671232876712" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="382.7671232876712" fill="#64748B" font-size="12" text-anchor="end">450m</text>
+<line x1="100" y1="368.6301369863014" x2="840" y2="368.6301369863014" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="372.6301369863014" fill="#64748B" font-size="12" text-anchor="end">500m</text>
+<line x1="100" y1="358.4931506849315" x2="840" y2="358.4931506849315" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="362.4931506849315" fill="#64748B" font-size="12" text-anchor="end">550m</text>
+<line x1="100" y1="348.35616438356163" x2="840" y2="348.35616438356163" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="352.35616438356163" fill="#64748B" font-size="12" text-anchor="end">600m</text>
+<line x1="100" y1="338.2191780821918" x2="840" y2="338.2191780821918" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="342.2191780821918" fill="#64748B" font-size="12" text-anchor="end">650m</text>
+<line x1="100" y1="328.0821917808219" x2="840" y2="328.0821917808219" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="332.0821917808219" fill="#64748B" font-size="12" text-anchor="end">700m</text>
+<line x1="100" y1="317.94520547945206" x2="840" y2="317.94520547945206" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="321.94520547945206" fill="#64748B" font-size="12" text-anchor="end">750m</text>
+<line x1="100" y1="307.8082191780822" x2="840" y2="307.8082191780822" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="311.8082191780822" fill="#64748B" font-size="12" text-anchor="end">800m</text>
+<line x1="100" y1="297.67123287671234" x2="840" y2="297.67123287671234" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="301.67123287671234" fill="#64748B" font-size="12" text-anchor="end">850m</text>
+<line x1="100" y1="287.5342465753425" x2="840" y2="287.5342465753425" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="291.5342465753425" fill="#64748B" font-size="12" text-anchor="end">900m</text>
+<line x1="100" y1="277.3972602739726" x2="840" y2="277.3972602739726" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="281.3972602739726" fill="#64748B" font-size="12" text-anchor="end">950m</text>
+<line x1="100" y1="267.26027397260276" x2="840" y2="267.26027397260276" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="271.26027397260276" fill="#64748B" font-size="12" text-anchor="end">1000m</text>
+<line x1="100" y1="257.1232876712329" x2="840" y2="257.1232876712329" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="261.1232876712329" fill="#64748B" font-size="12" text-anchor="end">1050m</text>
+<line x1="100" y1="246.986301369863" x2="840" y2="246.986301369863" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="250.986301369863" fill="#64748B" font-size="12" text-anchor="end">1100m</text>
+<line x1="100" y1="236.84931506849315" x2="840" y2="236.84931506849315" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="240.84931506849315" fill="#64748B" font-size="12" text-anchor="end">1150m</text>
+<line x1="100" y1="226.7123287671233" x2="840" y2="226.7123287671233" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="230.7123287671233" fill="#64748B" font-size="12" text-anchor="end">1200m</text>
+<line x1="100" y1="216.57534246575344" x2="840" y2="216.57534246575344" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="220.57534246575344" fill="#64748B" font-size="12" text-anchor="end">1250m</text>
+<line x1="100" y1="206.43835616438355" x2="840" y2="206.43835616438355" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="210.43835616438355" fill="#64748B" font-size="12" text-anchor="end">1300m</text>
+<line x1="100" y1="196.3013698630137" x2="840" y2="196.3013698630137" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="200.3013698630137" fill="#64748B" font-size="12" text-anchor="end">1350m</text>
+<line x1="100" y1="186.16438356164383" x2="840" y2="186.16438356164383" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="190.16438356164383" fill="#64748B" font-size="12" text-anchor="end">1400m</text>
+<line x1="100" y1="176.02739726027397" x2="840" y2="176.02739726027397" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="180.02739726027397" fill="#64748B" font-size="12" text-anchor="end">1450m</text>
+<line x1="100" y1="165.8904109589041" x2="840" y2="165.8904109589041" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="169.8904109589041" fill="#64748B" font-size="12" text-anchor="end">1500m</text>
+<line x1="100" y1="155.75342465753425" x2="840" y2="155.75342465753425" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="159.75342465753425" fill="#64748B" font-size="12" text-anchor="end">1550m</text>
+<line x1="100" y1="145.6164383561644" x2="840" y2="145.6164383561644" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="149.6164383561644" fill="#64748B" font-size="12" text-anchor="end">1600m</text>
+<line x1="100" y1="135.47945205479454" x2="840" y2="135.47945205479454" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="139.47945205479454" fill="#64748B" font-size="12" text-anchor="end">1650m</text>
+<line x1="100" y1="125.34246575342468" x2="840" y2="125.34246575342468" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="129.34246575342468" fill="#64748B" font-size="12" text-anchor="end">1700m</text>
+<line x1="100" y1="115.20547945205482" x2="840" y2="115.20547945205482" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="119.20547945205482" fill="#64748B" font-size="12" text-anchor="end">1750m</text>
+<line x1="100" y1="105.06849315068496" x2="840" y2="105.06849315068496" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="109.06849315068496" fill="#64748B" font-size="12" text-anchor="end">1800m</text>
+<line x1="156.92307692307693" y1="100" x2="156.92307692307693" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="156.92307692307693" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">5s</text>
+<line x1="213.84615384615387" y1="100" x2="213.84615384615387" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="213.84615384615387" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">10s</text>
+<line x1="327.69230769230774" y1="100" x2="327.69230769230774" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="327.69230769230774" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">20s</text>
+<line x1="441.53846153846155" y1="100" x2="441.53846153846155" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="441.53846153846155" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">30s</text>
+<line x1="783.0769230769231" y1="100" x2="783.0769230769231" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="783.0769230769231" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">60s</text>
+<line x1="100" y1="470" x2="840" y2="470" stroke="#64748B" stroke-width="2"/>
+<line x1="100" y1="100" x2="100" y2="470" stroke="#64748B" stroke-width="2"/>
+<text x="470.0" y="525" fill="#CBD5E1" font-size="14" font-weight="600" text-anchor="middle">Outage Duration (Seconds)</text>
+<text x="35" y="285.0" fill="#CBD5E1" font-size="14" font-weight="600" text-anchor="middle" transform="rotate(-90 35 285.0)">Position Error (Meters)</text>
+<path d="M 156.92307692307693 403.8683287671233 L 213.84615384615387 353.77134246575343 L 327.69230769230774 319.95435616438357 L 441.53846153846155 262.8851506849315 L 783.0769230769231 104.36498630136987" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-dasharray="6,3" stroke-linejoin="round"/>
+<circle cx="156.92307692307693" cy="403.8683287671233" r="5" fill="#EF4444" stroke="#0F172A" stroke-width="2"/>
+<circle cx="213.84615384615387" cy="353.77134246575343" r="5" fill="#EF4444" stroke="#0F172A" stroke-width="2"/>
+<circle cx="327.69230769230774" cy="319.95435616438357" r="5" fill="#EF4444" stroke="#0F172A" stroke-width="2"/>
+<circle cx="441.53846153846155" cy="262.8851506849315" r="5" fill="#EF4444" stroke="#0F172A" stroke-width="2"/>
+<circle cx="783.0769230769231" cy="104.36498630136987" r="5" fill="#EF4444" stroke="#0F172A" stroke-width="2"/>
+<path d="M 156.92307692307693 404.5779178082192 L 213.84615384615387 357.59501369863017 L 327.69230769230774 324.56668493150687 L 441.53846153846155 272.15846575342465 L 783.0769230769231 112.91046575342472" fill="none" stroke="#F59E0B" stroke-width="3.0" stroke-linejoin="round"/>
+<circle cx="156.92307692307693" cy="404.5779178082192" r="5" fill="#F59E0B" stroke="#0F172A" stroke-width="2"/>
+<circle cx="213.84615384615387" cy="357.59501369863017" r="5" fill="#F59E0B" stroke="#0F172A" stroke-width="2"/>
+<circle cx="327.69230769230774" cy="324.56668493150687" r="5" fill="#F59E0B" stroke="#0F172A" stroke-width="2"/>
+<circle cx="441.53846153846155" cy="272.15846575342465" r="5" fill="#F59E0B" stroke="#0F172A" stroke-width="2"/>
+<circle cx="783.0769230769231" cy="112.91046575342472" r="5" fill="#F59E0B" stroke="#0F172A" stroke-width="2"/>
+<path d="M 156.92307692307693 454.05452054794523 L 213.84615384615387 441.13391780821917 L 327.69230769230774 430.30964383561644 L 441.53846153846155 415.2339178082192 L 783.0769230769231 387.2862465753425" fill="none" stroke="#38BDF8" stroke-width="3.0" stroke-linejoin="round"/>
+<circle cx="156.92307692307693" cy="454.05452054794523" r="5" fill="#38BDF8" stroke="#0F172A" stroke-width="2"/>
+<circle cx="213.84615384615387" cy="441.13391780821917" r="5" fill="#38BDF8" stroke="#0F172A" stroke-width="2"/>
+<circle cx="327.69230769230774" cy="430.30964383561644" r="5" fill="#38BDF8" stroke="#0F172A" stroke-width="2"/>
+<circle cx="441.53846153846155" cy="415.2339178082192" r="5" fill="#38BDF8" stroke="#0F172A" stroke-width="2"/>
+<circle cx="783.0769230769231" cy="387.2862465753425" r="5" fill="#38BDF8" stroke="#0F172A" stroke-width="2"/>
+<path d="M 156.92307692307693 460.5158356164384 L 213.84615384615387 443.9499726027397 L 327.69230769230774 446.8937534246575 L 441.53846153846155 394.95183561643836 L 783.0769230769231 430.7333698630137" fill="none" stroke="#10B981" stroke-width="3.0" stroke-linejoin="round"/>
+<circle cx="156.92307692307693" cy="460.5158356164384" r="5" fill="#10B981" stroke="#0F172A" stroke-width="2"/>
+<circle cx="213.84615384615387" cy="443.9499726027397" r="5" fill="#10B981" stroke="#0F172A" stroke-width="2"/>
+<circle cx="327.69230769230774" cy="446.8937534246575" r="5" fill="#10B981" stroke="#0F172A" stroke-width="2"/>
+<circle cx="441.53846153846155" cy="394.95183561643836" r="5" fill="#10B981" stroke="#0F172A" stroke-width="2"/>
+<circle cx="783.0769230769231" cy="430.7333698630137" r="5" fill="#10B981" stroke="#0F172A" stroke-width="2"/>
+<rect x="120" y="125" width="420" height="40" fill="#1E293B" stroke="#334155" rx="6"/>
+<circle cx="140" cy="145" r="4" fill="#38BDF8"/>
+<text x="152" y="149" fill="#F8FAFC" font-size="12" font-weight="600">Mean</text>
+<circle cx="230" cy="145" r="4" fill="#10B981"/>
+<text x="242" y="149" fill="#F8FAFC" font-size="12" font-weight="600">Median</text>
+<circle cx="330" cy="145" r="4" fill="#F59E0B"/>
+<text x="342" y="149" fill="#F8FAFC" font-size="12" font-weight="600">P95 Error</text>
+<circle cx="440" cy="145" r="4" fill="#EF4444"/>
+<text x="452" y="149" fill="#F8FAFC" font-size="12" font-weight="600">Max Excursion</text>
+</svg>

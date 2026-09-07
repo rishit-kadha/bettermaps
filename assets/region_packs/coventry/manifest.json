@@ -1,0 +1,541 @@
+{
+  "id": "coventry_uk",
+  "name": "Coventry UK Road Network",
+  "bbox": {
+    "minLat": 52.38,
+    "maxLat": 52.43,
+    "minLon": -1.55,
+    "maxLon": -1.48
+  },
+  "tileScheme": "deg",
+  "roadDataVersion": 1,
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "createdAt": "2026-09-06T21:03:24.227Z",
+  "byteSize": 2271033,
+  "checksum": "d58681410589e927",
+  "tiles": [
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5240:-151"
+      },
+      "fileName": "tiles/tile_100_5240_-151.json",
+      "bounds": {
+        "minLat": 52.4,
+        "maxLat": 52.410000000000004,
+        "minLon": -1.51,
+        "maxLon": -1.5
+      },
+      "segmentCount": 170,
+      "nodeCount": 187,
+      "intersectionCount": 115,
+      "byteSize": 244335,
+      "checksum": "57d3ba0f3ad044d1"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5239:-151"
+      },
+      "fileName": "tiles/tile_100_5239_-151.json",
+      "bounds": {
+        "minLat": 52.39,
+        "maxLat": 52.4,
+        "minLon": -1.51,
+        "maxLon": -1.5
+      },
+      "segmentCount": 48,
+      "nodeCount": 75,
+      "intersectionCount": 18,
+      "byteSize": 88102,
+      "checksum": "22fad83b08d6034f"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5238:-150"
+      },
+      "fileName": "tiles/tile_100_5238_-150.json",
+      "bounds": {
+        "minLat": 52.38,
+        "maxLat": 52.39,
+        "minLon": -1.5,
+        "maxLon": -1.49
+      },
+      "segmentCount": 16,
+      "nodeCount": 18,
+      "intersectionCount": 7,
+      "byteSize": 39160,
+      "checksum": "0143f55170b40815"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5240:-152"
+      },
+      "fileName": "tiles/tile_100_5240_-152.json",
+      "bounds": {
+        "minLat": 52.4,
+        "maxLat": 52.410000000000004,
+        "minLon": -1.52,
+        "maxLon": -1.51
+      },
+      "segmentCount": 217,
+      "nodeCount": 206,
+      "intersectionCount": 167,
+      "byteSize": 292845,
+      "checksum": "b56a11e1b807d3ff"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5239:-152"
+      },
+      "fileName": "tiles/tile_100_5239_-152.json",
+      "bounds": {
+        "minLat": 52.39,
+        "maxLat": 52.4,
+        "minLon": -1.52,
+        "maxLon": -1.51
+      },
+      "segmentCount": 58,
+      "nodeCount": 68,
+      "intersectionCount": 31,
+      "byteSize": 100285,
+      "checksum": "5e14a8e098b3e9db"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5240:-154"
+      },
+      "fileName": "tiles/tile_100_5240_-154.json",
+      "bounds": {
+        "minLat": 52.4,
+        "maxLat": 52.410000000000004,
+        "minLon": -1.54,
+        "maxLon": -1.53
+      },
+      "segmentCount": 51,
+      "nodeCount": 67,
+      "intersectionCount": 19,
+      "byteSize": 83286,
+      "checksum": "b7fc94c0e2ce2813"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5239:-150"
+      },
+      "fileName": "tiles/tile_100_5239_-150.json",
+      "bounds": {
+        "minLat": 52.39,
+        "maxLat": 52.4,
+        "minLon": -1.5,
+        "maxLon": -1.49
+      },
+      "segmentCount": 47,
+      "nodeCount": 52,
+      "intersectionCount": 26,
+      "byteSize": 79650,
+      "checksum": "bcad45bb2f6424f7"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5240:-150"
+      },
+      "fileName": "tiles/tile_100_5240_-150.json",
+      "bounds": {
+        "minLat": 52.4,
+        "maxLat": 52.410000000000004,
+        "minLon": -1.5,
+        "maxLon": -1.49
+      },
+      "segmentCount": 128,
+      "nodeCount": 136,
+      "intersectionCount": 72,
+      "byteSize": 182768,
+      "checksum": "007270c455956ec6"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5239:-153"
+      },
+      "fileName": "tiles/tile_100_5239_-153.json",
+      "bounds": {
+        "minLat": 52.39,
+        "maxLat": 52.4,
+        "minLon": -1.53,
+        "maxLon": -1.52
+      },
+      "segmentCount": 17,
+      "nodeCount": 28,
+      "intersectionCount": 8,
+      "byteSize": 39785,
+      "checksum": "75b171f44e4aab91"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5238:-152"
+      },
+      "fileName": "tiles/tile_100_5238_-152.json",
+      "bounds": {
+        "minLat": 52.38,
+        "maxLat": 52.39,
+        "minLon": -1.52,
+        "maxLon": -1.51
+      },
+      "segmentCount": 6,
+      "nodeCount": 10,
+      "intersectionCount": 2,
+      "byteSize": 10582,
+      "checksum": "e52931a4068b5bff"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5238:-151"
+      },
+      "fileName": "tiles/tile_100_5238_-151.json",
+      "bounds": {
+        "minLat": 52.38,
+        "maxLat": 52.39,
+        "minLon": -1.51,
+        "maxLon": -1.5
+      },
+      "segmentCount": 18,
+      "nodeCount": 29,
+      "intersectionCount": 3,
+      "byteSize": 30616,
+      "checksum": "999e0225510fc7c1"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5239:-154"
+      },
+      "fileName": "tiles/tile_100_5239_-154.json",
+      "bounds": {
+        "minLat": 52.39,
+        "maxLat": 52.4,
+        "minLon": -1.54,
+        "maxLon": -1.53
+      },
+      "segmentCount": 43,
+      "nodeCount": 41,
+      "intersectionCount": 19,
+      "byteSize": 64886,
+      "checksum": "a3568d6b9acfc525"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5240:-153"
+      },
+      "fileName": "tiles/tile_100_5240_-153.json",
+      "bounds": {
+        "minLat": 52.4,
+        "maxLat": 52.410000000000004,
+        "minLon": -1.53,
+        "maxLon": -1.52
+      },
+      "segmentCount": 100,
+      "nodeCount": 111,
+      "intersectionCount": 55,
+      "byteSize": 146052,
+      "checksum": "20f245ef195b7e35"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5241:-152"
+      },
+      "fileName": "tiles/tile_100_5241_-152.json",
+      "bounds": {
+        "minLat": 52.410000000000004,
+        "maxLat": 52.42,
+        "minLon": -1.52,
+        "maxLon": -1.51
+      },
+      "segmentCount": 111,
+      "nodeCount": 126,
+      "intersectionCount": 72,
+      "byteSize": 167983,
+      "checksum": "c9eb3da120b0bfee"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5238:-153"
+      },
+      "fileName": "tiles/tile_100_5238_-153.json",
+      "bounds": {
+        "minLat": 52.38,
+        "maxLat": 52.39,
+        "minLon": -1.53,
+        "maxLon": -1.52
+      },
+      "segmentCount": 6,
+      "nodeCount": 6,
+      "intersectionCount": 4,
+      "byteSize": 8316,
+      "checksum": "ed09ee4d8c8eb023"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5241:-151"
+      },
+      "fileName": "tiles/tile_100_5241_-151.json",
+      "bounds": {
+        "minLat": 52.410000000000004,
+        "maxLat": 52.42,
+        "minLon": -1.51,
+        "maxLon": -1.5
+      },
+      "segmentCount": 149,
+      "nodeCount": 168,
+      "intersectionCount": 81,
+      "byteSize": 213058,
+      "checksum": "c8f2ff9d432b0b94"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5241:-149"
+      },
+      "fileName": "tiles/tile_100_5241_-149.json",
+      "bounds": {
+        "minLat": 52.410000000000004,
+        "maxLat": 52.42,
+        "minLon": -1.49,
+        "maxLon": -1.48
+      },
+      "segmentCount": 5,
+      "nodeCount": 9,
+      "intersectionCount": 0,
+      "byteSize": 10951,
+      "checksum": "64243ed7ff2c896b"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5241:-154"
+      },
+      "fileName": "tiles/tile_100_5241_-154.json",
+      "bounds": {
+        "minLat": 52.410000000000004,
+        "maxLat": 52.42,
+        "minLon": -1.54,
+        "maxLon": -1.53
+      },
+      "segmentCount": 55,
+      "nodeCount": 58,
+      "intersectionCount": 28,
+      "byteSize": 72595,
+      "checksum": "3983d83c8f100ac7"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5240:-149"
+      },
+      "fileName": "tiles/tile_100_5240_-149.json",
+      "bounds": {
+        "minLat": 52.4,
+        "maxLat": 52.410000000000004,
+        "minLon": -1.49,
+        "maxLon": -1.48
+      },
+      "segmentCount": 2,
+      "nodeCount": 4,
+      "intersectionCount": 0,
+      "byteSize": 5886,
+      "checksum": "b978984fe22c3063"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5242:-154"
+      },
+      "fileName": "tiles/tile_100_5242_-154.json",
+      "bounds": {
+        "minLat": 52.42,
+        "maxLat": 52.43,
+        "minLon": -1.54,
+        "maxLon": -1.53
+      },
+      "segmentCount": 3,
+      "nodeCount": 4,
+      "intersectionCount": 0,
+      "byteSize": 7026,
+      "checksum": "da3cdb52b1022ded"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5241:-153"
+      },
+      "fileName": "tiles/tile_100_5241_-153.json",
+      "bounds": {
+        "minLat": 52.410000000000004,
+        "maxLat": 52.42,
+        "minLon": -1.53,
+        "maxLon": -1.52
+      },
+      "segmentCount": 111,
+      "nodeCount": 145,
+      "intersectionCount": 48,
+      "byteSize": 171076,
+      "checksum": "cf3c6dfadf64bbfb"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5242:-153"
+      },
+      "fileName": "tiles/tile_100_5242_-153.json",
+      "bounds": {
+        "minLat": 52.42,
+        "maxLat": 52.43,
+        "minLon": -1.53,
+        "maxLon": -1.52
+      },
+      "segmentCount": 2,
+      "nodeCount": 6,
+      "intersectionCount": 0,
+      "byteSize": 4748,
+      "checksum": "458ffcef74060667"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5241:-150"
+      },
+      "fileName": "tiles/tile_100_5241_-150.json",
+      "bounds": {
+        "minLat": 52.410000000000004,
+        "maxLat": 52.42,
+        "minLon": -1.5,
+        "maxLon": -1.49
+      },
+      "segmentCount": 115,
+      "nodeCount": 174,
+      "intersectionCount": 38,
+      "byteSize": 176268,
+      "checksum": "a2a091e60ebccbe3"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5242:-151"
+      },
+      "fileName": "tiles/tile_100_5242_-151.json",
+      "bounds": {
+        "minLat": 52.42,
+        "maxLat": 52.43,
+        "minLon": -1.51,
+        "maxLon": -1.5
+      },
+      "segmentCount": 1,
+      "nodeCount": 4,
+      "intersectionCount": 1,
+      "byteSize": 3198,
+      "checksum": "92018adfd57a078f"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5238:-154"
+      },
+      "fileName": "tiles/tile_100_5238_-154.json",
+      "bounds": {
+        "minLat": 52.38,
+        "maxLat": 52.39,
+        "minLon": -1.54,
+        "maxLon": -1.53
+      },
+      "segmentCount": 13,
+      "nodeCount": 14,
+      "intersectionCount": 12,
+      "byteSize": 16339,
+      "checksum": "6634c9940cf69247"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5238:-149"
+      },
+      "fileName": "tiles/tile_100_5238_-149.json",
+      "bounds": {
+        "minLat": 52.38,
+        "maxLat": 52.39,
+        "minLon": -1.49,
+        "maxLon": -1.48
+      },
+      "segmentCount": 2,
+      "nodeCount": 2,
+      "intersectionCount": 0,
+      "byteSize": 3805,
+      "checksum": "bd33105eaa539a75"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5242:-152"
+      },
+      "fileName": "tiles/tile_100_5242_-152.json",
+      "bounds": {
+        "minLat": 52.42,
+        "maxLat": 52.43,
+        "minLon": -1.52,
+        "maxLon": -1.51
+      },
+      "segmentCount": 1,
+      "nodeCount": 2,
+      "intersectionCount": 0,
+      "byteSize": 2833,
+      "checksum": "5f47eebbeaaa7192"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5241:-155"
+      },
+      "fileName": "tiles/tile_100_5241_-155.json",
+      "bounds": {
+        "minLat": 52.410000000000004,
+        "maxLat": 52.42,
+        "minLon": -1.55,
+        "maxLon": -1.54
+      },
+      "segmentCount": 1,
+      "nodeCount": 1,
+      "intersectionCount": 0,
+      "byteSize": 2651,
+      "checksum": "057a3afa4718497f"
+    },
+    {
+      "key": {
+        "scheme": "deg",
+        "key": "100:5239:-149"
+      },
+      "fileName": "tiles/tile_100_5239_-149.json",
+      "bounds": {
+        "minLat": 52.39,
+        "maxLat": 52.4,
+        "minLon": -1.49,
+        "maxLon": -1.48
+      },
+      "segmentCount": 1,
+      "nodeCount": 2,
+      "intersectionCount": 0,
+      "byteSize": 1948,
+      "checksum": "f563486d51cd440d"
+    }
+  ]
+}

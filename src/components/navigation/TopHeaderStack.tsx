@@ -14,6 +14,7 @@ interface TopHeaderStackProps {
   onToggleDiagnostics: () => void;
   onSwitchProvider: () => void;
   onOpenSensors?: () => void;
+  onOpenOfflineRegions?: () => void;
 }
 
 /**
@@ -24,6 +25,7 @@ interface TopHeaderStackProps {
  * 2. Clean Single-Row Action Pills:
  *    - [ Diagnostics / Close Stats ]
  *    - [ Live GNSS / Simulator ]
+ *    - [ Offline Packs ]
  *
  * Sensors and GNSS 3D Fix pills are removed to eliminate redundancy with FABs and stats card.
  */
@@ -33,6 +35,7 @@ export const TopHeaderStack: React.FC<TopHeaderStackProps> = ({
   diagnosticsOpen,
   onToggleDiagnostics,
   onSwitchProvider,
+  onOpenOfflineRegions,
 }) => {
   const insets = useSafeAreaInsets();
   const { theme } = useTheme();
@@ -82,35 +85,33 @@ export const TopHeaderStack: React.FC<TopHeaderStackProps> = ({
           </Text>
         </TouchableOpacity>
 
-        {/* Action Pill 2: Provider Switcher (Live GNSS / Simulator) */}
-        <TouchableOpacity
-          style={[
-            styles.actionPill,
-            {
-              backgroundColor: theme.surface,
-              borderColor: theme.surfaceBorder,
-            },
-          ]}
-          onPress={onSwitchProvider}
-          activeOpacity={0.7}
-          hitSlop={{ top: 8, bottom: 8, left: 6, right: 6 }}
-          accessibilityRole="button"
-          accessibilityLabel="Switch positioning provider"
-        >
-          <Ionicons
-            name={
-              providerType === "gnss"
-                ? "navigate-circle-outline"
-                : "game-controller-outline"
-            }
-            size={16}
-            color={providerType === "gnss" ? "#137333" : "#9334E6"}
-            style={styles.pillIcon}
-          />
-          <Text style={[styles.actionPillText, { color: theme.textPrimary }]}>
-            {providerType === "gnss" ? "Live GNSS" : "Simulator"}
-          </Text>
-        </TouchableOpacity>
+        {/* Action Pill 2: Offline Region Packs */}
+        {onOpenOfflineRegions && (
+          <TouchableOpacity
+            style={[
+              styles.actionPill,
+              {
+                backgroundColor: theme.surface,
+                borderColor: theme.surfaceBorder,
+              },
+            ]}
+            onPress={onOpenOfflineRegions}
+            activeOpacity={0.7}
+            hitSlop={{ top: 8, bottom: 8, left: 6, right: 6 }}
+            accessibilityRole="button"
+            accessibilityLabel="Manage offline regional map packs"
+          >
+            <Ionicons
+              name="map-outline"
+              size={15}
+              color={theme.accent}
+              style={styles.pillIcon}
+            />
+            <Text style={[styles.actionPillText, { color: theme.textPrimary }]}>
+              Offline Packs
+            </Text>
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );

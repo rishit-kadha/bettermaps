@@ -1,0 +1,289 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2863:7722"
+  },
+  "bounds": {
+    "minLat": 28.63,
+    "maxLat": 28.64,
+    "minLon": 77.22,
+    "maxLon": 77.23
+  },
+  "segments": [
+    {
+      "id": "delhi_s_cp_inner_2",
+      "name": "Connaught Place Inner Circle E",
+      "startPoint": {
+        "latitude": 28.6347,
+        "longitude": 77.223,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.6328,
+        "longitude": 77.224,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.6347,
+          "longitude": 77.223,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.63375,
+          "longitude": 77.2235,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6328,
+          "longitude": 77.224,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 232.7,
+      "bearingDeg": 155.2,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 8.3,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_cp_rad2",
+      "endNodeId": "delhi_n_cp_rad3"
+    },
+    {
+      "id": "delhi_s_cp_inner_3",
+      "name": "Connaught Place Inner Circle SE",
+      "startPoint": {
+        "latitude": 28.6328,
+        "longitude": 77.224,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.63,
+        "longitude": 77.2215,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.6328,
+          "longitude": 77.224,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6314,
+          "longitude": 77.22275,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.63,
+          "longitude": 77.2215,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 395.6,
+      "bearingDeg": 218.1,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 8.3,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_cp_rad3",
+      "endNodeId": "delhi_n_cp_rad4"
+    },
+    {
+      "id": "delhi_s_cp_inner_4",
+      "name": "Connaught Place Inner Circle S",
+      "startPoint": {
+        "latitude": 28.63,
+        "longitude": 77.2215,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.63,
+        "longitude": 77.217,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.63,
+          "longitude": 77.2215,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.63,
+          "longitude": 77.21925,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.63,
+          "longitude": 77.217,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 439.2,
+      "bearingDeg": 270,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 8.3,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_cp_rad4",
+      "endNodeId": "delhi_n_cp_rad5"
+    },
+    {
+      "id": "delhi_s_barakhamba_1",
+      "name": "Barakhamba Road",
+      "startPoint": {
+        "latitude": 28.6347,
+        "longitude": 77.223,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.6295,
+        "longitude": 77.2285,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.6347,
+          "longitude": 77.223,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6321,
+          "longitude": 77.22575,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6295,
+          "longitude": 77.2285,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 789,
+      "bearingDeg": 137.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.9,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_cp_rad2",
+      "endNodeId": "delhi_n_barakhamba"
+    },
+    {
+      "id": "delhi_s_janpath_1",
+      "name": "Janpath North",
+      "startPoint": {
+        "latitude": 28.63,
+        "longitude": 77.2215,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.626,
+        "longitude": 77.2185,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.63,
+          "longitude": 77.2215,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.628,
+          "longitude": 77.22,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.626,
+          "longitude": 77.2185,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 532.5,
+      "bearingDeg": 213.4,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 11.1,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_cp_rad4",
+      "endNodeId": "delhi_n_janpath_tolstoy"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_cp_rad2",
+      "coordinate": {
+        "latitude": 28.6347,
+        "longitude": 77.223,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_cp_inner_1",
+        "delhi_s_cp_inner_2",
+        "delhi_s_barakhamba_1"
+      ]
+    },
+    {
+      "id": "delhi_n_cp_rad3",
+      "coordinate": {
+        "latitude": 28.6328,
+        "longitude": 77.224,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_cp_inner_2",
+        "delhi_s_cp_inner_3"
+      ]
+    },
+    {
+      "id": "delhi_n_cp_rad4",
+      "coordinate": {
+        "latitude": 28.63,
+        "longitude": 77.2215,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_cp_inner_3",
+        "delhi_s_cp_inner_4",
+        "delhi_s_janpath_1"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_cp_rad2",
+      "coordinate": {
+        "latitude": 28.6347,
+        "longitude": 77.223,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_cp_inner_1",
+        "delhi_s_cp_inner_2",
+        "delhi_s_barakhamba_1"
+      ]
+    },
+    {
+      "nodeId": "delhi_n_cp_rad3",
+      "coordinate": {
+        "latitude": 28.6328,
+        "longitude": 77.224,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_cp_inner_2",
+        "delhi_s_cp_inner_3"
+      ]
+    },
+    {
+      "nodeId": "delhi_n_cp_rad4",
+      "coordinate": {
+        "latitude": 28.63,
+        "longitude": 77.2215,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_cp_inner_3",
+        "delhi_s_cp_inner_4",
+        "delhi_s_janpath_1"
+      ]
+    }
+  ]
+}

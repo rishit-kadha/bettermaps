@@ -122,8 +122,8 @@ export class AndroidGnssLocationProvider implements ILocationProvider {
       this.locationSubscription = await Location.watchPositionAsync(
         {
           accuracy: Location.Accuracy.BestForNavigation,
-          timeInterval: 500, // Query interval ~2 Hz for Phase 1 GNSS
-          distanceInterval: 0.5, // 0.5m minimum displacement
+          timeInterval: 500, // Query interval ~2 Hz for continuous GNSS
+          distanceInterval: 0, // 0m displacement: deliver updates continuously even when stationary
         },
         (location) => {
           const navLoc = this.normalizePosition(location);

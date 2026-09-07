@@ -1,0 +1,3477 @@
+{
+  "generatedAt": "2026-09-06T23:39:53.557Z",
+  "outageWindow": "20-50s",
+  "roadBbox": {
+    "latMin": 52.195,
+    "latMax": 53.177,
+    "lonMin": -2.214,
+    "lonMax": -1.431
+  },
+  "sessions": [
+    {
+      "sessionId": "Vta8",
+      "temporal": {
+        "valid": true,
+        "durationSec": 119.9,
+        "totalSamples": 1200,
+        "sampleIntervalMs": 100,
+        "outageStartIdx": 201,
+        "outageEndIdx": 500,
+        "outageSamplesN": 299,
+        "minSpeedKmh": 0,
+        "maxSpeedKmh": 6.3,
+        "isStationary": false
+      },
+      "roadCoverage": {
+        "covered": false,
+        "inBbox": true,
+        "lat": 52.8633,
+        "lon": -1.6827,
+        "nearbySegments": -1,
+        "reason": "In bbox but 0 segments"
+      },
+      "ablations": {
+        "A_IMU_ONLY": {
+          "ablation": "A_IMU_ONLY",
+          "useRoad": false,
+          "useRoute": false,
+          "outageSamplesN": 299,
+          "outageDistM": 10.41,
+          "endpointErrorM": 14.11,
+          "meanErrorM": 5.79,
+          "p95ErrorM": 14.36,
+          "maxErrorM": 17,
+          "sihDriftPct": 135.47,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20.1,
+              "err": 1.6,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 1.7,
+              "dist": 0.3
+            },
+            {
+              "relSec": 25.9,
+              "err": 1.7,
+              "dist": 0.5
+            },
+            {
+              "relSec": 28.8,
+              "err": 2.3,
+              "dist": 0.8
+            },
+            {
+              "relSec": 31.7,
+              "err": 3.2,
+              "dist": 1
+            },
+            {
+              "relSec": 34.6,
+              "err": 2.6,
+              "dist": 1.2
+            },
+            {
+              "relSec": 37.5,
+              "err": 3.2,
+              "dist": 1.4
+            },
+            {
+              "relSec": 40.4,
+              "err": 6.1,
+              "dist": 4.4
+            },
+            {
+              "relSec": 43.3,
+              "err": 15.5,
+              "dist": 8.9
+            },
+            {
+              "relSec": 46.2,
+              "err": 13.8,
+              "dist": 10.3
+            },
+            {
+              "relSec": 49.1,
+              "err": 14.3,
+              "dist": 10.4
+            }
+          ]
+        },
+        "B_ROAD": {
+          "ablation": "B_ROAD",
+          "useRoad": true,
+          "useRoute": false,
+          "outageSamplesN": 299,
+          "outageDistM": 10.41,
+          "endpointErrorM": 16.7,
+          "meanErrorM": 7.05,
+          "p95ErrorM": 16.83,
+          "maxErrorM": 17.86,
+          "sihDriftPct": 160.35,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 676,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20.1,
+              "err": 1.7,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 2.5,
+              "dist": 0.3
+            },
+            {
+              "relSec": 25.9,
+              "err": 4.7,
+              "dist": 0.5
+            },
+            {
+              "relSec": 28.8,
+              "err": 4,
+              "dist": 0.8
+            },
+            {
+              "relSec": 31.7,
+              "err": 3.1,
+              "dist": 1
+            },
+            {
+              "relSec": 34.6,
+              "err": 3.1,
+              "dist": 1.2
+            },
+            {
+              "relSec": 37.5,
+              "err": 3,
+              "dist": 1.4
+            },
+            {
+              "relSec": 40.4,
+              "err": 6.7,
+              "dist": 4.4
+            },
+            {
+              "relSec": 43.3,
+              "err": 16.4,
+              "dist": 8.9
+            },
+            {
+              "relSec": 46.2,
+              "err": 16.7,
+              "dist": 10.3
+            },
+            {
+              "relSec": 49.1,
+              "err": 16.9,
+              "dist": 10.4
+            }
+          ]
+        },
+        "C_ROUTE_LEAKY": {
+          "ablation": "C_ROUTE_LEAKY",
+          "useRoad": false,
+          "useRoute": true,
+          "outageSamplesN": 299,
+          "outageDistM": 10.41,
+          "endpointErrorM": 13.56,
+          "meanErrorM": 5.77,
+          "p95ErrorM": 14.01,
+          "maxErrorM": 17.01,
+          "sihDriftPct": 130.21,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 45,
+          "timeSeriesSample": [
+            {
+              "relSec": 20.1,
+              "err": 1.7,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 1.9,
+              "dist": 0.3
+            },
+            {
+              "relSec": 25.9,
+              "err": 1.9,
+              "dist": 0.5
+            },
+            {
+              "relSec": 28.8,
+              "err": 2.1,
+              "dist": 0.8
+            },
+            {
+              "relSec": 31.7,
+              "err": 3.7,
+              "dist": 1
+            },
+            {
+              "relSec": 34.6,
+              "err": 2.7,
+              "dist": 1.2
+            },
+            {
+              "relSec": 37.5,
+              "err": 3.2,
+              "dist": 1.4
+            },
+            {
+              "relSec": 40.4,
+              "err": 5.9,
+              "dist": 4.4
+            },
+            {
+              "relSec": 43.3,
+              "err": 15.5,
+              "dist": 8.9
+            },
+            {
+              "relSec": 46.2,
+              "err": 13.5,
+              "dist": 10.3
+            },
+            {
+              "relSec": 49.1,
+              "err": 13.9,
+              "dist": 10.4
+            }
+          ]
+        },
+        "D_ROAD_ROUTE_LEAKY": {
+          "ablation": "D_ROAD_ROUTE_LEAKY",
+          "useRoad": true,
+          "useRoute": true,
+          "outageSamplesN": 299,
+          "outageDistM": 10.41,
+          "endpointErrorM": 16.79,
+          "meanErrorM": 7.19,
+          "p95ErrorM": 16.98,
+          "maxErrorM": 18.09,
+          "sihDriftPct": 161.23,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 690,
+          "routeUpdatesApplied": 43,
+          "timeSeriesSample": [
+            {
+              "relSec": 20.1,
+              "err": 1.8,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 2.6,
+              "dist": 0.3
+            },
+            {
+              "relSec": 25.9,
+              "err": 4.7,
+              "dist": 0.5
+            },
+            {
+              "relSec": 28.8,
+              "err": 4,
+              "dist": 0.8
+            },
+            {
+              "relSec": 31.7,
+              "err": 3.3,
+              "dist": 1
+            },
+            {
+              "relSec": 34.6,
+              "err": 3.3,
+              "dist": 1.2
+            },
+            {
+              "relSec": 37.5,
+              "err": 3.2,
+              "dist": 1.4
+            },
+            {
+              "relSec": 40.4,
+              "err": 7,
+              "dist": 4.4
+            },
+            {
+              "relSec": 43.3,
+              "err": 16.6,
+              "dist": 8.9
+            },
+            {
+              "relSec": 46.2,
+              "err": 16.9,
+              "dist": 10.3
+            },
+            {
+              "relSec": 49.1,
+              "err": 17,
+              "dist": 10.4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sessionId": "S2",
+      "temporal": {
+        "valid": true,
+        "durationSec": 119.9,
+        "totalSamples": 1200,
+        "sampleIntervalMs": 100,
+        "outageStartIdx": 200,
+        "outageEndIdx": 500,
+        "outageSamplesN": 300,
+        "minSpeedKmh": 0.1,
+        "maxSpeedKmh": 12.8,
+        "isStationary": false
+      },
+      "roadCoverage": {
+        "covered": false,
+        "inBbox": true,
+        "lat": 52.4032,
+        "lon": -1.558,
+        "nearbySegments": -1,
+        "reason": "In bbox but 0 segments"
+      },
+      "ablations": {
+        "A_IMU_ONLY": {
+          "ablation": "A_IMU_ONLY",
+          "useRoad": false,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 57.83,
+          "endpointErrorM": 55.97,
+          "meanErrorM": 31.46,
+          "p95ErrorM": 52.72,
+          "maxErrorM": 55.97,
+          "sihDriftPct": 96.78,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 2.6,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 8.5,
+              "dist": 2.7
+            },
+            {
+              "relSec": 26,
+              "err": 7.2,
+              "dist": 3.5
+            },
+            {
+              "relSec": 29,
+              "err": 17.3,
+              "dist": 6.8
+            },
+            {
+              "relSec": 32,
+              "err": 32.3,
+              "dist": 14.4
+            },
+            {
+              "relSec": 35,
+              "err": 46.1,
+              "dist": 23.6
+            },
+            {
+              "relSec": 38,
+              "err": 49.8,
+              "dist": 30.1
+            },
+            {
+              "relSec": 41,
+              "err": 43.9,
+              "dist": 37.9
+            },
+            {
+              "relSec": 44,
+              "err": 36.2,
+              "dist": 47.9
+            },
+            {
+              "relSec": 47,
+              "err": 45,
+              "dist": 53.9
+            }
+          ]
+        },
+        "B_ROAD": {
+          "ablation": "B_ROAD",
+          "useRoad": true,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 57.83,
+          "endpointErrorM": 68.15,
+          "meanErrorM": 46.99,
+          "p95ErrorM": 73.01,
+          "maxErrorM": 76.13,
+          "sihDriftPct": 117.84,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 617,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 2.6,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 7.6,
+              "dist": 2.7
+            },
+            {
+              "relSec": 26,
+              "err": 8,
+              "dist": 3.5
+            },
+            {
+              "relSec": 29,
+              "err": 27.3,
+              "dist": 6.8
+            },
+            {
+              "relSec": 32,
+              "err": 51.6,
+              "dist": 14.4
+            },
+            {
+              "relSec": 35,
+              "err": 70.4,
+              "dist": 23.6
+            },
+            {
+              "relSec": 38,
+              "err": 71.8,
+              "dist": 30.1
+            },
+            {
+              "relSec": 41,
+              "err": 65.2,
+              "dist": 37.9
+            },
+            {
+              "relSec": 44,
+              "err": 62.4,
+              "dist": 47.9
+            },
+            {
+              "relSec": 47,
+              "err": 68.6,
+              "dist": 53.9
+            }
+          ]
+        },
+        "C_ROUTE_LEAKY": {
+          "ablation": "C_ROUTE_LEAKY",
+          "useRoad": false,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 57.83,
+          "endpointErrorM": 46.85,
+          "meanErrorM": 34.88,
+          "p95ErrorM": 58.11,
+          "maxErrorM": 59.91,
+          "sihDriftPct": 81.01,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 338,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 2.6,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 8.1,
+              "dist": 2.7
+            },
+            {
+              "relSec": 26,
+              "err": 8.7,
+              "dist": 3.5
+            },
+            {
+              "relSec": 29,
+              "err": 18.9,
+              "dist": 6.8
+            },
+            {
+              "relSec": 32,
+              "err": 33.6,
+              "dist": 14.4
+            },
+            {
+              "relSec": 35,
+              "err": 52.7,
+              "dist": 23.6
+            },
+            {
+              "relSec": 38,
+              "err": 57.9,
+              "dist": 30.1
+            },
+            {
+              "relSec": 41,
+              "err": 52.6,
+              "dist": 37.9
+            },
+            {
+              "relSec": 44,
+              "err": 45.9,
+              "dist": 47.9
+            },
+            {
+              "relSec": 47,
+              "err": 44.5,
+              "dist": 53.9
+            }
+          ]
+        },
+        "D_ROAD_ROUTE_LEAKY": {
+          "ablation": "D_ROAD_ROUTE_LEAKY",
+          "useRoad": true,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 57.83,
+          "endpointErrorM": 66.3,
+          "meanErrorM": 40.1,
+          "p95ErrorM": 64.01,
+          "maxErrorM": 66.3,
+          "sihDriftPct": 114.64,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 608,
+          "routeUpdatesApplied": 365,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 2.6,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 7.4,
+              "dist": 2.7
+            },
+            {
+              "relSec": 26,
+              "err": 9.3,
+              "dist": 3.5
+            },
+            {
+              "relSec": 29,
+              "err": 24.5,
+              "dist": 6.8
+            },
+            {
+              "relSec": 32,
+              "err": 38.9,
+              "dist": 14.4
+            },
+            {
+              "relSec": 35,
+              "err": 59,
+              "dist": 23.6
+            },
+            {
+              "relSec": 38,
+              "err": 63.5,
+              "dist": 30.1
+            },
+            {
+              "relSec": 41,
+              "err": 55.3,
+              "dist": 37.9
+            },
+            {
+              "relSec": 44,
+              "err": 51,
+              "dist": 47.9
+            },
+            {
+              "relSec": 47,
+              "err": 57.5,
+              "dist": 53.9
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sessionId": "S1",
+      "temporal": {
+        "valid": true,
+        "durationSec": 179.9,
+        "totalSamples": 1800,
+        "sampleIntervalMs": 100,
+        "outageStartIdx": 201,
+        "outageEndIdx": 501,
+        "outageSamplesN": 300,
+        "minSpeedKmh": 0,
+        "maxSpeedKmh": 5.7,
+        "isStationary": false
+      },
+      "roadCoverage": {
+        "covered": false,
+        "inBbox": true,
+        "lat": 52.4016,
+        "lon": -1.5056,
+        "nearbySegments": -1,
+        "reason": "In bbox but 0 segments"
+      },
+      "ablations": {
+        "A_IMU_ONLY": {
+          "ablation": "A_IMU_ONLY",
+          "useRoad": false,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 2.93,
+          "endpointErrorM": 1.34,
+          "meanErrorM": 1.53,
+          "p95ErrorM": 2.54,
+          "maxErrorM": 3.27,
+          "sihDriftPct": null,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 1299,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20.1,
+              "err": 1,
+              "dist": 0
+            },
+            {
+              "relSec": 23.1,
+              "err": 1.1,
+              "dist": 0.5
+            },
+            {
+              "relSec": 26.1,
+              "err": 1.1,
+              "dist": 0.9
+            },
+            {
+              "relSec": 29.1,
+              "err": 2,
+              "dist": 1.2
+            },
+            {
+              "relSec": 32.1,
+              "err": 1.5,
+              "dist": 1.4
+            },
+            {
+              "relSec": 35.1,
+              "err": 1.3,
+              "dist": 1.5
+            },
+            {
+              "relSec": 38.1,
+              "err": 2.1,
+              "dist": 1.7
+            },
+            {
+              "relSec": 41.1,
+              "err": 1.3,
+              "dist": 1.8
+            },
+            {
+              "relSec": 44.1,
+              "err": 1.9,
+              "dist": 1.9
+            },
+            {
+              "relSec": 47.1,
+              "err": 1.1,
+              "dist": 2
+            }
+          ]
+        },
+        "B_ROAD": {
+          "ablation": "B_ROAD",
+          "useRoad": true,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 2.93,
+          "endpointErrorM": 3.38,
+          "meanErrorM": 3.12,
+          "p95ErrorM": 4.13,
+          "maxErrorM": 4.16,
+          "sihDriftPct": null,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 1299,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 1128,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20.1,
+              "err": 0.8,
+              "dist": 0
+            },
+            {
+              "relSec": 23.1,
+              "err": 0.7,
+              "dist": 0.5
+            },
+            {
+              "relSec": 26.1,
+              "err": 1.4,
+              "dist": 0.9
+            },
+            {
+              "relSec": 29.1,
+              "err": 3.9,
+              "dist": 1.2
+            },
+            {
+              "relSec": 32.1,
+              "err": 3.3,
+              "dist": 1.4
+            },
+            {
+              "relSec": 35.1,
+              "err": 3.3,
+              "dist": 1.5
+            },
+            {
+              "relSec": 38.1,
+              "err": 4,
+              "dist": 1.7
+            },
+            {
+              "relSec": 41.1,
+              "err": 3.9,
+              "dist": 1.8
+            },
+            {
+              "relSec": 44.1,
+              "err": 4.1,
+              "dist": 1.9
+            },
+            {
+              "relSec": 47.1,
+              "err": 4.1,
+              "dist": 2
+            }
+          ]
+        },
+        "C_ROUTE_LEAKY": {
+          "ablation": "C_ROUTE_LEAKY",
+          "useRoad": false,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 2.93,
+          "endpointErrorM": 3.97,
+          "meanErrorM": 2.81,
+          "p95ErrorM": 3.64,
+          "maxErrorM": 3.97,
+          "sihDriftPct": null,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 1299,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 708,
+          "timeSeriesSample": [
+            {
+              "relSec": 20.1,
+              "err": 1.2,
+              "dist": 0
+            },
+            {
+              "relSec": 23.1,
+              "err": 1.5,
+              "dist": 0.5
+            },
+            {
+              "relSec": 26.1,
+              "err": 1.8,
+              "dist": 0.9
+            },
+            {
+              "relSec": 29.1,
+              "err": 3,
+              "dist": 1.2
+            },
+            {
+              "relSec": 32.1,
+              "err": 2.7,
+              "dist": 1.4
+            },
+            {
+              "relSec": 35.1,
+              "err": 3.7,
+              "dist": 1.5
+            },
+            {
+              "relSec": 38.1,
+              "err": 3.1,
+              "dist": 1.7
+            },
+            {
+              "relSec": 41.1,
+              "err": 3.3,
+              "dist": 1.8
+            },
+            {
+              "relSec": 44.1,
+              "err": 3.2,
+              "dist": 1.9
+            },
+            {
+              "relSec": 47.1,
+              "err": 3.1,
+              "dist": 2
+            }
+          ]
+        },
+        "D_ROAD_ROUTE_LEAKY": {
+          "ablation": "D_ROAD_ROUTE_LEAKY",
+          "useRoad": true,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 2.93,
+          "endpointErrorM": 1.97,
+          "meanErrorM": 1.63,
+          "p95ErrorM": 2.14,
+          "maxErrorM": 2.38,
+          "sihDriftPct": null,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 1299,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 1114,
+          "routeUpdatesApplied": 632,
+          "timeSeriesSample": [
+            {
+              "relSec": 20.1,
+              "err": 1.1,
+              "dist": 0
+            },
+            {
+              "relSec": 23.1,
+              "err": 0.8,
+              "dist": 0.5
+            },
+            {
+              "relSec": 26.1,
+              "err": 0.9,
+              "dist": 0.9
+            },
+            {
+              "relSec": 29.1,
+              "err": 2.1,
+              "dist": 1.2
+            },
+            {
+              "relSec": 32.1,
+              "err": 1.7,
+              "dist": 1.4
+            },
+            {
+              "relSec": 35.1,
+              "err": 2.1,
+              "dist": 1.5
+            },
+            {
+              "relSec": 38.1,
+              "err": 1.9,
+              "dist": 1.7
+            },
+            {
+              "relSec": 41.1,
+              "err": 1.7,
+              "dist": 1.8
+            },
+            {
+              "relSec": 44.1,
+              "err": 2.2,
+              "dist": 1.9
+            },
+            {
+              "relSec": 47.1,
+              "err": 1.8,
+              "dist": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sessionId": "M",
+      "temporal": {
+        "valid": true,
+        "durationSec": 119.9,
+        "totalSamples": 1200,
+        "sampleIntervalMs": 100,
+        "outageStartIdx": 200,
+        "outageEndIdx": 500,
+        "outageSamplesN": 300,
+        "minSpeedKmh": 20.5,
+        "maxSpeedKmh": 28.6,
+        "isStationary": false
+      },
+      "roadCoverage": {
+        "covered": false,
+        "inBbox": true,
+        "lat": 52.4026,
+        "lon": -1.5016,
+        "nearbySegments": -1,
+        "reason": "In bbox but 0 segments"
+      },
+      "ablations": {
+        "A_IMU_ONLY": {
+          "ablation": "A_IMU_ONLY",
+          "useRoad": false,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 212.27,
+          "endpointErrorM": 146.44,
+          "meanErrorM": 107.66,
+          "p95ErrorM": 146.67,
+          "maxErrorM": 147.37,
+          "sihDriftPct": 68.99,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 29.2,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 62.3,
+              "dist": 19.5
+            },
+            {
+              "relSec": 26,
+              "err": 91.5,
+              "dist": 41.8
+            },
+            {
+              "relSec": 29,
+              "err": 87.4,
+              "dist": 61.6
+            },
+            {
+              "relSec": 32,
+              "err": 108.3,
+              "dist": 81.7
+            },
+            {
+              "relSec": 35,
+              "err": 121.9,
+              "dist": 103
+            },
+            {
+              "relSec": 38,
+              "err": 109.6,
+              "dist": 123.6
+            },
+            {
+              "relSec": 41,
+              "err": 143.9,
+              "dist": 145.4
+            },
+            {
+              "relSec": 44,
+              "err": 136.2,
+              "dist": 167.7
+            },
+            {
+              "relSec": 47,
+              "err": 128,
+              "dist": 189.9
+            }
+          ]
+        },
+        "B_ROAD": {
+          "ablation": "B_ROAD",
+          "useRoad": true,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 212.27,
+          "endpointErrorM": 128.98,
+          "meanErrorM": 102.02,
+          "p95ErrorM": 135.86,
+          "maxErrorM": 137.95,
+          "sihDriftPct": 60.76,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 460,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 30.4,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 63.4,
+              "dist": 19.5
+            },
+            {
+              "relSec": 26,
+              "err": 92.3,
+              "dist": 41.8
+            },
+            {
+              "relSec": 29,
+              "err": 86.7,
+              "dist": 61.6
+            },
+            {
+              "relSec": 32,
+              "err": 106.6,
+              "dist": 81.7
+            },
+            {
+              "relSec": 35,
+              "err": 121.7,
+              "dist": 103
+            },
+            {
+              "relSec": 38,
+              "err": 101.4,
+              "dist": 123.6
+            },
+            {
+              "relSec": 41,
+              "err": 134.5,
+              "dist": 145.4
+            },
+            {
+              "relSec": 44,
+              "err": 125.2,
+              "dist": 167.7
+            },
+            {
+              "relSec": 47,
+              "err": 109.9,
+              "dist": 189.9
+            }
+          ]
+        },
+        "C_ROUTE_LEAKY": {
+          "ablation": "C_ROUTE_LEAKY",
+          "useRoad": false,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 212.27,
+          "endpointErrorM": 130.86,
+          "meanErrorM": 102.12,
+          "p95ErrorM": 137.24,
+          "maxErrorM": 139.17,
+          "sihDriftPct": 61.65,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 68,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 29,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 62.1,
+              "dist": 19.5
+            },
+            {
+              "relSec": 26,
+              "err": 91.1,
+              "dist": 41.8
+            },
+            {
+              "relSec": 29,
+              "err": 85,
+              "dist": 61.6
+            },
+            {
+              "relSec": 32,
+              "err": 104.6,
+              "dist": 81.7
+            },
+            {
+              "relSec": 35,
+              "err": 118.2,
+              "dist": 103
+            },
+            {
+              "relSec": 38,
+              "err": 102.5,
+              "dist": 123.6
+            },
+            {
+              "relSec": 41,
+              "err": 136.2,
+              "dist": 145.4
+            },
+            {
+              "relSec": 44,
+              "err": 127,
+              "dist": 167.7
+            },
+            {
+              "relSec": 47,
+              "err": 114.9,
+              "dist": 189.9
+            }
+          ]
+        },
+        "D_ROAD_ROUTE_LEAKY": {
+          "ablation": "D_ROAD_ROUTE_LEAKY",
+          "useRoad": true,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 212.27,
+          "endpointErrorM": 121.96,
+          "meanErrorM": 99.54,
+          "p95ErrorM": 133,
+          "maxErrorM": 135.26,
+          "sihDriftPct": 57.46,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 456,
+          "routeUpdatesApplied": 65,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 30.3,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 63.3,
+              "dist": 19.5
+            },
+            {
+              "relSec": 26,
+              "err": 92.1,
+              "dist": 41.8
+            },
+            {
+              "relSec": 29,
+              "err": 85.7,
+              "dist": 61.6
+            },
+            {
+              "relSec": 32,
+              "err": 104.4,
+              "dist": 81.7
+            },
+            {
+              "relSec": 35,
+              "err": 119.5,
+              "dist": 103
+            },
+            {
+              "relSec": 38,
+              "err": 97.8,
+              "dist": 123.6
+            },
+            {
+              "relSec": 41,
+              "err": 130.9,
+              "dist": 145.4
+            },
+            {
+              "relSec": 44,
+              "err": 122.7,
+              "dist": 167.7
+            },
+            {
+              "relSec": 47,
+              "err": 103.9,
+              "dist": 189.9
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sessionId": "Vtb10",
+      "temporal": {
+        "valid": false,
+        "durationSec": 19.4,
+        "totalSamples": 195,
+        "sampleIntervalMs": 100,
+        "outageStartIdx": -1,
+        "outageEndIdx": -1,
+        "outageSamplesN": 0,
+        "minSpeedKmh": 26.1,
+        "maxSpeedKmh": 58.5,
+        "isStationary": false
+      },
+      "roadCoverage": {
+        "covered": false,
+        "nearbySegments": 0,
+        "reason": "No sample at outage start"
+      },
+      "ablations": {
+        "A_IMU_ONLY": {
+          "ablation": "A_IMU_ONLY",
+          "useRoad": false,
+          "useRoute": false,
+          "outageSamplesN": 0,
+          "outageDistM": 0,
+          "endpointErrorM": 0,
+          "meanErrorM": 0,
+          "p95ErrorM": 0,
+          "maxErrorM": 0,
+          "sihDriftPct": null,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 196,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": []
+        },
+        "B_ROAD": {
+          "ablation": "B_ROAD",
+          "useRoad": true,
+          "useRoute": false,
+          "outageSamplesN": 0,
+          "outageDistM": 0,
+          "endpointErrorM": 0,
+          "meanErrorM": 0,
+          "p95ErrorM": 0,
+          "maxErrorM": 0,
+          "sihDriftPct": null,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 196,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 108,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": []
+        },
+        "C_ROUTE_LEAKY": {
+          "ablation": "C_ROUTE_LEAKY",
+          "useRoad": false,
+          "useRoute": true,
+          "outageSamplesN": 0,
+          "outageDistM": 0,
+          "endpointErrorM": 0,
+          "meanErrorM": 0,
+          "p95ErrorM": 0,
+          "maxErrorM": 0,
+          "sihDriftPct": null,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 196,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 38,
+          "timeSeriesSample": []
+        },
+        "D_ROAD_ROUTE_LEAKY": {
+          "ablation": "D_ROAD_ROUTE_LEAKY",
+          "useRoad": true,
+          "useRoute": true,
+          "outageSamplesN": 0,
+          "outageDistM": 0,
+          "endpointErrorM": 0,
+          "meanErrorM": 0,
+          "p95ErrorM": 0,
+          "maxErrorM": 0,
+          "sihDriftPct": null,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 196,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 108,
+          "routeUpdatesApplied": 37,
+          "timeSeriesSample": []
+        }
+      }
+    },
+    {
+      "sessionId": "Vta10",
+      "temporal": {
+        "valid": true,
+        "durationSec": 119.9,
+        "totalSamples": 1200,
+        "sampleIntervalMs": 100,
+        "outageStartIdx": 200,
+        "outageEndIdx": 500,
+        "outageSamplesN": 300,
+        "minSpeedKmh": 86.1,
+        "maxSpeedKmh": 118,
+        "isStationary": false
+      },
+      "roadCoverage": {
+        "covered": false,
+        "inBbox": true,
+        "lat": 52.8839,
+        "lon": -1.7257,
+        "nearbySegments": -1,
+        "reason": "In bbox but 0 segments"
+      },
+      "ablations": {
+        "A_IMU_ONLY": {
+          "ablation": "A_IMU_ONLY",
+          "useRoad": false,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 851.3,
+          "endpointErrorM": 1035.31,
+          "meanErrorM": 634.5,
+          "p95ErrorM": 995.55,
+          "maxErrorM": 1035.31,
+          "sihDriftPct": 121.61,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 229.4,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 325.6,
+              "dist": 87.4
+            },
+            {
+              "relSec": 26,
+              "err": 416,
+              "dist": 168.3
+            },
+            {
+              "relSec": 29,
+              "err": 489.1,
+              "dist": 247.4
+            },
+            {
+              "relSec": 32,
+              "err": 557.1,
+              "dist": 320.2
+            },
+            {
+              "relSec": 35,
+              "err": 626.9,
+              "dist": 396.6
+            },
+            {
+              "relSec": 38,
+              "err": 700.5,
+              "dist": 482.1
+            },
+            {
+              "relSec": 41,
+              "err": 783.3,
+              "dist": 574.8
+            },
+            {
+              "relSec": 44,
+              "err": 874.1,
+              "dist": 671.7
+            },
+            {
+              "relSec": 47,
+              "err": 955.1,
+              "dist": 765.3
+            }
+          ]
+        },
+        "B_ROAD": {
+          "ablation": "B_ROAD",
+          "useRoad": true,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 851.3,
+          "endpointErrorM": 1046.48,
+          "meanErrorM": 641.5,
+          "p95ErrorM": 1008.06,
+          "maxErrorM": 1046.48,
+          "sihDriftPct": 122.93,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 664,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 231.1,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 327.3,
+              "dist": 87.4
+            },
+            {
+              "relSec": 26,
+              "err": 417.7,
+              "dist": 168.3
+            },
+            {
+              "relSec": 29,
+              "err": 492.2,
+              "dist": 247.4
+            },
+            {
+              "relSec": 32,
+              "err": 561.9,
+              "dist": 320.2
+            },
+            {
+              "relSec": 35,
+              "err": 632.4,
+              "dist": 396.6
+            },
+            {
+              "relSec": 38,
+              "err": 708.8,
+              "dist": 482.1
+            },
+            {
+              "relSec": 41,
+              "err": 797.3,
+              "dist": 574.8
+            },
+            {
+              "relSec": 44,
+              "err": 885.6,
+              "dist": 671.7
+            },
+            {
+              "relSec": 47,
+              "err": 967.1,
+              "dist": 765.3
+            }
+          ]
+        },
+        "C_ROUTE_LEAKY": {
+          "ablation": "C_ROUTE_LEAKY",
+          "useRoad": false,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 851.3,
+          "endpointErrorM": 1026.57,
+          "meanErrorM": 640.57,
+          "p95ErrorM": 991.19,
+          "maxErrorM": 1026.57,
+          "sihDriftPct": 120.59,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 290,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 238.4,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 334.6,
+              "dist": 87.4
+            },
+            {
+              "relSec": 26,
+              "err": 424.8,
+              "dist": 168.3
+            },
+            {
+              "relSec": 29,
+              "err": 497.6,
+              "dist": 247.4
+            },
+            {
+              "relSec": 32,
+              "err": 565,
+              "dist": 320.2
+            },
+            {
+              "relSec": 35,
+              "err": 634.4,
+              "dist": 396.6
+            },
+            {
+              "relSec": 38,
+              "err": 707.6,
+              "dist": 482.1
+            },
+            {
+              "relSec": 41,
+              "err": 790.5,
+              "dist": 574.8
+            },
+            {
+              "relSec": 44,
+              "err": 878.5,
+              "dist": 671.7
+            },
+            {
+              "relSec": 47,
+              "err": 955.3,
+              "dist": 765.3
+            }
+          ]
+        },
+        "D_ROAD_ROUTE_LEAKY": {
+          "ablation": "D_ROAD_ROUTE_LEAKY",
+          "useRoad": true,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 851.3,
+          "endpointErrorM": 1047.05,
+          "meanErrorM": 647.39,
+          "p95ErrorM": 1009.68,
+          "maxErrorM": 1047.05,
+          "sihDriftPct": 122.99,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 652,
+          "routeUpdatesApplied": 211,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 240,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 336,
+              "dist": 87.4
+            },
+            {
+              "relSec": 26,
+              "err": 426.2,
+              "dist": 168.3
+            },
+            {
+              "relSec": 29,
+              "err": 499.8,
+              "dist": 247.4
+            },
+            {
+              "relSec": 32,
+              "err": 568.7,
+              "dist": 320.2
+            },
+            {
+              "relSec": 35,
+              "err": 639.8,
+              "dist": 396.6
+            },
+            {
+              "relSec": 38,
+              "err": 714.7,
+              "dist": 482.1
+            },
+            {
+              "relSec": 41,
+              "err": 801,
+              "dist": 574.8
+            },
+            {
+              "relSec": 44,
+              "err": 889.1,
+              "dist": 671.7
+            },
+            {
+              "relSec": 47,
+              "err": 969.6,
+              "dist": 765.3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sessionId": "Vta15",
+      "temporal": {
+        "valid": true,
+        "durationSec": 83.2,
+        "totalSamples": 833,
+        "sampleIntervalMs": 100,
+        "outageStartIdx": 200,
+        "outageEndIdx": 500,
+        "outageSamplesN": 300,
+        "minSpeedKmh": 60.1,
+        "maxSpeedKmh": 77,
+        "isStationary": false
+      },
+      "roadCoverage": {
+        "covered": false,
+        "inBbox": true,
+        "lat": 52.9684,
+        "lon": -1.7538,
+        "nearbySegments": -1,
+        "reason": "In bbox but 0 segments"
+      },
+      "ablations": {
+        "A_IMU_ONLY": {
+          "ablation": "A_IMU_ONLY",
+          "useRoad": false,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 563.47,
+          "endpointErrorM": 553.73,
+          "meanErrorM": 346.54,
+          "p95ErrorM": 537.77,
+          "maxErrorM": 553.73,
+          "sihDriftPct": 98.27,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 333,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 120.2,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 175,
+              "dist": 53
+            },
+            {
+              "relSec": 26,
+              "err": 235.7,
+              "dist": 104.9
+            },
+            {
+              "relSec": 29,
+              "err": 274.3,
+              "dist": 156
+            },
+            {
+              "relSec": 32,
+              "err": 310.3,
+              "dist": 208
+            },
+            {
+              "relSec": 35,
+              "err": 351,
+              "dist": 262.7
+            },
+            {
+              "relSec": 38,
+              "err": 377.9,
+              "dist": 319
+            },
+            {
+              "relSec": 41,
+              "err": 423.9,
+              "dist": 378.3
+            },
+            {
+              "relSec": 44,
+              "err": 471.1,
+              "dist": 440.3
+            },
+            {
+              "relSec": 47,
+              "err": 518.8,
+              "dist": 503.7
+            }
+          ]
+        },
+        "B_ROAD": {
+          "ablation": "B_ROAD",
+          "useRoad": true,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 563.47,
+          "endpointErrorM": 553.73,
+          "meanErrorM": 346.54,
+          "p95ErrorM": 537.77,
+          "maxErrorM": 553.73,
+          "sihDriftPct": 98.27,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 333,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 20,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 120.2,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 175,
+              "dist": 53
+            },
+            {
+              "relSec": 26,
+              "err": 235.7,
+              "dist": 104.9
+            },
+            {
+              "relSec": 29,
+              "err": 274.3,
+              "dist": 156
+            },
+            {
+              "relSec": 32,
+              "err": 310.3,
+              "dist": 208
+            },
+            {
+              "relSec": 35,
+              "err": 351,
+              "dist": 262.7
+            },
+            {
+              "relSec": 38,
+              "err": 377.9,
+              "dist": 319
+            },
+            {
+              "relSec": 41,
+              "err": 423.9,
+              "dist": 378.3
+            },
+            {
+              "relSec": 44,
+              "err": 471.1,
+              "dist": 440.3
+            },
+            {
+              "relSec": 47,
+              "err": 518.8,
+              "dist": 503.7
+            }
+          ]
+        },
+        "C_ROUTE_LEAKY": {
+          "ablation": "C_ROUTE_LEAKY",
+          "useRoad": false,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 563.47,
+          "endpointErrorM": 555.27,
+          "meanErrorM": 347.12,
+          "p95ErrorM": 538.81,
+          "maxErrorM": 555.27,
+          "sihDriftPct": 98.55,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 333,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 172,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 121.3,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 174.3,
+              "dist": 53
+            },
+            {
+              "relSec": 26,
+              "err": 234.6,
+              "dist": 104.9
+            },
+            {
+              "relSec": 29,
+              "err": 274,
+              "dist": 156
+            },
+            {
+              "relSec": 32,
+              "err": 310.8,
+              "dist": 208
+            },
+            {
+              "relSec": 35,
+              "err": 352.4,
+              "dist": 262.7
+            },
+            {
+              "relSec": 38,
+              "err": 379.7,
+              "dist": 319
+            },
+            {
+              "relSec": 41,
+              "err": 425.2,
+              "dist": 378.3
+            },
+            {
+              "relSec": 44,
+              "err": 471.2,
+              "dist": 440.3
+            },
+            {
+              "relSec": 47,
+              "err": 519.1,
+              "dist": 503.7
+            }
+          ]
+        },
+        "D_ROAD_ROUTE_LEAKY": {
+          "ablation": "D_ROAD_ROUTE_LEAKY",
+          "useRoad": true,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 563.47,
+          "endpointErrorM": 555.27,
+          "meanErrorM": 347.12,
+          "p95ErrorM": 538.81,
+          "maxErrorM": 555.27,
+          "sihDriftPct": 98.55,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 333,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 18,
+          "routeUpdatesApplied": 172,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 121.3,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 174.3,
+              "dist": 53
+            },
+            {
+              "relSec": 26,
+              "err": 234.6,
+              "dist": 104.9
+            },
+            {
+              "relSec": 29,
+              "err": 274,
+              "dist": 156
+            },
+            {
+              "relSec": 32,
+              "err": 310.8,
+              "dist": 208
+            },
+            {
+              "relSec": 35,
+              "err": 352.4,
+              "dist": 262.7
+            },
+            {
+              "relSec": 38,
+              "err": 379.7,
+              "dist": 319
+            },
+            {
+              "relSec": 41,
+              "err": 425.2,
+              "dist": 378.3
+            },
+            {
+              "relSec": 44,
+              "err": 471.2,
+              "dist": 440.3
+            },
+            {
+              "relSec": 47,
+              "err": 519.1,
+              "dist": 503.7
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sessionId": "Vta21",
+      "temporal": {
+        "valid": true,
+        "durationSec": 119.9,
+        "totalSamples": 1200,
+        "sampleIntervalMs": 100,
+        "outageStartIdx": 200,
+        "outageEndIdx": 500,
+        "outageSamplesN": 300,
+        "minSpeedKmh": 51.3,
+        "maxSpeedKmh": 66.9,
+        "isStationary": false
+      },
+      "roadCoverage": {
+        "covered": false,
+        "inBbox": true,
+        "lat": 53.0422,
+        "lon": -1.8137,
+        "nearbySegments": -1,
+        "reason": "In bbox but 0 segments"
+      },
+      "ablations": {
+        "A_IMU_ONLY": {
+          "ablation": "A_IMU_ONLY",
+          "useRoad": false,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 495.01,
+          "endpointErrorM": 701.03,
+          "meanErrorM": 425.8,
+          "p95ErrorM": 688.75,
+          "maxErrorM": 701.03,
+          "sihDriftPct": 141.62,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 111.7,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 167.6,
+              "dist": 50.2
+            },
+            {
+              "relSec": 26,
+              "err": 232.1,
+              "dist": 95.9
+            },
+            {
+              "relSec": 29,
+              "err": 299,
+              "dist": 143.6
+            },
+            {
+              "relSec": 32,
+              "err": 362.7,
+              "dist": 192.9
+            },
+            {
+              "relSec": 35,
+              "err": 429.5,
+              "dist": 245.8
+            },
+            {
+              "relSec": 38,
+              "err": 498.4,
+              "dist": 300.1
+            },
+            {
+              "relSec": 41,
+              "err": 571,
+              "dist": 355.1
+            },
+            {
+              "relSec": 44,
+              "err": 628.6,
+              "dist": 407.4
+            },
+            {
+              "relSec": 47,
+              "err": 672.1,
+              "dist": 451.9
+            }
+          ]
+        },
+        "B_ROAD": {
+          "ablation": "B_ROAD",
+          "useRoad": true,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 495.01,
+          "endpointErrorM": 715.31,
+          "meanErrorM": 429.83,
+          "p95ErrorM": 701.9,
+          "maxErrorM": 715.31,
+          "sihDriftPct": 144.51,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 239,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 112,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 168,
+              "dist": 50.2
+            },
+            {
+              "relSec": 26,
+              "err": 232.4,
+              "dist": 95.9
+            },
+            {
+              "relSec": 29,
+              "err": 299.1,
+              "dist": 143.6
+            },
+            {
+              "relSec": 32,
+              "err": 362.6,
+              "dist": 192.9
+            },
+            {
+              "relSec": 35,
+              "err": 430.1,
+              "dist": 245.8
+            },
+            {
+              "relSec": 38,
+              "err": 504.1,
+              "dist": 300.1
+            },
+            {
+              "relSec": 41,
+              "err": 577.4,
+              "dist": 355.1
+            },
+            {
+              "relSec": 44,
+              "err": 637.1,
+              "dist": 407.4
+            },
+            {
+              "relSec": 47,
+              "err": 683.3,
+              "dist": 451.9
+            }
+          ]
+        },
+        "C_ROUTE_LEAKY": {
+          "ablation": "C_ROUTE_LEAKY",
+          "useRoad": false,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 495.01,
+          "endpointErrorM": 694.24,
+          "meanErrorM": 423.57,
+          "p95ErrorM": 682.52,
+          "maxErrorM": 694.24,
+          "sihDriftPct": 140.25,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 237,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 112.7,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 168.7,
+              "dist": 50.2
+            },
+            {
+              "relSec": 26,
+              "err": 232.4,
+              "dist": 95.9
+            },
+            {
+              "relSec": 29,
+              "err": 298.4,
+              "dist": 143.6
+            },
+            {
+              "relSec": 32,
+              "err": 361,
+              "dist": 192.9
+            },
+            {
+              "relSec": 35,
+              "err": 427.3,
+              "dist": 245.8
+            },
+            {
+              "relSec": 38,
+              "err": 495.6,
+              "dist": 300.1
+            },
+            {
+              "relSec": 41,
+              "err": 567.5,
+              "dist": 355.1
+            },
+            {
+              "relSec": 44,
+              "err": 624.2,
+              "dist": 407.4
+            },
+            {
+              "relSec": 47,
+              "err": 666.6,
+              "dist": 451.9
+            }
+          ]
+        },
+        "D_ROAD_ROUTE_LEAKY": {
+          "ablation": "D_ROAD_ROUTE_LEAKY",
+          "useRoad": true,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 495.01,
+          "endpointErrorM": 716.74,
+          "meanErrorM": 428.82,
+          "p95ErrorM": 702.5,
+          "maxErrorM": 716.74,
+          "sihDriftPct": 144.79,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 324,
+          "routeUpdatesApplied": 223,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 113,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 169.1,
+              "dist": 50.2
+            },
+            {
+              "relSec": 26,
+              "err": 232,
+              "dist": 95.9
+            },
+            {
+              "relSec": 29,
+              "err": 297.7,
+              "dist": 143.6
+            },
+            {
+              "relSec": 32,
+              "err": 359.8,
+              "dist": 192.9
+            },
+            {
+              "relSec": 35,
+              "err": 427.2,
+              "dist": 245.8
+            },
+            {
+              "relSec": 38,
+              "err": 502.2,
+              "dist": 300.1
+            },
+            {
+              "relSec": 41,
+              "err": 575.8,
+              "dist": 355.1
+            },
+            {
+              "relSec": 44,
+              "err": 636.1,
+              "dist": 407.4
+            },
+            {
+              "relSec": 47,
+              "err": 683.1,
+              "dist": 451.9
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sessionId": "Vtb4",
+      "temporal": {
+        "valid": true,
+        "durationSec": 55.5,
+        "totalSamples": 556,
+        "sampleIntervalMs": 100,
+        "outageStartIdx": 200,
+        "outageEndIdx": 501,
+        "outageSamplesN": 301,
+        "minSpeedKmh": 0.6,
+        "maxSpeedKmh": 24.4,
+        "isStationary": false
+      },
+      "roadCoverage": {
+        "covered": false,
+        "inBbox": true,
+        "lat": 53.1715,
+        "lon": -1.6742,
+        "nearbySegments": -1,
+        "reason": "In bbox but 0 segments"
+      },
+      "ablations": {
+        "A_IMU_ONLY": {
+          "ablation": "A_IMU_ONLY",
+          "useRoad": false,
+          "useRoute": false,
+          "outageSamplesN": 301,
+          "outageDistM": 118.59,
+          "endpointErrorM": 202.5,
+          "meanErrorM": 124.17,
+          "p95ErrorM": 202.46,
+          "maxErrorM": 206.94,
+          "sihDriftPct": 170.75,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 55,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 15.1,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 47.1,
+              "dist": 18.2
+            },
+            {
+              "relSec": 26,
+              "err": 76.4,
+              "dist": 34.2
+            },
+            {
+              "relSec": 29,
+              "err": 90.2,
+              "dist": 48.4
+            },
+            {
+              "relSec": 32,
+              "err": 118.8,
+              "dist": 62.2
+            },
+            {
+              "relSec": 35,
+              "err": 144.1,
+              "dist": 80.3
+            },
+            {
+              "relSec": 38,
+              "err": 139.2,
+              "dist": 96.9
+            },
+            {
+              "relSec": 41,
+              "err": 147.7,
+              "dist": 107.7
+            },
+            {
+              "relSec": 44,
+              "err": 172,
+              "dist": 114.2
+            },
+            {
+              "relSec": 47,
+              "err": 190.8,
+              "dist": 115.8
+            },
+            {
+              "relSec": 50,
+              "err": 202.5,
+              "dist": 118.6
+            }
+          ]
+        },
+        "B_ROAD": {
+          "ablation": "B_ROAD",
+          "useRoad": true,
+          "useRoute": false,
+          "outageSamplesN": 301,
+          "outageDistM": 118.59,
+          "endpointErrorM": 200.88,
+          "meanErrorM": 121.5,
+          "p95ErrorM": 200.88,
+          "maxErrorM": 205.4,
+          "sihDriftPct": 169.39,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 55,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 401,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 15.5,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 47.5,
+              "dist": 18.2
+            },
+            {
+              "relSec": 26,
+              "err": 77.5,
+              "dist": 34.2
+            },
+            {
+              "relSec": 29,
+              "err": 94.4,
+              "dist": 48.4
+            },
+            {
+              "relSec": 32,
+              "err": 116.7,
+              "dist": 62.2
+            },
+            {
+              "relSec": 35,
+              "err": 131.3,
+              "dist": 80.3
+            },
+            {
+              "relSec": 38,
+              "err": 126.2,
+              "dist": 96.9
+            },
+            {
+              "relSec": 41,
+              "err": 143.4,
+              "dist": 107.7
+            },
+            {
+              "relSec": 44,
+              "err": 172.6,
+              "dist": 114.2
+            },
+            {
+              "relSec": 47,
+              "err": 191,
+              "dist": 115.8
+            },
+            {
+              "relSec": 50,
+              "err": 200.9,
+              "dist": 118.6
+            }
+          ]
+        },
+        "C_ROUTE_LEAKY": {
+          "ablation": "C_ROUTE_LEAKY",
+          "useRoad": false,
+          "useRoute": true,
+          "outageSamplesN": 301,
+          "outageDistM": 118.59,
+          "endpointErrorM": 182.65,
+          "meanErrorM": 117.48,
+          "p95ErrorM": 182.65,
+          "maxErrorM": 187.28,
+          "sihDriftPct": 154.01,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 55,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 141,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 14.8,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 47.8,
+              "dist": 18.2
+            },
+            {
+              "relSec": 26,
+              "err": 78.7,
+              "dist": 34.2
+            },
+            {
+              "relSec": 29,
+              "err": 93,
+              "dist": 48.4
+            },
+            {
+              "relSec": 32,
+              "err": 122.6,
+              "dist": 62.2
+            },
+            {
+              "relSec": 35,
+              "err": 134.1,
+              "dist": 80.3
+            },
+            {
+              "relSec": 38,
+              "err": 127.8,
+              "dist": 96.9
+            },
+            {
+              "relSec": 41,
+              "err": 137,
+              "dist": 107.7
+            },
+            {
+              "relSec": 44,
+              "err": 154.6,
+              "dist": 114.2
+            },
+            {
+              "relSec": 47,
+              "err": 172.1,
+              "dist": 115.8
+            },
+            {
+              "relSec": 50,
+              "err": 182.6,
+              "dist": 118.6
+            }
+          ]
+        },
+        "D_ROAD_ROUTE_LEAKY": {
+          "ablation": "D_ROAD_ROUTE_LEAKY",
+          "useRoad": true,
+          "useRoute": true,
+          "outageSamplesN": 301,
+          "outageDistM": 118.59,
+          "endpointErrorM": 195.07,
+          "meanErrorM": 120.5,
+          "p95ErrorM": 195.17,
+          "maxErrorM": 199.33,
+          "sihDriftPct": 164.49,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 55,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 364,
+          "routeUpdatesApplied": 125,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 15.5,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 47.5,
+              "dist": 18.2
+            },
+            {
+              "relSec": 26,
+              "err": 77.8,
+              "dist": 34.2
+            },
+            {
+              "relSec": 29,
+              "err": 94.9,
+              "dist": 48.4
+            },
+            {
+              "relSec": 32,
+              "err": 117.2,
+              "dist": 62.2
+            },
+            {
+              "relSec": 35,
+              "err": 130.7,
+              "dist": 80.3
+            },
+            {
+              "relSec": 38,
+              "err": 126.4,
+              "dist": 96.9
+            },
+            {
+              "relSec": 41,
+              "err": 143.1,
+              "dist": 107.7
+            },
+            {
+              "relSec": 44,
+              "err": 169.4,
+              "dist": 114.2
+            },
+            {
+              "relSec": 47,
+              "err": 186.6,
+              "dist": 115.8
+            },
+            {
+              "relSec": 50,
+              "err": 195.1,
+              "dist": 118.6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sessionId": "Vtb12",
+      "temporal": {
+        "valid": true,
+        "durationSec": 44.6,
+        "totalSamples": 447,
+        "sampleIntervalMs": 100,
+        "outageStartIdx": 200,
+        "outageEndIdx": -1,
+        "outageSamplesN": 0,
+        "minSpeedKmh": 22.2,
+        "maxSpeedKmh": 50.4,
+        "isStationary": false
+      },
+      "roadCoverage": {
+        "covered": false,
+        "inBbox": true,
+        "lat": 52.5536,
+        "lon": -1.4635,
+        "nearbySegments": -1,
+        "reason": "In bbox but 0 segments"
+      },
+      "ablations": {
+        "A_IMU_ONLY": {
+          "ablation": "A_IMU_ONLY",
+          "useRoad": false,
+          "useRoute": false,
+          "outageSamplesN": 247,
+          "outageDistM": 263.93,
+          "endpointErrorM": 435.4,
+          "meanErrorM": 249.94,
+          "p95ErrorM": 417.81,
+          "maxErrorM": 435.4,
+          "sihDriftPct": 164.97,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 0,
+          "gnssLeakageDetected": false,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 49.2,
+              "dist": 0
+            },
+            {
+              "relSec": 22.4,
+              "err": 90.4,
+              "dist": 29
+            },
+            {
+              "relSec": 24.8,
+              "err": 136.8,
+              "dist": 56.4
+            },
+            {
+              "relSec": 27.2,
+              "err": 181.3,
+              "dist": 81.8
+            },
+            {
+              "relSec": 29.6,
+              "err": 218.1,
+              "dist": 99.3
+            },
+            {
+              "relSec": 32,
+              "err": 248.1,
+              "dist": 116.3
+            },
+            {
+              "relSec": 34.4,
+              "err": 282.3,
+              "dist": 137.3
+            },
+            {
+              "relSec": 36.8,
+              "err": 317.1,
+              "dist": 162.9
+            },
+            {
+              "relSec": 39.2,
+              "err": 354.4,
+              "dist": 193
+            },
+            {
+              "relSec": 41.6,
+              "err": 388.5,
+              "dist": 226.1
+            },
+            {
+              "relSec": 44,
+              "err": 426.8,
+              "dist": 257.1
+            }
+          ]
+        },
+        "B_ROAD": {
+          "ablation": "B_ROAD",
+          "useRoad": true,
+          "useRoute": false,
+          "outageSamplesN": 247,
+          "outageDistM": 263.93,
+          "endpointErrorM": 380.08,
+          "meanErrorM": 232.96,
+          "p95ErrorM": 368.54,
+          "maxErrorM": 380.08,
+          "sihDriftPct": 144,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 0,
+          "gnssLeakageDetected": false,
+          "roadUpdatesApplied": 209,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 49.8,
+              "dist": 0
+            },
+            {
+              "relSec": 22.4,
+              "err": 90.9,
+              "dist": 29
+            },
+            {
+              "relSec": 24.8,
+              "err": 136.8,
+              "dist": 56.4
+            },
+            {
+              "relSec": 27.2,
+              "err": 178.5,
+              "dist": 81.8
+            },
+            {
+              "relSec": 29.6,
+              "err": 209.2,
+              "dist": 99.3
+            },
+            {
+              "relSec": 32,
+              "err": 230.7,
+              "dist": 116.3
+            },
+            {
+              "relSec": 34.4,
+              "err": 267.4,
+              "dist": 137.3
+            },
+            {
+              "relSec": 36.8,
+              "err": 296.3,
+              "dist": 162.9
+            },
+            {
+              "relSec": 39.2,
+              "err": 325,
+              "dist": 193
+            },
+            {
+              "relSec": 41.6,
+              "err": 348,
+              "dist": 226.1
+            },
+            {
+              "relSec": 44,
+              "err": 374.5,
+              "dist": 257.1
+            }
+          ]
+        },
+        "C_ROUTE_LEAKY": {
+          "ablation": "C_ROUTE_LEAKY",
+          "useRoad": false,
+          "useRoute": true,
+          "outageSamplesN": 247,
+          "outageDistM": 263.93,
+          "endpointErrorM": 437.83,
+          "meanErrorM": 250.59,
+          "p95ErrorM": 419.92,
+          "maxErrorM": 437.83,
+          "sihDriftPct": 165.89,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 0,
+          "gnssLeakageDetected": false,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 55,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 49.5,
+              "dist": 0
+            },
+            {
+              "relSec": 22.4,
+              "err": 90.6,
+              "dist": 29
+            },
+            {
+              "relSec": 24.8,
+              "err": 137.1,
+              "dist": 56.4
+            },
+            {
+              "relSec": 27.2,
+              "err": 181.5,
+              "dist": 81.8
+            },
+            {
+              "relSec": 29.6,
+              "err": 218.5,
+              "dist": 99.3
+            },
+            {
+              "relSec": 32,
+              "err": 248.6,
+              "dist": 116.3
+            },
+            {
+              "relSec": 34.4,
+              "err": 282.4,
+              "dist": 137.3
+            },
+            {
+              "relSec": 36.8,
+              "err": 317.6,
+              "dist": 162.9
+            },
+            {
+              "relSec": 39.2,
+              "err": 355.4,
+              "dist": 193
+            },
+            {
+              "relSec": 41.6,
+              "err": 390.2,
+              "dist": 226.1
+            },
+            {
+              "relSec": 44,
+              "err": 429,
+              "dist": 257.1
+            }
+          ]
+        },
+        "D_ROAD_ROUTE_LEAKY": {
+          "ablation": "D_ROAD_ROUTE_LEAKY",
+          "useRoad": true,
+          "useRoute": true,
+          "outageSamplesN": 247,
+          "outageDistM": 263.93,
+          "endpointErrorM": 379.81,
+          "meanErrorM": 230.02,
+          "p95ErrorM": 366.89,
+          "maxErrorM": 379.81,
+          "sihDriftPct": 143.9,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 0,
+          "gnssLeakageDetected": false,
+          "roadUpdatesApplied": 206,
+          "routeUpdatesApplied": 98,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 50.1,
+              "dist": 0
+            },
+            {
+              "relSec": 22.4,
+              "err": 91,
+              "dist": 29
+            },
+            {
+              "relSec": 24.8,
+              "err": 137,
+              "dist": 56.4
+            },
+            {
+              "relSec": 27.2,
+              "err": 178.6,
+              "dist": 81.8
+            },
+            {
+              "relSec": 29.6,
+              "err": 209.4,
+              "dist": 99.3
+            },
+            {
+              "relSec": 32,
+              "err": 226.9,
+              "dist": 116.3
+            },
+            {
+              "relSec": 34.4,
+              "err": 258.6,
+              "dist": 137.3
+            },
+            {
+              "relSec": 36.8,
+              "err": 288.4,
+              "dist": 162.9
+            },
+            {
+              "relSec": 39.2,
+              "err": 319.1,
+              "dist": 193
+            },
+            {
+              "relSec": 41.6,
+              "err": 344.5,
+              "dist": 226.1
+            },
+            {
+              "relSec": 44,
+              "err": 373.5,
+              "dist": 257.1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sessionId": "Vw8",
+      "temporal": {
+        "valid": true,
+        "durationSec": 119.9,
+        "totalSamples": 1200,
+        "sampleIntervalMs": 100,
+        "outageStartIdx": 200,
+        "outageEndIdx": 500,
+        "outageSamplesN": 300,
+        "minSpeedKmh": 1.9,
+        "maxSpeedKmh": 36.1,
+        "isStationary": false
+      },
+      "roadCoverage": {
+        "covered": false,
+        "inBbox": true,
+        "lat": 52.2025,
+        "lon": -2.1994,
+        "nearbySegments": -1,
+        "reason": "In bbox but 0 segments"
+      },
+      "ablations": {
+        "A_IMU_ONLY": {
+          "ablation": "A_IMU_ONLY",
+          "useRoad": false,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 210.73,
+          "endpointErrorM": 226.69,
+          "meanErrorM": 108.4,
+          "p95ErrorM": 220.61,
+          "maxErrorM": 227.45,
+          "sihDriftPct": 107.57,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 17,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 32.1,
+              "dist": 21.3
+            },
+            {
+              "relSec": 26,
+              "err": 53.4,
+              "dist": 36
+            },
+            {
+              "relSec": 29,
+              "err": 56.6,
+              "dist": 40.1
+            },
+            {
+              "relSec": 32,
+              "err": 64.8,
+              "dist": 54.3
+            },
+            {
+              "relSec": 35,
+              "err": 89.3,
+              "dist": 79.6
+            },
+            {
+              "relSec": 38,
+              "err": 120.5,
+              "dist": 108.7
+            },
+            {
+              "relSec": 41,
+              "err": 152.8,
+              "dist": 137.6
+            },
+            {
+              "relSec": 44,
+              "err": 178.9,
+              "dist": 165.9
+            },
+            {
+              "relSec": 47,
+              "err": 209.8,
+              "dist": 192.3
+            }
+          ]
+        },
+        "B_ROAD": {
+          "ablation": "B_ROAD",
+          "useRoad": true,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 210.73,
+          "endpointErrorM": 215.73,
+          "meanErrorM": 107.85,
+          "p95ErrorM": 211.23,
+          "maxErrorM": 216.7,
+          "sihDriftPct": 102.37,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 830,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 17.1,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 33.3,
+              "dist": 21.3
+            },
+            {
+              "relSec": 26,
+              "err": 54.4,
+              "dist": 36
+            },
+            {
+              "relSec": 29,
+              "err": 58.8,
+              "dist": 40.1
+            },
+            {
+              "relSec": 32,
+              "err": 68.9,
+              "dist": 54.3
+            },
+            {
+              "relSec": 35,
+              "err": 92.9,
+              "dist": 79.6
+            },
+            {
+              "relSec": 38,
+              "err": 122.1,
+              "dist": 108.7
+            },
+            {
+              "relSec": 41,
+              "err": 151.3,
+              "dist": 137.6
+            },
+            {
+              "relSec": 44,
+              "err": 174.3,
+              "dist": 165.9
+            },
+            {
+              "relSec": 47,
+              "err": 201.9,
+              "dist": 192.3
+            }
+          ]
+        },
+        "C_ROUTE_LEAKY": {
+          "ablation": "C_ROUTE_LEAKY",
+          "useRoad": false,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 210.73,
+          "endpointErrorM": 227.23,
+          "meanErrorM": 108.51,
+          "p95ErrorM": 221.06,
+          "maxErrorM": 227.98,
+          "sihDriftPct": 107.83,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 56,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 17,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 32.2,
+              "dist": 21.3
+            },
+            {
+              "relSec": 26,
+              "err": 53.6,
+              "dist": 36
+            },
+            {
+              "relSec": 29,
+              "err": 56.8,
+              "dist": 40.1
+            },
+            {
+              "relSec": 32,
+              "err": 64.9,
+              "dist": 54.3
+            },
+            {
+              "relSec": 35,
+              "err": 89.3,
+              "dist": 79.6
+            },
+            {
+              "relSec": 38,
+              "err": 120.4,
+              "dist": 108.7
+            },
+            {
+              "relSec": 41,
+              "err": 152.7,
+              "dist": 137.6
+            },
+            {
+              "relSec": 44,
+              "err": 179.1,
+              "dist": 165.9
+            },
+            {
+              "relSec": 47,
+              "err": 210.2,
+              "dist": 192.3
+            }
+          ]
+        },
+        "D_ROAD_ROUTE_LEAKY": {
+          "ablation": "D_ROAD_ROUTE_LEAKY",
+          "useRoad": true,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 210.73,
+          "endpointErrorM": 215.65,
+          "meanErrorM": 107.86,
+          "p95ErrorM": 211.14,
+          "maxErrorM": 216.63,
+          "sihDriftPct": 102.33,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 828,
+          "routeUpdatesApplied": 54,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 17.2,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 33.4,
+              "dist": 21.3
+            },
+            {
+              "relSec": 26,
+              "err": 54.6,
+              "dist": 36
+            },
+            {
+              "relSec": 29,
+              "err": 59,
+              "dist": 40.1
+            },
+            {
+              "relSec": 32,
+              "err": 69,
+              "dist": 54.3
+            },
+            {
+              "relSec": 35,
+              "err": 92.9,
+              "dist": 79.6
+            },
+            {
+              "relSec": 38,
+              "err": 122,
+              "dist": 108.7
+            },
+            {
+              "relSec": 41,
+              "err": 151.2,
+              "dist": 137.6
+            },
+            {
+              "relSec": 44,
+              "err": 174.2,
+              "dist": 165.9
+            },
+            {
+              "relSec": 47,
+              "err": 201.7,
+              "dist": 192.3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sessionId": "Vw14b",
+      "temporal": {
+        "valid": true,
+        "durationSec": 119.9,
+        "totalSamples": 1200,
+        "sampleIntervalMs": 100,
+        "outageStartIdx": 200,
+        "outageEndIdx": 500,
+        "outageSamplesN": 300,
+        "minSpeedKmh": 91.9,
+        "maxSpeedKmh": 101.4,
+        "isStationary": false
+      },
+      "roadCoverage": {
+        "covered": false,
+        "inBbox": true,
+        "lat": 52.3526,
+        "lon": -2.0703,
+        "nearbySegments": -1,
+        "reason": "In bbox but 0 segments"
+      },
+      "ablations": {
+        "A_IMU_ONLY": {
+          "ablation": "A_IMU_ONLY",
+          "useRoad": false,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 797.95,
+          "endpointErrorM": 1052.73,
+          "meanErrorM": 590.89,
+          "p95ErrorM": 1007.2,
+          "maxErrorM": 1052.73,
+          "sihDriftPct": 131.93,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 155.8,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 242.3,
+              "dist": 79.9
+            },
+            {
+              "relSec": 26,
+              "err": 326.1,
+              "dist": 157.8
+            },
+            {
+              "relSec": 29,
+              "err": 406.5,
+              "dist": 235.3
+            },
+            {
+              "relSec": 32,
+              "err": 497.7,
+              "dist": 315.4
+            },
+            {
+              "relSec": 35,
+              "err": 588.6,
+              "dist": 393.8
+            },
+            {
+              "relSec": 38,
+              "err": 677.6,
+              "dist": 472.4
+            },
+            {
+              "relSec": 41,
+              "err": 766.8,
+              "dist": 553.6
+            },
+            {
+              "relSec": 44,
+              "err": 860.8,
+              "dist": 635.4
+            },
+            {
+              "relSec": 47,
+              "err": 958.7,
+              "dist": 719.1
+            }
+          ]
+        },
+        "B_ROAD": {
+          "ablation": "B_ROAD",
+          "useRoad": true,
+          "useRoute": false,
+          "outageSamplesN": 300,
+          "outageDistM": 797.95,
+          "endpointErrorM": 888.09,
+          "meanErrorM": 523.31,
+          "p95ErrorM": 857.11,
+          "maxErrorM": 888.09,
+          "sihDriftPct": 111.3,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 407,
+          "routeUpdatesApplied": 0,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 157.4,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 235,
+              "dist": 79.9
+            },
+            {
+              "relSec": 26,
+              "err": 308.2,
+              "dist": 157.8
+            },
+            {
+              "relSec": 29,
+              "err": 373.8,
+              "dist": 235.3
+            },
+            {
+              "relSec": 32,
+              "err": 451.2,
+              "dist": 315.4
+            },
+            {
+              "relSec": 35,
+              "err": 524.8,
+              "dist": 393.8
+            },
+            {
+              "relSec": 38,
+              "err": 600.8,
+              "dist": 472.4
+            },
+            {
+              "relSec": 41,
+              "err": 672.3,
+              "dist": 553.6
+            },
+            {
+              "relSec": 44,
+              "err": 743.7,
+              "dist": 635.4
+            },
+            {
+              "relSec": 47,
+              "err": 821.8,
+              "dist": 719.1
+            }
+          ]
+        },
+        "C_ROUTE_LEAKY": {
+          "ablation": "C_ROUTE_LEAKY",
+          "useRoad": false,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 797.95,
+          "endpointErrorM": 936.56,
+          "meanErrorM": 538.01,
+          "p95ErrorM": 899.05,
+          "maxErrorM": 936.56,
+          "sihDriftPct": 117.37,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 0,
+          "routeUpdatesApplied": 243,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 157.4,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 234.5,
+              "dist": 79.9
+            },
+            {
+              "relSec": 26,
+              "err": 309.3,
+              "dist": 157.8
+            },
+            {
+              "relSec": 29,
+              "err": 377.7,
+              "dist": 235.3
+            },
+            {
+              "relSec": 32,
+              "err": 458.5,
+              "dist": 315.4
+            },
+            {
+              "relSec": 35,
+              "err": 535.5,
+              "dist": 393.8
+            },
+            {
+              "relSec": 38,
+              "err": 615.8,
+              "dist": 472.4
+            },
+            {
+              "relSec": 41,
+              "err": 692.9,
+              "dist": 553.6
+            },
+            {
+              "relSec": 44,
+              "err": 771.9,
+              "dist": 635.4
+            },
+            {
+              "relSec": 47,
+              "err": 858.1,
+              "dist": 719.1
+            }
+          ]
+        },
+        "D_ROAD_ROUTE_LEAKY": {
+          "ablation": "D_ROAD_ROUTE_LEAKY",
+          "useRoad": true,
+          "useRoute": true,
+          "outageSamplesN": 300,
+          "outageDistM": 797.95,
+          "endpointErrorM": 798.41,
+          "meanErrorM": 477.63,
+          "p95ErrorM": 771.04,
+          "maxErrorM": 798.41,
+          "sihDriftPct": 100.06,
+          "passesSih": false,
+          "gnssLeakDuringOutage": 700,
+          "gnssLeakageDetected": true,
+          "roadUpdatesApplied": 292,
+          "routeUpdatesApplied": 315,
+          "timeSeriesSample": [
+            {
+              "relSec": 20,
+              "err": 157.9,
+              "dist": 0
+            },
+            {
+              "relSec": 23,
+              "err": 226.4,
+              "dist": 79.9
+            },
+            {
+              "relSec": 26,
+              "err": 289.5,
+              "dist": 157.8
+            },
+            {
+              "relSec": 29,
+              "err": 347.2,
+              "dist": 235.3
+            },
+            {
+              "relSec": 32,
+              "err": 415.1,
+              "dist": 315.4
+            },
+            {
+              "relSec": 35,
+              "err": 476.2,
+              "dist": 393.8
+            },
+            {
+              "relSec": 38,
+              "err": 544.6,
+              "dist": 472.4
+            },
+            {
+              "relSec": 41,
+              "err": 608.5,
+              "dist": 553.6
+            },
+            {
+              "relSec": 44,
+              "err": 670.1,
+              "dist": 635.4
+            },
+            {
+              "relSec": 47,
+              "err": 739.7,
+              "dist": 719.1
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1962 @@
+{
+  "M_tcn_5s": {
+    "session": "M",
+    "model": "tcn",
+    "duration": 5,
+    "report": {
+      "session": "M",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 5,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 1.02,
+      "medianErrorMeters": 0.7,
+      "p90ErrorMeters": 2.02,
+      "maxErrorMeters": 7.51,
+      "outageMeanErrorMeters": 3.31,
+      "outageMedianErrorMeters": 3.32,
+      "outageP90ErrorMeters": 4.86,
+      "outageMaxErrorMeters": 7.51,
+      "postRecoveryErrorMeters": 0.67,
+      "gnssDeliveredBeforeOutage": 199,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 160,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 7.5,
+        "at10s": 0.7,
+        "at20s": 0.7,
+        "at30s": 0.6,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_5s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_5s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_5s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_5s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_5s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_5s\\06_final.png"
+    }
+  },
+  "M_tcn_10s": {
+    "session": "M",
+    "model": "tcn",
+    "duration": 10,
+    "report": {
+      "session": "M",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 10,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 2.57,
+      "medianErrorMeters": 0.72,
+      "p90ErrorMeters": 10.73,
+      "maxErrorMeters": 20.44,
+      "outageMeanErrorMeters": 10.22,
+      "outageMedianErrorMeters": 11.28,
+      "outageP90ErrorMeters": 19.65,
+      "outageMaxErrorMeters": 20.44,
+      "postRecoveryErrorMeters": 0.7,
+      "gnssDeliveredBeforeOutage": 201,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 211,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 11.3,
+        "at10s": 0.6,
+        "at20s": 0.6,
+        "at30s": 0.6,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_10s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_10s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_10s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_10s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_10s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_10s\\06_final.png"
+    }
+  },
+  "M_tcn_20s": {
+    "session": "M",
+    "model": "tcn",
+    "duration": 20,
+    "report": {
+      "session": "M",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 20,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 5.06,
+      "medianErrorMeters": 0.75,
+      "p90ErrorMeters": 18.77,
+      "maxErrorMeters": 28.96,
+      "outageMeanErrorMeters": 14.37,
+      "outageMedianErrorMeters": 16.11,
+      "outageP90ErrorMeters": 25.83,
+      "outageMaxErrorMeters": 28.96,
+      "postRecoveryErrorMeters": 0.73,
+      "gnssDeliveredBeforeOutage": 200,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 235,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 9.5,
+        "at10s": 14.2,
+        "at20s": 19.3,
+        "at30s": 0.7,
+        "at60s": 0.7
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_20s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_20s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_20s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_20s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_20s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_20s\\06_final.png"
+    }
+  },
+  "M_tcn_30s": {
+    "session": "M",
+    "model": "tcn",
+    "duration": 30,
+    "report": {
+      "session": "M",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 30,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 8.34,
+      "medianErrorMeters": 0.76,
+      "p90ErrorMeters": 29.32,
+      "maxErrorMeters": 44.49,
+      "outageMeanErrorMeters": 21.53,
+      "outageMedianErrorMeters": 20.67,
+      "outageP90ErrorMeters": 37.87,
+      "outageMaxErrorMeters": 44.49,
+      "postRecoveryErrorMeters": 0.69,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 318,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 12.6,
+        "at10s": 13,
+        "at20s": 21.9,
+        "at30s": 0.8,
+        "at60s": 0.7
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_30s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_30s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_30s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_30s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_30s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_30s\\06_final.png"
+    }
+  },
+  "M_tcn_60s": {
+    "session": "M",
+    "model": "tcn",
+    "duration": 60,
+    "report": {
+      "session": "S1",
+      "experimentMode": "R0_PURE_DR",
+      "outageStartSec": 20,
+      "outageDurationSec": 30,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 0,
+      "medianErrorMeters": 0,
+      "p90ErrorMeters": 0,
+      "maxErrorMeters": 0,
+      "outageMeanErrorMeters": 0,
+      "outageMedianErrorMeters": 0,
+      "outageP90ErrorMeters": 0,
+      "outageMaxErrorMeters": 0,
+      "postRecoveryErrorMeters": 0,
+      "gnssDeliveredBeforeOutage": 1,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 0,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": null,
+        "at10s": null,
+        "at20s": null,
+        "at30s": null,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_60s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_60s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_60s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_60s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_60s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\M\\tcn_60s\\06_final.png"
+    }
+  },
+  "S2_tcn_5s": {
+    "session": "S2",
+    "model": "tcn",
+    "duration": 5,
+    "report": {
+      "session": "S2",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 5,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 0.24,
+      "medianErrorMeters": 0.06,
+      "p90ErrorMeters": 0.34,
+      "maxErrorMeters": 2.4,
+      "outageMeanErrorMeters": 1.3,
+      "outageMedianErrorMeters": 1.41,
+      "outageP90ErrorMeters": 2.39,
+      "outageMaxErrorMeters": 2.4,
+      "postRecoveryErrorMeters": 0.21,
+      "gnssDeliveredBeforeOutage": 200,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 184,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 0,
+        "at10s": 0,
+        "at20s": 0,
+        "at30s": 0.2,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_5s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_5s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_5s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_5s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_5s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_5s\\06_final.png"
+    }
+  },
+  "S2_tcn_10s": {
+    "session": "S2",
+    "model": "tcn",
+    "duration": 10,
+    "report": {
+      "session": "S2",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 10,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 0.33,
+      "medianErrorMeters": 0.22,
+      "p90ErrorMeters": 0.68,
+      "maxErrorMeters": 1.88,
+      "outageMeanErrorMeters": 1.17,
+      "outageMedianErrorMeters": 1.34,
+      "outageP90ErrorMeters": 1.87,
+      "outageMaxErrorMeters": 1.88,
+      "postRecoveryErrorMeters": 0.32,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 335,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 1.9,
+        "at10s": 0.1,
+        "at20s": 0.1,
+        "at30s": 0.2,
+        "at60s": 0.7
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_10s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_10s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_10s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_10s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_10s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_10s\\06_final.png"
+    }
+  },
+  "S2_tcn_20s": {
+    "session": "S2",
+    "model": "tcn",
+    "duration": 20,
+    "report": {
+      "session": "S2",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 20,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 3.01,
+      "medianErrorMeters": 0.28,
+      "p90ErrorMeters": 16.06,
+      "maxErrorMeters": 21.7,
+      "outageMeanErrorMeters": 7.96,
+      "outageMedianErrorMeters": 3.49,
+      "outageP90ErrorMeters": 18.03,
+      "outageMaxErrorMeters": 21.7,
+      "postRecoveryErrorMeters": 0.26,
+      "gnssDeliveredBeforeOutage": 200,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 148,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 2.4,
+        "at10s": 3.3,
+        "at20s": 21.4,
+        "at30s": 0.3,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_20s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_20s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_20s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_20s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_20s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_20s\\06_final.png"
+    }
+  },
+  "S2_tcn_30s": {
+    "session": "S2",
+    "model": "tcn",
+    "duration": 30,
+    "report": {
+      "session": "S2",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 30,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 6.06,
+      "medianErrorMeters": 0.58,
+      "p90ErrorMeters": 22.05,
+      "maxErrorMeters": 28.51,
+      "outageMeanErrorMeters": 13.07,
+      "outageMedianErrorMeters": 16.6,
+      "outageP90ErrorMeters": 25.54,
+      "outageMaxErrorMeters": 28.51,
+      "postRecoveryErrorMeters": 0.35,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 156,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 1.9,
+        "at10s": 3.7,
+        "at20s": 21,
+        "at30s": 0.2,
+        "at60s": 0.7
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_30s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_30s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_30s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_30s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_30s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_30s\\06_final.png"
+    }
+  },
+  "S2_tcn_60s": {
+    "session": "S2",
+    "model": "tcn",
+    "duration": 60,
+    "report": {
+      "session": "S2",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 60,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 31.86,
+      "medianErrorMeters": 6.53,
+      "p90ErrorMeters": 115.62,
+      "maxErrorMeters": 116.98,
+      "outageMeanErrorMeters": 51.81,
+      "outageMedianErrorMeters": 28.62,
+      "outageP90ErrorMeters": 115.95,
+      "outageMaxErrorMeters": 116.98,
+      "postRecoveryErrorMeters": 0.19,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 177,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 1.9,
+        "at10s": 3.7,
+        "at20s": 21,
+        "at30s": 28.6,
+        "at60s": 0
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_60s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_60s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_60s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_60s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_60s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\tcn_60s\\06_final.png"
+    }
+  },
+  "Vta10_tcn_5s": {
+    "session": "Vta10",
+    "model": "tcn",
+    "duration": 5,
+    "report": {
+      "session": "Vta10",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 5,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 4.87,
+      "medianErrorMeters": 3.01,
+      "p90ErrorMeters": 5,
+      "maxErrorMeters": 47.46,
+      "outageMeanErrorMeters": 18.59,
+      "outageMedianErrorMeters": 15.54,
+      "outageP90ErrorMeters": 38.75,
+      "outageMaxErrorMeters": 47.46,
+      "postRecoveryErrorMeters": 2.73,
+      "gnssDeliveredBeforeOutage": 196,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 174,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 43.8,
+        "at10s": 2.7,
+        "at20s": 2.7,
+        "at30s": 2.4,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_5s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_5s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_5s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_5s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_5s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_5s\\06_final.png"
+    }
+  },
+  "Vta10_tcn_10s": {
+    "session": "Vta10",
+    "model": "tcn",
+    "duration": 10,
+    "report": {
+      "session": "Vta10",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 10,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 8.79,
+      "medianErrorMeters": 3.05,
+      "p90ErrorMeters": 30.18,
+      "maxErrorMeters": 69.28,
+      "outageMeanErrorMeters": 29.56,
+      "outageMedianErrorMeters": 25.46,
+      "outageP90ErrorMeters": 63.88,
+      "outageMaxErrorMeters": 69.28,
+      "postRecoveryErrorMeters": 2.85,
+      "gnssDeliveredBeforeOutage": 201,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 150,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 26.7,
+        "at10s": 2.4,
+        "at20s": 2.4,
+        "at30s": 2.4,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_10s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_10s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_10s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_10s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_10s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_10s\\06_final.png"
+    }
+  },
+  "Vta10_tcn_20s": {
+    "session": "Vta10",
+    "model": "tcn",
+    "duration": 20,
+    "report": {
+      "session": "Vta10",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 20,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 23.98,
+      "medianErrorMeters": 3.11,
+      "p90ErrorMeters": 89.7,
+      "maxErrorMeters": 99.83,
+      "outageMeanErrorMeters": 60.7,
+      "outageMedianErrorMeters": 72.2,
+      "outageP90ErrorMeters": 98.27,
+      "outageMaxErrorMeters": 99.83,
+      "postRecoveryErrorMeters": 3.02,
+      "gnssDeliveredBeforeOutage": 200,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 149,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 28.3,
+        "at10s": 77.6,
+        "at20s": 3,
+        "at30s": 3,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_20s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_20s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_20s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_20s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_20s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_20s\\06_final.png"
+    }
+  },
+  "Vta10_tcn_30s": {
+    "session": "Vta10",
+    "model": "tcn",
+    "duration": 30,
+    "report": {
+      "session": "Vta10",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 30,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 31.49,
+      "medianErrorMeters": 3.08,
+      "p90ErrorMeters": 95.92,
+      "maxErrorMeters": 177.81,
+      "outageMeanErrorMeters": 66.72,
+      "outageMedianErrorMeters": 69.44,
+      "outageP90ErrorMeters": 99.83,
+      "outageMaxErrorMeters": 177.81,
+      "postRecoveryErrorMeters": 2.72,
+      "gnssDeliveredBeforeOutage": 200,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 169,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 28.3,
+        "at10s": 77.6,
+        "at20s": 64.2,
+        "at30s": 2.9,
+        "at60s": 2.8
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_30s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_30s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_30s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_30s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_30s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_30s\\06_final.png"
+    }
+  },
+  "Vta10_tcn_60s": {
+    "session": "Vta10",
+    "model": "tcn",
+    "duration": 60,
+    "report": {
+      "session": "Vta10",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 60,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 164.02,
+      "medianErrorMeters": 91.5,
+      "p90ErrorMeters": 527.48,
+      "maxErrorMeters": 722.63,
+      "outageMeanErrorMeters": 254.48,
+      "outageMedianErrorMeters": 156.75,
+      "outageP90ErrorMeters": 592.83,
+      "outageMaxErrorMeters": 722.63,
+      "postRecoveryErrorMeters": 1.76,
+      "gnssDeliveredBeforeOutage": 192,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 151,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 40.6,
+        "at10s": 118.6,
+        "at20s": 146.6,
+        "at30s": 89.8,
+        "at60s": 703
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_60s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_60s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_60s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_60s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_60s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta10\\tcn_60s\\06_final.png"
+    }
+  },
+  "Vta15_tcn_5s": {
+    "session": "Vta15",
+    "model": "tcn",
+    "duration": 5,
+    "report": {
+      "session": "Vta15",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 5,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 2.48,
+      "medianErrorMeters": 1.95,
+      "p90ErrorMeters": 2.59,
+      "maxErrorMeters": 12.96,
+      "outageMeanErrorMeters": 6.29,
+      "outageMedianErrorMeters": 5.42,
+      "outageP90ErrorMeters": 12.39,
+      "outageMaxErrorMeters": 12.96,
+      "postRecoveryErrorMeters": 1.8,
+      "gnssDeliveredBeforeOutage": 197,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 158,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 12.7,
+        "at10s": 1.7,
+        "at20s": 1.7,
+        "at30s": 1.7,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_5s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_5s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_5s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_5s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_5s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_5s\\06_final.png"
+    }
+  },
+  "Vta15_tcn_10s": {
+    "session": "Vta15",
+    "model": "tcn",
+    "duration": 10,
+    "report": {
+      "session": "Vta15",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 10,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 3.01,
+      "medianErrorMeters": 2.01,
+      "p90ErrorMeters": 8.36,
+      "maxErrorMeters": 12.85,
+      "outageMeanErrorMeters": 7.45,
+      "outageMedianErrorMeters": 8.42,
+      "outageP90ErrorMeters": 10.48,
+      "outageMaxErrorMeters": 12.85,
+      "postRecoveryErrorMeters": 1.96,
+      "gnssDeliveredBeforeOutage": 201,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 221,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 10.5,
+        "at10s": 1.7,
+        "at20s": 1.7,
+        "at30s": 1.7,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_10s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_10s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_10s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_10s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_10s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_10s\\06_final.png"
+    }
+  },
+  "Vta15_tcn_20s": {
+    "session": "Vta15",
+    "model": "tcn",
+    "duration": 20,
+    "report": {
+      "session": "Vta15",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 20,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 11.78,
+      "medianErrorMeters": 2.08,
+      "p90ErrorMeters": 41.01,
+      "maxErrorMeters": 70.12,
+      "outageMeanErrorMeters": 28.78,
+      "outageMedianErrorMeters": 23.82,
+      "outageP90ErrorMeters": 58.79,
+      "outageMaxErrorMeters": 70.12,
+      "postRecoveryErrorMeters": 2.07,
+      "gnssDeliveredBeforeOutage": 195,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 159,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 15.7,
+        "at10s": 23.3,
+        "at20s": 69.5,
+        "at30s": 2,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_20s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_20s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_20s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_20s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_20s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_20s\\06_final.png"
+    }
+  },
+  "Vta15_tcn_30s": {
+    "session": "Vta15",
+    "model": "tcn",
+    "duration": 30,
+    "report": {
+      "session": "Vta15",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 30,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 17.21,
+      "medianErrorMeters": 2.15,
+      "p90ErrorMeters": 66.33,
+      "maxErrorMeters": 112.73,
+      "outageMeanErrorMeters": 35.37,
+      "outageMedianErrorMeters": 22.25,
+      "outageP90ErrorMeters": 90.09,
+      "outageMaxErrorMeters": 112.73,
+      "postRecoveryErrorMeters": 2.12,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 158,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 7.2,
+        "at10s": 8.3,
+        "at20s": 47.6,
+        "at30s": 2,
+        "at60s": 2.1
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_30s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_30s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_30s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_30s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_30s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta15\\tcn_30s\\06_final.png"
+    }
+  },
+  "Vta21_tcn_5s": {
+    "session": "Vta21",
+    "model": "tcn",
+    "duration": 5,
+    "report": {
+      "session": "Vta21",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 5,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 2.95,
+      "medianErrorMeters": 1.76,
+      "p90ErrorMeters": 2.86,
+      "maxErrorMeters": 30.5,
+      "outageMeanErrorMeters": 12.74,
+      "outageMedianErrorMeters": 11.24,
+      "outageP90ErrorMeters": 26.81,
+      "outageMaxErrorMeters": 30.5,
+      "postRecoveryErrorMeters": 1.7,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 164,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 1.6,
+        "at10s": 1.6,
+        "at20s": 1.6,
+        "at30s": 1.7,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_5s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_5s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_5s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_5s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_5s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_5s\\06_final.png"
+    }
+  },
+  "Vta21_tcn_10s": {
+    "session": "Vta21",
+    "model": "tcn",
+    "duration": 10,
+    "report": {
+      "session": "Vta21",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 10,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 7.38,
+      "medianErrorMeters": 1.8,
+      "p90ErrorMeters": 28.21,
+      "maxErrorMeters": 60.47,
+      "outageMeanErrorMeters": 28.24,
+      "outageMedianErrorMeters": 25.45,
+      "outageP90ErrorMeters": 57.44,
+      "outageMaxErrorMeters": 60.47,
+      "postRecoveryErrorMeters": 1.74,
+      "gnssDeliveredBeforeOutage": 199,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 158,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 26.3,
+        "at10s": 1.7,
+        "at20s": 1.7,
+        "at30s": 1.7,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_10s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_10s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_10s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_10s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_10s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_10s\\06_final.png"
+    }
+  },
+  "Vta21_tcn_20s": {
+    "session": "Vta21",
+    "model": "tcn",
+    "duration": 20,
+    "report": {
+      "session": "Vta21",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 20,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 12.42,
+      "medianErrorMeters": 1.85,
+      "p90ErrorMeters": 45.83,
+      "maxErrorMeters": 54.24,
+      "outageMeanErrorMeters": 30.45,
+      "outageMedianErrorMeters": 32.21,
+      "outageP90ErrorMeters": 51.73,
+      "outageMaxErrorMeters": 54.24,
+      "postRecoveryErrorMeters": 1.58,
+      "gnssDeliveredBeforeOutage": 197,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 145,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 21.1,
+        "at10s": 52.1,
+        "at20s": 48.6,
+        "at30s": 1.9,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_20s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_20s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_20s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_20s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_20s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_20s\\06_final.png"
+    }
+  },
+  "Vta21_tcn_30s": {
+    "session": "Vta21",
+    "model": "tcn",
+    "duration": 30,
+    "report": {
+      "session": "Vta21",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 30,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 30.13,
+      "medianErrorMeters": 1.95,
+      "p90ErrorMeters": 94.98,
+      "maxErrorMeters": 158,
+      "outageMeanErrorMeters": 64.98,
+      "outageMedianErrorMeters": 59.5,
+      "outageP90ErrorMeters": 132.72,
+      "outageMaxErrorMeters": 158,
+      "postRecoveryErrorMeters": 1.25,
+      "gnssDeliveredBeforeOutage": 201,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 166,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 30.7,
+        "at10s": 65.9,
+        "at20s": 53.8,
+        "at30s": 158,
+        "at60s": 0.8
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_30s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_30s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_30s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_30s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_30s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_30s\\06_final.png"
+    }
+  },
+  "Vta21_tcn_60s": {
+    "session": "Vta21",
+    "model": "tcn",
+    "duration": 60,
+    "report": {
+      "session": "Vta21",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 60,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 114.78,
+      "medianErrorMeters": 40.96,
+      "p90ErrorMeters": 344.75,
+      "maxErrorMeters": 447.98,
+      "outageMeanErrorMeters": 181.77,
+      "outageMedianErrorMeters": 159.89,
+      "outageP90ErrorMeters": 373.31,
+      "outageMaxErrorMeters": 447.98,
+      "postRecoveryErrorMeters": 1.77,
+      "gnssDeliveredBeforeOutage": 198,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 161,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 24.6,
+        "at10s": 55.4,
+        "at20s": 44.8,
+        "at30s": 159.9,
+        "at60s": 445
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_60s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_60s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_60s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_60s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_60s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta21\\tcn_60s\\06_final.png"
+    }
+  },
+  "Vta8_tcn_5s": {
+    "session": "Vta8",
+    "model": "tcn",
+    "duration": 5,
+    "report": {
+      "session": "Vta8",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 5,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 0.12,
+      "medianErrorMeters": 0,
+      "p90ErrorMeters": 0.4,
+      "maxErrorMeters": 1.01,
+      "outageMeanErrorMeters": 0.19,
+      "outageMedianErrorMeters": 0.19,
+      "outageP90ErrorMeters": 0.34,
+      "outageMaxErrorMeters": 0.37,
+      "postRecoveryErrorMeters": 0.02,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 161,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 0,
+        "at10s": 0,
+        "at20s": 0,
+        "at30s": 0,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_5s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_5s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_5s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_5s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_5s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_5s\\06_final.png"
+    }
+  },
+  "Vta8_tcn_10s": {
+    "session": "Vta8",
+    "model": "tcn",
+    "duration": 10,
+    "report": {
+      "session": "Vta8",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 10,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 0.17,
+      "medianErrorMeters": 0.05,
+      "p90ErrorMeters": 0.63,
+      "maxErrorMeters": 1.01,
+      "outageMeanErrorMeters": 0.39,
+      "outageMedianErrorMeters": 0.4,
+      "outageP90ErrorMeters": 0.68,
+      "outageMaxErrorMeters": 0.74,
+      "postRecoveryErrorMeters": 0.04,
+      "gnssDeliveredBeforeOutage": 200,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 183,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 0.4,
+        "at10s": 0,
+        "at20s": 0,
+        "at30s": 0,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_10s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_10s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_10s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_10s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_10s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_10s\\06_final.png"
+    }
+  },
+  "Vta8_tcn_20s": {
+    "session": "Vta8",
+    "model": "tcn",
+    "duration": 20,
+    "report": {
+      "session": "Vta8",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 20,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 0.36,
+      "medianErrorMeters": 0.13,
+      "p90ErrorMeters": 1.07,
+      "maxErrorMeters": 2.44,
+      "outageMeanErrorMeters": 0.78,
+      "outageMedianErrorMeters": 0.79,
+      "outageP90ErrorMeters": 1.17,
+      "outageMaxErrorMeters": 2.44,
+      "postRecoveryErrorMeters": 0.04,
+      "gnssDeliveredBeforeOutage": 196,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 157,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 0.4,
+        "at10s": 0.8,
+        "at20s": 2.4,
+        "at30s": 0.1,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_20s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_20s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_20s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_20s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_20s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_20s\\06_final.png"
+    }
+  },
+  "Vta8_tcn_30s": {
+    "session": "Vta8",
+    "model": "tcn",
+    "duration": 30,
+    "report": {
+      "session": "Vta8",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 30,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 1.53,
+      "medianErrorMeters": 0.2,
+      "p90ErrorMeters": 8.09,
+      "maxErrorMeters": 9.56,
+      "outageMeanErrorMeters": 3.18,
+      "outageMedianErrorMeters": 1.11,
+      "outageP90ErrorMeters": 9.53,
+      "outageMaxErrorMeters": 9.56,
+      "postRecoveryErrorMeters": 0,
+      "gnssDeliveredBeforeOutage": 196,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 160,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 0.4,
+        "at10s": 0.8,
+        "at20s": 2.4,
+        "at30s": 9.6,
+        "at60s": 0
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_30s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_30s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_30s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_30s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_30s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_30s\\06_final.png"
+    }
+  },
+  "Vta8_tcn_60s": {
+    "session": "Vta8",
+    "model": "tcn",
+    "duration": 60,
+    "report": {
+      "session": "Vta8",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 60,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 4.11,
+      "medianErrorMeters": 0.96,
+      "p90ErrorMeters": 9.61,
+      "maxErrorMeters": 9.64,
+      "outageMeanErrorMeters": 6.4,
+      "outageMedianErrorMeters": 9.49,
+      "outageP90ErrorMeters": 9.62,
+      "outageMaxErrorMeters": 9.64,
+      "postRecoveryErrorMeters": 0.2,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 151,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 0.4,
+        "at10s": 0.8,
+        "at20s": 3.2,
+        "at30s": 9.5,
+        "at60s": 0
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_60s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_60s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_60s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_60s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_60s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vta8\\tcn_60s\\06_final.png"
+    }
+  },
+  "Vtb12_tcn_5s": {
+    "session": "Vtb12",
+    "model": "tcn",
+    "duration": 5,
+    "report": {
+      "session": "Vtb12",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 5,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 1.66,
+      "medianErrorMeters": 1.18,
+      "p90ErrorMeters": 1.95,
+      "maxErrorMeters": 15.12,
+      "outageMeanErrorMeters": 5.37,
+      "outageMedianErrorMeters": 3.78,
+      "outageP90ErrorMeters": 13.13,
+      "outageMaxErrorMeters": 15.12,
+      "postRecoveryErrorMeters": 1.04,
+      "gnssDeliveredBeforeOutage": 200,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 194,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 1.1,
+        "at10s": 1.1,
+        "at20s": 1.1,
+        "at30s": 0.6,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb12\\tcn_5s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb12\\tcn_5s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb12\\tcn_5s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb12\\tcn_5s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb12\\tcn_5s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb12\\tcn_5s\\06_final.png"
+    }
+  },
+  "Vtb12_tcn_10s": {
+    "session": "Vtb12",
+    "model": "tcn",
+    "duration": 10,
+    "report": {
+      "session": "Vtb12",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 10,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 4.85,
+      "medianErrorMeters": 1.28,
+      "p90ErrorMeters": 18.97,
+      "maxErrorMeters": 38.57,
+      "outageMeanErrorMeters": 17.15,
+      "outageMedianErrorMeters": 15.66,
+      "outageP90ErrorMeters": 36.74,
+      "outageMaxErrorMeters": 38.57,
+      "postRecoveryErrorMeters": 1.09,
+      "gnssDeliveredBeforeOutage": 200,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 142,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 15.7,
+        "at10s": 0.6,
+        "at20s": 0.6,
+        "at30s": 0.6,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb12\\tcn_10s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb12\\tcn_10s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb12\\tcn_10s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb12\\tcn_10s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb12\\tcn_10s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb12\\tcn_10s\\06_final.png"
+    }
+  },
+  "Vtb4_tcn_5s": {
+    "session": "Vtb4",
+    "model": "tcn",
+    "duration": 5,
+    "report": {
+      "session": "Vtb4",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 5,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 1.26,
+      "medianErrorMeters": 0.55,
+      "p90ErrorMeters": 0.94,
+      "maxErrorMeters": 16.55,
+      "outageMeanErrorMeters": 6.64,
+      "outageMedianErrorMeters": 5.83,
+      "outageP90ErrorMeters": 14.51,
+      "outageMaxErrorMeters": 16.55,
+      "postRecoveryErrorMeters": 0.49,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 162,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 0.5,
+        "at10s": 0.5,
+        "at20s": 0.5,
+        "at30s": 0.4,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_5s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_5s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_5s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_5s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_5s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_5s\\06_final.png"
+    }
+  },
+  "Vtb4_tcn_10s": {
+    "session": "Vtb4",
+    "model": "tcn",
+    "duration": 10,
+    "report": {
+      "session": "Vtb4",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 10,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 4.89,
+      "medianErrorMeters": 0.61,
+      "p90ErrorMeters": 21.28,
+      "maxErrorMeters": 45.82,
+      "outageMeanErrorMeters": 20.99,
+      "outageMedianErrorMeters": 19.46,
+      "outageP90ErrorMeters": 43.54,
+      "outageMaxErrorMeters": 45.82,
+      "postRecoveryErrorMeters": 0.38,
+      "gnssDeliveredBeforeOutage": 201,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 168,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 20.1,
+        "at10s": 0.4,
+        "at20s": 0.4,
+        "at30s": 0.4,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_10s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_10s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_10s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_10s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_10s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_10s\\06_final.png"
+    }
+  },
+  "Vtb4_tcn_20s": {
+    "session": "Vtb4",
+    "model": "tcn",
+    "duration": 20,
+    "report": {
+      "session": "Vtb4",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 20,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 12.22,
+      "medianErrorMeters": 0.72,
+      "p90ErrorMeters": 46.47,
+      "maxErrorMeters": 55.19,
+      "outageMeanErrorMeters": 33.67,
+      "outageMedianErrorMeters": 42.52,
+      "outageP90ErrorMeters": 52.98,
+      "outageMaxErrorMeters": 55.19,
+      "postRecoveryErrorMeters": 0.11,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 150,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 18.8,
+        "at10s": 43,
+        "at20s": 0.4,
+        "at30s": 0.4,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_20s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_20s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_20s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_20s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_20s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vtb4\\tcn_20s\\06_final.png"
+    }
+  },
+  "Vw14b_tcn_5s": {
+    "session": "Vw14b",
+    "model": "tcn",
+    "duration": 5,
+    "report": {
+      "session": "Vw14b",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 5,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 3.04,
+      "medianErrorMeters": 2.59,
+      "p90ErrorMeters": 3.27,
+      "maxErrorMeters": 12.81,
+      "outageMeanErrorMeters": 6.56,
+      "outageMedianErrorMeters": 5.82,
+      "outageP90ErrorMeters": 11.31,
+      "outageMaxErrorMeters": 12.81,
+      "postRecoveryErrorMeters": 2.64,
+      "gnssDeliveredBeforeOutage": 198,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 171,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 2.6,
+        "at10s": 2.6,
+        "at20s": 2.6,
+        "at30s": 2.7,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_5s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_5s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_5s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_5s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_5s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_5s\\06_final.png"
+    }
+  },
+  "Vw14b_tcn_10s": {
+    "session": "Vw14b",
+    "model": "tcn",
+    "duration": 10,
+    "report": {
+      "session": "Vw14b",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 10,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 5.84,
+      "medianErrorMeters": 2.64,
+      "p90ErrorMeters": 16.79,
+      "maxErrorMeters": 41.19,
+      "outageMeanErrorMeters": 17.48,
+      "outageMedianErrorMeters": 14.5,
+      "outageP90ErrorMeters": 36.09,
+      "outageMaxErrorMeters": 41.19,
+      "postRecoveryErrorMeters": 2.68,
+      "gnssDeliveredBeforeOutage": 198,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 161,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 15.1,
+        "at10s": 2.7,
+        "at20s": 2.7,
+        "at30s": 2.7,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_10s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_10s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_10s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_10s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_10s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_10s\\06_final.png"
+    }
+  },
+  "Vw14b_tcn_20s": {
+    "session": "Vw14b",
+    "model": "tcn",
+    "duration": 20,
+    "report": {
+      "session": "Vw14b",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 20,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 15.7,
+      "medianErrorMeters": 2.72,
+      "p90ErrorMeters": 58.08,
+      "maxErrorMeters": 87.99,
+      "outageMeanErrorMeters": 39.97,
+      "outageMedianErrorMeters": 37.26,
+      "outageP90ErrorMeters": 79.17,
+      "outageMaxErrorMeters": 87.99,
+      "postRecoveryErrorMeters": 2.73,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 166,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 17.4,
+        "at10s": 38.3,
+        "at20s": 2.7,
+        "at30s": 2.7,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_20s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_20s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_20s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_20s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_20s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_20s\\06_final.png"
+    }
+  },
+  "Vw14b_tcn_30s": {
+    "session": "Vw14b",
+    "model": "tcn",
+    "duration": 30,
+    "report": {
+      "session": "Vw14b",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 30,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 37.93,
+      "medianErrorMeters": 2.72,
+      "p90ErrorMeters": 131.68,
+      "maxErrorMeters": 205.81,
+      "outageMeanErrorMeters": 79.17,
+      "outageMedianErrorMeters": 70.53,
+      "outageP90ErrorMeters": 167.1,
+      "outageMaxErrorMeters": 205.81,
+      "postRecoveryErrorMeters": 2.6,
+      "gnssDeliveredBeforeOutage": 199,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 154,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 17.7,
+        "at10s": 42,
+        "at20s": 99.1,
+        "at30s": 2.7,
+        "at60s": 2.5
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_30s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_30s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_30s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_30s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_30s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_30s\\06_final.png"
+    }
+  },
+  "Vw14b_tcn_60s": {
+    "session": "Vw14b",
+    "model": "tcn",
+    "duration": 60,
+    "report": {
+      "session": "Vw14b",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 60,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 165.93,
+      "medianErrorMeters": 51.29,
+      "p90ErrorMeters": 540.06,
+      "maxErrorMeters": 689.89,
+      "outageMeanErrorMeters": 259.6,
+      "outageMedianErrorMeters": 201.31,
+      "outageP90ErrorMeters": 588.69,
+      "outageMaxErrorMeters": 689.89,
+      "postRecoveryErrorMeters": 2.59,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 144,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 17.4,
+        "at10s": 38.3,
+        "at20s": 91.7,
+        "at30s": 201.3,
+        "at60s": 2.6
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_60s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_60s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_60s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_60s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_60s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw14b\\tcn_60s\\06_final.png"
+    }
+  },
+  "Vw8_tcn_5s": {
+    "session": "Vw8",
+    "model": "tcn",
+    "duration": 5,
+    "report": {
+      "session": "Vw8",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 5,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 1.32,
+      "medianErrorMeters": 0.86,
+      "p90ErrorMeters": 1.04,
+      "maxErrorMeters": 18.83,
+      "outageMeanErrorMeters": 5.83,
+      "outageMedianErrorMeters": 4.08,
+      "outageP90ErrorMeters": 14.78,
+      "outageMaxErrorMeters": 18.83,
+      "postRecoveryErrorMeters": 0.64,
+      "gnssDeliveredBeforeOutage": 201,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 164,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 0.5,
+        "at10s": 0.5,
+        "at20s": 0.5,
+        "at30s": 0.3,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_5s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_5s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_5s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_5s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_5s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_5s\\06_final.png"
+    }
+  },
+  "Vw8_tcn_10s": {
+    "session": "Vw8",
+    "model": "tcn",
+    "duration": 10,
+    "report": {
+      "session": "Vw8",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 10,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 4.85,
+      "medianErrorMeters": 0.94,
+      "p90ErrorMeters": 27.83,
+      "maxErrorMeters": 35.03,
+      "outageMeanErrorMeters": 19.11,
+      "outageMedianErrorMeters": 23.27,
+      "outageP90ErrorMeters": 33.22,
+      "outageMaxErrorMeters": 35.03,
+      "postRecoveryErrorMeters": 0.88,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 154,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 23.3,
+        "at10s": 0.3,
+        "at20s": 0.3,
+        "at30s": 0.3,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_10s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_10s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_10s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_10s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_10s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_10s\\06_final.png"
+    }
+  },
+  "Vw8_tcn_20s": {
+    "session": "Vw8",
+    "model": "tcn",
+    "duration": 20,
+    "report": {
+      "session": "Vw8",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 20,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 10.12,
+      "medianErrorMeters": 0.94,
+      "p90ErrorMeters": 32.72,
+      "maxErrorMeters": 70.39,
+      "outageMeanErrorMeters": 27.77,
+      "outageMedianErrorMeters": 27.84,
+      "outageP90ErrorMeters": 53.02,
+      "outageMaxErrorMeters": 70.39,
+      "postRecoveryErrorMeters": 0.51,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 173,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 23.3,
+        "at10s": 28.5,
+        "at20s": 1,
+        "at30s": 1,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_20s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_20s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_20s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_20s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_20s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_20s\\06_final.png"
+    }
+  },
+  "Vw8_tcn_30s": {
+    "session": "Vw8",
+    "model": "tcn",
+    "duration": 30,
+    "report": {
+      "session": "Vw8",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 30,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 25.28,
+      "medianErrorMeters": 0.99,
+      "p90ErrorMeters": 97.56,
+      "maxErrorMeters": 142.79,
+      "outageMeanErrorMeters": 54.55,
+      "outageMedianErrorMeters": 33.3,
+      "outageP90ErrorMeters": 127.38,
+      "outageMaxErrorMeters": 142.79,
+      "postRecoveryErrorMeters": 0.24,
+      "gnssDeliveredBeforeOutage": 201,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 156,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 22.1,
+        "at10s": 28.8,
+        "at20s": 69.3,
+        "at30s": 0.4,
+        "at60s": 0.2
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_30s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_30s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_30s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_30s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_30s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_30s\\06_final.png"
+    }
+  },
+  "Vw8_tcn_60s": {
+    "session": "Vw8",
+    "model": "tcn",
+    "duration": 60,
+    "report": {
+      "session": "Vw8",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 60,
+      "modelBackend": "Tiny Causal TCN (Locked Test Winner - B2)",
+      "meanErrorMeters": 57.94,
+      "medianErrorMeters": 31.2,
+      "p90ErrorMeters": 137.05,
+      "maxErrorMeters": 144.89,
+      "outageMeanErrorMeters": 91.95,
+      "outageMedianErrorMeters": 118.52,
+      "outageP90ErrorMeters": 139.15,
+      "outageMaxErrorMeters": 144.89,
+      "postRecoveryErrorMeters": 0.92,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 155,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 23.3,
+        "at10s": 28.5,
+        "at20s": 71.2,
+        "at30s": 144.3,
+        "at60s": 0.9
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_60s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_60s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_60s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_60s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_60s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\Vw8\\tcn_60s\\06_final.png"
+    }
+  },
+  "S2_kinematic_5s": {
+    "session": "S2",
+    "model": "kinematic",
+    "duration": 5,
+    "report": {
+      "session": "S2",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 5,
+      "modelBackend": "Classical Kinematic Baseline (Strapdown INS + ZUPT)",
+      "meanErrorMeters": 0.25,
+      "medianErrorMeters": 0.05,
+      "p90ErrorMeters": 0.32,
+      "maxErrorMeters": 2.41,
+      "outageMeanErrorMeters": 1.35,
+      "outageMedianErrorMeters": 1.5,
+      "outageP90ErrorMeters": 2.39,
+      "outageMaxErrorMeters": 2.41,
+      "postRecoveryErrorMeters": 0.2,
+      "gnssDeliveredBeforeOutage": 200,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 163,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 0,
+        "at10s": 0,
+        "at20s": 0,
+        "at30s": 0.2,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_5s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_5s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_5s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_5s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_5s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_5s\\06_final.png"
+    }
+  },
+  "S2_kinematic_10s": {
+    "session": "S2",
+    "model": "kinematic",
+    "duration": 10,
+    "report": {
+      "session": "S2",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 10,
+      "modelBackend": "Classical Kinematic Baseline (Strapdown INS + ZUPT)",
+      "meanErrorMeters": 0.49,
+      "medianErrorMeters": 0.22,
+      "p90ErrorMeters": 2.09,
+      "maxErrorMeters": 3.05,
+      "outageMeanErrorMeters": 1.77,
+      "outageMedianErrorMeters": 1.99,
+      "outageP90ErrorMeters": 2.65,
+      "outageMaxErrorMeters": 3.05,
+      "postRecoveryErrorMeters": 0.26,
+      "gnssDeliveredBeforeOutage": 196,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 174,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 2.6,
+        "at10s": 2.6,
+        "at20s": 0.2,
+        "at30s": 0.2,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_10s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_10s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_10s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_10s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_10s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_10s\\06_final.png"
+    }
+  },
+  "S2_kinematic_20s": {
+    "session": "S2",
+    "model": "kinematic",
+    "duration": 20,
+    "report": {
+      "session": "S2",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 20,
+      "modelBackend": "Classical Kinematic Baseline (Strapdown INS + ZUPT)",
+      "meanErrorMeters": 2.58,
+      "medianErrorMeters": 0.27,
+      "p90ErrorMeters": 13.98,
+      "maxErrorMeters": 19.15,
+      "outageMeanErrorMeters": 7.27,
+      "outageMedianErrorMeters": 3.16,
+      "outageP90ErrorMeters": 17.15,
+      "outageMaxErrorMeters": 19.15,
+      "postRecoveryErrorMeters": 0.3,
+      "gnssDeliveredBeforeOutage": 202,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 173,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 1.9,
+        "at10s": 3.7,
+        "at20s": 0.2,
+        "at30s": 0.2,
+        "at60s": null
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_20s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_20s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_20s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_20s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_20s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_20s\\06_final.png"
+    }
+  },
+  "S2_kinematic_30s": {
+    "session": "S2",
+    "model": "kinematic",
+    "duration": 30,
+    "report": {
+      "session": "S2",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 30,
+      "modelBackend": "Classical Kinematic Baseline (Strapdown INS + ZUPT)",
+      "meanErrorMeters": 6.25,
+      "medianErrorMeters": 0.61,
+      "p90ErrorMeters": 22.96,
+      "maxErrorMeters": 28.54,
+      "outageMeanErrorMeters": 13.42,
+      "outageMedianErrorMeters": 16.76,
+      "outageP90ErrorMeters": 25.75,
+      "outageMaxErrorMeters": 28.54,
+      "postRecoveryErrorMeters": 0.35,
+      "gnssDeliveredBeforeOutage": 200,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 157,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 2.4,
+        "at10s": 3.3,
+        "at20s": 21.4,
+        "at30s": 28.5,
+        "at60s": 0.7
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_30s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_30s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_30s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_30s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_30s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_30s\\06_final.png"
+    }
+  },
+  "S2_kinematic_60s": {
+    "session": "S2",
+    "model": "kinematic",
+    "duration": 60,
+    "report": {
+      "session": "S2",
+      "experimentMode": "R3_DROP_RECOVERY",
+      "outageStartSec": 20,
+      "outageDurationSec": 60,
+      "modelBackend": "Classical Kinematic Baseline (Strapdown INS + ZUPT)",
+      "meanErrorMeters": 32.35,
+      "medianErrorMeters": 11.63,
+      "p90ErrorMeters": 112.73,
+      "maxErrorMeters": 114.06,
+      "outageMeanErrorMeters": 50.53,
+      "outageMedianErrorMeters": 28.76,
+      "outageP90ErrorMeters": 113.03,
+      "outageMaxErrorMeters": 114.06,
+      "postRecoveryErrorMeters": 0.11,
+      "gnssDeliveredBeforeOutage": 197,
+      "gnssDeliveredDuringOutage": 0,
+      "gnssDeliveredAfterOutage": 145,
+      "outageValid": true,
+      "milestoneErrors": {
+        "at5s": 2.8,
+        "at10s": 2.9,
+        "at20s": 21.2,
+        "at30s": 28.6,
+        "at60s": 114
+      }
+    },
+    "screenshots": {
+      "01_before": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_60s\\01_before.png",
+      "02_pre_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_60s\\02_pre_outage.png",
+      "03_during_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_60s\\03_during_outage.png",
+      "04_end_outage": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_60s\\04_end_outage.png",
+      "05_recovery": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_60s\\05_recovery.png",
+      "06_final": "C:\\Users\\rkadh\\OneDrive\\Documents\\GitHub\\bettermaps\\artifacts\\device_evaluation\\screenshots\\S2\\kinematic_60s\\06_final.png"
+    }
+  }
+}

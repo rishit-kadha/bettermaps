@@ -1,33 +1,45 @@
+/**
+ * DiagnosticsPanel.tsx
+ *
+ * Professional bottom-sheet diagnostics modal for BetterMaps.
+ * Displays real-time quantitative positioning telemetry structured into 6 scannable sections:
+ * 1. POSITIONING (Provider, Speed, Heading, Accuracy, Reliability)
+ * 2. AI MODEL (B3_GRU ONNX status, Inferences, Latency, Window, Predictions)
+ * 3. ROAD COVERAGE (Mode, Region, Loaded Tiles, Cache Hits, Coalescing)
+ * 4. REPLAY (Session ID, Clock, Drift %, Instantaneous Error, Milestones)
+ * 5. GNSS & SENSOR FUSION (Raw GNSS vs ESKF Fused State, Fix Age, Fix Count)
+ * 6. PERFORMANCE & MEMORY (Update Freq Hz, RAM Road Budget, Memory Pressure, Evictions)
+ */
+
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { NavigationTelemetry } from "../../core/types/navigation";
+import { ReplayTelemetry } from "../../services/replay/types";
 import { useTheme } from "../../theme/ThemeContext";
 
 interface DiagnosticsPanelProps {
   telemetry: NavigationTelemetry;
+  replayTelemetry?: ReplayTelemetry;
   visible: boolean;
   onClose: () => void;
 }
 
-/**
- * DiagnosticsPanel
- *
- * Debug telemetry panel providing real-time positioning metrics:
- * - Update Frequency in approximate Hz (calculated via rolling window)
- * - Horizontal Accuracy radius (±m)
- * - Vehicle Speed (km/h and m/s)
- * - Course Heading & Reliability flag
- * - WGS84 Latitude, Longitude, Altitude
- * - Active Platform Provider tag (GNSS vs Future IDR)
- */
 export const DiagnosticsPanel: React.FC<DiagnosticsPanelProps> = ({
   telemetry,
+  replayTelemetry,
   visible,
   onClose,
 }) => {
   const insets = useSafeAreaInsets();
   const { theme } = useTheme();
+
   if (!visible) return null;
 
   const {
@@ -38,7 +50,19 @@ export const DiagnosticsPanel: React.FC<DiagnosticsPanelProps> = ({
     updateFrequencyHz,
     providerName,
     providerType,
-    providerStatus,
+    locationSource,
+    isDeadReckoning,
+    gnssStatus,
+    lastGnssFixAgeMs,
+    gnssFixCount,
+    eskfGnssUpdateCount,
+    currentPositionEstimate,
+    rawGnssLocation,
+    gruModelDiagnostics,
+    roadCoverageDiagnostics,
+    roadMemoryDiagnostics,
+    gnssStreamGateState,
+    positioningStatus,
   } = telemetry;
 
   const latText = currentLocation
@@ -48,13 +72,11 @@ export const DiagnosticsPanel: React.FC<DiagnosticsPanelProps> = ({
     ? `${currentLocation.longitude.toFixed(6)}°`
     : "--";
   const altText =
-    currentLocation?.altitude !== null &&
-    currentLocation?.altitude !== undefined
+    currentLocation?.altitude !== null && currentLocation?.altitude !== undefined
       ? `${currentLocation.altitude.toFixed(1)} m`
       : "--";
   const accText =
-    currentLocation?.accuracy !== null &&
-    currentLocation?.accuracy !== undefined
+    currentLocation?.accuracy !== null && currentLocation?.accuracy !== undefined
       ? `±${currentLocation.accuracy.toFixed(1)} m`
       : "--";
   const speedMsText =
@@ -62,33 +84,54 @@ export const DiagnosticsPanel: React.FC<DiagnosticsPanelProps> = ({
       ? `${currentLocation.speed.toFixed(1)} m/s`
       : "--";
 
-  const formatTime = (epochMs?: number) => {
-    if (!epochMs) return "--";
-    const d = new Date(epochMs);
-    return (
-      d.toTimeString().split(" ")[0] +
-      "." +
-      String(d.getMilliseconds()).padStart(3, "0")
-    );
+  const formatMs = (ms: number | null | undefined): string => {
+    if (ms === null || ms === undefined || isNaN(ms) || !isFinite(ms)) {
+      return "00:00.0";
+    }
+    const safeMs = Math.max(0, ms);
+    const totalSec = Math.floor(safeMs / 1000);
+    const m = Math.floor(totalSec / 60);
+    const s = totalSec % 60;
+    const tenths = Math.floor((safeMs % 1000) / 100);
+    return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}.${tenths}`;
+  };
+
+  const safeNum = (
+    val: number | null | undefined,
+    digits = 1,
+    fallback = "--",
+    suffix = "",
+  ): string => {
+    if (val === null || val === undefined || isNaN(val) || !isFinite(val)) {
+      return fallback;
+    }
+    return `${val.toFixed(digits)}${suffix}`;
   };
 
   return (
     <View
       style={[
-        styles.container,
+        styles.bottomSheet,
         {
-          top: Math.max(insets.top, 16) + 124,
-          right: 76,
+          paddingBottom: Math.max(insets.bottom, 12),
           backgroundColor: theme.surface,
           borderColor: theme.surfaceBorder,
         },
       ]}
     >
+      {/* 0. Top Drag Handle */}
+      <View style={styles.dragHandleContainer}>
+        <View
+          style={[styles.dragHandle, { backgroundColor: theme.surfaceBorder }]}
+        />
+      </View>
+
+      {/* Header Bar */}
       <View style={[styles.header, { borderBottomColor: theme.surfaceBorder }]}>
         <View style={styles.titleRow}>
           <View style={[styles.indicator, { backgroundColor: theme.accent }]} />
           <Text style={[styles.title, { color: theme.textPrimary }]}>
-            GNSS DIAGNOSTICS
+            GNSS & ESTIMATOR DIAGNOSTICS
           </Text>
         </View>
         <TouchableOpacity
@@ -104,493 +147,860 @@ export const DiagnosticsPanel: React.FC<DiagnosticsPanelProps> = ({
         </TouchableOpacity>
       </View>
 
-      <View style={styles.grid}>
-        {/* Row 1: Provider & Hz */}
-        <View style={styles.row}>
-          <View
-            style={[
-              styles.cell,
-              {
-                backgroundColor: theme.surfaceSubtle,
-                borderColor: theme.surfaceBorder,
-              },
-            ]}
-          >
-            <Text style={[styles.label, { color: theme.textMuted }]}>
-              PLATFORM PROVIDER
-            </Text>
-            <Text style={[styles.valueHighlight, { color: theme.textPrimary }]}>
-              {providerType === "gnss" ? "GNSS" : providerType.toUpperCase()}
-            </Text>
-            <Text style={[styles.subText, { color: theme.textSecondary }]}>
-              {providerName}
-            </Text>
-          </View>
-
-          <View
-            style={[
-              styles.cell,
-              {
-                backgroundColor: theme.surfaceSubtle,
-                borderColor: theme.surfaceBorder,
-              },
-            ]}
-          >
-            <Text style={[styles.label, { color: theme.textMuted }]}>
-              UPDATE FREQ
-            </Text>
-            <Text
-              style={[
-                styles.valueHighlight,
-                { color: updateFrequencyHz > 0 ? theme.success : theme.danger },
-              ]}
-            >
-              ~{updateFrequencyHz.toFixed(1)} Hz
-            </Text>
-            <Text style={[styles.subText, { color: theme.textSecondary }]}>
-              Target: ~10 Hz (IDR)
-            </Text>
-          </View>
-        </View>
-
-        {/* Row 2: Speed & Heading */}
-        <View style={styles.row}>
-          <View
-            style={[
-              styles.cell,
-              {
-                backgroundColor: theme.surfaceSubtle,
-                borderColor: theme.surfaceBorder,
-              },
-            ]}
-          >
-            <Text style={[styles.label, { color: theme.textMuted }]}>
-              GROUND SPEED
-            </Text>
-            <Text style={[styles.value, { color: theme.textPrimary }]}>
-              {speedKmh}{" "}
-              <Text style={[styles.unit, { color: theme.textSecondary }]}>
-                km/h
-              </Text>
-            </Text>
-            <Text style={[styles.subText, { color: theme.textSecondary }]}>
-              ({speedMsText})
-            </Text>
-          </View>
-
-          <View
-            style={[
-              styles.cell,
-              {
-                backgroundColor: theme.surfaceSubtle,
-                borderColor: theme.surfaceBorder,
-              },
-            ]}
-          >
-            <Text style={[styles.label, { color: theme.textMuted }]}>
-              COURSE HEADING
-            </Text>
-            <Text style={[styles.value, { color: theme.textPrimary }]}>
-              {smoothedHeading}°
-            </Text>
-            <Text
-              style={[
-                styles.subText,
-                { color: isHeadingReliable ? theme.success : theme.warning },
-              ]}
-            >
-              {isHeadingReliable ? "Reliable (Moving)" : "Stationary / Inert"}
-            </Text>
-          </View>
-        </View>
-
-        {/* Row 3: Accuracy & Altitude */}
-        <View style={styles.row}>
-          <View
-            style={[
-              styles.cell,
-              {
-                backgroundColor: theme.surfaceSubtle,
-                borderColor: theme.surfaceBorder,
-              },
-            ]}
-          >
-            <Text style={[styles.label, { color: theme.textMuted }]}>
-              HORIZONTAL ACCURACY
-            </Text>
-            <Text style={[styles.value, { color: theme.accent }]}>
-              {accText}
-            </Text>
-          </View>
-
-          <View
-            style={[
-              styles.cell,
-              {
-                backgroundColor: theme.surfaceSubtle,
-                borderColor: theme.surfaceBorder,
-              },
-            ]}
-          >
-            <Text style={[styles.label, { color: theme.textMuted }]}>
-              ALTITUDE (WGS84)
-            </Text>
-            <Text style={[styles.value, { color: theme.textPrimary }]}>
-              {altText}
-            </Text>
-          </View>
-        </View>
-
-        {/* Row 4: Coordinates */}
+      {/* Scrollable Structured Sections */}
+      <ScrollView
+        style={styles.scrollContainer}
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={false}
+      >
+        {/* ============================================================ */}
+        {/* SECTION 1: POSITIONING                                       */}
+        {/* ============================================================ */}
         <View
           style={[
-            styles.coordsBox,
+            styles.card,
             {
               backgroundColor: theme.surfaceSubtle,
               borderColor: theme.surfaceBorder,
             },
           ]}
         >
-          <View style={styles.coordCol}>
-            <Text style={[styles.label, { color: theme.textMuted }]}>
-              LATITUDE
+          <View style={styles.cardHeader}>
+            <Text style={[styles.cardTitle, { color: theme.accent }]}>
+              1. POSITIONING & ESTIMATION
             </Text>
-            <Text style={[styles.coordValue, { color: theme.textPrimary }]}>
-              {latText}
+            <Text
+              style={[
+                styles.badge,
+                {
+                  color: isDeadReckoning ? theme.warning : theme.success,
+                  borderColor: isDeadReckoning ? theme.warning : theme.success,
+                },
+              ]}
+            >
+              {locationSource}
             </Text>
           </View>
-          <View style={styles.coordCol}>
-            <Text style={[styles.label, { color: theme.textMuted }]}>
-              LONGITUDE
-            </Text>
-            <Text style={[styles.coordValue, { color: theme.textPrimary }]}>
-              {lngText}
-            </Text>
-          </View>
-        </View>
 
-        {/* Development Only: IDR Motion Model Diagnostics */}
-        {telemetry.motionDiagnostics && (
-          <View
-            style={[
-              styles.modelDiagBox,
-              {
-                backgroundColor: theme.surfaceSubtle,
-                borderColor: theme.accent,
-              },
-            ]}
-          >
-            <View style={styles.modelDiagHeader}>
-              <Text style={[styles.modelDiagTitle, { color: theme.accent }]}>
-                IDR MOTION MODEL (DEV DIAGNOSTICS)
+          <View style={styles.dataRow}>
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                PROVIDER
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {providerType === "gnss" ? "GNSS" : providerType?.toUpperCase()}
+              </Text>
+              <Text style={[styles.sub, { color: theme.textSecondary }]}>
+                {providerName}
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                GROUND SPEED
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {speedKmh}{" "}
+                <Text style={[styles.unit, { color: theme.textSecondary }]}>
+                  km/h
+                </Text>
+              </Text>
+              <Text style={[styles.sub, { color: theme.textSecondary }]}>
+                {speedMsText}
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                COURSE HEADING
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {smoothedHeading}°
               </Text>
               <Text
                 style={[
-                  styles.modelStatusBadge,
-                  {
-                    color: telemetry.motionDiagnostics.valid
-                      ? theme.success
-                      : theme.danger,
-                  },
+                  styles.sub,
+                  { color: isHeadingReliable ? theme.success : theme.warning },
                 ]}
               >
-                {telemetry.motionDiagnostics.valid ? "VALID" : "INVALID"}
+                {isHeadingReliable ? "Moving" : "Stationary"}
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.dataRow}>
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                HORIZONTAL ACCURACY
+              </Text>
+              <Text style={[styles.valHighlight, { color: theme.accent }]}>
+                {accText}
               </Text>
             </View>
 
-            <Text
-              style={[styles.modelNameText, { color: theme.textPrimary }]}
-              numberOfLines={1}
-            >
-              {telemetry.motionDiagnostics.backendName}
-            </Text>
-            <Text
-              style={[styles.modelVerText, { color: theme.textSecondary }]}
-              numberOfLines={1}
-            >
-              ckpt: {telemetry.motionDiagnostics.modelVersion}
-            </Text>
-
-            <View style={styles.modelRow}>
-              <View style={styles.modelCol}>
-                <Text style={[styles.label, { color: theme.textMuted }]}>
-                  INFERENCE
-                </Text>
-                <Text
-                  style={[styles.modelValue, { color: theme.textPrimary }]}
-                >
-                  {telemetry.motionDiagnostics.lastInferenceDurationMs.toFixed(2)}{" "}
-                  ms
-                </Text>
-              </View>
-              <View style={styles.modelCol}>
-                <Text style={[styles.label, { color: theme.textMuted }]}>
-                  WINDOW
-                </Text>
-                <Text
-                  style={[styles.modelValue, { color: theme.textPrimary }]}
-                >
-                  {telemetry.motionDiagnostics.windowLength} /{" "}
-                  {telemetry.motionDiagnostics.targetWindowLength} spl
-                </Text>
-              </View>
-              <View style={styles.modelCol}>
-                <Text style={[styles.label, { color: theme.textMuted }]}>
-                  DROPPED
-                </Text>
-                <Text
-                  style={[
-                    styles.modelValue,
-                    {
-                      color:
-                        telemetry.motionDiagnostics.droppedPredictions > 0
-                          ? theme.warning
-                          : theme.textPrimary,
-                    },
-                  ]}
-                >
-                  {telemetry.motionDiagnostics.droppedPredictions} /{" "}
-                  {telemetry.motionDiagnostics.totalPredictions}
-                </Text>
-              </View>
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                ENGINE STATUS
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {positioningStatus}
+              </Text>
             </View>
 
-            <View style={styles.modelRow}>
-              <View style={styles.modelCol}>
-                <Text style={[styles.label, { color: theme.textMuted }]}>
-                  PRED VELOCITY
-                </Text>
-                <Text
-                  style={[styles.modelValue, { color: theme.textPrimary }]}
-                >
-                  {(
-                    telemetry.motionDiagnostics.predictedVelocityMps * 3.6
-                  ).toFixed(1)}{" "}
-                  <Text style={styles.unit}>km/h</Text>
-                </Text>
-              </View>
-              <View style={styles.modelCol}>
-                <Text style={[styles.label, { color: theme.textMuted }]}>
-                  PRED YAW RATE
-                </Text>
-                <Text
-                  style={[styles.modelValue, { color: theme.textPrimary }]}
-                >
-                  {telemetry.motionDiagnostics.predictedYawRateRadps.toFixed(3)}{" "}
-                  <Text style={styles.unit}>rad/s</Text>
-                </Text>
-              </View>
-              <View style={styles.modelCol}>
-                <Text style={[styles.label, { color: theme.textMuted }]}>
-                  CONFIDENCE
-                </Text>
-                <Text
-                  style={[styles.modelValue, { color: theme.textPrimary }]}
-                >
-                  {(telemetry.motionDiagnostics.confidence * 100).toFixed(0)}%
-                </Text>
-              </View>
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                IDR DR STATUS
+              </Text>
+              <Text
+                style={[
+                  styles.val,
+                  {
+                    color: isDeadReckoning ? theme.warning : theme.success,
+                  },
+                ]}
+              >
+                {isDeadReckoning ? "ACTIVE" : "INACTIVE"}
+              </Text>
             </View>
           </View>
-        )}
+        </View>
 
-        {/* Footer */}
-        <View style={styles.footerRow}>
-          <Text style={[styles.footerText, { color: theme.textSecondary }]}>
-            Gate:{" "}
+        {/* ============================================================ */}
+        {/* SECTION 2: AI MODEL (B3_GRU ONNX)                           */}
+        {/* ============================================================ */}
+        <View
+          style={[
+            styles.card,
+            {
+              backgroundColor: theme.surfaceSubtle,
+              borderColor:
+                gruModelDiagnostics?.status === "READY"
+                  ? theme.success
+                  : gruModelDiagnostics?.status === "LOADING"
+                  ? theme.warning
+                  : theme.surfaceBorder,
+            },
+          ]}
+        >
+          <View style={styles.cardHeader}>
+            <Text style={[styles.cardTitle, { color: theme.accent }]}>
+              2. AI MODEL (B3_GRU ONNX)
+            </Text>
             <Text
               style={[
-                styles.boldText,
+                styles.badge,
                 {
                   color:
-                    telemetry.gnssStreamGateState === "GNSS_STREAM_DISABLED"
+                    gruModelDiagnostics?.status === "READY"
+                      ? theme.success
+                      : gruModelDiagnostics?.status === "LOADING"
+                      ? theme.warning
+                      : theme.danger,
+                  borderColor:
+                    gruModelDiagnostics?.status === "READY"
+                      ? theme.success
+                      : theme.danger,
+                },
+              ]}
+            >
+              {gruModelDiagnostics?.status ?? "INITIALIZING"}
+            </Text>
+          </View>
+
+          <View style={styles.dataRow}>
+            <View style={[styles.col, { flex: 2 }]}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                BACKEND / FILE
+              </Text>
+              <Text
+                style={[styles.valMono, { color: theme.textPrimary }]}
+                numberOfLines={1}
+              >
+                {gruModelDiagnostics?.modelFile ?? "b3_gru_clean.onnx"}
+              </Text>
+              <Text style={[styles.sub, { color: theme.textSecondary }]}>
+                Runtime: {gruModelDiagnostics?.runtime?.toUpperCase() ?? "ORT-CPU"}
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                LATENCY
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {safeNum(gruModelDiagnostics?.lastInferenceLatencyMs, 1, "--", " ms")}
+              </Text>
+              <Text style={[styles.sub, { color: theme.textSecondary }]}>
+                Target: &lt;5 ms
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.dataRow}>
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                INFERENCES
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {gruModelDiagnostics?.totalInferences ?? 0}
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                WINDOW FILL
+              </Text>
+              <Text
+                style={[
+                  styles.val,
+                  {
+                    color:
+                      (gruModelDiagnostics?.windowFill ?? 0) >= 20
+                        ? theme.success
+                        : theme.warning,
+                  },
+                ]}
+              >
+                {gruModelDiagnostics?.windowFill ?? 0}/20
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                PRED SPEED
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {safeNum(
+                  gruModelDiagnostics?.lastVelocityMps
+                    ? gruModelDiagnostics.lastVelocityMps * 3.6
+                    : null,
+                  1,
+                  "--",
+                  " km/h",
+                )}
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        {/* ============================================================ */}
+        {/* SECTION 3: ROAD COVERAGE & PREFETCH                          */}
+        {/* ============================================================ */}
+        <View
+          style={[
+            styles.card,
+            {
+              backgroundColor: theme.surfaceSubtle,
+              borderColor: theme.surfaceBorder,
+            },
+          ]}
+        >
+          <View style={styles.cardHeader}>
+            <Text style={[styles.cardTitle, { color: theme.accent }]}>
+              3. ROAD COVERAGE & PREFETCH
+            </Text>
+            <Text
+              style={[
+                styles.badge,
+                {
+                  color:
+                    roadCoverageDiagnostics?.sourcePosition === "REPLAY"
+                      ? theme.warning
+                      : theme.success,
+                  borderColor:
+                    roadCoverageDiagnostics?.sourcePosition === "REPLAY"
+                      ? theme.warning
+                      : theme.success,
+                },
+              ]}
+            >
+              SOURCE: {roadCoverageDiagnostics?.sourcePosition ?? "LIVE"}
+            </Text>
+          </View>
+
+          <View style={styles.dataRow}>
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                ACTIVE REGION
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {roadCoverageDiagnostics?.activeRegionId?.toUpperCase() ?? "LOCAL"}
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                PLANNER MODE
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {roadCoverageDiagnostics?.planner ?? "FREE_DRIVE"}
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                ACTIVE TILES
+              </Text>
+              <Text style={[styles.valHighlight, { color: theme.textPrimary }]}>
+                {roadCoverageDiagnostics?.loadedTileCount ?? 0}
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.dataRow}>
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                CACHE HITS
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {roadCoverageDiagnostics?.cacheHitCount ?? 0}
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                COALESCED SKIPS
+              </Text>
+              <Text style={[styles.val, { color: theme.success }]}>
+                {roadCoverageDiagnostics?.coalescedSkipCount ?? 0}
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                TRIGGER
+              </Text>
+              <Text
+                style={[styles.val, { color: theme.textSecondary, fontSize: 10 }]}
+                numberOfLines={1}
+              >
+                {roadCoverageDiagnostics?.lastTriggerReason ?? "HEARTBEAT"}
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        {/* ============================================================ */}
+        {/* SECTION 4: REPLAY BENCHMARK & DRIFT                          */}
+        {/* ============================================================ */}
+        <View
+          style={[
+            styles.card,
+            {
+              backgroundColor: theme.surfaceSubtle,
+              borderColor: replayTelemetry ? "#FF9100" : theme.surfaceBorder,
+            },
+          ]}
+        >
+          <View style={styles.cardHeader}>
+            <Text style={[styles.cardTitle, { color: "#FF9100" }]}>
+              4. REPLAY BENCHMARK & DRIFT
+            </Text>
+            <Text
+              style={[
+                styles.badge,
+                {
+                  color: replayTelemetry ? "#FF9100" : theme.textMuted,
+                  borderColor: replayTelemetry ? "#FF9100" : theme.surfaceBorder,
+                },
+              ]}
+            >
+              {replayTelemetry
+                ? `SESSION: ${replayTelemetry.sessionId.toUpperCase()}`
+                : "REPLAY INACTIVE"}
+            </Text>
+          </View>
+
+          {replayTelemetry ? (
+            <>
+              <View style={styles.dataRow}>
+                <View style={styles.col}>
+                  <Text style={[styles.label, { color: theme.textMuted }]}>
+                    VIRTUAL CLOCK
+                  </Text>
+                  <Text style={[styles.val, { color: theme.textPrimary }]}>
+                    {formatMs(replayTelemetry.elapsedTimeMs)} /{" "}
+                    {formatMs(replayTelemetry.totalDurationMs)}
+                  </Text>
+                  <Text style={[styles.sub, { color: theme.textSecondary }]}>
+                    Speed: {replayTelemetry.speed}x
+                  </Text>
+                </View>
+
+                <View style={styles.col}>
+                  <Text style={[styles.label, { color: theme.textMuted }]}>
+                    POSITION ERROR
+                  </Text>
+                  <Text style={[styles.valHighlight, { color: "#F57C00" }]}>
+                    {safeNum(replayTelemetry.instantaneousErrorMeters, 1, "--", " m")}
+                  </Text>
+                </View>
+
+                <View style={styles.col}>
+                  <Text style={[styles.label, { color: theme.textMuted }]}>
+                    SIH DRIFT RATIO
+                  </Text>
+                  <Text style={[styles.valHighlight, { color: theme.accent }]}>
+                    {safeNum(replayTelemetry.cumulativeDriftPercent, 1, "N/A", "%")}
+                  </Text>
+                  <Text style={[styles.sub, { color: theme.textSecondary }]}>
+                    Ref: {safeNum(replayTelemetry.cumulativeDistanceTraveledM, 0, "0", "m")}
+                  </Text>
+                </View>
+              </View>
+
+              {/* Milestones chips */}
+              <View style={styles.milestonesContainer}>
+                <Text style={[styles.label, { color: theme.textMuted, marginBottom: 4 }]}>
+                  MILESTONES (ERROR / DRIFT %)
+                </Text>
+                <View style={styles.milestonesChipsRow}>
+                  {(
+                    [
+                      { label: "5s", err: replayTelemetry.milestoneErrors?.at5s, d: replayTelemetry.milestoneDrifts?.at5s },
+                      { label: "10s", err: replayTelemetry.milestoneErrors?.at10s, d: replayTelemetry.milestoneDrifts?.at10s },
+                      { label: "20s", err: replayTelemetry.milestoneErrors?.at20s, d: replayTelemetry.milestoneDrifts?.at20s },
+                      { label: "30s", err: replayTelemetry.milestoneErrors?.at30s, d: replayTelemetry.milestoneDrifts?.at30s },
+                      { label: "60s", err: replayTelemetry.milestoneErrors?.at60s, d: replayTelemetry.milestoneDrifts?.at60s },
+                    ] as const
+                  ).map((m) => (
+                    <View
+                      key={m.label}
+                      style={[
+                        styles.milestoneChip,
+                        {
+                          backgroundColor: theme.surface,
+                          borderColor: theme.surfaceBorder,
+                        },
+                      ]}
+                    >
+                      <Text style={[styles.milestoneLabel, { color: theme.textMuted }]}>
+                        {m.label}
+                      </Text>
+                      <Text style={[styles.milestoneVal, { color: theme.textPrimary }]}>
+                        {safeNum(m.err, 1, "--", "m")}
+                      </Text>
+                      <Text style={[styles.milestoneDrift, { color: theme.accent }]}>
+                        {m.d !== null && m.d !== undefined ? `${m.d}%` : "--"}
+                      </Text>
+                    </View>
+                  ))}
+                </View>
+              </View>
+            </>
+          ) : (
+            <Text style={[styles.inactiveNotice, { color: theme.textSecondary }]}>
+              Live driving mode active. Open Replay Lab to run reproducible IO-VNBD benchmark sessions.
+            </Text>
+          )}
+        </View>
+
+        {/* ============================================================ */}
+        {/* SECTION 5: GNSS & SENSOR FUSION                              */}
+        {/* ============================================================ */}
+        <View
+          style={[
+            styles.card,
+            {
+              backgroundColor: theme.surfaceSubtle,
+              borderColor:
+                gnssStatus === "VALID"
+                  ? theme.success
+                  : gnssStatus === "STALE"
+                  ? theme.warning
+                  : theme.danger,
+            },
+          ]}
+        >
+          <View style={styles.cardHeader}>
+            <Text style={[styles.cardTitle, { color: theme.accent }]}>
+              5. GNSS & SENSOR FUSION
+            </Text>
+            <Text
+              style={[
+                styles.badge,
+                {
+                  color:
+                    gnssStatus === "VALID"
+                      ? theme.success
+                      : gnssStatus === "STALE"
+                      ? theme.warning
+                      : theme.danger,
+                  borderColor:
+                    gnssStatus === "VALID"
+                      ? theme.success
+                      : theme.danger,
+                },
+              ]}
+            >
+              GNSS {gnssStatus ?? "UNKNOWN"}
+            </Text>
+          </View>
+
+          <View style={styles.dataRow}>
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                FIX AGE
+              </Text>
+              <Text
+                style={[
+                  styles.val,
+                  {
+                    color:
+                      lastGnssFixAgeMs == null
+                        ? theme.textMuted
+                        : lastGnssFixAgeMs < 2000
+                        ? theme.success
+                        : lastGnssFixAgeMs < 5000
+                        ? theme.warning
+                        : theme.danger,
+                  },
+                ]}
+              >
+                {lastGnssFixAgeMs != null ? `${lastGnssFixAgeMs} ms` : "--"}
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                GNSS FIXES
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {gnssFixCount ?? 0}
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                ESKF UPDATES
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {eskfGnssUpdateCount ?? 0}
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.coordsRow}>
+            <View style={styles.coordCol}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                RAW GNSS FIX
+              </Text>
+              <Text style={[styles.valMono, { color: theme.textPrimary }]}>
+                {rawGnssLocation
+                  ? `${rawGnssLocation.latitude.toFixed(6)}, ${rawGnssLocation.longitude.toFixed(6)}`
+                  : `${latText}, ${lngText}`}
+              </Text>
+              <Text style={[styles.sub, { color: theme.textSecondary }]}>
+                Acc: {rawGnssLocation?.accuracy != null ? `±${rawGnssLocation.accuracy.toFixed(1)}m` : accText} • Alt: {altText}
+              </Text>
+            </View>
+
+            <View style={styles.coordCol}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                ESKF FUSED STATE
+              </Text>
+              <Text style={[styles.valMono, { color: theme.textPrimary }]}>
+                {currentPositionEstimate
+                  ? `${currentPositionEstimate.latitude.toFixed(6)}, ${currentPositionEstimate.longitude.toFixed(6)}`
+                  : "--"}
+              </Text>
+              <Text style={[styles.sub, { color: theme.textSecondary }]}>
+                Unc: {currentPositionEstimate?.horizontal_accuracy != null ? `±${currentPositionEstimate.horizontal_accuracy.toFixed(1)}m` : "--"}
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        {/* ============================================================ */}
+        {/* SECTION 6: PERFORMANCE & RAM BUDGET                          */}
+        {/* ============================================================ */}
+        <View
+          style={[
+            styles.card,
+            {
+              backgroundColor: theme.surfaceSubtle,
+              borderColor:
+                roadMemoryDiagnostics?.memoryPressure === "AGGRESSIVE"
+                  ? theme.danger
+                  : roadMemoryDiagnostics?.memoryPressure === "PRESSURE"
+                  ? theme.warning
+                  : theme.surfaceBorder,
+            },
+          ]}
+        >
+          <View style={styles.cardHeader}>
+            <Text style={[styles.cardTitle, { color: theme.accent }]}>
+              6. PERFORMANCE & RAM BUDGET
+            </Text>
+            <Text
+              style={[
+                styles.badge,
+                {
+                  color:
+                    roadMemoryDiagnostics?.memoryPressure === "AGGRESSIVE"
+                      ? theme.danger
+                      : roadMemoryDiagnostics?.memoryPressure === "PRESSURE"
+                      ? theme.warning
+                      : theme.success,
+                  borderColor:
+                    roadMemoryDiagnostics?.memoryPressure === "AGGRESSIVE"
                       ? theme.danger
                       : theme.success,
                 },
               ]}
             >
-              {telemetry.gnssStreamGateState === "GNSS_STREAM_DISABLED"
-                ? "BLOCKED"
-                : "ACTIVE"}
-            </Text>{" "}
-            • Engine:{" "}
-            <Text style={[styles.boldText, { color: theme.textPrimary }]}>
-              {telemetry.positioningStatus}
+              PRESSURE: {roadMemoryDiagnostics?.memoryPressure ?? "NORMAL"}
             </Text>
-          </Text>
-          <Text style={[styles.footerText, { color: theme.textSecondary }]}>
-            Fix: {formatTime(currentLocation?.timestamp)}
-          </Text>
+          </View>
+
+          <View style={styles.dataRow}>
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                UPDATE FREQ
+              </Text>
+              <Text
+                style={[
+                  styles.valHighlight,
+                  { color: updateFrequencyHz > 0 ? theme.success : theme.danger },
+                ]}
+              >
+                ~{updateFrequencyHz.toFixed(1)} Hz
+              </Text>
+              <Text style={[styles.sub, { color: theme.textSecondary }]}>
+                Target: ~10 Hz
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                ROAD RAM USED
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {((roadMemoryDiagnostics?.ramRoadBytes ?? 0) / (1024 * 1024)).toFixed(2)} MB
+              </Text>
+              <Text style={[styles.sub, { color: theme.textSecondary }]}>
+                Budget: {((roadMemoryDiagnostics?.ramBudgetBytes ?? 15728640) / (1024 * 1024)).toFixed(0)} MB
+              </Text>
+            </View>
+
+            <View style={styles.col}>
+              <Text style={[styles.label, { color: theme.textMuted }]}>
+                EVICTIONS
+              </Text>
+              <Text style={[styles.val, { color: theme.textPrimary }]}>
+                {roadMemoryDiagnostics?.evictionCount ?? 0}
+              </Text>
+              <Text style={[styles.sub, { color: theme.textSecondary }]}>
+                Segs: {roadMemoryDiagnostics?.activeSegmentCount ?? 0}
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.streamGateRow}>
+            <Text style={[styles.sub, { color: theme.textSecondary }]}>
+              GNSS Stream Gate:{" "}
+              <Text
+                style={{
+                  fontWeight: "700",
+                  color:
+                    gnssStreamGateState === "GNSS_STREAM_DISABLED"
+                      ? theme.danger
+                      : theme.success,
+                }}
+              >
+                {gnssStreamGateState === "GNSS_STREAM_DISABLED"
+                  ? "STREAM BLOCKED (OUTAGE)"
+                  : "STREAM PERMITTED"}
+              </Text>
+            </Text>
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  bottomSheet: {
     position: "absolute",
-    left: 16,
-    borderRadius: 14,
-    padding: 14,
-    borderWidth: 1,
-    elevation: 8,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: "48%",
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    borderTopWidth: 1,
+    borderLeftWidth: 1,
+    borderRightWidth: 1,
+    paddingHorizontal: 14,
+    elevation: 24,
     shadowColor: "#000",
-    shadowOpacity: 0.2,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: -4 },
+    zIndex: 999,
+  },
+  dragHandleContainer: {
+    width: "100%",
+    alignItems: "center",
+    paddingVertical: 7,
+  },
+  dragHandle: {
+    width: 40,
+    height: 4,
+    borderRadius: 2,
   },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 10,
-    paddingBottom: 6,
+    paddingBottom: 8,
     borderBottomWidth: 1,
-    borderBottomColor: "#F1F3F4",
+    marginBottom: 8,
   },
   titleRow: {
     flexDirection: "row",
     alignItems: "center",
   },
   indicator: {
-    width: 7,
-    height: 7,
-    borderRadius: 3.5,
-    backgroundColor: "#1A73E8",
-    marginRight: 6,
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginRight: 8,
   },
   title: {
-    fontSize: 11,
+    fontSize: 12,
     fontWeight: "800",
-    letterSpacing: 0.8,
-    color: "#3C4043",
+    letterSpacing: 0.6,
   },
   closeTouch: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
+    width: 28,
+    height: 28,
+    borderRadius: 14,
     alignItems: "center",
     justifyContent: "center",
   },
   closeText: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: "700",
   },
-  grid: {
-    gap: 8,
-  },
-  row: {
-    flexDirection: "row",
-    gap: 8,
-  },
-  cell: {
+  scrollContainer: {
     flex: 1,
-    backgroundColor: "#F8F9FA",
-    borderRadius: 8,
-    padding: 8,
+  },
+  scrollContent: {
+    gap: 10,
+    paddingBottom: 16,
+  },
+  card: {
+    borderRadius: 10,
+    padding: 10,
     borderWidth: 1,
-    borderColor: "#ECEFF1",
+    gap: 8,
+  },
+  cardHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingBottom: 4,
+    borderBottomWidth: 1,
+    borderBottomColor: "rgba(150, 150, 150, 0.15)",
+  },
+  cardTitle: {
+    fontSize: 10,
+    fontWeight: "800",
+    letterSpacing: 0.5,
+  },
+  badge: {
+    fontSize: 9,
+    fontWeight: "800",
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+    borderWidth: 1,
+  },
+  dataRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    gap: 8,
+  },
+  col: {
+    flex: 1,
   },
   label: {
-    fontSize: 9,
+    fontSize: 8.5,
     fontWeight: "700",
-    color: "#70757A",
-    letterSpacing: 0.5,
+    letterSpacing: 0.4,
     marginBottom: 2,
   },
-  valueHighlight: {
-    fontSize: 16,
-    fontWeight: "800",
-    color: "#202124",
-  },
-  value: {
-    fontSize: 15,
+  val: {
+    fontSize: 12.5,
     fontWeight: "700",
-    color: "#202124",
+  },
+  valHighlight: {
+    fontSize: 14,
+    fontWeight: "800",
+  },
+  valMono: {
+    fontSize: 10.5,
+    fontWeight: "700",
+    fontFamily: "monospace",
   },
   unit: {
-    fontSize: 10,
+    fontSize: 9.5,
     fontWeight: "600",
-    color: "#5F6368",
   },
-  subText: {
-    fontSize: 9,
-    color: "#5F6368",
+  sub: {
+    fontSize: 8.5,
     marginTop: 2,
   },
-  coordsBox: {
+  coordsRow: {
     flexDirection: "row",
-    backgroundColor: "#F8F9FA",
-    borderRadius: 8,
-    padding: 8,
-    borderWidth: 1,
-    borderColor: "#ECEFF1",
+    gap: 8,
+    paddingTop: 4,
+    borderTopWidth: 1,
+    borderTopColor: "rgba(150, 150, 150, 0.12)",
   },
   coordCol: {
     flex: 1,
   },
-  coordValue: {
-    fontSize: 12,
-    fontWeight: "700",
-    fontFamily: "monospace",
-    color: "#202124",
+  milestonesContainer: {
+    paddingTop: 6,
+    borderTopWidth: 1,
+    borderTopColor: "rgba(150, 150, 150, 0.12)",
   },
-  footerRow: {
+  milestonesChipsRow: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingTop: 4,
-  },
-  footerText: {
-    fontSize: 9,
-    color: "#70757A",
-  },
-  boldText: {
-    fontWeight: "700",
-    color: "#202124",
-  },
-  modelDiagBox: {
-    borderRadius: 8,
-    padding: 8,
-    borderWidth: 1,
     gap: 4,
   },
-  modelDiagHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    borderBottomWidth: 1,
-    borderBottomColor: "#ECEFF1",
-    paddingBottom: 4,
-    marginBottom: 2,
-  },
-  modelDiagTitle: {
-    fontSize: 9,
-    fontWeight: "800",
-    letterSpacing: 0.5,
-  },
-  modelStatusBadge: {
-    fontSize: 9,
-    fontWeight: "800",
-  },
-  modelNameText: {
-    fontSize: 11,
-    fontWeight: "700",
-  },
-  modelVerText: {
-    fontSize: 9,
-    fontFamily: "monospace",
-  },
-  modelRow: {
-    flexDirection: "row",
-    gap: 6,
-    marginTop: 2,
-  },
-  modelCol: {
+  milestoneChip: {
     flex: 1,
+    alignItems: "center",
+    paddingVertical: 4,
+    paddingHorizontal: 2,
+    borderRadius: 6,
+    borderWidth: 1,
   },
-  modelValue: {
-    fontSize: 11,
+  milestoneLabel: {
+    fontSize: 8,
     fontWeight: "700",
+  },
+  milestoneVal: {
+    fontSize: 10,
+    fontWeight: "800",
+  },
+  milestoneDrift: {
+    fontSize: 8,
+    fontWeight: "700",
+  },
+  inactiveNotice: {
+    fontSize: 10.5,
+    lineHeight: 15,
+    fontStyle: "italic",
+  },
+  streamGateRow: {
+    paddingTop: 4,
+    borderTopWidth: 1,
+    borderTopColor: "rgba(150, 150, 150, 0.12)",
   },
 });

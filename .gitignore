@@ -65,6 +65,14 @@ scratch/
 screenshot_*.*
 screenshots/
 *_screenshot.*
+demo_*.png
+emulator_*.png
+screen_*.png
+scratch_screen.png
+dump.xml
+*.png
+artifacts/**/screenshots/
+dist_test/
 
 # Large zip archives
 *.zip

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" width="900" height="550" style="background:#0F172A; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;">
+<text x="100" y="45" fill="#F8FAFC" font-size="20" font-weight="bold">Maximum Drift % vs Outage Duration</text>
+<text x="100" y="70" fill="#94A3B8" font-size="13">Physical OnePlus Nord CE4 Evaluation | IO-VNBD Test Split (N = 88 Runs)</text>
+<line x1="100" y1="470.0" x2="840" y2="470.0" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="474.0" fill="#64748B" font-size="12" text-anchor="end">0%</text>
+<line x1="100" y1="408.3333333333333" x2="840" y2="408.3333333333333" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="412.3333333333333" fill="#64748B" font-size="12" text-anchor="end">50%</text>
+<line x1="100" y1="346.6666666666667" x2="840" y2="346.6666666666667" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="350.6666666666667" fill="#64748B" font-size="12" text-anchor="end">100%</text>
+<line x1="100" y1="285.0" x2="840" y2="285.0" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="289.0" fill="#64748B" font-size="12" text-anchor="end">150%</text>
+<line x1="100" y1="223.33333333333334" x2="840" y2="223.33333333333334" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="227.33333333333334" fill="#64748B" font-size="12" text-anchor="end">200%</text>
+<line x1="100" y1="161.66666666666663" x2="840" y2="161.66666666666663" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="165.66666666666663" fill="#64748B" font-size="12" text-anchor="end">250%</text>
+<line x1="100" y1="100.0" x2="840" y2="100.0" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="88" y="104.0" fill="#64748B" font-size="12" text-anchor="end">300%</text>
+<line x1="156.92307692307693" y1="100" x2="156.92307692307693" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="156.92307692307693" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">5s</text>
+<line x1="213.84615384615387" y1="100" x2="213.84615384615387" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="213.84615384615387" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">10s</text>
+<line x1="327.69230769230774" y1="100" x2="327.69230769230774" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="327.69230769230774" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">20s</text>
+<line x1="441.53846153846155" y1="100" x2="441.53846153846155" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="441.53846153846155" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">30s</text>
+<line x1="783.0769230769231" y1="100" x2="783.0769230769231" y2="470" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="783.0769230769231" y="494" fill="#94A3B8" font-size="13" font-weight="600" text-anchor="middle">60s</text>
+<line x1="100" y1="470" x2="840" y2="470" stroke="#64748B" stroke-width="2"/>
+<line x1="100" y1="100" x2="100" y2="470" stroke="#64748B" stroke-width="2"/>
+<text x="470.0" y="525" fill="#CBD5E1" font-size="14" font-weight="600" text-anchor="middle">Outage Duration (Seconds)</text>
+<text x="35" y="285.0" fill="#CBD5E1" font-size="14" font-weight="600" text-anchor="middle" transform="rotate(-90 35 285.0)">Drift % of Outage Distance</text>
+<line x1="100" y1="457.6666666666667" x2="840" y2="457.6666666666667" stroke="#10B981" stroke-width="2.5" stroke-dasharray="8,4"/>
+<rect x="655" y="433.6666666666667" width="180" height="20" fill="#064E3B" rx="4"/>
+<text x="745" y="447.6666666666667" fill="#34D399" font-size="11" font-weight="bold" text-anchor="middle">SIH TARGET THRESHOLD (10%)</text>
+<path d="M 156.92307692307693 128.05833333333334 L 213.84615384615387 241.03166666666667 L 327.69230769230774 317.93 L 441.53846153846155 348.973 L 783.0769230769231 361.294" fill="none" stroke="#F43F5E" stroke-width="3.5" stroke-linejoin="round"/>
+<circle cx="156.92307692307693" cy="128.05833333333334" r="6" fill="#F43F5E" stroke="#0F172A" stroke-width="2.5"/>
+<text x="156.92307692307693" y="116.05833333333334" fill="#F43F5E" font-size="11" font-weight="bold" text-anchor="middle">277.2%</text>
+<circle cx="213.84615384615387" cy="241.03166666666667" r="6" fill="#F43F5E" stroke="#0F172A" stroke-width="2.5"/>
+<text x="213.84615384615387" y="229.03166666666667" fill="#F43F5E" font-size="11" font-weight="bold" text-anchor="middle">185.7%</text>
+<circle cx="327.69230769230774" cy="317.93" r="6" fill="#F43F5E" stroke="#0F172A" stroke-width="2.5"/>
+<text x="327.69230769230774" y="305.93" fill="#F43F5E" font-size="11" font-weight="bold" text-anchor="middle">123.3%</text>
+<circle cx="441.53846153846155" cy="348.973" r="6" fill="#F43F5E" stroke="#0F172A" stroke-width="2.5"/>
+<text x="441.53846153846155" y="336.973" fill="#F43F5E" font-size="11" font-weight="bold" text-anchor="middle">98.1%</text>
+<circle cx="783.0769230769231" cy="361.294" r="6" fill="#F43F5E" stroke="#0F172A" stroke-width="2.5"/>
+<text x="783.0769230769231" y="349.294" fill="#F43F5E" font-size="11" font-weight="bold" text-anchor="middle">88.1%</text>
+<path d="M 156.92307692307693 158.91633333333334 L 213.84615384615387 242.77066666666667 L 327.69230769230774 318.1766666666667 L 441.53846153846155 347.086 L 783.0769230769231 360.34433333333334" fill="none" stroke="#38BDF8" stroke-width="3.5" stroke-linejoin="round"/>
+<circle cx="156.92307692307693" cy="158.91633333333334" r="6" fill="#38BDF8" stroke="#0F172A" stroke-width="2.5"/>
+<text x="156.92307692307693" y="146.91633333333334" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">252.2%</text>
+<circle cx="213.84615384615387" cy="242.77066666666667" r="6" fill="#38BDF8" stroke="#0F172A" stroke-width="2.5"/>
+<text x="213.84615384615387" y="230.77066666666667" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">184.2%</text>
+<circle cx="327.69230769230774" cy="318.1766666666667" r="6" fill="#38BDF8" stroke="#0F172A" stroke-width="2.5"/>
+<text x="327.69230769230774" y="306.1766666666667" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">123.1%</text>
+<circle cx="441.53846153846155" cy="347.086" r="6" fill="#38BDF8" stroke="#0F172A" stroke-width="2.5"/>
+<text x="441.53846153846155" y="335.086" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">99.7%</text>
+<circle cx="783.0769230769231" cy="360.34433333333334" r="6" fill="#38BDF8" stroke="#0F172A" stroke-width="2.5"/>
+<text x="783.0769230769231" y="348.34433333333334" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">88.9%</text>
+<rect x="120" y="125" width="340" height="60" fill="#1E293B" stroke="#334155" rx="6"/>
+<line x1="135" y1="145" x2="165" y2="145" stroke="#38BDF8" stroke-width="3"/>
+<circle cx="150" cy="145" r="4" fill="#38BDF8"/>
+<text x="175" y="149" fill="#F8FAFC" font-size="12" font-weight="600">FINAL IDR (Road Network ON)</text>
+<line x1="135" y1="167" x2="165" y2="167" stroke="#F43F5E" stroke-width="3"/>
+<circle cx="150" cy="167" r="4" fill="#F43F5E"/>
+<text x="175" y="171" fill="#F8FAFC" font-size="12" font-weight="600">FINAL IDR · ROAD OFF (Ablation)</text>
+</svg>

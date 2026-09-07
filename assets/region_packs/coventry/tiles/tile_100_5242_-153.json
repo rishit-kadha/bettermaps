@@ -1,0 +1,225 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5242:-153"
+  },
+  "bounds": {
+    "minLat": 52.42,
+    "maxLat": 52.43,
+    "minLon": -1.53,
+    "maxLon": -1.52
+  },
+  "segments": [
+    {
+      "id": "s_4912271",
+      "name": "Banks Road",
+      "startPoint": {
+        "latitude": 52.4222756,
+        "longitude": -1.5268206
+      },
+      "endPoint": {
+        "latitude": 52.4180632,
+        "longitude": -1.5282764
+      },
+      "lengthMeters": 501.6,
+      "bearingDeg": 201,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "residential",
+      "startNodeId": "n_30049390",
+      "endNodeId": "n_30049359",
+      "geometry": [
+        {
+          "latitude": 52.4222756,
+          "longitude": -1.5268206
+        },
+        {
+          "latitude": 52.4219517,
+          "longitude": -1.527025
+        },
+        {
+          "latitude": 52.4216469,
+          "longitude": -1.5272173
+        },
+        {
+          "latitude": 52.4215461,
+          "longitude": -1.5272848
+        },
+        {
+          "latitude": 52.4214258,
+          "longitude": -1.5273542
+        },
+        {
+          "latitude": 52.4213033,
+          "longitude": -1.5273862
+        },
+        {
+          "latitude": 52.4211335,
+          "longitude": -1.5274124
+        },
+        {
+          "latitude": 52.4209744,
+          "longitude": -1.5274244
+        },
+        {
+          "latitude": 52.4208589,
+          "longitude": -1.5274144
+        },
+        {
+          "latitude": 52.4205226,
+          "longitude": -1.5273697
+        },
+        {
+          "latitude": 52.4200726,
+          "longitude": -1.5273096
+        },
+        {
+          "latitude": 52.4198156,
+          "longitude": -1.5272747
+        },
+        {
+          "latitude": 52.4192525,
+          "longitude": -1.5271815
+        },
+        {
+          "latitude": 52.4191502,
+          "longitude": -1.527167
+        },
+        {
+          "latitude": 52.419058,
+          "longitude": -1.5271741
+        },
+        {
+          "latitude": 52.4189832,
+          "longitude": -1.5271934
+        },
+        {
+          "latitude": 52.4189037,
+          "longitude": -1.5272225
+        },
+        {
+          "latitude": 52.4188219,
+          "longitude": -1.5272775
+        },
+        {
+          "latitude": 52.4187563,
+          "longitude": -1.5273353
+        },
+        {
+          "latitude": 52.4186115,
+          "longitude": -1.5274822
+        },
+        {
+          "latitude": 52.4184788,
+          "longitude": -1.5276343
+        },
+        {
+          "latitude": 52.4183523,
+          "longitude": -1.5278118
+        },
+        {
+          "latitude": 52.4180632,
+          "longitude": -1.5282764
+        }
+      ]
+    },
+    {
+      "id": "s_4912281",
+      "name": "Harington Road",
+      "startPoint": {
+        "latitude": 52.4202334,
+        "longitude": -1.5241356
+      },
+      "endPoint": {
+        "latitude": 52.4192037,
+        "longitude": -1.5237071
+      },
+      "lengthMeters": 118.2,
+      "bearingDeg": 166.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_32134025",
+      "endNodeId": "n_32134026",
+      "geometry": [
+        {
+          "latitude": 52.4202334,
+          "longitude": -1.5241356
+        },
+        {
+          "latitude": 52.4193777,
+          "longitude": -1.523805
+        },
+        {
+          "latitude": 52.4192037,
+          "longitude": -1.5237071
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_30049390",
+      "coordinate": {
+        "latitude": 52.4222756,
+        "longitude": -1.5268206
+      },
+      "connectedSegmentIds": [
+        "s_4912271"
+      ]
+    },
+    {
+      "id": "n_30049349",
+      "coordinate": {
+        "latitude": 52.4204117,
+        "longitude": -1.5221249
+      },
+      "connectedSegmentIds": [
+        "s_4912278"
+      ]
+    },
+    {
+      "id": "n_32134025",
+      "coordinate": {
+        "latitude": 52.4202334,
+        "longitude": -1.5241356
+      },
+      "connectedSegmentIds": [
+        "s_4912281"
+      ]
+    },
+    {
+      "id": "n_32221296",
+      "coordinate": {
+        "latitude": 52.4214525,
+        "longitude": -1.5263528
+      },
+      "connectedSegmentIds": [
+        "s_4918615"
+      ]
+    },
+    {
+      "id": "n_26092565",
+      "coordinate": {
+        "latitude": 52.4212135,
+        "longitude": -1.525296
+      },
+      "connectedSegmentIds": [
+        "s_4918616"
+      ]
+    },
+    {
+      "id": "n_32221322",
+      "coordinate": {
+        "latitude": 52.4253349,
+        "longitude": -1.5258005
+      },
+      "connectedSegmentIds": [
+        "s_4918623"
+      ]
+    }
+  ],
+  "intersections": []
+}

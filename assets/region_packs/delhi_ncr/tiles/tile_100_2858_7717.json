@@ -1,0 +1,146 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2858:7717"
+  },
+  "bounds": {
+    "minLat": 28.580000000000002,
+    "maxLat": 28.59,
+    "minLon": 77.17,
+    "maxLon": 77.18
+  },
+  "segments": [
+    {
+      "id": "delhi_s_munirka_connector",
+      "name": "Munirka Marg",
+      "startPoint": {
+        "latitude": 28.5812,
+        "longitude": 77.172,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.583,
+        "longitude": 77.178,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.5812,
+          "longitude": 77.172,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.582099999999997,
+          "longitude": 77.175,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.583,
+          "longitude": 77.178,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 619.1,
+      "bearingDeg": 71.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 11.1,
+      "roadClass": "secondary",
+      "startNodeId": "delhi_n_room_e",
+      "endNodeId": "delhi_n_moti_bagh_ring"
+    },
+    {
+      "id": "delhi_s_ring_moti_aiims",
+      "name": "Mahatma Gandhi Ring Road South",
+      "startPoint": {
+        "latitude": 28.583,
+        "longitude": 77.178,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.568,
+        "longitude": 77.21,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.583,
+          "longitude": 77.178,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.575499999999998,
+          "longitude": 77.19399999999999,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.568,
+          "longitude": 77.21,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 3542.1,
+      "bearingDeg": 118.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 16.7,
+      "roadClass": "trunk",
+      "startNodeId": "delhi_n_moti_bagh_ring",
+      "endNodeId": "delhi_n_aiims"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_room_e",
+      "coordinate": {
+        "latitude": 28.5812,
+        "longitude": 77.172,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_room_street_2",
+        "delhi_s_munirka_connector"
+      ]
+    },
+    {
+      "id": "delhi_n_moti_bagh_ring",
+      "coordinate": {
+        "latitude": 28.583,
+        "longitude": 77.178,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_munirka_connector",
+        "delhi_s_moti_bagh_ring",
+        "delhi_s_ring_moti_aiims"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_room_e",
+      "coordinate": {
+        "latitude": 28.5812,
+        "longitude": 77.172,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_room_street_2",
+        "delhi_s_munirka_connector"
+      ]
+    },
+    {
+      "nodeId": "delhi_n_moti_bagh_ring",
+      "coordinate": {
+        "latitude": 28.583,
+        "longitude": 77.178,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_munirka_connector",
+        "delhi_s_moti_bagh_ring",
+        "delhi_s_ring_moti_aiims"
+      ]
+    }
+  ]
+}

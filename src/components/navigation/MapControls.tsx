@@ -66,26 +66,22 @@ export const MapControls: React.FC<MapControlsProps> = ({
         />
       </TouchableOpacity>
 
-      {/* 2. IO-VNBD Replay Lab FAB */}
-      {onToggleReplay && (
+      {/* 2. IO-VNBD Replay Lab FAB (hidden while Replay Lab is actively open to avoid control crowding) */}
+      {onToggleReplay && !isReplayActive && (
         <TouchableOpacity
           style={[
             styles.circleFab,
             {
-              backgroundColor: isReplayActive ? theme.accent : theme.surface,
-              borderColor: isReplayActive ? theme.accent : theme.surfaceBorder,
+              backgroundColor: theme.surface,
+              borderColor: theme.surfaceBorder,
             },
           ]}
           onPress={onToggleReplay}
           activeOpacity={0.8}
-          accessibilityLabel="Toggle IO-VNBD Replay Lab"
+          accessibilityLabel="Open IO-VNBD Replay Lab"
           hitSlop={{ top: 4, bottom: 4, left: 4, right: 4 }}
         >
-          <Ionicons
-            name={isReplayActive ? "videocam" : "videocam-outline"}
-            size={20}
-            color={isReplayActive ? "#FFFFFF" : theme.accent}
-          />
+          <Ionicons name="videocam-outline" size={20} color={theme.accent} />
         </TouchableOpacity>
       )}
 

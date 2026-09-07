@@ -62,7 +62,7 @@ export const SystemWarningBanner: React.FC<SystemWarningBannerProps> = ({
                 { color: themeMode === "dark" ? "#E2E8F0" : "#5F6368" },
               ]}
             >
-              BetterMaps requires fine location access to track vehicle
+              Saathi requires fine location access to track vehicle
               position.
             </Text>
           </View>

@@ -1,0 +1,320 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2863:7721"
+  },
+  "bounds": {
+    "minLat": 28.63,
+    "maxLat": 28.64,
+    "minLon": 77.21000000000001,
+    "maxLon": 77.22
+  },
+  "segments": [
+    {
+      "id": "delhi_s_cp_inner_1",
+      "name": "Connaught Place Inner Circle NE",
+      "startPoint": {
+        "latitude": 28.6355,
+        "longitude": 77.2197,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.6347,
+        "longitude": 77.223,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.6355,
+          "longitude": 77.2197,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6351,
+          "longitude": 77.22135,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6347,
+          "longitude": 77.223,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 334.1,
+      "bearingDeg": 105.4,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 8.3,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_cp_rad1",
+      "endNodeId": "delhi_n_cp_rad2"
+    },
+    {
+      "id": "delhi_s_cp_inner_5",
+      "name": "Connaught Place Inner Circle SW",
+      "startPoint": {
+        "latitude": 28.63,
+        "longitude": 77.217,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.632,
+        "longitude": 77.215,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.63,
+          "longitude": 77.217,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.631,
+          "longitude": 77.21600000000001,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.632,
+          "longitude": 77.215,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 295.9,
+      "bearingDeg": 318.7,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 8.3,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_cp_rad5",
+      "endNodeId": "delhi_n_cp_rad6"
+    },
+    {
+      "id": "delhi_s_cp_inner_6",
+      "name": "Connaught Place Inner Circle NW",
+      "startPoint": {
+        "latitude": 28.632,
+        "longitude": 77.215,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.635,
+        "longitude": 77.216,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.632,
+          "longitude": 77.215,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6335,
+          "longitude": 77.21549999999999,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.635,
+          "longitude": 77.216,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 347.6,
+      "bearingDeg": 16.3,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 8.3,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_cp_rad6",
+      "endNodeId": "delhi_n_cp_rad7"
+    },
+    {
+      "id": "delhi_s_cp_inner_7",
+      "name": "Connaught Place Inner Circle N",
+      "startPoint": {
+        "latitude": 28.635,
+        "longitude": 77.216,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.6355,
+        "longitude": 77.2197,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.635,
+          "longitude": 77.216,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.63525,
+          "longitude": 77.21785,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6355,
+          "longitude": 77.2197,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 365.4,
+      "bearingDeg": 81.2,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 8.3,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_cp_rad7",
+      "endNodeId": "delhi_n_cp_rad1"
+    },
+    {
+      "id": "delhi_s_sansad_1",
+      "name": "Parliament Street (Sansad Marg)",
+      "startPoint": {
+        "latitude": 28.63,
+        "longitude": 77.217,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.6235,
+        "longitude": 77.2135,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.63,
+          "longitude": 77.217,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.62675,
+          "longitude": 77.21525,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6235,
+          "longitude": 77.2135,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 799.4,
+      "bearingDeg": 205.3,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 11.1,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_cp_rad5",
+      "endNodeId": "delhi_n_patel_chowk"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_cp_center",
+      "coordinate": {
+        "latitude": 28.6328,
+        "longitude": 77.2197,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": []
+    },
+    {
+      "id": "delhi_n_cp_rad1",
+      "coordinate": {
+        "latitude": 28.6355,
+        "longitude": 77.2197,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_cp_inner_1",
+        "delhi_s_cp_inner_7"
+      ]
+    },
+    {
+      "id": "delhi_n_cp_rad5",
+      "coordinate": {
+        "latitude": 28.63,
+        "longitude": 77.217,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_cp_inner_4",
+        "delhi_s_cp_inner_5",
+        "delhi_s_sansad_1"
+      ]
+    },
+    {
+      "id": "delhi_n_cp_rad6",
+      "coordinate": {
+        "latitude": 28.632,
+        "longitude": 77.215,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_cp_inner_5",
+        "delhi_s_cp_inner_6"
+      ]
+    },
+    {
+      "id": "delhi_n_cp_rad7",
+      "coordinate": {
+        "latitude": 28.635,
+        "longitude": 77.216,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_cp_inner_6",
+        "delhi_s_cp_inner_7"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_cp_rad1",
+      "coordinate": {
+        "latitude": 28.6355,
+        "longitude": 77.2197,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_cp_inner_1",
+        "delhi_s_cp_inner_7"
+      ]
+    },
+    {
+      "nodeId": "delhi_n_cp_rad5",
+      "coordinate": {
+        "latitude": 28.63,
+        "longitude": 77.217,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_cp_inner_4",
+        "delhi_s_cp_inner_5",
+        "delhi_s_sansad_1"
+      ]
+    },
+    {
+      "nodeId": "delhi_n_cp_rad6",
+      "coordinate": {
+        "latitude": 28.632,
+        "longitude": 77.215,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_cp_inner_5",
+        "delhi_s_cp_inner_6"
+      ]
+    },
+    {
+      "nodeId": "delhi_n_cp_rad7",
+      "coordinate": {
+        "latitude": 28.635,
+        "longitude": 77.216,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_cp_inner_6",
+        "delhi_s_cp_inner_7"
+      ]
+    }
+  ]
+}

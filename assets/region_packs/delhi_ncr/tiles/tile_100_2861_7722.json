@@ -1,0 +1,159 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2861:7722"
+  },
+  "bounds": {
+    "minLat": 28.61,
+    "maxLat": 28.62,
+    "minLon": 77.22,
+    "maxLon": 77.23
+  },
+  "segments": [
+    {
+      "id": "delhi_s_c_hex_1",
+      "name": "C-Hexagon NW",
+      "startPoint": {
+        "latitude": 28.6129,
+        "longitude": 77.225,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.616,
+        "longitude": 77.2295,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.6129,
+          "longitude": 77.225,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.614449999999998,
+          "longitude": 77.22725,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.616,
+          "longitude": 77.2295,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 558.4,
+      "bearingDeg": 51.9,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 11.1,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_ig_hex_w",
+      "endNodeId": "delhi_n_ig_hex_n"
+    },
+    {
+      "id": "delhi_s_c_hex_2",
+      "name": "C-Hexagon NE",
+      "startPoint": {
+        "latitude": 28.616,
+        "longitude": 77.2295,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.6129,
+        "longitude": 77.2335,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.616,
+          "longitude": 77.2295,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.614449999999998,
+          "longitude": 77.23150000000001,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6129,
+          "longitude": 77.2335,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 520.8,
+      "bearingDeg": 131.4,
+      "directionality": "forward_only",
+      "oneWay": true,
+      "speedLimitMps": 11.1,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_ig_hex_n",
+      "endNodeId": "delhi_n_ig_hex_e"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_ig_center",
+      "coordinate": {
+        "latitude": 28.6129,
+        "longitude": 77.2295,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": []
+    },
+    {
+      "id": "delhi_n_ig_hex_n",
+      "coordinate": {
+        "latitude": 28.616,
+        "longitude": 77.2295,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_mandi_tilak",
+        "delhi_s_c_hex_1",
+        "delhi_s_c_hex_2"
+      ]
+    },
+    {
+      "id": "delhi_n_ig_hex_w",
+      "coordinate": {
+        "latitude": 28.6129,
+        "longitude": 77.225,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_janpath_3",
+        "delhi_s_kartavya_2",
+        "delhi_s_c_hex_1",
+        "delhi_s_c_hex_4"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_ig_hex_n",
+      "coordinate": {
+        "latitude": 28.616,
+        "longitude": 77.2295,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_mandi_tilak",
+        "delhi_s_c_hex_1",
+        "delhi_s_c_hex_2"
+      ]
+    },
+    {
+      "nodeId": "delhi_n_ig_hex_w",
+      "coordinate": {
+        "latitude": 28.6129,
+        "longitude": 77.225,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_janpath_3",
+        "delhi_s_kartavya_2",
+        "delhi_s_c_hex_1",
+        "delhi_s_c_hex_4"
+      ]
+    }
+  ]
+}

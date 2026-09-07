@@ -1,0 +1,501 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5241:-149"
+  },
+  "bounds": {
+    "minLat": 52.410000000000004,
+    "maxLat": 52.42,
+    "minLon": -1.49,
+    "maxLon": -1.48
+  },
+  "segments": [
+    {
+      "id": "s_4310553",
+      "name": "Swan Lane",
+      "startPoint": {
+        "latitude": 52.4130621,
+        "longitude": -1.4881959
+      },
+      "endPoint": {
+        "latitude": 52.4154574,
+        "longitude": -1.4902618
+      },
+      "lengthMeters": 317.5,
+      "bearingDeg": 356.8,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 11.1,
+      "roadClass": "secondary",
+      "startNodeId": "n_1109307201",
+      "endNodeId": "n_1950046943",
+      "geometry": [
+        {
+          "latitude": 52.4130621,
+          "longitude": -1.4881959
+        },
+        {
+          "latitude": 52.4132755,
+          "longitude": -1.4882153
+        },
+        {
+          "latitude": 52.413489,
+          "longitude": -1.4882486
+        },
+        {
+          "latitude": 52.413602,
+          "longitude": -1.4882736
+        },
+        {
+          "latitude": 52.4136954,
+          "longitude": -1.4882942
+        },
+        {
+          "latitude": 52.4138934,
+          "longitude": -1.4883575
+        },
+        {
+          "latitude": 52.4140714,
+          "longitude": -1.4884295
+        },
+        {
+          "latitude": 52.4142627,
+          "longitude": -1.4885492
+        },
+        {
+          "latitude": 52.4144278,
+          "longitude": -1.4886721
+        },
+        {
+          "latitude": 52.4145784,
+          "longitude": -1.4888028
+        },
+        {
+          "latitude": 52.4146422,
+          "longitude": -1.4888704
+        },
+        {
+          "latitude": 52.4147117,
+          "longitude": -1.4889529
+        },
+        {
+          "latitude": 52.4147661,
+          "longitude": -1.4890263
+        },
+        {
+          "latitude": 52.4148291,
+          "longitude": -1.4891203
+        },
+        {
+          "latitude": 52.4148807,
+          "longitude": -1.4892189
+        },
+        {
+          "latitude": 52.4149273,
+          "longitude": -1.4893299
+        },
+        {
+          "latitude": 52.414978,
+          "longitude": -1.4894671
+        },
+        {
+          "latitude": 52.4151,
+          "longitude": -1.489823
+        },
+        {
+          "latitude": 52.4151594,
+          "longitude": -1.4899468
+        },
+        {
+          "latitude": 52.4151882,
+          "longitude": -1.4899872
+        },
+        {
+          "latitude": 52.4152168,
+          "longitude": -1.4900273
+        },
+        {
+          "latitude": 52.4152646,
+          "longitude": -1.4900746
+        },
+        {
+          "latitude": 52.4152797,
+          "longitude": -1.4900896
+        },
+        {
+          "latitude": 52.4153939,
+          "longitude": -1.4901866
+        },
+        {
+          "latitude": 52.4154574,
+          "longitude": -1.4902618
+        }
+      ]
+    },
+    {
+      "id": "s_16224184",
+      "name": "Thackhall Street",
+      "startPoint": {
+        "latitude": 52.4129614,
+        "longitude": -1.4881892
+      },
+      "endPoint": {
+        "latitude": 52.4126399,
+        "longitude": -1.4916186
+      },
+      "lengthMeters": 237.8,
+      "bearingDeg": 253.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_164789485",
+      "endNodeId": "n_164789513",
+      "geometry": [
+        {
+          "latitude": 52.4129614,
+          "longitude": -1.4881892
+        },
+        {
+          "latitude": 52.4128198,
+          "longitude": -1.4889527
+        },
+        {
+          "latitude": 52.41277,
+          "longitude": -1.489221
+        },
+        {
+          "latitude": 52.4127051,
+          "longitude": -1.4895989
+        },
+        {
+          "latitude": 52.4126638,
+          "longitude": -1.4898292
+        },
+        {
+          "latitude": 52.4126518,
+          "longitude": -1.4899562
+        },
+        {
+          "latitude": 52.4126797,
+          "longitude": -1.4905182
+        },
+        {
+          "latitude": 52.4126399,
+          "longitude": -1.4916186
+        }
+      ]
+    },
+    {
+      "id": "s_73925562",
+      "name": "Signet Square",
+      "startPoint": {
+        "latitude": 52.4126518,
+        "longitude": -1.4899562
+      },
+      "endPoint": {
+        "latitude": 52.4116139,
+        "longitude": -1.4905559
+      },
+      "lengthMeters": 210.6,
+      "bearingDeg": 180.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_164789502",
+      "endNodeId": "n_4874418214",
+      "geometry": [
+        {
+          "latitude": 52.4126518,
+          "longitude": -1.4899562
+        },
+        {
+          "latitude": 52.4121794,
+          "longitude": -1.4899651
+        },
+        {
+          "latitude": 52.4121794,
+          "longitude": -1.4897202
+        },
+        {
+          "latitude": 52.412182,
+          "longitude": -1.4895998
+        },
+        {
+          "latitude": 52.4121711,
+          "longitude": -1.4895549
+        },
+        {
+          "latitude": 52.4121469,
+          "longitude": -1.4895306
+        },
+        {
+          "latitude": 52.4120844,
+          "longitude": -1.4895221
+        },
+        {
+          "latitude": 52.4119606,
+          "longitude": -1.4895232
+        },
+        {
+          "latitude": 52.4118117,
+          "longitude": -1.4895205
+        },
+        {
+          "latitude": 52.4116393,
+          "longitude": -1.4895259
+        },
+        {
+          "latitude": 52.4116298,
+          "longitude": -1.4895483
+        },
+        {
+          "latitude": 52.4116226,
+          "longitude": -1.4895767
+        },
+        {
+          "latitude": 52.411618,
+          "longitude": -1.4896171
+        },
+        {
+          "latitude": 52.4116165,
+          "longitude": -1.4898495
+        },
+        {
+          "latitude": 52.4116138,
+          "longitude": -1.490124
+        },
+        {
+          "latitude": 52.4116138,
+          "longitude": -1.4903456
+        },
+        {
+          "latitude": 52.4116139,
+          "longitude": -1.4905559
+        }
+      ]
+    },
+    {
+      "id": "s_73925570",
+      "name": "Signet Square",
+      "startPoint": {
+        "latitude": 52.4121794,
+        "longitude": -1.4899651
+      },
+      "endPoint": {
+        "latitude": 52.4115011,
+        "longitude": -1.4909875
+      },
+      "lengthMeters": 140,
+      "bearingDeg": 270.9,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_874739843",
+      "endNodeId": "n_1950712149",
+      "geometry": [
+        {
+          "latitude": 52.4121794,
+          "longitude": -1.4899651
+        },
+        {
+          "latitude": 52.4121829,
+          "longitude": -1.4903155
+        },
+        {
+          "latitude": 52.4121825,
+          "longitude": -1.4904888
+        },
+        {
+          "latitude": 52.4121752,
+          "longitude": -1.4905108
+        },
+        {
+          "latitude": 52.4121673,
+          "longitude": -1.4905345
+        },
+        {
+          "latitude": 52.4121265,
+          "longitude": -1.4905629
+        },
+        {
+          "latitude": 52.4120531,
+          "longitude": -1.4905648
+        },
+        {
+          "latitude": 52.4116633,
+          "longitude": -1.4905567
+        },
+        {
+          "latitude": 52.4116139,
+          "longitude": -1.4905559
+        },
+        {
+          "latitude": 52.4115616,
+          "longitude": -1.4905602
+        },
+        {
+          "latitude": 52.4115211,
+          "longitude": -1.4905705
+        },
+        {
+          "latitude": 52.4115109,
+          "longitude": -1.4905995
+        },
+        {
+          "latitude": 52.4115081,
+          "longitude": -1.4906623
+        },
+        {
+          "latitude": 52.4115011,
+          "longitude": -1.4909875
+        }
+      ]
+    },
+    {
+      "id": "s_152343559",
+      "name": "Hans Close",
+      "startPoint": {
+        "latitude": 52.4167758,
+        "longitude": -1.4894922
+      },
+      "endPoint": {
+        "latitude": 52.4165526,
+        "longitude": -1.4902722
+      },
+      "lengthMeters": 69.1,
+      "bearingDeg": 189.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_1651671695",
+      "endNodeId": "n_1651671671",
+      "geometry": [
+        {
+          "latitude": 52.4167758,
+          "longitude": -1.4894922
+        },
+        {
+          "latitude": 52.4166585,
+          "longitude": -1.4895247
+        },
+        {
+          "latitude": 52.4166006,
+          "longitude": -1.4896021
+        },
+        {
+          "latitude": 52.4165625,
+          "longitude": -1.489697
+        },
+        {
+          "latitude": 52.4165305,
+          "longitude": -1.4898194
+        },
+        {
+          "latitude": 52.4165305,
+          "longitude": -1.4900042
+        },
+        {
+          "latitude": 52.4165526,
+          "longitude": -1.4902722
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_1109307201",
+      "coordinate": {
+        "latitude": 52.4130621,
+        "longitude": -1.4881959
+      },
+      "connectedSegmentIds": [
+        "s_4310553"
+      ]
+    },
+    {
+      "id": "n_605711",
+      "coordinate": {
+        "latitude": 52.4103077,
+        "longitude": -1.4888547
+      },
+      "connectedSegmentIds": [
+        "s_8003340"
+      ]
+    },
+    {
+      "id": "n_164789479",
+      "coordinate": {
+        "latitude": 52.4109627,
+        "longitude": -1.488827
+      },
+      "connectedSegmentIds": [
+        "s_16224183"
+      ]
+    },
+    {
+      "id": "n_164789485",
+      "coordinate": {
+        "latitude": 52.4129614,
+        "longitude": -1.4881892
+      },
+      "connectedSegmentIds": [
+        "s_16224184"
+      ]
+    },
+    {
+      "id": "n_164789613",
+      "coordinate": {
+        "latitude": 52.4145784,
+        "longitude": -1.4888028
+      },
+      "connectedSegmentIds": [
+        "s_16224191"
+      ]
+    },
+    {
+      "id": "n_166616790",
+      "coordinate": {
+        "latitude": 52.4162322,
+        "longitude": -1.4872539
+      },
+      "connectedSegmentIds": [
+        "s_16300145"
+      ]
+    },
+    {
+      "id": "n_164789502",
+      "coordinate": {
+        "latitude": 52.4126518,
+        "longitude": -1.4899562
+      },
+      "connectedSegmentIds": [
+        "s_73925562"
+      ]
+    },
+    {
+      "id": "n_874739843",
+      "coordinate": {
+        "latitude": 52.4121794,
+        "longitude": -1.4899651
+      },
+      "connectedSegmentIds": [
+        "s_73925570"
+      ]
+    },
+    {
+      "id": "n_1651671695",
+      "coordinate": {
+        "latitude": 52.4167758,
+        "longitude": -1.4894922
+      },
+      "connectedSegmentIds": [
+        "s_152343559"
+      ]
+    }
+  ],
+  "intersections": []
+}

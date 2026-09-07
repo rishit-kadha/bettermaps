@@ -1,0 +1,81 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2862:7723"
+  },
+  "bounds": {
+    "minLat": 28.62,
+    "maxLat": 28.63,
+    "minLon": 77.23,
+    "maxLon": 77.24
+  },
+  "segments": [
+    {
+      "id": "delhi_s_mandi_tilak",
+      "name": "Tilak Marg",
+      "startPoint": {
+        "latitude": 28.6258,
+        "longitude": 77.234,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.616,
+        "longitude": 77.2295,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.6258,
+          "longitude": 77.234,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6209,
+          "longitude": 77.23175,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.616,
+          "longitude": 77.2295,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 1174.9,
+      "bearingDeg": 202,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.9,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_mandi_house",
+      "endNodeId": "delhi_n_ig_hex_n"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_mandi_house",
+      "coordinate": {
+        "latitude": 28.6258,
+        "longitude": 77.234,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_barakhamba_2",
+        "delhi_s_mandi_tilak"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_mandi_house",
+      "coordinate": {
+        "latitude": 28.6258,
+        "longitude": 77.234,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_barakhamba_2",
+        "delhi_s_mandi_tilak"
+      ]
+    }
+  ]
+}

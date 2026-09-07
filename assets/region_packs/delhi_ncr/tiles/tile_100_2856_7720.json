@@ -1,0 +1,81 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2856:7720"
+  },
+  "bounds": {
+    "minLat": 28.560000000000002,
+    "maxLat": 28.57,
+    "minLon": 77.2,
+    "maxLon": 77.21000000000001
+  },
+  "segments": [
+    {
+      "id": "delhi_s_ring_aiims_moolchand",
+      "name": "Mahatma Gandhi Ring Road SE",
+      "startPoint": {
+        "latitude": 28.568,
+        "longitude": 77.21,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.569,
+        "longitude": 77.235,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.568,
+          "longitude": 77.21,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.5685,
+          "longitude": 77.2225,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.569,
+          "longitude": 77.235,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 2443.9,
+      "bearingDeg": 87.4,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 16.7,
+      "roadClass": "trunk",
+      "startNodeId": "delhi_n_aiims",
+      "endNodeId": "delhi_n_moolchand"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_aiims",
+      "coordinate": {
+        "latitude": 28.568,
+        "longitude": 77.21,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_ring_moti_aiims",
+        "delhi_s_ring_aiims_moolchand"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_aiims",
+      "coordinate": {
+        "latitude": 28.568,
+        "longitude": 77.21,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_ring_moti_aiims",
+        "delhi_s_ring_aiims_moolchand"
+      ]
+    }
+  ]
+}

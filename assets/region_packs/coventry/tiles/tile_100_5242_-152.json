@@ -1,0 +1,135 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5242:-152"
+  },
+  "bounds": {
+    "minLat": 52.42,
+    "maxLat": 52.43,
+    "minLon": -1.52,
+    "maxLon": -1.51
+  },
+  "segments": [
+    {
+      "id": "s_156620381",
+      "name": "Radford Road",
+      "startPoint": {
+        "latitude": 52.4202933,
+        "longitude": -1.5189143
+      },
+      "endPoint": {
+        "latitude": 52.4171247,
+        "longitude": -1.5168002
+      },
+      "lengthMeters": 397.6,
+      "bearingDeg": 167.2,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.4,
+      "roadClass": "secondary",
+      "startNodeId": "n_638840",
+      "endNodeId": "n_272972756",
+      "geometry": [
+        {
+          "latitude": 52.4202933,
+          "longitude": -1.5189143
+        },
+        {
+          "latitude": 52.4201791,
+          "longitude": -1.5188717
+        },
+        {
+          "latitude": 52.4199053,
+          "longitude": -1.5187865
+        },
+        {
+          "latitude": 52.4198199,
+          "longitude": -1.5187711
+        },
+        {
+          "latitude": 52.4197296,
+          "longitude": -1.5187583
+        },
+        {
+          "latitude": 52.4195507,
+          "longitude": -1.5187509
+        },
+        {
+          "latitude": 52.4194216,
+          "longitude": -1.5187554
+        },
+        {
+          "latitude": 52.4193455,
+          "longitude": -1.5187603
+        },
+        {
+          "latitude": 52.4191734,
+          "longitude": -1.518764
+        },
+        {
+          "latitude": 52.4189322,
+          "longitude": -1.5187551
+        },
+        {
+          "latitude": 52.4187879,
+          "longitude": -1.5187362
+        },
+        {
+          "latitude": 52.4186843,
+          "longitude": -1.5186913
+        },
+        {
+          "latitude": 52.4185079,
+          "longitude": -1.5185748
+        },
+        {
+          "latitude": 52.4183474,
+          "longitude": -1.518444
+        },
+        {
+          "latitude": 52.4181398,
+          "longitude": -1.5182284
+        },
+        {
+          "latitude": 52.4179322,
+          "longitude": -1.5179634
+        },
+        {
+          "latitude": 52.4178056,
+          "longitude": -1.5177639
+        },
+        {
+          "latitude": 52.4173145,
+          "longitude": -1.5170554
+        },
+        {
+          "latitude": 52.4171247,
+          "longitude": -1.5168002
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_3834510531",
+      "coordinate": {
+        "latitude": 52.4203342,
+        "longitude": -1.5147959
+      },
+      "connectedSegmentIds": [
+        "s_25083692"
+      ]
+    },
+    {
+      "id": "n_638840",
+      "coordinate": {
+        "latitude": 52.4202933,
+        "longitude": -1.5189143
+      },
+      "connectedSegmentIds": [
+        "s_156620381"
+      ]
+    }
+  ],
+  "intersections": []
+}

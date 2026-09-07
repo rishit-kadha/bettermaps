@@ -1,0 +1,196 @@
+{
+  "description": "Road tile test fixtures and benchmark session coverage catalog for Phase 1.5",
+  "generatedAt": "2026-09-06T11:40:07.503Z",
+  "sourceDataset": "assets/datasets/road_network_coventry.json",
+  "tiles": [
+    {
+      "fileName": "tile_coventry_east.json",
+      "key": {
+        "scheme": "deg",
+        "key": "100:5240:-151"
+      },
+      "bounds": {
+        "minLat": 52.395,
+        "maxLat": 52.42,
+        "minLon": -1.52,
+        "maxLon": -1.49
+      },
+      "segmentCount": 52,
+      "nodeCount": 32,
+      "intersectionCount": 32,
+      "byteSize": 51908
+    },
+    {
+      "fileName": "tile_coventry_west.json",
+      "key": {
+        "scheme": "deg",
+        "key": "100:5240:-155"
+      },
+      "bounds": {
+        "minLat": 52.395,
+        "maxLat": 52.42,
+        "minLon": -1.565,
+        "maxLon": -1.515
+      },
+      "segmentCount": 35,
+      "nodeCount": 24,
+      "intersectionCount": 24,
+      "byteSize": 36495
+    },
+    {
+      "fileName": "tile_coventry_central.json",
+      "key": {
+        "scheme": "deg",
+        "key": "100:5241:-152"
+      },
+      "bounds": {
+        "minLat": 52.405,
+        "maxLat": 52.425,
+        "minLon": -1.53,
+        "maxLon": -1.505
+      },
+      "segmentCount": 35,
+      "nodeCount": 25,
+      "intersectionCount": 25,
+      "byteSize": 36627
+    }
+  ],
+  "topology": {
+    "sharedEastWestCount": 23,
+    "sharedEastCentralCount": 34,
+    "sharedWestCentralCount": 11,
+    "uniqueEastCount": 5
+  },
+  "sessionCoverage": [
+    {
+      "sessionId": "M",
+      "coordinate": {
+        "latitude": 52.40256,
+        "longitude": -1.50348
+      },
+      "region": "Coventry East",
+      "status": "COVERED_COVENTRY_EAST",
+      "matchedTile": "tile_coventry_east.json",
+      "nearestSegmentId": "s9",
+      "nearestSegmentName": "Warwick Road",
+      "nearestSegmentDistanceMeters": 343
+    },
+    {
+      "sessionId": "S2",
+      "coordinate": {
+        "latitude": 52.40314,
+        "longitude": -1.55798
+      },
+      "region": "Coventry West",
+      "status": "COVERED_COVENTRY_WEST",
+      "matchedTile": "tile_coventry_west.json",
+      "nearestSegmentId": "s22",
+      "nearestSegmentName": "Charter Avenue",
+      "nearestSegmentDistanceMeters": 1368
+    },
+    {
+      "sessionId": "Vta8",
+      "coordinate": {
+        "latitude": 52.86297,
+        "longitude": -1.68282
+      },
+      "region": "Burton upon Trent (Staffordshire East)",
+      "status": "UNAVAILABLE",
+      "matchedTile": null,
+      "nearestSegmentId": "s12",
+      "nearestSegmentName": "Warwick Road",
+      "nearestSegmentDistanceMeters": 50973
+    },
+    {
+      "sessionId": "Vta10",
+      "coordinate": {
+        "latitude": 52.88177,
+        "longitude": -1.71742
+      },
+      "region": "Stretton (Staffordshire East)",
+      "status": "UNAVAILABLE",
+      "matchedTile": null,
+      "nearestSegmentId": "s12",
+      "nearestSegmentName": "Warwick Road",
+      "nearestSegmentDistanceMeters": 53576
+    },
+    {
+      "sessionId": "Vta15",
+      "coordinate": {
+        "latitude": 52.96543,
+        "longitude": -1.75695
+      },
+      "region": "Uttoxeter (Staffordshire North)",
+      "status": "UNAVAILABLE",
+      "matchedTile": null,
+      "nearestSegmentId": "s12",
+      "nearestSegmentName": "Warwick Road",
+      "nearestSegmentDistanceMeters": 63249
+    },
+    {
+      "sessionId": "Vta21",
+      "coordinate": {
+        "latitude": 53.04053,
+        "longitude": -1.81736
+      },
+      "region": "Cheadle (Staffordshire North)",
+      "status": "UNAVAILABLE",
+      "matchedTile": null,
+      "nearestSegmentId": "s12",
+      "nearestSegmentName": "Warwick Road",
+      "nearestSegmentDistanceMeters": 72395
+    },
+    {
+      "sessionId": "Vtb12",
+      "coordinate": {
+        "latitude": 52.55384,
+        "longitude": -1.46679
+      },
+      "region": "Nuneaton (Warwickshire North)",
+      "status": "UNAVAILABLE",
+      "matchedTile": null,
+      "nearestSegmentId": "s12",
+      "nearestSegmentName": "Warwick Road",
+      "nearestSegmentDistanceMeters": 15470
+    },
+    {
+      "sessionId": "Vtb4",
+      "coordinate": {
+        "latitude": 53.17105,
+        "longitude": -1.67288
+      },
+      "region": "Matlock (Derbyshire Peak District)",
+      "status": "UNAVAILABLE",
+      "matchedTile": null,
+      "nearestSegmentId": "s12",
+      "nearestSegmentName": "Warwick Road",
+      "nearestSegmentDistanceMeters": 84576
+    },
+    {
+      "sessionId": "Vw14b",
+      "coordinate": {
+        "latitude": 52.34884,
+        "longitude": -2.07422
+      },
+      "region": "Bromsgrove (Worcestershire North)",
+      "status": "UNAVAILABLE",
+      "matchedTile": null,
+      "nearestSegmentId": "s13",
+      "nearestSegmentName": "Kenilworth Road",
+      "nearestSegmentDistanceMeters": 36422
+    },
+    {
+      "sessionId": "Vw8",
+      "coordinate": {
+        "latitude": 52.20313,
+        "longitude": -2.19773
+      },
+      "region": "Worcester South (Worcestershire South)",
+      "status": "UNAVAILABLE",
+      "matchedTile": null,
+      "nearestSegmentId": "s13",
+      "nearestSegmentName": "Kenilworth Road",
+      "nearestSegmentDistanceMeters": 49196
+    }
+  ]
+}

@@ -5,7 +5,22 @@
  * high-rate decoupled recording, and UI telemetry broadcasting.
  */
 
-import { NativeModules, NativeEventEmitter, Platform } from "react-native";
+let BetterMapsSensorModule: any = null;
+let NativeEventEmitterClass: any = null;
+let isAndroidPlatform = false;
+
+try {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const rn = require("react-native");
+  if (rn) {
+    BetterMapsSensorModule = rn.NativeModules?.BetterMapsSensorModule ?? null;
+    NativeEventEmitterClass = rn.NativeEventEmitter;
+    isAndroidPlatform = rn.Platform?.OS === "android";
+  }
+} catch (_err) {
+  // Plain Node or non-React-Native environment
+}
+
 import {
   HardwareInventory,
   SensorTelemetry,
@@ -15,21 +30,19 @@ import {
 import { NavLocation } from "../../core/types/location";
 import { PositionEstimate } from "../../core/types/positioning";
 
-const { BetterMapsSensorModule } = NativeModules;
-
 export type SensorTelemetryListener = (telemetry: SensorTelemetry) => void;
 
 class SensorRecorderManager {
   private static instance: SensorRecorderManager;
 
-  private eventEmitter: NativeEventEmitter | null = null;
+  private eventEmitter: any = null;
   private telemetryListeners = new Set<SensorTelemetryListener>();
   private latestTelemetry: SensorTelemetry | null = null;
   private isMonitoring = false;
 
   private constructor() {
-    if (Platform.OS === "android" && BetterMapsSensorModule) {
-      this.eventEmitter = new NativeEventEmitter(BetterMapsSensorModule);
+    if (isAndroidPlatform && BetterMapsSensorModule && NativeEventEmitterClass) {
+      this.eventEmitter = new NativeEventEmitterClass(BetterMapsSensorModule);
       this.eventEmitter.addListener(
         "onSensorTelemetry",
         (telemetry: SensorTelemetry) => {
@@ -54,7 +67,7 @@ class SensorRecorderManager {
   }
 
   public isAvailable(): boolean {
-    return Platform.OS === "android" && !!BetterMapsSensorModule;
+    return isAndroidPlatform && !!BetterMapsSensorModule;
   }
 
   public async getSensorHardwareInfo(): Promise<HardwareInventory | null> {

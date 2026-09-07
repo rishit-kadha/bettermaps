@@ -1,0 +1,144 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2862:7721"
+  },
+  "bounds": {
+    "minLat": 28.62,
+    "maxLat": 28.63,
+    "minLon": 77.21000000000001,
+    "maxLon": 77.22
+  },
+  "segments": [
+    {
+      "id": "delhi_s_janpath_2",
+      "name": "Janpath Central",
+      "startPoint": {
+        "latitude": 28.626,
+        "longitude": 77.2185,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.6185,
+        "longitude": 77.2175,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.626,
+          "longitude": 77.2185,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.62225,
+          "longitude": 77.218,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6185,
+          "longitude": 77.2175,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 839.7,
+      "bearingDeg": 186.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 11.1,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_janpath_tolstoy",
+      "endNodeId": "delhi_n_windsor"
+    },
+    {
+      "id": "delhi_s_sansad_2",
+      "name": "Sansad Marg Extension",
+      "startPoint": {
+        "latitude": 28.6235,
+        "longitude": 77.2135,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.614,
+        "longitude": 77.209,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.6235,
+          "longitude": 77.2135,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.61875,
+          "longitude": 77.21125,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.614,
+          "longitude": 77.209,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 1144,
+      "bearingDeg": 202.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 11.1,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_patel_chowk",
+      "endNodeId": "delhi_n_vijay_chowk"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_janpath_tolstoy",
+      "coordinate": {
+        "latitude": 28.626,
+        "longitude": 77.2185,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_janpath_1",
+        "delhi_s_janpath_2"
+      ]
+    },
+    {
+      "id": "delhi_n_patel_chowk",
+      "coordinate": {
+        "latitude": 28.6235,
+        "longitude": 77.2135,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_sansad_1",
+        "delhi_s_sansad_2"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_janpath_tolstoy",
+      "coordinate": {
+        "latitude": 28.626,
+        "longitude": 77.2185,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_janpath_1",
+        "delhi_s_janpath_2"
+      ]
+    },
+    {
+      "nodeId": "delhi_n_patel_chowk",
+      "coordinate": {
+        "latitude": 28.6235,
+        "longitude": 77.2135,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_sansad_1",
+        "delhi_s_sansad_2"
+      ]
+    }
+  ]
+}

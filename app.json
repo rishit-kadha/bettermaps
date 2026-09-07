@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "BetterMaps",
+    "name": "Saathi",
     "slug": "bettermaps",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,7 +9,7 @@
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "BetterMaps requires your location to display your real-time navigation position on the map."
+        "NSLocationWhenInUseUsageDescription": "Saathi requires your location to display your real-time navigation position on the map."
       }
     },
     "android": {
@@ -35,9 +35,11 @@
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "Allow BetterMaps to access your location to navigate and track positioning."
+          "locationAlwaysAndWhenInUsePermission": "Allow Saathi to access your location to navigate and track positioning."
         }
-      ]
+      ],
+      "expo-asset",
+      "onnxruntime-react-native"
     ],
     "web": {
       "favicon": "./assets/favicon.png"

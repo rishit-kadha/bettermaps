@@ -1,0 +1,165 @@
+<USER_REQUEST>
+# BetterMaps — Physical Device Replay UI Visual Audit
+
+Perform a VISUAL + INTERACTION AUDIT of the BetterMaps Replay System on the PHYSICAL OnePlus Nord CE4.
+
+This task is primarily for:
+1. Seeing the replay UI as it actually renders on-device.
+2. Finding overlaps, clipping, spacing problems, inconsistent colors, broken states, and interaction issues.
+3. Documenting every finding in a Markdown audit file that can be used as context for a later UI-fix task.
+
+IMPORTANT:
+Do NOT make UI fixes during this task unless absolutely necessary to make the screen render or interact with the test.
+This is an AUDIT-FIRST task.
+
+Do NOT modify:
+- ESKF
+- road network
+- route constraints
+- road matcher
+- motion models
+- replay/evaluation mathematics
+- test methodology
+
+The goal is to inspect and document, not redesign.
+
+---
+
+# 1. Physical Device Requirement
+
+Use the connected physical OnePlus Nord CE4.
+
+Expected device:
+
+- Model: OnePlus Nord CE4 / CPH2661
+- ADB serial: d988dd17
+
+Verify the device is connected before starting.
+
+Do NOT use only the Android emulator for visual inspection.
+
+The physical-device rendering is the source of truth.
+
+---
+
+# 2. Build and Launch
+
+Build/run the current BetterMaps app using the existing development workflow.
+
+Do not change the project configuration unnecessarily.
+
+Open the actual Replay / Evaluation page.
+
+Verify that the app launches successfully before beginning the audit.
+
+---
+
+# 3. Capture the INITIAL Replay Screen
+
+Before interacting with anything, capture a screenshot of the replay page.
+
+Inspect:
+
+- page margins
+- safe-area handling
+- header positioning
+- title/subtitle alignment
+- session selector
+- replay status
+- map size
+- controls
+- diagnostics area
+- bottom navigation if present
+- spacing between sections
+- card/panel sizes
+- icon alignment
+- typography hierarchy
+- text clipping
+- text wrapping
+- button dimensions
+- empty states
+
+Look specifically for:
+
+- overlapping components
+- co
+<truncated 9523 bytes>
+ath the Android navigation/safe-area region, causing the final row to be partially obscured."
+
+Or:
+
+"The reset button clears the visible polyline immediately, but 1–2 seconds later the previous replay trail reappears, indicating a stale replay callback is repopulating the trajectory buffer."
+
+Or:
+
+"The selected session label and metadata have insufficient horizontal separation and visually collide on the physical 1080px-wide device."
+
+Only document things you actually observe.
+
+---
+
+# 16. Do Not Fix Findings
+
+During this task:
+
+DO NOT:
+- redesign components
+- change colors
+- change spacing
+- rewrite replay state
+- modify estimator
+- modify route/road logic
+- alter test data
+- change replay semantics
+
+The audit document is the output.
+
+The next task will consume this document and implement the fixes.
+
+---
+
+# 17. Final Verification
+
+After completing the visual audit:
+
+Run the relevant existing tests to ensure the inspection did not affect functionality.
+
+Do not create fake passing tests.
+
+Report:
+
+### Physical Device
+- connected device
+- build/run result
+
+### Screenshots
+- number captured
+- artifact directory
+
+### Findings
+- Critical
+- High
+- Medium
+- Low
+- no issues where applicable
+
+### Tests
+- existing tests run
+- results
+
+### Documentation
+- path to `docs/REPLAY_UI_PHYSICAL_DEVICE_AUDIT.md`
+
+Finally give a concise statement:
+
+> "The replay UI has been physically inspected on the OnePlus Nord CE4. The attached audit documents all observed visual, layout, interaction, state, and theme inconsistencies and can be used as context for the next UI-fix task."
+
+Do not claim the UI is polished unless the physical inspection supports that conclusion.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-06T13:34:09+05:30.
+
+The user's current state is as follows:
+Other open documents:
+- c:\Users\rkadh\OneDrive\Documents\GitHub\bettermaps\tests\integration\RoadContextInfluenceAudit.test.ts (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>

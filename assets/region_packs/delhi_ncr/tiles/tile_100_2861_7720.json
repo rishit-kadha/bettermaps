@@ -1,0 +1,133 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2861:7720"
+  },
+  "bounds": {
+    "minLat": 28.61,
+    "maxLat": 28.62,
+    "minLon": 77.2,
+    "maxLon": 77.21000000000001
+  },
+  "segments": [
+    {
+      "id": "delhi_s_kartavya_1",
+      "name": "Kartavya Path West",
+      "startPoint": {
+        "latitude": 28.6143,
+        "longitude": 77.2,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.614,
+        "longitude": 77.209,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.6143,
+          "longitude": 77.2,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.614150000000002,
+          "longitude": 77.2045,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.614,
+          "longitude": 77.209,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 879.2,
+      "bearingDeg": 92.2,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.3,
+      "roadClass": "secondary",
+      "startNodeId": "delhi_n_rb",
+      "endNodeId": "delhi_n_vijay_chowk"
+    },
+    {
+      "id": "delhi_s_kartavya_2",
+      "name": "Kartavya Path",
+      "startPoint": {
+        "latitude": 28.614,
+        "longitude": 77.209,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.6129,
+        "longitude": 77.225,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.614,
+          "longitude": 77.209,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.61345,
+          "longitude": 77.217,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6129,
+          "longitude": 77.225,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 1566.6,
+      "bearingDeg": 94.5,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 11.1,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_vijay_chowk",
+      "endNodeId": "delhi_n_ig_hex_w"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_rb",
+      "coordinate": {
+        "latitude": 28.6143,
+        "longitude": 77.2,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_kartavya_1"
+      ]
+    },
+    {
+      "id": "delhi_n_vijay_chowk",
+      "coordinate": {
+        "latitude": 28.614,
+        "longitude": 77.209,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_sansad_2",
+        "delhi_s_kartavya_1",
+        "delhi_s_kartavya_2"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_vijay_chowk",
+      "coordinate": {
+        "latitude": 28.614,
+        "longitude": 77.209,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_sansad_2",
+        "delhi_s_kartavya_1",
+        "delhi_s_kartavya_2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5242:-151"
+  },
+  "bounds": {
+    "minLat": 52.42,
+    "maxLat": 52.43,
+    "minLon": -1.51,
+    "maxLon": -1.5
+  },
+  "segments": [
+    {
+      "id": "s_16300164",
+      "name": "George Eliot Road",
+      "startPoint": {
+        "latitude": 52.4200503,
+        "longitude": -1.5065663
+      },
+      "endPoint": {
+        "latitude": 52.4190696,
+        "longitude": -1.5027615
+      },
+      "lengthMeters": 291.8,
+      "bearingDeg": 112.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "residential",
+      "startNodeId": "n_25712474",
+      "endNodeId": "n_166616934",
+      "geometry": [
+        {
+          "latitude": 52.4200503,
+          "longitude": -1.5065663
+        },
+        {
+          "latitude": 52.4199185,
+          "longitude": -1.5060462
+        },
+        {
+          "latitude": 52.4198915,
+          "longitude": -1.5059399
+        },
+        {
+          "latitude": 52.4198753,
+          "longitude": -1.5054622
+        },
+        {
+          "latitude": 52.4198731,
+          "longitude": -1.5053963
+        },
+        {
+          "latitude": 52.4198587,
+          "longitude": -1.504973
+        },
+        {
+          "latitude": 52.4198584,
+          "longitude": -1.5049619
+        },
+        {
+          "latitude": 52.4198503,
+          "longitude": -1.5046461
+        },
+        {
+          "latitude": 52.4197984,
+          "longitude": -1.5044636
+        },
+        {
+          "latitude": 52.419771,
+          "longitude": -1.5043672
+        },
+        {
+          "latitude": 52.419638,
+          "longitude": -1.5039001
+        },
+        {
+          "latitude": 52.419473,
+          "longitude": -1.5033203
+        },
+        {
+          "latitude": 52.419462,
+          "longitude": -1.503305
+        },
+        {
+          "latitude": 52.4194475,
+          "longitude": -1.5032849
+        },
+        {
+          "latitude": 52.4193131,
+          "longitude": -1.5030988
+        },
+        {
+          "latitude": 52.4190696,
+          "longitude": -1.5027615
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_32678006",
+      "coordinate": {
+        "latitude": 52.420028,
+        "longitude": -1.5093455
+      },
+      "connectedSegmentIds": [
+        "s_4974699"
+      ]
+    },
+    {
+      "id": "n_32964320",
+      "coordinate": {
+        "latitude": 52.4205664,
+        "longitude": -1.5091623
+      },
+      "connectedSegmentIds": [
+        "s_4974700"
+      ]
+    },
+    {
+      "id": "n_25712474",
+      "coordinate": {
+        "latitude": 52.4200503,
+        "longitude": -1.5065663
+      },
+      "connectedSegmentIds": [
+        "s_16300164",
+        "s_989326431"
+      ]
+    },
+    {
+      "id": "n_32678008",
+      "coordinate": {
+        "latitude": 52.4215585,
+        "longitude": -1.5088694
+      },
+      "connectedSegmentIds": [
+        "s_157593598"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "n_25712474",
+      "coordinate": {
+        "latitude": 52.4200503,
+        "longitude": -1.5065663
+      },
+      "outboundSegmentIds": [
+        "s_16300164",
+        "s_989326431"
+      ]
+    }
+  ]
+}

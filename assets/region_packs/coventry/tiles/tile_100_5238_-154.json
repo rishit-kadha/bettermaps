@@ -1,0 +1,740 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5238:-154"
+  },
+  "bounds": {
+    "minLat": 52.38,
+    "maxLat": 52.39,
+    "minLon": -1.54,
+    "maxLon": -1.53
+  },
+  "segments": [
+    {
+      "id": "s_123928713",
+      "name": "Kenilworth Road",
+      "startPoint": {
+        "latitude": 52.3890941,
+        "longitude": -1.5324001
+      },
+      "endPoint": {
+        "latitude": 52.3898198,
+        "longitude": -1.5316758
+      },
+      "lengthMeters": 94.5,
+      "bearingDeg": 31.3,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 17.9,
+      "roadClass": "primary",
+      "startNodeId": "n_345374775",
+      "endNodeId": "n_1380536337",
+      "geometry": [
+        {
+          "latitude": 52.3890941,
+          "longitude": -1.5324001
+        },
+        {
+          "latitude": 52.3892426,
+          "longitude": -1.5322519
+        },
+        {
+          "latitude": 52.3893837,
+          "longitude": -1.5321113
+        },
+        {
+          "latitude": 52.3898198,
+          "longitude": -1.5316758
+        }
+      ]
+    },
+    {
+      "id": "s_123928717",
+      "name": "Kenilworth Road",
+      "startPoint": {
+        "latitude": 52.3898198,
+        "longitude": -1.5316758
+      },
+      "endPoint": {
+        "latitude": 52.390058,
+        "longitude": -1.5314412
+      },
+      "lengthMeters": 30.9,
+      "bearingDeg": 31.2,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 17.9,
+      "roadClass": "primary",
+      "startNodeId": "n_1380536337",
+      "endNodeId": "n_21587645",
+      "geometry": [
+        {
+          "latitude": 52.3898198,
+          "longitude": -1.5316758
+        },
+        {
+          "latitude": 52.3898621,
+          "longitude": -1.5316338
+        },
+        {
+          "latitude": 52.3898788,
+          "longitude": -1.5316174
+        },
+        {
+          "latitude": 52.390058,
+          "longitude": -1.5314412
+        }
+      ]
+    },
+    {
+      "id": "s_148710783",
+      "name": "Coat of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.3885829,
+        "longitude": -1.5303637
+      },
+      "endPoint": {
+        "latitude": 52.3888324,
+        "longitude": -1.5313716
+      },
+      "lengthMeters": 73.8,
+      "bearingDeg": 292.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_1617841666",
+      "endNodeId": "n_9820934278",
+      "geometry": [
+        {
+          "latitude": 52.3885829,
+          "longitude": -1.5303637
+        },
+        {
+          "latitude": 52.3888324,
+          "longitude": -1.5313716
+        }
+      ]
+    },
+    {
+      "id": "s_381285029",
+      "name": "Coat of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.3889988,
+        "longitude": -1.5320182
+      },
+      "endPoint": {
+        "latitude": 52.3890698,
+        "longitude": -1.5323027
+      },
+      "lengthMeters": 20.9,
+      "bearingDeg": 292.2,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_3845123713",
+      "endNodeId": "n_13108595978",
+      "geometry": [
+        {
+          "latitude": 52.3889988,
+          "longitude": -1.5320182
+        },
+        {
+          "latitude": 52.3890698,
+          "longitude": -1.5323027
+        }
+      ]
+    },
+    {
+      "id": "s_421083617",
+      "name": "Kenilworth Road",
+      "startPoint": {
+        "latitude": 52.3875038,
+        "longitude": -1.5338997
+      },
+      "endPoint": {
+        "latitude": 52.3890941,
+        "longitude": -1.5324001
+      },
+      "lengthMeters": 204,
+      "bearingDeg": 29.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 17.9,
+      "roadClass": "primary",
+      "startNodeId": "n_4181275123",
+      "endNodeId": "n_345374775",
+      "geometry": [
+        {
+          "latitude": 52.3875038,
+          "longitude": -1.5338997
+        },
+        {
+          "latitude": 52.387709,
+          "longitude": -1.5337082
+        },
+        {
+          "latitude": 52.3885785,
+          "longitude": -1.5328968
+        },
+        {
+          "latitude": 52.3885991,
+          "longitude": -1.5328776
+        },
+        {
+          "latitude": 52.3887403,
+          "longitude": -1.5327414
+        },
+        {
+          "latitude": 52.3890941,
+          "longitude": -1.5324001
+        }
+      ]
+    },
+    {
+      "id": "s_481072591",
+      "name": "Canley Ford",
+      "startPoint": {
+        "latitude": 52.3891123,
+        "longitude": -1.5324753
+      },
+      "endPoint": {
+        "latitude": 52.3890941,
+        "longitude": -1.5324001
+      },
+      "lengthMeters": 5.5,
+      "bearingDeg": 111.6,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 17.9,
+      "roadClass": "unclassified",
+      "startNodeId": "n_2766894632",
+      "endNodeId": "n_345374775",
+      "geometry": [
+        {
+          "latitude": 52.3891123,
+          "longitude": -1.5324753
+        },
+        {
+          "latitude": 52.3890941,
+          "longitude": -1.5324001
+        }
+      ]
+    },
+    {
+      "id": "s_1070047451",
+      "name": "Coat Of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.3889589,
+        "longitude": -1.5318713
+      },
+      "endPoint": {
+        "latitude": 52.3889988,
+        "longitude": -1.5320182
+      },
+      "lengthMeters": 10.9,
+      "bearingDeg": 294,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_9820934275",
+      "endNodeId": "n_3845123713",
+      "geometry": [
+        {
+          "latitude": 52.3889589,
+          "longitude": -1.5318713
+        },
+        {
+          "latitude": 52.3889988,
+          "longitude": -1.5320182
+        }
+      ]
+    },
+    {
+      "id": "s_1070047452",
+      "name": "Coat Of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.3889261,
+        "longitude": -1.5317501
+      },
+      "endPoint": {
+        "latitude": 52.3889589,
+        "longitude": -1.5318713
+      },
+      "lengthMeters": 9,
+      "bearingDeg": 293.9,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_1617841667",
+      "endNodeId": "n_9820934275",
+      "geometry": [
+        {
+          "latitude": 52.3889261,
+          "longitude": -1.5317501
+        },
+        {
+          "latitude": 52.3889589,
+          "longitude": -1.5318713
+        }
+      ]
+    },
+    {
+      "id": "s_1070047454",
+      "name": "Coat of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.3885381,
+        "longitude": -1.5301898
+      },
+      "endPoint": {
+        "latitude": 52.3885829,
+        "longitude": -1.5303637
+      },
+      "lengthMeters": 12.8,
+      "bearingDeg": 292.9,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_12534738724",
+      "endNodeId": "n_1617841666",
+      "geometry": [
+        {
+          "latitude": 52.3885381,
+          "longitude": -1.5301898
+        },
+        {
+          "latitude": 52.3885829,
+          "longitude": -1.5303637
+        }
+      ]
+    },
+    {
+      "id": "s_1070047455",
+      "name": "Coat Of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.3888733,
+        "longitude": -1.5315367
+      },
+      "endPoint": {
+        "latitude": 52.3889261,
+        "longitude": -1.5317501
+      },
+      "lengthMeters": 15.6,
+      "bearingDeg": 292.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_9820934277",
+      "endNodeId": "n_1617841667",
+      "geometry": [
+        {
+          "latitude": 52.3888733,
+          "longitude": -1.5315367
+        },
+        {
+          "latitude": 52.3889261,
+          "longitude": -1.5317501
+        }
+      ]
+    },
+    {
+      "id": "s_1070047456",
+      "name": "Coat Of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.3888324,
+        "longitude": -1.5313716
+      },
+      "endPoint": {
+        "latitude": 52.3888733,
+        "longitude": -1.5315367
+      },
+      "lengthMeters": 12.1,
+      "bearingDeg": 292.1,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_9820934278",
+      "endNodeId": "n_9820934277",
+      "geometry": [
+        {
+          "latitude": 52.3888324,
+          "longitude": -1.5313716
+        },
+        {
+          "latitude": 52.3888733,
+          "longitude": -1.5315367
+        }
+      ]
+    },
+    {
+      "id": "s_1246911545",
+      "name": "Canley Ford",
+      "startPoint": {
+        "latitude": 52.3896825,
+        "longitude": -1.5348777
+      },
+      "endPoint": {
+        "latitude": 52.3891123,
+        "longitude": -1.5324753
+      },
+      "lengthMeters": 174.9,
+      "bearingDeg": 112.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 26.8,
+      "roadClass": "unclassified",
+      "startNodeId": "n_1998943256",
+      "endNodeId": "n_2766894632",
+      "geometry": [
+        {
+          "latitude": 52.3896825,
+          "longitude": -1.5348777
+        },
+        {
+          "latitude": 52.3895845,
+          "longitude": -1.5344946
+        },
+        {
+          "latitude": 52.3894883,
+          "longitude": -1.5340826
+        },
+        {
+          "latitude": 52.3891312,
+          "longitude": -1.5325536
+        },
+        {
+          "latitude": 52.3891123,
+          "longitude": -1.5324753
+        }
+      ]
+    },
+    {
+      "id": "s_1426024161",
+      "name": "Coat of Arms Bridge Road",
+      "startPoint": {
+        "latitude": 52.3890698,
+        "longitude": -1.5323027
+      },
+      "endPoint": {
+        "latitude": 52.3890941,
+        "longitude": -1.5324001
+      },
+      "lengthMeters": 7.1,
+      "bearingDeg": 292.2,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 17.9,
+      "roadClass": "tertiary",
+      "startNodeId": "n_13108595978",
+      "endNodeId": "n_345374775",
+      "geometry": [
+        {
+          "latitude": 52.3890698,
+          "longitude": -1.5323027
+        },
+        {
+          "latitude": 52.3890941,
+          "longitude": -1.5324001
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_345374775",
+      "coordinate": {
+        "latitude": 52.3890941,
+        "longitude": -1.5324001
+      },
+      "connectedSegmentIds": [
+        "s_123928713",
+        "s_421083617",
+        "s_481072591",
+        "s_1426024161"
+      ]
+    },
+    {
+      "id": "n_1380536337",
+      "coordinate": {
+        "latitude": 52.3898198,
+        "longitude": -1.5316758
+      },
+      "connectedSegmentIds": [
+        "s_123928713",
+        "s_123928717"
+      ]
+    },
+    {
+      "id": "n_1998943256",
+      "coordinate": {
+        "latitude": 52.3896825,
+        "longitude": -1.5348777
+      },
+      "connectedSegmentIds": [
+        "s_123928733",
+        "s_1246911545"
+      ]
+    },
+    {
+      "id": "n_1617841666",
+      "coordinate": {
+        "latitude": 52.3885829,
+        "longitude": -1.5303637
+      },
+      "connectedSegmentIds": [
+        "s_148710783",
+        "s_1070047454"
+      ]
+    },
+    {
+      "id": "n_9820934278",
+      "coordinate": {
+        "latitude": 52.3888324,
+        "longitude": -1.5313716
+      },
+      "connectedSegmentIds": [
+        "s_148710783",
+        "s_1070047456"
+      ]
+    },
+    {
+      "id": "n_1647882677",
+      "coordinate": {
+        "latitude": 52.3899993,
+        "longitude": -1.5338378
+      },
+      "connectedSegmentIds": [
+        "s_151948138"
+      ]
+    },
+    {
+      "id": "n_3845123713",
+      "coordinate": {
+        "latitude": 52.3889988,
+        "longitude": -1.5320182
+      },
+      "connectedSegmentIds": [
+        "s_381285029",
+        "s_1070047451"
+      ]
+    },
+    {
+      "id": "n_13108595978",
+      "coordinate": {
+        "latitude": 52.3890698,
+        "longitude": -1.5323027
+      },
+      "connectedSegmentIds": [
+        "s_381285029",
+        "s_1426024161"
+      ]
+    },
+    {
+      "id": "n_4181275123",
+      "coordinate": {
+        "latitude": 52.3875038,
+        "longitude": -1.5338997
+      },
+      "connectedSegmentIds": [
+        "s_421083617"
+      ]
+    },
+    {
+      "id": "n_2766894632",
+      "coordinate": {
+        "latitude": 52.3891123,
+        "longitude": -1.5324753
+      },
+      "connectedSegmentIds": [
+        "s_481072591",
+        "s_1246911545"
+      ]
+    },
+    {
+      "id": "n_9820934275",
+      "coordinate": {
+        "latitude": 52.3889589,
+        "longitude": -1.5318713
+      },
+      "connectedSegmentIds": [
+        "s_1070047451",
+        "s_1070047452"
+      ]
+    },
+    {
+      "id": "n_1617841667",
+      "coordinate": {
+        "latitude": 52.3889261,
+        "longitude": -1.5317501
+      },
+      "connectedSegmentIds": [
+        "s_1070047452",
+        "s_1070047455"
+      ]
+    },
+    {
+      "id": "n_12534738724",
+      "coordinate": {
+        "latitude": 52.3885381,
+        "longitude": -1.5301898
+      },
+      "connectedSegmentIds": [
+        "s_1070047453",
+        "s_1070047454"
+      ]
+    },
+    {
+      "id": "n_9820934277",
+      "coordinate": {
+        "latitude": 52.3888733,
+        "longitude": -1.5315367
+      },
+      "connectedSegmentIds": [
+        "s_1070047455",
+        "s_1070047456"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "n_345374775",
+      "coordinate": {
+        "latitude": 52.3890941,
+        "longitude": -1.5324001
+      },
+      "outboundSegmentIds": [
+        "s_123928713",
+        "s_421083617",
+        "s_481072591",
+        "s_1426024161"
+      ]
+    },
+    {
+      "nodeId": "n_1380536337",
+      "coordinate": {
+        "latitude": 52.3898198,
+        "longitude": -1.5316758
+      },
+      "outboundSegmentIds": [
+        "s_123928713",
+        "s_123928717"
+      ]
+    },
+    {
+      "nodeId": "n_1998943256",
+      "coordinate": {
+        "latitude": 52.3896825,
+        "longitude": -1.5348777
+      },
+      "outboundSegmentIds": [
+        "s_123928733",
+        "s_1246911545"
+      ]
+    },
+    {
+      "nodeId": "n_1617841666",
+      "coordinate": {
+        "latitude": 52.3885829,
+        "longitude": -1.5303637
+      },
+      "outboundSegmentIds": [
+        "s_148710783",
+        "s_1070047454"
+      ]
+    },
+    {
+      "nodeId": "n_9820934278",
+      "coordinate": {
+        "latitude": 52.3888324,
+        "longitude": -1.5313716
+      },
+      "outboundSegmentIds": [
+        "s_148710783",
+        "s_1070047456"
+      ]
+    },
+    {
+      "nodeId": "n_3845123713",
+      "coordinate": {
+        "latitude": 52.3889988,
+        "longitude": -1.5320182
+      },
+      "outboundSegmentIds": [
+        "s_381285029",
+        "s_1070047451"
+      ]
+    },
+    {
+      "nodeId": "n_13108595978",
+      "coordinate": {
+        "latitude": 52.3890698,
+        "longitude": -1.5323027
+      },
+      "outboundSegmentIds": [
+        "s_381285029",
+        "s_1426024161"
+      ]
+    },
+    {
+      "nodeId": "n_2766894632",
+      "coordinate": {
+        "latitude": 52.3891123,
+        "longitude": -1.5324753
+      },
+      "outboundSegmentIds": [
+        "s_481072591",
+        "s_1246911545"
+      ]
+    },
+    {
+      "nodeId": "n_9820934275",
+      "coordinate": {
+        "latitude": 52.3889589,
+        "longitude": -1.5318713
+      },
+      "outboundSegmentIds": [
+        "s_1070047451",
+        "s_1070047452"
+      ]
+    },
+    {
+      "nodeId": "n_1617841667",
+      "coordinate": {
+        "latitude": 52.3889261,
+        "longitude": -1.5317501
+      },
+      "outboundSegmentIds": [
+        "s_1070047452",
+        "s_1070047455"
+      ]
+    },
+    {
+      "nodeId": "n_12534738724",
+      "coordinate": {
+        "latitude": 52.3885381,
+        "longitude": -1.5301898
+      },
+      "outboundSegmentIds": [
+        "s_1070047453",
+        "s_1070047454"
+      ]
+    },
+    {
+      "nodeId": "n_9820934277",
+      "coordinate": {
+        "latitude": 52.3888733,
+        "longitude": -1.5315367
+      },
+      "outboundSegmentIds": [
+        "s_1070047455",
+        "s_1070047456"
+      ]
+    }
+  ]
+}

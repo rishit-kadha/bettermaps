@@ -1,4 +1,17 @@
-import { Accelerometer, Gyroscope, Magnetometer } from "expo-sensors";
+// Minimal expo-sensors interfaces to prevent hard import from breaking Node.js test environments
+interface SensorSubscription {
+  remove(): void;
+}
+interface SensorModule<T> {
+  setUpdateInterval(intervalMs: number): void;
+  addListener(listener: (data: T) => void): SensorSubscription;
+}
+interface ExpoSensors {
+  Accelerometer: SensorModule<{ x: number; y: number; z: number }>;
+  Gyroscope: SensorModule<{ x: number; y: number; z: number }>;
+  Magnetometer: SensorModule<{ x: number; y: number; z: number }>;
+}
+
 import {
   IImuProvider,
   ImuListener,
@@ -21,9 +34,9 @@ export class AndroidImuProvider implements IImuProvider {
   public readonly name = "Android IMU (SensorManager)";
 
   private status: ProviderStatus = "idle";
-  private accelSub: ReturnType<typeof Accelerometer.addListener> | null = null;
-  private gyroSub: ReturnType<typeof Gyroscope.addListener> | null = null;
-  private magSub: ReturnType<typeof Magnetometer.addListener> | null = null;
+  private accelSub: SensorSubscription | null = null;
+  private gyroSub: SensorSubscription | null = null;
+  private magSub: SensorSubscription | null = null;
 
   private latestAccel: Vector3D = { x: 0, y: 0, z: 9.81 };
   private latestGyro: Vector3D = { x: 0, y: 0, z: 0 };
@@ -41,6 +54,21 @@ export class AndroidImuProvider implements IImuProvider {
     this.status = "initializing";
 
     try {
+      let expoSensors: ExpoSensors | null = null;
+      try {
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
+        expoSensors = require("expo-sensors") as ExpoSensors;
+      } catch (_e) {
+        // Not in Expo environment
+      }
+
+      if (!expoSensors) {
+        this.status = "error";
+        return;
+      }
+
+      const { Accelerometer, Gyroscope, Magnetometer } = expoSensors;
+
       // Calculate update interval in milliseconds (e.g. 50 Hz -> 20ms)
       const intervalMs = Math.max(10, Math.round(1000 / sampleRateHz));
 

@@ -1,0 +1,131 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2858:7716"
+  },
+  "bounds": {
+    "minLat": 28.580000000000002,
+    "maxLat": 28.59,
+    "minLon": 77.16,
+    "maxLon": 77.17
+  },
+  "segments": [
+    {
+      "id": "delhi_s_room_street_1",
+      "name": "Vasant Marg West",
+      "startPoint": {
+        "latitude": 28.5809,
+        "longitude": 77.165,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.581,
+        "longitude": 77.1678,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.5809,
+          "longitude": 77.165,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.58095,
+          "longitude": 77.16640000000001,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.581,
+          "longitude": 77.1678,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 273.6,
+      "bearingDeg": 87.7,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.3,
+      "roadClass": "residential",
+      "startNodeId": "delhi_n_room_w",
+      "endNodeId": "delhi_n_room_loc"
+    },
+    {
+      "id": "delhi_s_room_street_2",
+      "name": "Vasant Marg East",
+      "startPoint": {
+        "latitude": 28.581,
+        "longitude": 77.1678,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.5812,
+        "longitude": 77.172,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.581,
+          "longitude": 77.1678,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.5811,
+          "longitude": 77.1699,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.5812,
+          "longitude": 77.172,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 410.7,
+      "bearingDeg": 86.9,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 8.3,
+      "roadClass": "residential",
+      "startNodeId": "delhi_n_room_loc",
+      "endNodeId": "delhi_n_room_e"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_room_w",
+      "coordinate": {
+        "latitude": 28.5809,
+        "longitude": 77.165,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_room_street_1"
+      ]
+    },
+    {
+      "id": "delhi_n_room_loc",
+      "coordinate": {
+        "latitude": 28.581,
+        "longitude": 77.1678,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_room_street_1",
+        "delhi_s_room_street_2"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_room_loc",
+      "coordinate": {
+        "latitude": 28.581,
+        "longitude": 77.1678,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_room_street_1",
+        "delhi_s_room_street_2"
+      ]
+    }
+  ]
+}

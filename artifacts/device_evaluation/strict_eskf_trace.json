@@ -1,0 +1,271 @@
+[
+  {
+    "step": 1,
+    "timeS": "0.1",
+    "posEnu": [
+      -0.011,
+      0.19,
+      0.026
+    ],
+    "velEnu": [
+      -0.732,
+      0.885,
+      0.294
+    ],
+    "headingDeg": 168.58,
+    "covTrace": 12.8713,
+    "mlInnovation": [
+      4.995
+    ],
+    "nhcInnovation": [
+      -3.334,
+      0.324
+    ],
+    "roadUpdate": "none",
+    "gnssUpdate": "none"
+  },
+  {
+    "step": 2,
+    "timeS": "0.2",
+    "posEnu": [
+      0.002,
+      0.217,
+      -0.02
+    ],
+    "velEnu": [
+      2.064,
+      1.247,
+      2.756
+    ],
+    "headingDeg": 210.39,
+    "covTrace": 10.7454,
+    "mlInnovation": [
+      6.263
+    ],
+    "nhcInnovation": [
+      1.55,
+      0.767
+    ],
+    "roadUpdate": "none",
+    "gnssUpdate": "none"
+  },
+  {
+    "step": 3,
+    "timeS": "0.3",
+    "posEnu": [
+      -0.276,
+      -0.755,
+      -0.998
+    ],
+    "velEnu": [
+      1.113,
+      -4.379,
+      -3.349
+    ],
+    "headingDeg": 242.35,
+    "covTrace": 8.288,
+    "mlInnovation": [
+      7.574
+    ],
+    "nhcInnovation": [
+      -4.229,
+      -3.461
+    ],
+    "roadUpdate": "none",
+    "gnssUpdate": "none"
+  },
+  {
+    "step": 4,
+    "timeS": "0.4",
+    "posEnu": [
+      0.098,
+      -0.901,
+      -0.892
+    ],
+    "velEnu": [
+      1.399,
+      -4.206,
+      -2.678
+    ],
+    "headingDeg": 287.84,
+    "covTrace": 6.6367,
+    "mlInnovation": [
+      5.723
+    ],
+    "nhcInnovation": [
+      -4.919,
+      -3.667
+    ],
+    "roadUpdate": {
+      "accepted": true,
+      "res": [
+        -0.1,
+        0
+      ]
+    },
+    "gnssUpdate": "none"
+  },
+  {
+    "step": 5,
+    "timeS": "0.5",
+    "posEnu": [
+      0.795,
+      -0.703,
+      -0.882
+    ],
+    "velEnu": [
+      1.031,
+      -2.698,
+      -2.892
+    ],
+    "headingDeg": 7.97,
+    "covTrace": 6.3824,
+    "mlInnovation": [
+      8.368
+    ],
+    "nhcInnovation": [
+      -1.338,
+      1.768
+    ],
+    "roadUpdate": "none",
+    "gnssUpdate": "none"
+  },
+  {
+    "step": 6,
+    "timeS": "0.6",
+    "posEnu": [
+      0.8,
+      -0.559,
+      -0.289
+    ],
+    "velEnu": [
+      0.467,
+      -1.27,
+      -0.12
+    ],
+    "headingDeg": 41.85,
+    "covTrace": 6.036,
+    "mlInnovation": [
+      6.472
+    ],
+    "nhcInnovation": [
+      1.571,
+      2.675
+    ],
+    "roadUpdate": "none",
+    "gnssUpdate": "none"
+  },
+  {
+    "step": 7,
+    "timeS": "0.7",
+    "posEnu": [
+      1.187,
+      -0.378,
+      0.056
+    ],
+    "velEnu": [
+      2.309,
+      -0.213,
+      0.183
+    ],
+    "headingDeg": 58.05,
+    "covTrace": 5.618,
+    "mlInnovation": [
+      4.837
+    ],
+    "nhcInnovation": [
+      2.257,
+      -1.598
+    ],
+    "roadUpdate": "none",
+    "gnssUpdate": "none"
+  },
+  {
+    "step": 8,
+    "timeS": "0.8",
+    "posEnu": [
+      1.782,
+      -0.341,
+      0.243
+    ],
+    "velEnu": [
+      3.53,
+      -0.456,
+      -0.933
+    ],
+    "headingDeg": 100.65,
+    "covTrace": 5.2675,
+    "mlInnovation": [
+      2.538
+    ],
+    "nhcInnovation": [
+      0.799,
+      -2.355
+    ],
+    "roadUpdate": {
+      "accepted": true,
+      "res": [
+        -1.809,
+        0
+      ]
+    },
+    "gnssUpdate": "none"
+  },
+  {
+    "step": 9,
+    "timeS": "0.9",
+    "posEnu": [
+      1.743,
+      -0.628,
+      0.556
+    ],
+    "velEnu": [
+      2.333,
+      -1.424,
+      -1.151
+    ],
+    "headingDeg": 317.2,
+    "covTrace": 5.0192,
+    "mlInnovation": [
+      4.858
+    ],
+    "nhcInnovation": [
+      0.2,
+      -4.127
+    ],
+    "roadUpdate": "none",
+    "gnssUpdate": "none"
+  },
+  {
+    "step": 10,
+    "timeS": "1.0",
+    "posEnu": [
+      1.727,
+      -0.586,
+      1.016
+    ],
+    "velEnu": [
+      1.066,
+      -1.151,
+      -1.894
+    ],
+    "headingDeg": 313.61,
+    "covTrace": 4.2679,
+    "mlInnovation": [
+      7.486
+    ],
+    "nhcInnovation": [
+      -0.226,
+      -2.362
+    ],
+    "roadUpdate": "none",
+    "gnssUpdate": {
+      "accepted": true,
+      "res": [
+        -1.942,
+        0,
+        -1.183
+      ]
+    }
+  }
+]

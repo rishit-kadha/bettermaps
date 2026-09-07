@@ -1,0 +1,81 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:2862:7722"
+  },
+  "bounds": {
+    "minLat": 28.62,
+    "maxLat": 28.63,
+    "minLon": 77.22,
+    "maxLon": 77.23
+  },
+  "segments": [
+    {
+      "id": "delhi_s_barakhamba_2",
+      "name": "Barakhamba Road South",
+      "startPoint": {
+        "latitude": 28.6295,
+        "longitude": 77.2285,
+        "altitudeM": 215
+      },
+      "endPoint": {
+        "latitude": 28.6258,
+        "longitude": 77.234,
+        "altitudeM": 215
+      },
+      "geometry": [
+        {
+          "latitude": 28.6295,
+          "longitude": 77.2285,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.627650000000003,
+          "longitude": 77.23124999999999,
+          "altitudeM": 215
+        },
+        {
+          "latitude": 28.6258,
+          "longitude": 77.234,
+          "altitudeM": 215
+        }
+      ],
+      "lengthMeters": 676.3,
+      "bearingDeg": 127.5,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.9,
+      "roadClass": "primary",
+      "startNodeId": "delhi_n_barakhamba",
+      "endNodeId": "delhi_n_mandi_house"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "delhi_n_barakhamba",
+      "coordinate": {
+        "latitude": 28.6295,
+        "longitude": 77.2285,
+        "altitudeM": 215
+      },
+      "connectedSegmentIds": [
+        "delhi_s_barakhamba_1",
+        "delhi_s_barakhamba_2"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "nodeId": "delhi_n_barakhamba",
+      "coordinate": {
+        "latitude": 28.6295,
+        "longitude": 77.2285,
+        "altitudeM": 215
+      },
+      "outboundSegmentIds": [
+        "delhi_s_barakhamba_1",
+        "delhi_s_barakhamba_2"
+      ]
+    }
+  ]
+}

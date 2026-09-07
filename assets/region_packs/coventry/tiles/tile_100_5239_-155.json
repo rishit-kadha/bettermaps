@@ -1,0 +1,61 @@
+{
+  "key": {
+    "scheme": "deg",
+    "key": "100:5239:-155"
+  },
+  "bounds": {
+    "minLat": 52.39,
+    "maxLat": 52.4,
+    "minLon": -1.55,
+    "maxLon": -1.54
+  },
+  "segments": [
+    {
+      "id": "s13",
+      "name": "Kenilworth Road",
+      "startPoint": {
+        "latitude": 52.39,
+        "longitude": -1.542
+      },
+      "endPoint": {
+        "latitude": 52.394,
+        "longitude": -1.536
+      },
+      "lengthMeters": 603,
+      "bearingDeg": 42.5,
+      "directionality": "two_way",
+      "oneWay": false,
+      "speedLimitMps": 13.9,
+      "roadClass": "primary",
+      "startNodeId": "n14",
+      "endNodeId": "n15",
+      "geometry": [
+        {
+          "latitude": 52.39,
+          "longitude": -1.542
+        },
+        {
+          "latitude": 52.3921,
+          "longitude": -1.5389000000000002
+        },
+        {
+          "latitude": 52.394,
+          "longitude": -1.536
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n14",
+      "coordinate": {
+        "latitude": 52.39,
+        "longitude": -1.542
+      },
+      "connectedSegmentIds": [
+        "s13"
+      ]
+    }
+  ],
+  "intersections": []
+}

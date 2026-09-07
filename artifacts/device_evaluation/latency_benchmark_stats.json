@@ -1,0 +1,47 @@
+{
+  "mlInference": {
+    "stage": "1. Learned Motion Model (Tiny Causal TCN)",
+    "n": 5000,
+    "meanMs": 0.0012028000000001953,
+    "medianMs": 0.0007999999999981355,
+    "p95Ms": 0.0017000000000280124,
+    "p99Ms": 0.003899999999987358,
+    "maxMs": 0.5557000000000016
+  },
+  "eskfPropagate": {
+    "stage": "2. ESKF IMU Propagation Step",
+    "n": 5000,
+    "meanMs": 0.015384739999999434,
+    "medianMs": 0.01259999999996353,
+    "p95Ms": 0.023200000000031196,
+    "p99Ms": 0.07220000000000937,
+    "maxMs": 0.7337999999999738
+  },
+  "nhcUpdate": {
+    "stage": "3. Non-Holonomic Constraint (NHC) Update",
+    "n": 5000,
+    "meanMs": 0.00022261999999975614,
+    "medianMs": 0.00010000000000331966,
+    "p95Ms": 0.0002000000000066393,
+    "p99Ms": 0.0004000000000132786,
+    "maxMs": 0.10890000000000555
+  },
+  "routeConstraint": {
+    "stage": "4. Soft Route Constraint Evaluation & Update",
+    "n": 5000,
+    "meanMs": 0.011822099999999626,
+    "medianMs": 0.0017000000000280124,
+    "p95Ms": 0.026499999999998636,
+    "p99Ms": 0.07489999999998531,
+    "maxMs": 0.7536999999999807
+  },
+  "totalTick": {
+    "stage": "5. Full Navigation Pipeline Tick (End-to-End)",
+    "n": 5000,
+    "meanMs": 0.07102131999999968,
+    "medianMs": 0.05629999999999313,
+    "p95Ms": 0.12250000000000227,
+    "p99Ms": 0.19650000000000034,
+    "maxMs": 2.1291999999999973
+  }
+}
