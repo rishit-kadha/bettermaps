@@ -74,8 +74,9 @@ dump.xml
 artifacts/**/screenshots/
 dist_test/
 
-# Large zip archives
+# Large archives & binaries
 *.zip
+*.apk
 
 # Raw IO-VNBD dataset (keep local only per IDR handover; do not commit)
 research/IO-VNBD/

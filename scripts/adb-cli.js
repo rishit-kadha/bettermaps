@@ -186,7 +186,18 @@ switch (action) {
       `📱 Targeting physical phone: ${phone.id} (${phone.model}, ${phone.product})`,
     );
 
-    const apkPath = path.resolve(
+    const releaseApk = path.resolve(
+      __dirname,
+      "..",
+      "android",
+      "app",
+      "build",
+      "outputs",
+      "apk",
+      "release",
+      "app-release.apk",
+    );
+    const debugApk = path.resolve(
       __dirname,
       "..",
       "android",
@@ -197,6 +208,22 @@ switch (action) {
       "debug",
       "app-debug.apk",
     );
+
+    let apkPath = debugApk;
+    if (process.argv.includes("--release")) {
+      apkPath = releaseApk;
+    } else if (process.argv.includes("--debug")) {
+      apkPath = debugApk;
+    } else if (fs.existsSync(releaseApk) && fs.existsSync(debugApk)) {
+      apkPath =
+        fs.statSync(releaseApk).mtimeMs > fs.statSync(debugApk).mtimeMs
+          ? releaseApk
+          : debugApk;
+    } else if (fs.existsSync(releaseApk)) {
+      apkPath = releaseApk;
+    }
+
+    console.log(`📦 Selected APK: ${apkPath}`);
 
     // If APK does not exist or user specified --build, build it with Gradle
     const forceBuild =
@@ -281,7 +308,18 @@ switch (action) {
     const emu = emulators[0];
     console.log(`🤖 Targeting emulator: ${emu.id}`);
 
-    const apkPath = path.resolve(
+    const releaseApk = path.resolve(
+      __dirname,
+      "..",
+      "android",
+      "app",
+      "build",
+      "outputs",
+      "apk",
+      "release",
+      "app-release.apk",
+    );
+    const debugApk = path.resolve(
       __dirname,
       "..",
       "android",
@@ -292,8 +330,23 @@ switch (action) {
       "debug",
       "app-debug.apk",
     );
+
+    let apkPath = debugApk;
+    if (process.argv.includes("--release")) {
+      apkPath = releaseApk;
+    } else if (process.argv.includes("--debug")) {
+      apkPath = debugApk;
+    } else if (fs.existsSync(releaseApk) && fs.existsSync(debugApk)) {
+      apkPath =
+        fs.statSync(releaseApk).mtimeMs > fs.statSync(debugApk).mtimeMs
+          ? releaseApk
+          : debugApk;
+    } else if (fs.existsSync(releaseApk)) {
+      apkPath = releaseApk;
+    }
+
     if (!fs.existsSync(apkPath)) {
-      console.error("❌ Debug APK not found. Please build it first.");
+      console.error("❌ Target APK not found. Please build it first.");
       process.exit(1);
     }
 

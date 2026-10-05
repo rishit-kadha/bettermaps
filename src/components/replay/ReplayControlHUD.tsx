@@ -14,12 +14,7 @@
  */
 
 import React, { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import {
@@ -275,7 +270,9 @@ export const ReplayControlHUD: React.FC<ReplayControlHUDProps> = ({
                   },
                 ]}
               >
-                <Text style={[styles.speedBadgeText, { color: theme.textPrimary }]}>
+                <Text
+                  style={[styles.speedBadgeText, { color: theme.textPrimary }]}
+                >
                   1x
                 </Text>
               </View>
@@ -312,7 +309,9 @@ export const ReplayControlHUD: React.FC<ReplayControlHUDProps> = ({
             >
               {/* Col 1: Mode & Position Source */}
               <View style={styles.metricCol}>
-                <Text style={[styles.metricLabel, { color: theme.textSecondary }]}>
+                <Text
+                  style={[styles.metricLabel, { color: theme.textSecondary }]}
+                >
                   MODE & SOURCE
                 </Text>
                 <View style={styles.gnssStatusRow}>
@@ -337,12 +336,22 @@ export const ReplayControlHUD: React.FC<ReplayControlHUDProps> = ({
                       },
                     ]}
                   >
+                    {/* ORIGINAL (Preserved per user directive: do not remove):
                     {telemetry.isDeadReckoning ? "IDR (OUTAGE)" : "GNSS LOCKED"}
+                    */}
+                    {telemetry.isDeadReckoning
+                      ? "IDR (OUTAGE) • GNSS LOST"
+                      : "GNSS LOCKED"}
                   </Text>
                 </View>
                 <Text style={[styles.metricSub, { color: theme.textMuted }]}>
+                  {/* ORIGINAL (Preserved per user directive: do not remove):
                   {telemetry.isDeadReckoning
                     ? "B3-GRU + 15-State ESKF"
+                    : "Reference GNSS Anchor"}
+                  */}
+                  {telemetry.isDeadReckoning
+                    ? "GNSS Stream Lost • IDR Active"
                     : "Reference GNSS Anchor"}
                 </Text>
               </View>
@@ -427,7 +436,9 @@ export const ReplayControlHUD: React.FC<ReplayControlHUDProps> = ({
 
               {/* Col 3: Endpoint Error & Outage Distance */}
               <View style={styles.metricCol}>
-                <Text style={[styles.metricLabel, { color: theme.textSecondary }]}>
+                <Text
+                  style={[styles.metricLabel, { color: theme.textSecondary }]}
+                >
                   ENDPOINT ERROR
                 </Text>
                 <Text
@@ -439,7 +450,8 @@ export const ReplayControlHUD: React.FC<ReplayControlHUDProps> = ({
                   {safeNum(telemetry.instantaneousErrorMeters, 1, "--", " m")}
                 </Text>
                 <Text style={[styles.metricSub, { color: theme.textMuted }]}>
-                  Outage Dist: {safeNum(telemetry.cumulativeDistanceTraveledM, 0, "0", " m")}
+                  Outage Dist:{" "}
+                  {safeNum(telemetry.cumulativeDistanceTraveledM, 0, "0", " m")}
                 </Text>
               </View>
             </View>
@@ -512,10 +524,7 @@ export const ReplayControlHUD: React.FC<ReplayControlHUDProps> = ({
                       {safeNum(m.err, 1, "--", "m")}
                     </Text>
                     <Text
-                      style={[
-                        styles.milestoneDrift,
-                        { color: theme.accent },
-                      ]}
+                      style={[styles.milestoneDrift, { color: theme.accent }]}
                       numberOfLines={1}
                     >
                       {m.drift !== null && m.drift !== undefined
